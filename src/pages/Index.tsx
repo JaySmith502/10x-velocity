@@ -128,6 +128,7 @@ const Index = () => {
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center glass-card p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
             Ready to Increase Your Velocity?
           </h2>
@@ -141,9 +142,47 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="mt-auto py-8 border-t border-white/10">
+      <footer className="mt-auto py-16 border-t border-white/10 bg-black/20">
         <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-velocity-light">Company</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Careers</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Contact</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-velocity-light">Solutions</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Automation</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Data Analytics</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">AI Integration</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Workflow Optimization</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-velocity-light">Resources</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Documentation</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Case Studies</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Webinars</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">API Reference</a></li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold mb-4 text-velocity-light">Legal</h3>
+              <ul className="space-y-2">
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Privacy Policy</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Terms of Service</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Cookie Policy</a></li>
+                <li><a href="#" className="text-velocity-muted hover:text-velocity-accent transition-colors">Security</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
             <p className="text-velocity-muted">
               © 2024 10x Velocity. All rights reserved.
             </p>
