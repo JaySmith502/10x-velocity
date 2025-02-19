@@ -1,3 +1,4 @@
+
 import { ArrowRight, Bot, ChartLine, Users, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -31,7 +32,7 @@ const Index = () => {
             Transform your business processes with cutting-edge AI solutions. 
             Based in Louisville, KY, serving ambitious companies worldwide.
           </p>
-          <Button className="btn-primary text-lg">
+          <Button className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:opacity-90 transition-opacity text-lg">
             Get Started <ArrowRight className="w-5 h-5" />
           </Button>
         </div>
