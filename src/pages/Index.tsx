@@ -1,5 +1,5 @@
 
-import { ArrowRight, Robot, ChartLine, Users, Database } from "lucide-react";
+import { ArrowRight, Bot, ChartLine, Users, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
@@ -74,7 +74,7 @@ const features = [
   {
     title: "AI Process Automation",
     description: "Streamline your operations with intelligent automation solutions that learn and adapt.",
-    icon: Robot,
+    icon: Bot,
   },
   {
     title: "Data Analytics",
