@@ -12,7 +12,7 @@ const Index = () => {
             <span className="bg-gradient-to-r from-velocity-accent to-velocity-light bg-clip-text text-transparent">Velocity</span>
           </h1>
           <Button 
-            className="bg-gradient-to-r from-velocity-accent to-velocity-light text-white hover:opacity-90 transition-opacity"
+            className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:opacity-90 transition-opacity"
           >
             Contact Us
           </Button>
