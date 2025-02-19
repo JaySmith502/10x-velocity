@@ -1,10 +1,18 @@
 
 import { ArrowRight, Bot, ChartLine, Users, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
+      {/* Header with Theme Switcher */}
+      <header className="container mx-auto px-4 py-4">
+        <div className="flex justify-end">
+          <ThemeSwitcher />
+        </div>
+      </header>
+
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
