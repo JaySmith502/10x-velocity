@@ -25,7 +25,7 @@ const Index = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-velocity-accent text-velocity-accent hover:bg-velocity-accent/10"
+              className="border-velocity-accent text-[#151A24] hover:bg-velocity-accent/10 text-lg"
             >
               <Link to="/case-studies">
                 View Case Studies <ArrowRight className="w-5 h-5" />
