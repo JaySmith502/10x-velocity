@@ -1,25 +1,9 @@
-
 import { ArrowRight, Bot, ChartLine, Users, Database } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="container mx-auto px-4 py-6">
-        <div className="flex justify-between items-center">
-          <h1 className="text-2xl font-bold">
-            <span className="text-white">10x</span>
-            <span className="bg-gradient-to-r from-velocity-accent to-velocity-light bg-clip-text text-transparent">Velocity</span>
-          </h1>
-          <Button 
-            className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:opacity-90 transition-opacity"
-          >
-            Contact Us
-          </Button>
-        </div>
-      </header>
-
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
