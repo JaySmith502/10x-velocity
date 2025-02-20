@@ -13,7 +13,7 @@ const Header = () => {
         <div className="flex items-center gap-6">
           <Link 
             to="/case-studies" 
-            className="text-velocity-muted hover:text-velocity-accent transition-colors font-bold"
+            className="text-velocity-muted hover:text-velocity-accent transition-colors font-bold hidden md:block"
           >
             Case Studies
           </Link>
