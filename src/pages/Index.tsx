@@ -21,7 +21,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               asChild
-              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:opacity-90 transition-opacity text-lg"
+              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all text-lg"
             >
               <Link to="/savings-calculator">
                 Savings Calculator <Calculator className="w-5 h-5" />
@@ -30,7 +30,7 @@ const Index = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-velocity-accent text-[#151A24] hover:bg-velocity-accent/10 text-lg"
+              className="border-velocity-accent text-[#151A24] hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
             >
               <Link to="/case-studies">
                 View Case Studies <ArrowRight className="w-5 h-5" />
