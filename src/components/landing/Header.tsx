@@ -14,7 +14,10 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <Button asChild variant="outline" className="border-velocity-accent text-velocity-accent hover:bg-velocity-accent hover:text-velocity-light">
+            <Button 
+              asChild
+              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:opacity-90 transition-opacity"
+            >
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
