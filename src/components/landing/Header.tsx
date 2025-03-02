@@ -8,7 +8,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-velocity-light">
+            <Link to="/" className="text-2xl font-bold heading-gradient">
               10x Velocity
             </Link>
           </div>
