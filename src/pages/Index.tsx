@@ -1,4 +1,5 @@
-import { ArrowRight, Bot, ChartLine, Users, Database } from "lucide-react";
+
+import { ArrowRight, Bot, ChartLine, Users, Database, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -18,8 +19,13 @@ const Index = () => {
             Based in Louisville, KY, serving ambitious companies worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:opacity-90 transition-opacity text-lg">
-              Get Started <ArrowRight className="w-5 h-5" />
+            <Button 
+              asChild
+              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:opacity-90 transition-opacity text-lg"
+            >
+              <Link to="/savings-calculator">
+                Savings Calculator <Calculator className="w-5 h-5" />
+              </Link>
             </Button>
             <Button 
               asChild
