@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Slider } from "@/components/ui/slider";
-import { Calculator, DollarSign, Clock, Users } from "lucide-react";
+import { Calculator, DollarSign, Clock, Users, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
