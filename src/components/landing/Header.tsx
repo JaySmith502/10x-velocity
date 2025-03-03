@@ -14,17 +14,6 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-4">
-            <nav className="hidden md:flex items-center gap-6 mr-4">
-              <Link to="/case-studies" className="text-velocity-light hover:text-velocity-accent transition-colors">
-                Case Studies
-              </Link>
-              <Link to="/blog" className="text-velocity-light hover:text-velocity-accent transition-colors">
-                Blog
-              </Link>
-              <Link to="/savings-calculator" className="text-velocity-light hover:text-velocity-accent transition-colors">
-                Savings Calculator
-              </Link>
-            </nav>
             <Button 
               asChild
               className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all"
