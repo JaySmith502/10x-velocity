@@ -11,6 +11,7 @@ import InnesYoung from "./pages/case-studies/InnesYoung";
 import ECatalyst from "./pages/case-studies/ECatalyst";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Blog from "./pages/Blog";
+import BlogPost from "./components/blog/BlogPost";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/case-studies/ecatalyst" element={<ECatalyst />} />
             <Route path="/savings-calculator" element={<SavingsCalculator />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
