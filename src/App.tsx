@@ -12,6 +12,7 @@ import ECatalyst from "./pages/case-studies/ECatalyst";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Blog from "./pages/Blog";
 import BlogPost from "./components/blog/BlogPost";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => (
             <Route path="/savings-calculator" element={<SavingsCalculator />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
+            <Route path="/contact" element={<Contact />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
