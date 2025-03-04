@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -40,7 +41,7 @@ const InnesYoung = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-start mb-6">
             <img 
-              src="/lovable-uploads/5071bfe4-5693-4e64-9156-bbc232f773dd.png" 
+              src="/lovable-uploads/859250a0-ea24-4201-9f66-afa2988ca598.png" 
               alt="Innes & Young Logo" 
               className="w-48 md:w-[200px]"
             />
