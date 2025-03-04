@@ -43,7 +43,7 @@ const InnesYoung = () => {
             <img 
               src="/lovable-uploads/859250a0-ea24-4201-9f66-afa2988ca598.png" 
               alt="Innes & Young Logo" 
-              className="w-48 md:w-[200px]"
+              className="w-60 md:w-[250px]"
             />
           </div>
           
