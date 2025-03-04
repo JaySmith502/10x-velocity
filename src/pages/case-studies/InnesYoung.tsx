@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -39,23 +38,18 @@ const InnesYoung = () => {
     <main className="flex-1">
       <article className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          {/* Header with Logo and Title */}
-          <div className="flex flex-col md:flex-row md:items-center gap-6 mb-12">
-            <div className="md:w-1/3 flex justify-center md:justify-start">
-              <img 
-                src="/lovable-uploads/5071bfe4-5693-4e64-9156-bbc232f773dd.png" 
-                alt="Innes & Young Logo" 
-                className="w-48 md:w-[200px]"
-              />
-            </div>
-            <div className="md:w-2/3">
-              <h1 className="text-4xl md:text-5xl font-bold heading-gradient">
-                Innes & Young: AI-Powered PR Evolution
-              </h1>
-            </div>
+          <div className="flex justify-start mb-6">
+            <img 
+              src="/lovable-uploads/5071bfe4-5693-4e64-9156-bbc232f773dd.png" 
+              alt="Innes & Young Logo" 
+              className="w-48 md:w-[200px]"
+            />
           </div>
           
-          {/* Client Overview */}
+          <h1 className="text-4xl md:text-5xl font-bold mb-12 heading-gradient">
+            Innes & Young: AI-Powered PR Evolution
+          </h1>
+          
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Client Overview</h2>
             <p className="text-velocity-muted mb-6">
@@ -63,7 +57,6 @@ const InnesYoung = () => {
             </p>
           </section>
 
-          {/* The Challenge */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
             <p className="text-velocity-muted mb-6">
@@ -77,7 +70,6 @@ const InnesYoung = () => {
             </ul>
           </section>
 
-          {/* The Solution */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">The 10x Velocity Solution</h2>
             <div className="grid gap-8">
@@ -94,7 +86,6 @@ const InnesYoung = () => {
             </div>
           </section>
 
-          {/* Results & Impact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">Results & Impact</h2>
             <div className="glass-card p-8">
@@ -112,7 +103,6 @@ const InnesYoung = () => {
             </div>
           </section>
 
-          {/* Conclusion */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
             <p className="text-velocity-muted mb-6">
@@ -123,7 +113,6 @@ const InnesYoung = () => {
             </p>
           </section>
 
-          {/* What's Next */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
             <p className="text-velocity-muted mb-6">
