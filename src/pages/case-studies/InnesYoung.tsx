@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
@@ -45,9 +46,18 @@ const InnesYoung = () => {
           {/* Client Overview */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Client Overview</h2>
-            <p className="text-velocity-muted">
+            <p className="text-velocity-muted mb-6">
               Innes & Young (IY) is a leading public relations and reputation management firm that focuses on crisis communication, brand positioning, and strategic media outreach. Renowned for its personalised approach and extensive industry knowledge, IY sought to enhance operations, boost efficiency, and improve digital outreach while maintaining the quality of service that established its reputation.
             </p>
+            
+            {/* Client Logo */}
+            <div className="flex justify-center mb-8 mt-8">
+              <img 
+                src="/lovable-uploads/5071bfe4-5693-4e64-9156-bbc232f773dd.png" 
+                alt="Innes & Young Logo" 
+                className="h-20 md:h-24"
+              />
+            </div>
           </section>
 
           {/* The Challenge */}
