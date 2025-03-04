@@ -39,9 +39,21 @@ const InnesYoung = () => {
     <main className="flex-1">
       <article className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            Innes & Young: AI-Powered PR Evolution
-          </h1>
+          {/* Header with Logo and Title */}
+          <div className="flex flex-col md:flex-row md:items-center gap-6 mb-12">
+            <div className="md:w-1/3 flex justify-center md:justify-start">
+              <img 
+                src="/lovable-uploads/5071bfe4-5693-4e64-9156-bbc232f773dd.png" 
+                alt="Innes & Young Logo" 
+                className="w-48 md:w-[200px]"
+              />
+            </div>
+            <div className="md:w-2/3">
+              <h1 className="text-4xl md:text-5xl font-bold heading-gradient">
+                Innes & Young: AI-Powered PR Evolution
+              </h1>
+            </div>
+          </div>
           
           {/* Client Overview */}
           <section className="mb-16">
@@ -49,15 +61,6 @@ const InnesYoung = () => {
             <p className="text-velocity-muted mb-6">
               Innes & Young (IY) is a leading public relations and reputation management firm that focuses on crisis communication, brand positioning, and strategic media outreach. Renowned for its personalised approach and extensive industry knowledge, IY sought to enhance operations, boost efficiency, and improve digital outreach while maintaining the quality of service that established its reputation.
             </p>
-            
-            {/* Client Logo */}
-            <div className="flex justify-center mb-8 mt-8">
-              <img 
-                src="/lovable-uploads/5071bfe4-5693-4e64-9156-bbc232f773dd.png" 
-                alt="Innes & Young Logo" 
-                className="h-20 md:h-24"
-              />
-            </div>
           </section>
 
           {/* The Challenge */}
