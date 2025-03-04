@@ -81,50 +81,6 @@ const Services = () => {
 
 const services = [
   {
-    title: "AI Process Automation",
-    description: "Streamline your operations with intelligent automation solutions that learn and adapt to your business processes.",
-    icon: Bot,
-    benefits: [
-      "Reduce manual, repetitive tasks by up to 70%",
-      "Minimize human error in routine processes",
-      "Scale operations without proportional headcount increases",
-      "24/7 processing capability with no downtime"
-    ]
-  },
-  {
-    title: "Data Analytics",
-    description: "Transform your raw data into actionable insights with advanced analytics and visualization tools.",
-    icon: ChartLine,
-    benefits: [
-      "Data-driven decision making at all levels",
-      "Identify trends and patterns invisible to manual analysis",
-      "Predictive analytics to anticipate market changes",
-      "Customized dashboards and reporting for key stakeholders"
-    ]
-  },
-  {
-    title: "Team Augmentation",
-    description: "Enhance your team's capabilities with AI-powered tools and expert support to achieve more with less.",
-    icon: Users,
-    benefits: [
-      "Close skill gaps without lengthy hiring processes",
-      "Access specialized expertise on-demand",
-      "Reduce training costs for specialized tasks",
-      "Improve team productivity with AI assistance"
-    ]
-  },
-  {
-    title: "Process Mining",
-    description: "Discover optimization opportunities in your business processes through AI-powered analysis and mapping.",
-    icon: Database,
-    benefits: [
-      "Visualize and understand complex processes",
-      "Identify bottlenecks and inefficiencies automatically",
-      "Continuous improvement through ongoing monitoring",
-      "Data-backed recommendations for process optimization"
-    ]
-  },
-  {
     title: "Team Training",
     description: "Equip your team with the skills to leverage AI tools effectively through targeted workshops and training.",
     icon: GraduationCap,
@@ -144,6 +100,50 @@ const services = [
       "Prioritize initiatives with highest ROI potential",
       "Align technology investments with business goals",
       "Create a roadmap for sustainable transformation"
+    ]
+  },
+  {
+    title: "Data Analytics",
+    description: "Transform your raw data into actionable insights with advanced analytics and visualization tools.",
+    icon: ChartLine,
+    benefits: [
+      "Data-driven decision making at all levels",
+      "Identify trends and patterns invisible to manual analysis",
+      "Predictive analytics to anticipate market changes",
+      "Customized dashboards and reporting for key stakeholders"
+    ]
+  },
+  {
+    title: "Process Mining",
+    description: "Discover optimization opportunities in your business processes through AI-powered analysis and mapping.",
+    icon: Database,
+    benefits: [
+      "Visualize and understand complex processes",
+      "Identify bottlenecks and inefficiencies automatically",
+      "Continuous improvement through ongoing monitoring",
+      "Data-backed recommendations for process optimization"
+    ]
+  },
+  {
+    title: "AI Process Automation",
+    description: "Streamline your operations with intelligent automation solutions that learn and adapt to your business processes.",
+    icon: Bot,
+    benefits: [
+      "Reduce manual, repetitive tasks by up to 70%",
+      "Minimize human error in routine processes",
+      "Scale operations without proportional headcount increases",
+      "24/7 processing capability with no downtime"
+    ]
+  },
+  {
+    title: "Team Augmentation",
+    description: "Enhance your team's capabilities with AI-powered tools and expert support to achieve more with less.",
+    icon: Users,
+    benefits: [
+      "Close skill gaps without lengthy hiring processes",
+      "Access specialized expertise on-demand",
+      "Reduce training costs for specialized tasks",
+      "Improve team productivity with AI assistance"
     ]
   }
 ];
