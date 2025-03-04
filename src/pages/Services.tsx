@@ -28,6 +28,7 @@ const Services = () => {
           {services.map((service, index) => (
             <div
               key={service.title}
+              id={service.id}
               className="glass-card p-8 flex flex-col h-full animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
@@ -81,6 +82,7 @@ const Services = () => {
 
 const services = [
   {
+    id: "team-training",
     title: "Team Training",
     description: "Equip your team with the skills to leverage AI tools effectively through targeted workshops and training.",
     icon: GraduationCap,
@@ -92,6 +94,7 @@ const services = [
     ]
   },
   {
+    id: "opportunity-discovery",
     title: "Opportunity Discovery",
     description: "Identify high-impact areas for digital transformation through a comprehensive analysis of your operations.",
     icon: Search,
@@ -103,6 +106,7 @@ const services = [
     ]
   },
   {
+    id: "data-analytics",
     title: "Data Analytics",
     description: "Transform your raw data into actionable insights with advanced analytics and visualization tools.",
     icon: ChartLine,
@@ -114,6 +118,7 @@ const services = [
     ]
   },
   {
+    id: "process-mining",
     title: "Process Mining",
     description: "Discover optimization opportunities in your business processes through AI-powered analysis and mapping.",
     icon: Database,
@@ -125,6 +130,7 @@ const services = [
     ]
   },
   {
+    id: "process-automation",
     title: "AI Process Automation",
     description: "Streamline your operations with intelligent automation solutions that learn and adapt to your business processes.",
     icon: Bot,
@@ -136,6 +142,7 @@ const services = [
     ]
   },
   {
+    id: "team-augmentation",
     title: "Team Augmentation",
     description: "Enhance your team's capabilities with AI-powered tools and expert support to achieve more with less.",
     icon: Users,

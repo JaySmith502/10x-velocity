@@ -18,11 +18,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Solutions</h3>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Automation</Link></li>
-              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Data Analytics</Link></li>
-              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Augmentation</Link></li>
-              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Mining</Link></li>
-              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Training</Link></li>
+              <li><Link to="/services#process-automation" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Automation</Link></li>
+              <li><Link to="/services#data-analytics" className="text-velocity-muted hover:text-velocity-accent transition-colors">Data Analytics</Link></li>
+              <li><Link to="/services#team-augmentation" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Augmentation</Link></li>
+              <li><Link to="/services#process-mining" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Mining</Link></li>
+              <li><Link to="/services#team-training" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Training</Link></li>
+              <li><Link to="/services#opportunity-discovery" className="text-velocity-muted hover:text-velocity-accent transition-colors">Opportunity Discovery</Link></li>
             </ul>
           </div>
           <div>
