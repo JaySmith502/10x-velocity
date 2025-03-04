@@ -41,7 +41,7 @@ const InnesYoung = () => {
         <div className="max-w-4xl mx-auto">
           <div className="flex justify-start mb-6">
             <img 
-              src="/lovable-uploads/859250a0-ea24-4201-9f66-afa2988ca598.png" 
+              src="/lovable-uploads/d8541ecf-d7f8-4c54-b92a-91f0aa1face0.png" 
               alt="Innes & Young Logo" 
               className="w-60 md:w-[250px]"
             />
