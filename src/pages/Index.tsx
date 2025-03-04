@@ -1,6 +1,6 @@
-
 import { ArrowRight, Bot, ChartLine, Users, Database, Calculator } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -152,14 +152,7 @@ const Index = () => {
           <p className="text-lg text-velocity-muted mb-8">
             Book a free consultation and discover how we can help you achieve 10x growth.
           </p>
-          <Button 
-            asChild
-            className="btn-primary text-lg"
-          >
-            <a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">
-              15 minute quick discovery chat <ArrowRight className="w-5 h-5" />
-            </a>
-          </Button>
+          <DiscoveryButton />
         </div>
       </section>
     </div>

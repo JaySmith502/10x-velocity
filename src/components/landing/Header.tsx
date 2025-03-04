@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
+import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const Header = () => {
   return (
@@ -28,14 +28,7 @@ const Header = () => {
                 Blog
               </Link>
             </nav>
-            <Button 
-              asChild
-              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all"
-            >
-              <a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">
-                Contact Us
-              </a>
-            </Button>
+            <DiscoveryButton className="text-sm" />
           </div>
         </div>
       </div>
