@@ -152,8 +152,13 @@ const Index = () => {
           <p className="text-lg text-velocity-muted mb-8">
             Book a free consultation and discover how we can help you achieve 10x growth.
           </p>
-          <Button className="btn-primary text-lg">
-            Book Consultation <ArrowRight className="w-5 h-5" />
+          <Button 
+            asChild
+            className="btn-primary text-lg"
+          >
+            <a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">
+              15 minute quick discovery chat <ArrowRight className="w-5 h-5" />
+            </a>
           </Button>
         </div>
       </section>

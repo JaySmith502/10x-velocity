@@ -18,7 +18,9 @@ const Header = () => {
               asChild
               className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all"
             >
-              <Link to="/contact">Contact Us</Link>
+              <a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">
+                Contact Us
+              </a>
             </Button>
           </div>
         </div>
