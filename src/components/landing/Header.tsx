@@ -28,7 +28,7 @@ const Header = () => {
                 Blog
               </Link>
             </nav>
-            <DiscoveryButton className="text-sm" />
+            <DiscoveryButton className="text-sm" text="Contact Us" />
           </div>
         </div>
       </div>

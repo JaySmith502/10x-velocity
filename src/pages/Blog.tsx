@@ -63,19 +63,49 @@ const Blog = () => {
           ))}
         </div>
 
-        {/* CTA Section */}
-        <div className="max-w-4xl mx-auto mt-16 text-center glass-card p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
-            Want More Insights?
-          </h2>
-          <p className="text-lg text-velocity-muted mb-8">
-            Subscribe to our newsletter for weekly updates on AI, automation, and business growth strategies.
-          </p>
-          <Button className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all text-lg">
-            Subscribe Now <ArrowRight className="w-5 h-5" />
-          </Button>
+        {/* Contact Section */}
+        <div className="mt-24">
+          <div className="container mx-auto px-4">
+            <div className="max-w-5xl mx-auto">
+              <div className="flex flex-col md:flex-row gap-12 md:gap-16">
+                <div className="flex-1">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+                    Get in Touch
+                  </h2>
+                  <p className="text-velocity-muted mb-8 text-lg">
+                    Ready to supercharge your team's velocity? Let's talk about how we can help you achieve 10x results.
+                  </p>
+                  
+                  <div className="glass-card p-6 md:p-8 mb-8">
+                    <h3 className="font-semibold text-lg mb-2">Contact Information</h3>
+                    <p className="text-velocity-muted mb-4">
+                      Email: <a href="mailto:hello@10xvelocity.com" className="text-velocity-accent hover:underline">hello@10xvelocity.com</a>
+                    </p>
+                    <p className="text-velocity-muted">
+                      Hours: Monday-Friday, 9am-5pm PST
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="flex-1">
+                  <div className="glass-card p-6 md:p-8">
+                    <h3 className="text-2xl font-semibold mb-6">Get started today</h3>
+                    <p className="text-velocity-muted mb-6">
+                      Schedule a quick discovery call with our team to explore how we can help accelerate your business.
+                    </p>
+                    <Button 
+                      asChild
+                      className="w-full bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all"
+                    >
+                      <a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">
+                        Schedule a 15 minute call <ArrowRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
