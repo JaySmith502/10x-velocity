@@ -13,7 +13,21 @@ const Header = () => {
             </Link>
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
+            <nav className="hidden md:flex items-center gap-6">
+              <Link to="/services" className="text-velocity-muted hover:text-velocity-light transition-colors">
+                Services
+              </Link>
+              <Link to="/case-studies" className="text-velocity-muted hover:text-velocity-light transition-colors">
+                Case Studies
+              </Link>
+              <Link to="/savings-calculator" className="text-velocity-muted hover:text-velocity-light transition-colors">
+                Savings Calculator
+              </Link>
+              <Link to="/blog" className="text-velocity-muted hover:text-velocity-light transition-colors">
+                Blog
+              </Link>
+            </nav>
             <Button 
               asChild
               className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all"

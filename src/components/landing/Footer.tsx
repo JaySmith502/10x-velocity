@@ -11,17 +11,18 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
               <li><Link to="/case-studies" className="text-velocity-muted hover:text-velocity-accent transition-colors">Case Studies</Link></li>
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Contact</Link></li>
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</Link></li>
+              <li><Link to="/contact" className="text-velocity-muted hover:text-velocity-accent transition-colors">Contact</Link></li>
+              <li><Link to="/blog" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</Link></li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Solutions</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Automation</Link></li>
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Data Analytics</Link></li>
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">AI Integration</Link></li>
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Workflow Optimization</Link></li>
+              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Automation</Link></li>
+              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Data Analytics</Link></li>
+              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Augmentation</Link></li>
+              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Mining</Link></li>
+              <li><Link to="/services" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Training</Link></li>
             </ul>
           </div>
           <div>
