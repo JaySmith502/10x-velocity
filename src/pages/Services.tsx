@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap } from "lucide-react";
+import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -133,6 +133,17 @@ const services = [
       "Custom training for your industry and specific needs",
       "Reduce resistance to technology adoption",
       "Create internal AI champions within your organization"
+    ]
+  },
+  {
+    title: "Opportunity Discovery",
+    description: "Identify high-impact areas for digital transformation through a comprehensive analysis of your operations.",
+    icon: Search,
+    benefits: [
+      "Uncover hidden inefficiencies and opportunities",
+      "Prioritize initiatives with highest ROI potential",
+      "Align technology investments with business goals",
+      "Create a roadmap for sustainable transformation"
     ]
   }
 ];
