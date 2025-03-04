@@ -14,17 +14,17 @@ const Header = () => {
           </div>
           
           <div className="flex items-center gap-6">
-            <nav className="hidden md:flex items-center gap-6">
-              <Link to="/services" className="text-velocity-muted hover:text-velocity-light transition-colors">
+            <nav className="hidden md:flex items-center gap-8">
+              <Link to="/services" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Services
               </Link>
-              <Link to="/case-studies" className="text-velocity-muted hover:text-velocity-light transition-colors">
+              <Link to="/case-studies" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Case Studies
               </Link>
-              <Link to="/savings-calculator" className="text-velocity-muted hover:text-velocity-light transition-colors">
+              <Link to="/savings-calculator" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Savings Calculator
               </Link>
-              <Link to="/blog" className="text-velocity-muted hover:text-velocity-light transition-colors">
+              <Link to="/blog" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Blog
               </Link>
             </nav>
