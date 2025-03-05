@@ -12,10 +12,10 @@ const Index = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
-            Accelerate Your Business Growth with AI
+            Accelerate Your Business Growth with AI & Automation
           </h1>
           <p className="text-lg md:text-xl text-velocity-muted mb-8">
-            Transform your business processes with cutting-edge AI solutions. 
+            Transform your business processes with cutting-edge solutions. 
             Based in Louisville, KY, serving ambitious companies worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
