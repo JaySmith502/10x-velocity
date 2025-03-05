@@ -12,7 +12,7 @@ const Header = () => {
               <img 
                 src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
                 alt="10x Velocity Logo" 
-                className="h-6 sm:h-8 md:h-10 w-auto"
+                className="h-7 sm:h-10 md:h-12 w-auto" // Increased sizes by 20%
               />
             </Link>
           </div>
