@@ -6,14 +6,14 @@ const CaseStudies = () => {
   return (
     <main className="flex-1">
       <section className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
             Case Studies
           </h1>
           <p className="text-lg text-velocity-muted mb-12">
             Discover how we've helped businesses achieve transformative results through AI-powered automation.
           </p>
-          <div className="grid gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link 
               to="/case-studies/innes-young"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
