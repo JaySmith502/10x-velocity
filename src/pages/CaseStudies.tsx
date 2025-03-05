@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { Badge } from "@/components/ui/badge";
 
 const CaseStudies = () => {
   return (
@@ -18,6 +19,10 @@ const CaseStudies = () => {
               to="/case-studies/innes-young"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="flex gap-2 mb-3">
+                <Badge variant="outline" className="bg-purple-500/20 text-purple-300 border-purple-500/50">Public Relations</Badge>
+                <Badge variant="outline" className="bg-indigo-500/20 text-indigo-300 border-indigo-500/50">Media</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 Innes & Young: AI-Powered PR Evolution
               </h2>
@@ -33,6 +38,9 @@ const CaseStudies = () => {
               to="/case-studies/ecatalyst"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="mb-3">
+                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Business Services</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 eCatalyst: 10x Velocity Boosts Operational Excellence
               </h2>
@@ -48,6 +56,9 @@ const CaseStudies = () => {
               to="/case-studies/hillcrest-partners"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="mb-3">
+                <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/50">Real Estate</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 Hillcrest Partners: High-Growth Real Estate Powerhouse
               </h2>
@@ -63,6 +74,9 @@ const CaseStudies = () => {
               to="/case-studies/catalyst-group"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="mb-3">
+                <Badge variant="outline" className="bg-amber-500/20 text-amber-300 border-amber-500/50">Venture Investing</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 The Catalyst Group: Unprecedented Growth in Business Investment & Acquisitions
               </h2>
@@ -78,6 +92,9 @@ const CaseStudies = () => {
               to="/case-studies/director-of-marketing"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="mb-3">
+                <Badge variant="outline" className="bg-rose-500/20 text-rose-300 border-rose-500/50">Marketing</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 Director of Marketing Inc: High-Performance Social Media Marketing Agency
               </h2>
@@ -93,6 +110,9 @@ const CaseStudies = () => {
               to="/case-studies/birchwood-real-estate"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="mb-3">
+                <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/50">Real Estate</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 Birchwood Real Estate Partners: New Heights in Real Estate Wholesaling
               </h2>
@@ -108,6 +128,9 @@ const CaseStudies = () => {
               to="/case-studies/govbrokers"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="mb-3">
+                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Business Services</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 GovBrokers: High-Performance Government Contracting Powerhouse
               </h2>
@@ -123,6 +146,9 @@ const CaseStudies = () => {
               to="/case-studies/inspyrd"
               className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
             >
+              <div className="mb-3">
+                <Badge variant="outline" className="bg-teal-500/20 text-teal-300 border-teal-500/50">Nonprofit</Badge>
+              </div>
               <h2 className="text-2xl font-bold mb-4">
                 Inspyrd: Transformational Trauma Recovery Program
               </h2>
