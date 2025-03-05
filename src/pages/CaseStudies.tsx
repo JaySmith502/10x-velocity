@@ -58,6 +58,21 @@ const CaseStudies = () => {
                 Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
               </div>
             </Link>
+
+            <Link 
+              to="/case-studies/catalyst-group"
+              className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
+            >
+              <h2 className="text-2xl font-bold mb-4">
+                The Catalyst Group: Unprecedented Growth in Business Investment & Acquisitions
+              </h2>
+              <p className="text-velocity-muted mb-6">
+                Discover how we helped a business portfolio and investment firm achieve 300% increase in LinkedIn conversations and 50% faster deal evaluation through AI-powered automation.
+              </p>
+              <div className="flex items-center text-velocity-accent">
+                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
