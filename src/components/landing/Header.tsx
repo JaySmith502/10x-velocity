@@ -10,9 +10,9 @@ const Header = () => {
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/b6d20bcf-e009-4ee3-bf46-ccbad3d046e3.png" 
+                src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
                 alt="10x Velocity Logo" 
-                className="h-8"
+                className="h-6 sm:h-8 md:h-10 w-auto"
               />
             </Link>
           </div>
