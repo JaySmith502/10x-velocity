@@ -41,7 +41,11 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
       </div>
 
       <div className="pt-6">
-        <Button className="w-full btn-primary">
+        <Button 
+          asChild
+          variant="outline" 
+          className="w-full border-velocity-accent text-[#151A24] hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
+        >
           <Link to="/case-studies" className="flex items-center justify-center w-full">
             See some Case Studies
             <FileText className="ml-2 h-4 w-4" />
