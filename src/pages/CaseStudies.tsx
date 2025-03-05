@@ -88,6 +88,21 @@ const CaseStudies = () => {
                 Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
               </div>
             </Link>
+
+            <Link 
+              to="/case-studies/birchwood-real-estate"
+              className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
+            >
+              <h2 className="text-2xl font-bold mb-4">
+                Birchwood Real Estate Partners: New Heights in Real Estate Wholesaling
+              </h2>
+              <p className="text-velocity-muted mb-6">
+                Explore how we helped a real estate wholesaling firm achieve 400% faster lead processing and 300% growth in inbound leads through AI-powered automation.
+              </p>
+              <div className="flex items-center text-velocity-accent">
+                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
