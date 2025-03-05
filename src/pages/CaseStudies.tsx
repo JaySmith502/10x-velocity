@@ -73,6 +73,21 @@ const CaseStudies = () => {
                 Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
               </div>
             </Link>
+
+            <Link 
+              to="/case-studies/director-of-marketing"
+              className="glass-card p-8 hover:bg-white/10 transition-all cursor-pointer animate-fade-up"
+            >
+              <h2 className="text-2xl font-bold mb-4">
+                Director of Marketing Inc: High-Performance Social Media Marketing Agency
+              </h2>
+              <p className="text-velocity-muted mb-6">
+                Learn how we transformed a digital marketing agency with AI automation, achieving 300% increase in social media engagement and 40% reduction in PPC costs.
+              </p>
+              <div className="flex items-center text-velocity-accent">
+                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+              </div>
+            </Link>
           </div>
         </div>
       </section>
