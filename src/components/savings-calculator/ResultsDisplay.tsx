@@ -1,6 +1,6 @@
 
 import React from "react";
-import { DollarSign, ArrowRight } from "lucide-react";
+import { DollarSign, ArrowRight, FileText } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { SavingsResults } from "@/utils/savingsCalculator";
@@ -42,9 +42,9 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
 
       <div className="pt-6">
         <Button className="w-full btn-primary">
-          <Link to="/contact" className="flex items-center justify-center w-full">
-            Get a Custom Analysis
-            <ArrowRight className="ml-2 h-4 w-4" />
+          <Link to="/case-studies" className="flex items-center justify-center w-full">
+            See some Case Studies
+            <FileText className="ml-2 h-4 w-4" />
           </Link>
         </Button>
       </div>
