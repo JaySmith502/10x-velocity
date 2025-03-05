@@ -8,8 +8,12 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold heading-gradient">
-              10x Velocity
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/lovable-uploads/b6d20bcf-e009-4ee3-bf46-ccbad3d046e3.png" 
+                alt="10x Velocity Logo" 
+                className="h-8"
+              />
             </Link>
           </div>
           
