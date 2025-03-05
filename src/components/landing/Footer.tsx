@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -12,6 +11,13 @@ const Footer = () => {
               <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
               <li><Link to="/contact" className="text-velocity-muted hover:text-velocity-accent transition-colors">Contact</Link></li>
               <li><Link to="/blog" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</Link></li>
+              <li className="hidden md:block mt-6">
+                <img 
+                  src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
+                  alt="10x Velocity Logo" 
+                  className="h-16 w-auto"
+                />
+              </li>
             </ul>
           </div>
           <div>
