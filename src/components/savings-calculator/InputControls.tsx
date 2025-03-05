@@ -1,7 +1,7 @@
 
 import React from "react";
 import { Slider } from "@/components/ui/slider";
-import { Calculator, DollarSign, Clock, Users } from "lucide-react";
+import { Calculator, DollarSign, Clock, Users, Info } from "lucide-react";
 import { SavingsInputs } from "@/utils/savingsCalculator";
 import { 
   Tooltip,
@@ -33,6 +33,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
               <label className="text-velocity-light font-medium flex items-center cursor-help">
                 <Users className="mr-2 text-velocity-accent h-5 w-5" />
                 Number of Employees
+                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
               </label>
             </TooltipTrigger>
             <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
@@ -63,6 +64,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
               <label className="text-velocity-light font-medium flex items-center cursor-help">
                 <Clock className="mr-2 text-velocity-accent h-5 w-5" />
                 Hours Per Week (per employee)
+                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
               </label>
             </TooltipTrigger>
             <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
@@ -92,6 +94,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
             <TooltipTrigger asChild>
               <label className="text-velocity-light font-medium flex items-center cursor-help">
                 Automation Potential
+                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
               </label>
             </TooltipTrigger>
             <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
@@ -122,6 +125,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
               <label className="text-velocity-light font-medium flex items-center cursor-help">
                 <DollarSign className="mr-2 text-velocity-accent h-5 w-5" />
                 Hourly Rate
+                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
               </label>
             </TooltipTrigger>
             <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
