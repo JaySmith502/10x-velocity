@@ -3,6 +3,12 @@ import React from "react";
 import { Slider } from "@/components/ui/slider";
 import { Calculator, DollarSign, Clock, Users } from "lucide-react";
 import { SavingsInputs } from "@/utils/savingsCalculator";
+import { 
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger
+} from "@/components/ui/tooltip";
 
 interface InputControlsProps {
   inputs: SavingsInputs;
@@ -22,10 +28,17 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
       {/* Employee Count Slider */}
       <div className="space-y-4">
         <div className="flex justify-between">
-          <label className="text-velocity-light font-medium flex items-center">
-            <Users className="mr-2 text-velocity-accent h-5 w-5" />
-            Number of Employees
-          </label>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <label className="text-velocity-light font-medium flex items-center cursor-help">
+                <Users className="mr-2 text-velocity-accent h-5 w-5" />
+                Number of Employees
+              </label>
+            </TooltipTrigger>
+            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+              <p>The total number of staff who perform this task regularly</p>
+            </TooltipContent>
+          </Tooltip>
           <span className="text-velocity-accent font-semibold">{employeeCount}</span>
         </div>
         <Slider 
@@ -45,10 +58,17 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
       {/* Hours Per Week Slider */}
       <div className="space-y-4">
         <div className="flex justify-between">
-          <label className="text-velocity-light font-medium flex items-center">
-            <Clock className="mr-2 text-velocity-accent h-5 w-5" />
-            Hours Per Week (per employee)
-          </label>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <label className="text-velocity-light font-medium flex items-center cursor-help">
+                <Clock className="mr-2 text-velocity-accent h-5 w-5" />
+                Hours Per Week (per employee)
+              </label>
+            </TooltipTrigger>
+            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+              <p>Average time each employee spends on this task weekly</p>
+            </TooltipContent>
+          </Tooltip>
           <span className="text-velocity-accent font-semibold">{hoursPerWeek}</span>
         </div>
         <Slider 
@@ -68,9 +88,16 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
       {/* Automation Potential Slider */}
       <div className="space-y-4">
         <div className="flex justify-between">
-          <label className="text-velocity-light font-medium flex items-center">
-            Automation Potential
-          </label>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <label className="text-velocity-light font-medium flex items-center cursor-help">
+                Automation Potential
+              </label>
+            </TooltipTrigger>
+            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+              <p>Percentage of the task that can be automated with our solutions</p>
+            </TooltipContent>
+          </Tooltip>
           <span className="text-velocity-accent font-semibold">{automationPotential}%</span>
         </div>
         <Slider 
@@ -90,10 +117,17 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
       {/* Hourly Rate Slider */}
       <div className="space-y-4">
         <div className="flex justify-between">
-          <label className="text-velocity-light font-medium flex items-center">
-            <DollarSign className="mr-2 text-velocity-accent h-5 w-5" />
-            Hourly Rate
-          </label>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <label className="text-velocity-light font-medium flex items-center cursor-help">
+                <DollarSign className="mr-2 text-velocity-accent h-5 w-5" />
+                Hourly Rate
+              </label>
+            </TooltipTrigger>
+            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+              <p>Average hourly cost of employees performing this task</p>
+            </TooltipContent>
+          </Tooltip>
           <span className="text-velocity-accent font-semibold">${hourlyRate}</span>
         </div>
         <Slider 
