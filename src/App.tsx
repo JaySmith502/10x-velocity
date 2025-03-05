@@ -14,6 +14,7 @@ import HillcrestPartners from "./pages/case-studies/HillcrestPartners";
 import CatalystGroup from "./pages/case-studies/CatalystGroup";
 import DirectorOfMarketing from "./pages/case-studies/DirectorOfMarketing";
 import BirchwoodRealEstate from "./pages/case-studies/BirchwoodRealEstate";
+import GovBrokers from "./pages/case-studies/GovBrokers";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Blog from "./pages/Blog";
 import BlogPost from "./components/blog/BlogPost";
@@ -39,6 +40,7 @@ const App = () => (
             <Route path="/case-studies/catalyst-group" element={<CatalystGroup />} />
             <Route path="/case-studies/director-of-marketing" element={<DirectorOfMarketing />} />
             <Route path="/case-studies/birchwood-real-estate" element={<BirchwoodRealEstate />} />
+            <Route path="/case-studies/govbrokers" element={<GovBrokers />} />
             <Route path="/savings-calculator" element={<SavingsCalculator />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
