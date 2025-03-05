@@ -10,7 +10,6 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
-              <li><Link to="/case-studies" className="text-velocity-muted hover:text-velocity-accent transition-colors">Case Studies</Link></li>
               <li><Link to="/contact" className="text-velocity-muted hover:text-velocity-accent transition-colors">Contact</Link></li>
               <li><Link to="/blog" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</Link></li>
             </ul>
@@ -29,10 +28,10 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Documentation</Link></li>
               <li><Link to="/case-studies" className="text-velocity-muted hover:text-velocity-accent transition-colors">Case Studies</Link></li>
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Webinars</Link></li>
-              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">API Reference</Link></li>
+              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Documentation (Coming soon)</Link></li>
+              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Webinars (Coming soon)</Link></li>
+              <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">API Reference (Coming soon)</Link></li>
             </ul>
           </div>
           <div>
