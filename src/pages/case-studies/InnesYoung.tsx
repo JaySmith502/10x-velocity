@@ -1,6 +1,6 @@
 
-import { Button } from "@/components/ui/button";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
+import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
   "5x increase in media placements due to AI targeting",
@@ -123,9 +123,7 @@ const InnesYoung = () => {
               <p className="text-lg mb-6">
                 Want to achieve significant results in your business?
               </p>
-              <Button className="btn-primary">
-                Partner with 10x Velocity <ArrowRight className="ml-2 w-4 h-4" />
-              </Button>
+              <DiscoveryButton text="Partner with 10x Velocity" />
             </div>
           </section>
         </div>
