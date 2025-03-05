@@ -2,6 +2,7 @@
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
+import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const CaseStudies = () => {
   return (
@@ -159,6 +160,19 @@ const CaseStudies = () => {
                 Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
               </div>
             </Link>
+          </div>
+          
+          {/* CTA Section */}
+          <div className="max-w-4xl mx-auto mt-20 text-center glass-card p-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+              Ready to Increase Your Velocity?
+            </h2>
+            <p className="text-lg text-velocity-muted mb-8">
+              Book a free consultation and discover how we can help you achieve 10x growth.
+            </p>
+            <DiscoveryButton />
           </div>
         </div>
       </section>
