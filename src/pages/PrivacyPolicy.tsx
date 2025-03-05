@@ -60,6 +60,28 @@ const PrivacyPolicy = () => {
             </ul>
           </section>
           
+          <section id="cookie-policy">
+            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Cookie Policy</h2>
+            <p className="mb-4">
+              Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.
+            </p>
+            <p className="mb-4">
+              A cookie is a small file of letters and numbers that we store on your browser or the hard drive of your computer if you agree. Cookies contain information that is transferred to your computer's hard drive.
+            </p>
+            <p className="mb-4">
+              We use the following cookies:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li><strong>Strictly necessary cookies:</strong> These are cookies that are required for the operation of our website.</li>
+              <li><strong>Analytical/performance cookies:</strong> These allow us to recognize and count the number of visitors and to see how visitors move around our website when they are using it.</li>
+              <li><strong>Functionality cookies:</strong> These are used to recognize you when you return to our website.</li>
+              <li><strong>Targeting cookies:</strong> These cookies record your visit to our website, the pages you have visited and the links you have followed.</li>
+            </ul>
+            <p className="mb-4">
+              You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of this website may become inaccessible or not function properly.
+            </p>
+          </section>
+          
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Cookies and Tracking Technologies</h2>
             <p className="mb-4">
