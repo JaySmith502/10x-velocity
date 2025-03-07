@@ -40,6 +40,7 @@ const PrivacyPolicy = () => {
               <li>Payment data (such as credit card number and billing address)</li>
               <li>Location data (such as IP address)</li>
               <li>Usage data (such as how you use our website and services)</li>
+              <li>Communications and interactions when using our chatbot or customer service tools</li>
             </ul>
           </section>
           
@@ -57,7 +58,25 @@ const PrivacyPolicy = () => {
               <li>To monitor the usage of our website</li>
               <li>To detect, prevent and address technical issues</li>
               <li>To fulfill any other purpose for which you provide it</li>
+              <li>To personalize your experience and to deliver content and product offerings relevant to your interests</li>
             </ul>
+          </section>
+
+          <section id="ai-chatbot">
+            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">AI-Powered Chatbot</h2>
+            <p className="mb-4">
+              We utilize artificial intelligence (AI) technology to power our chatbot service. By using our chatbot, you acknowledge and agree to the following:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li><strong>Data Processing:</strong> Our AI chatbot processes the information you provide during conversations to generate appropriate responses. These interactions may be stored and analyzed to improve our service.</li>
+              <li><strong>Third-Party AI Services:</strong> We may use third-party AI services to power our chatbot. Information shared with our chatbot may be processed by these third-party providers in accordance with their privacy policies.</li>
+              <li><strong>Limitations:</strong> While we strive to ensure the accuracy of information provided by our AI chatbot, responses are generated automatically and may occasionally contain errors or misinterpretations. The information provided should not be considered professional advice.</li>
+              <li><strong>Data Retention:</strong> Conversations with our AI chatbot may be retained for training purposes, quality improvement, and to enhance user experience. We implement reasonable security measures to protect this information.</li>
+              <li><strong>Opt-Out:</strong> If you prefer not to interact with our AI chatbot, you can use alternative contact methods listed on our website.</li>
+            </ul>
+            <p>
+              By using our AI chatbot, you consent to the collection, processing, and storage of your interactions as described in this privacy policy.
+            </p>
           </section>
           
           <section id="cookie-policy">
@@ -94,9 +113,25 @@ const PrivacyPolicy = () => {
           
           <section>
             <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Data Security</h2>
-            <p>
+            <p className="mb-4">
               The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.
             </p>
+            <p>
+              For AI-powered features, we implement appropriate technical and organizational measures to protect the data processed through these systems. However, as with any technology service, there are inherent risks in transmitting information over the internet.
+            </p>
+          </section>
+          
+          <section>
+            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Legal Basis for Processing</h2>
+            <p className="mb-4">
+              We process your personal information, including data processed through our AI systems, on the following legal bases:
+            </p>
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li><strong>Consent:</strong> Where you have given us explicit consent to process your data for specific purposes.</li>
+              <li><strong>Contractual Necessity:</strong> Where processing is necessary for the performance of a contract with you.</li>
+              <li><strong>Legitimate Interests:</strong> Where processing is necessary for our legitimate interests, such as improving our services and AI systems, provided these interests are not overridden by your rights and freedoms.</li>
+              <li><strong>Legal Obligation:</strong> Where processing is necessary to comply with a legal obligation.</li>
+            </ul>
           </section>
           
           <section>
@@ -122,7 +157,7 @@ const PrivacyPolicy = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-velocity-muted">Last updated: June 1, 2024</p>
+          <p className="text-velocity-muted">Last updated: July 1, 2024</p>
         </div>
       </div>
     </main>
