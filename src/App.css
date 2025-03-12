@@ -19,3 +19,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* Add specific style for mobile menu to ensure opacity */
+.mobile-menu-panel {
+  background-color: #1A1F2C !important;
+  opacity: 1 !important;
+}
