@@ -31,15 +31,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         onClick={onClose}
       />
       
-      {/* Menu panel with solid background color */}
+      {/* Menu panel - using a div with absolute positioning to ensure solid background */}
       <div 
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs z-50 transform transition-transform duration-300 ease-in-out shadow-xl ${
+        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs z-50 transform transition-transform duration-300 ease-in-out mobile-menu-panel ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
-        style={{ 
-          backgroundColor: "#1A1F2C", 
-          boxShadow: "0 0 20px rgba(0,0,0,0.5)"
-        }}
       >
         <div className="p-4 flex justify-end">
           <button 
