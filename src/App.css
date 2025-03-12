@@ -20,9 +20,5 @@
   }
 }
 
-/* Ensure mobile menu has solid background with !important */
-.mobile-menu-panel {
-  background-color: #1A1F2C !important;
-  opacity: 1 !important;
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.8) !important;
-}
+/* Remove .mobile-menu-panel CSS since we're now using inline styles */
+
