@@ -31,11 +31,16 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         onClick={onClose}
       />
       
-      {/* Menu panel */}
+      {/* Menu panel with explicit background color and no transparency */}
       <div 
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-[#1A1F2C] z-50 shadow-2xl transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-[#1A1F2C] shadow-2xl transform transition-transform duration-300 ease-in-out z-[60] ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
+        style={{
+          backgroundColor: "#1A1F2C",
+          backgroundImage: "none",
+          backdropFilter: "none",
+        }}
       >
         <div className="p-4 flex justify-end">
           <button 

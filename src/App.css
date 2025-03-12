@@ -19,6 +19,3 @@
     transform: rotate(360deg);
   }
 }
-
-/* Remove .mobile-menu-panel CSS since we're now using inline styles */
-
