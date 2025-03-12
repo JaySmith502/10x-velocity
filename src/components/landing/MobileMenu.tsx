@@ -48,7 +48,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             </button>
           </div>
           
-          <div className="px-4 py-2 flex flex-col items-start">
+          <div className="px-4 py-2 flex flex-col items-start bg-[#1A1F2C]">
             <div className="mb-6">
               <Link to="/" className="flex items-center" onClick={onClose}>
                 <img 
