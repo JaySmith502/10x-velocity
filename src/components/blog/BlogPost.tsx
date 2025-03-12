@@ -129,7 +129,7 @@ const BlogPost = () => {
             <h3 className="text-xl font-semibold mb-3">Want to learn more?</h3>
             <p className="mb-4">Get in touch with our team to discuss how AI can transform your business operations.</p>
             <Button asChild className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all">
-              <Link to="https://calendly.com/therootofpi/15-minute-quick-chat">Contact Us</Link>
+            <a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">Contact Us</a>
             </Button>
           </div>
         </div>

@@ -95,13 +95,12 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               >
                 Blog
               </Link>
-              <Link 
-                to="https://calendly.com/therootofpi/15-minute-quick-chat" 
+              <a href="https://calendly.com/therootofpi/15-minute-quick-chat" 
                 className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-bold px-6 py-3 rounded-lg w-full text-center mt-4"
                 onClick={onClose}
               >
                 Contact Us
-              </Link>
+              </a>
             </nav>
           </div>
         </div>
