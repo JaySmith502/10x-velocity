@@ -9,7 +9,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
-              <li><Link to="/contact" className="text-velocity-muted hover:text-velocity-accent transition-colors">Contact</Link></li>
+              <li><Link to="https://calendly.com/therootofpi/15-minute-quick-chat" className="text-velocity-muted hover:text-velocity-accent transition-colors">Contact</Link></li>
               <li><Link to="/blog" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</Link></li>
               <li className="hidden md:block mt-12">
                 <Link to="/">

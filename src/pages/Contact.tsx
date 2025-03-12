@@ -57,16 +57,16 @@ const Contact = () => {
                 Email: <a href="mailto:hello@10xvelocity.com" className="text-velocity-accent hover:underline">hello@10xvelocity.com</a>
               </p>
               <p className="text-velocity-muted">
-                Hours: Monday-Friday, 9am-5pm PST
+                Hours: Monday-Friday, 9am-5pm EST
               </p>
             </div>
             
             <div className="glass-card p-6 md:p-8">
               <h3 className="font-semibold text-lg mb-2">Office Location</h3>
               <p className="text-velocity-muted">
-                10x Velocity, Inc.<br />
-                123 Innovation Drive<br />
-                San Francisco, CA 94103
+                10x Velocity<br />
+                10440 Bluegrass Pkwy<br />
+                Louisville, KY 40299
               </p>
             </div>
           </div>
