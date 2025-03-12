@@ -10,6 +10,16 @@ const Index = () => {
       <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
+        
+        {/* Mobile Logo */}
+        <div className="md:hidden flex justify-center mb-8">
+          <img 
+            src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
+            alt="10x Velocity Logo" 
+            className="h-14 w-auto"
+          />
+        </div>
+        
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
             Accelerate Your Business Growth with AI & Automation
