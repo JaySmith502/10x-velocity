@@ -1,10 +1,8 @@
-
 import { useState } from "react";
 import { ArrowRight, Check, CheckCircle2, Bot, ChartLine, Users, Database } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
-// Define the tab type to ensure type safety
 type TabType = 'overview' | 'features' | 'benefits' | 'cases';
 
 const PowerAutomate = () => {
@@ -12,7 +10,6 @@ const PowerAutomate = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
@@ -29,7 +26,6 @@ const PowerAutomate = () => {
         </div>
       </section>
 
-      {/* Tabs Navigation */}
       <section className="container mx-auto px-4">
         <div className="glass-card p-1 rounded-lg max-w-4xl mx-auto">
           <div className="grid grid-cols-4 gap-1">
@@ -50,7 +46,6 @@ const PowerAutomate = () => {
         </div>
       </section>
 
-      {/* Tab Content */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           {activeTab === 'overview' && (
@@ -202,7 +197,6 @@ const PowerAutomate = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center glass-card p-12 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -220,7 +214,6 @@ const PowerAutomate = () => {
   );
 };
 
-// Update the tabs to explicitly include the id as TabType
 const tabs: { id: TabType; label: string }[] = [
   { id: 'overview', label: 'Overview' },
   { id: 'features', label: 'Features' },
@@ -341,6 +334,19 @@ const benefits = [
 
 const caseStudies = [
   {
+    title: "Transportation Director - Appliance Manufacturing",
+    description: "Streamlined inbound logistics for a major appliance manufacturer handling 400+ daily trucks with Power Automate OCR solutions.",
+    industry: "Manufacturing & Logistics",
+    solutions: "Power Automate, AI Builder OCR, Document Processing",
+    results: [
+      "85% reduction in documentation errors",
+      "70% decrease in wasted labor hours",
+      "60% increase in dock productivity",
+      "Eliminated costly detention fees and production delays"
+    ],
+    linkTo: "/case-studies/transportation-director"
+  },
+  {
     title: "Global Financial Services Firm",
     description: "Automated client onboarding and KYC processes using Power Automate, integrating with legacy systems and Microsoft 365.",
     industry: "Financial Services",
@@ -364,19 +370,6 @@ const caseStudies = [
       "Enabled staff to handle 3x more patient inquiries"
     ],
     linkTo: "/case-studies/hillcrest-partners"
-  },
-  {
-    title: "Government Agency",
-    description: "Implemented automated document processing and approval workflows for permit applications and regulatory compliance.",
-    industry: "Government",
-    solutions: "Cloud Flows, AI Builder, Desktop Flows",
-    results: [
-      "Processing time reduced from weeks to days",
-      "95% accuracy in automated form processing",
-      "Eliminated application backlog entirely",
-      "Saved 15,000+ labor hours annually"
-    ],
-    linkTo: "/case-studies/govbrokers"
   }
 ];
 

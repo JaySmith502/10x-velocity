@@ -17,6 +17,7 @@ import DirectorOfMarketing from "./pages/case-studies/DirectorOfMarketing";
 import BirchwoodRealEstate from "./pages/case-studies/BirchwoodRealEstate";
 import GovBrokers from "./pages/case-studies/GovBrokers";
 import Inspyrd from "./pages/case-studies/Inspyrd";
+import TransportationDirector from "./pages/case-studies/TransportationDirector";
 import SavingsCalculator from "./pages/SavingsCalculator";
 import Blog from "./pages/Blog";
 import BlogPost from "./components/blog/BlogPost";
@@ -47,6 +48,7 @@ const App = () => (
             <Route path="/case-studies/birchwood-real-estate" element={<BirchwoodRealEstate />} />
             <Route path="/case-studies/govbrokers" element={<GovBrokers />} />
             <Route path="/case-studies/inspyrd" element={<Inspyrd />} />
+            <Route path="/case-studies/transportation-director" element={<TransportationDirector />} />
             <Route path="/savings-calculator" element={<SavingsCalculator />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
