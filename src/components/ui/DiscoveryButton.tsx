@@ -10,7 +10,7 @@ interface DiscoveryButtonProps {
 
 const DiscoveryButton: React.FC<DiscoveryButtonProps> = ({ 
   className, 
-  text = "15 minute quick discovery chat" 
+  text = "15 minute discovery" 
 }) => {
   return (
     <Button 
