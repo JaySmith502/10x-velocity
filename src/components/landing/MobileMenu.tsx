@@ -21,26 +21,23 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
     };
   }, [isOpen]);
 
+  if (!isOpen) return null;
+
   return (
     <>
       {/* Overlay */}
       <div 
-        className={`fixed inset-0 bg-black/70 backdrop-blur-sm z-50 transition-opacity duration-300 ${
-          isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-        }`}
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm z-50"
         onClick={onClose}
       />
       
-      {/* Menu panel with solid background and no transparency */}
+      {/* Menu panel with solid background */}
       <div 
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs transform transition-transform duration-300 ease-in-out z-[60] ${
-          isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
+        className="fixed top-0 left-0 h-full w-4/5 max-w-xs z-[60] bg-[#1A1F2C]"
         style={{
-          backgroundColor: "#1A1F2C",
-          backgroundImage: "none",
-          backdropFilter: "none",
-          boxShadow: "0 0 15px 5px rgba(0,0,0,0.3)"
+          boxShadow: "0 0 15px 5px rgba(0,0,0,0.3)",
+          transform: isOpen ? "translateX(0)" : "translateX(-100%)",
+          transition: "transform 300ms ease-in-out"
         }}
       >
         <div className="p-4 flex justify-end">
