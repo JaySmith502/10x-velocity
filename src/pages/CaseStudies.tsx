@@ -1,5 +1,5 @@
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
@@ -23,6 +23,9 @@ const CaseStudies = () => {
               <div className="flex gap-2 mb-3">
                 <Badge variant="outline" className="bg-orange-500/20 text-orange-300 border-orange-500/50">Manufacturing</Badge>
                 <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Logistics</Badge>
+                <Badge variant="outline" className="flex items-center gap-1 bg-purple-500/20 text-purple-300 border-purple-500/50">
+                  <Zap className="w-3 h-3" /> Power Automate
+                </Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 Transportation Director: Revolutionizing Logistics Management
