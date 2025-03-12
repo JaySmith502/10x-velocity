@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
+import PowerAutomate from "./pages/PowerAutomate";
 import CaseStudies from "./pages/CaseStudies";
 import InnesYoung from "./pages/case-studies/InnesYoung";
 import ECatalyst from "./pages/case-studies/ECatalyst";
@@ -36,6 +37,7 @@ const App = () => (
           <Route element={<RootLayout />}>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/power-automate" element={<PowerAutomate />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/innes-young" element={<InnesYoung />} />
             <Route path="/case-studies/ecatalyst" element={<ECatalyst />} />

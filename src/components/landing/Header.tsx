@@ -22,6 +22,9 @@ const Header = () => {
               <Link to="/services" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Services
               </Link>
+              <Link to="/power-automate" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
+                Power Automate
+              </Link>
               <Link to="/case-studies" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Case Studies
               </Link>
