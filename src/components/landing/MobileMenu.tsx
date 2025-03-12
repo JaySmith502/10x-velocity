@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
@@ -31,12 +30,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         onClick={onClose}
       />
       
-      {/* Menu panel - using inline style with !important to ensure solid background */}
+      {/* Menu panel */}
       <div 
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-[#1A1F2C] z-50 transform transition-transform duration-300 ease-in-out shadow-xl ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
-        style={{ backgroundColor: "#1A1F2C", boxShadow: "0 0 15px rgba(0,0,0,0.5)" }}
       >
         <div className="p-4 flex justify-end">
           <button 
