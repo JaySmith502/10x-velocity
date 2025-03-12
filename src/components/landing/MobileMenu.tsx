@@ -33,7 +33,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
       
       {/* Menu panel */}
       <div 
-        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-velocity-dark border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 h-full w-4/5 max-w-xs bg-[#1A1F2C] border-r border-white/10 z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
