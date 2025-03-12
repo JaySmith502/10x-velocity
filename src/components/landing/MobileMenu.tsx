@@ -31,13 +31,14 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         onClick={onClose}
       />
       
-      {/* Menu panel with solid background */}
+      {/* Menu panel - using a solid color with no transparency */}
       <div 
         className="fixed top-0 left-0 h-full w-4/5 max-w-xs z-[60] bg-[#1A1F2C]"
         style={{
+          backgroundColor: "#1A1F2C",
           boxShadow: "0 0 15px 5px rgba(0,0,0,0.3)",
           transform: isOpen ? "translateX(0)" : "translateX(-100%)",
-          transition: "transform 300ms ease-in-out"
+          transition: "transform 300ms ease-in-out",
         }}
       >
         <div className="p-4 flex justify-end">
