@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+/* Ensure mobile menu has a solid background */
+.mobile-menu {
+  background-color: #1A1F2C !important;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .logo-spin {
     animation: logo-spin infinite 20s linear;

@@ -1,3 +1,4 @@
+
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { X } from "lucide-react";
@@ -22,27 +23,21 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   if (!isOpen) return null;
 
   return (
-    <>
-      {/* Overlay */}
+    <div className="fixed inset-0 z-50 flex">
+      {/* Dark overlay */}
       <div 
-        className="fixed inset-0 bg-black/70 z-50"
+        className="absolute inset-0 bg-black/70"
         onClick={onClose}
       />
       
-      {/* Menu panel with absolute positioning and solid background */}
+      {/* Menu panel */}
       <div 
-        className="fixed top-0 left-0 bottom-0 w-4/5 max-w-xs z-[60]"
+        className="relative w-4/5 max-w-xs h-full z-10 bg-[#1A1F2C]"
         style={{
-          backgroundColor: "#1A1F2C",
-          transform: isOpen ? "translateX(0)" : "translateX(-100%)",
-          transition: "transform 300ms ease-in-out",
+          backgroundColor: "#1A1F2C" // Explicit background color
         }}
       >
-        {/* Solid background layer */}
-        <div className="absolute inset-0" style={{ backgroundColor: "#1A1F2C" }} />
-        
-        {/* Content container */}
-        <div className="relative z-10 h-full flex flex-col">
+        <div className="flex flex-col h-full">
           <div className="p-4 flex justify-end">
             <button 
               onClick={onClose}
@@ -111,7 +106,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
