@@ -4,8 +4,11 @@ import { ArrowRight, Check, CheckCircle2, Bot, ChartLine, Users, Database } from
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
+// Define the tab type to ensure type safety
+type TabType = 'overview' | 'features' | 'benefits' | 'cases';
+
 const PowerAutomate = () => {
-  const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'benefits' | 'cases'>('overview');
+  const [activeTab, setActiveTab] = useState<TabType>('overview');
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -38,7 +41,7 @@ const PowerAutomate = () => {
                     ? "bg-velocity-accent/20 text-velocity-accent"
                     : "hover:bg-gray-800/50 text-velocity-muted"
                 }`}
-                onClick={() => setActiveTab(tab.id)}
+                onClick={() => setActiveTab(tab.id as TabType)}
               >
                 {tab.label}
               </button>
@@ -217,8 +220,8 @@ const PowerAutomate = () => {
   );
 };
 
-// Data for the page
-const tabs = [
+// Update the tabs to explicitly include the id as TabType
+const tabs: { id: TabType; label: string }[] = [
   { id: 'overview', label: 'Overview' },
   { id: 'features', label: 'Features' },
   { id: 'benefits', label: 'Benefits' },
