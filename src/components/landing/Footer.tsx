@@ -10,7 +10,6 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
               <li><a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">Contact</a></li>
-              <li><Link to="/blog" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</Link></li>
               <li className="hidden md:block mt-12">
                 <Link to="/">
                   <img 
