@@ -25,6 +25,7 @@ import Contact from "./pages/Contact";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
+import DataCleaning from "./pages/services/DataCleaning";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ const App = () => (
           <Route element={<RootLayout />}>
             <Route path="/" element={<Index />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/data-cleaning" element={<DataCleaning />} />
             <Route path="/power-automate" element={<PowerAutomate />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/innes-young" element={<InnesYoung />} />

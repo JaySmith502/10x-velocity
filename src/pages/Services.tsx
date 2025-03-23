@@ -1,5 +1,6 @@
+
 import React from "react";
-import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search } from "lucide-react";
+import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
@@ -48,6 +49,14 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
+                {service.link && (
+                  <Link 
+                    to={service.link} 
+                    className="text-velocity-accent hover:text-velocity-light font-medium flex items-center gap-2 mt-4"
+                  >
+                    Learn more <ArrowRight className="w-4 h-4" />
+                  </Link>
+                )}
               </div>
             </div>
           ))}
@@ -108,6 +117,19 @@ const services = [
       "Predictive analytics to anticipate market changes",
       "Customized dashboards and reporting for key stakeholders"
     ]
+  },
+  {
+    id: "data-cleaning",
+    title: "Data Cleaning",
+    description: "Transform messy, inconsistent data into clean, reliable assets ready for analytics and automation.",
+    icon: FileText,
+    benefits: [
+      "Improve data quality across all sources",
+      "Handle structured and unstructured data types",
+      "Standardize formats for better integration",
+      "Prepare your data for AI and analytics"
+    ],
+    link: "/services/data-cleaning"
   },
   {
     id: "process-mining",
