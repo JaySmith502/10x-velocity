@@ -1,7 +1,7 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { X } from "lucide-react";
+import { X, ChevronDown, ChevronUp } from "lucide-react";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -9,6 +9,8 @@ interface MobileMenuProps {
 }
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
+  const [servicesOpen, setServicesOpen] = useState(false);
+  
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -60,13 +62,40 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             </div>
             
             <nav className="flex flex-col items-start w-full space-y-6">
-              <Link 
-                to="/services" 
-                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
-                onClick={onClose}
-              >
-                Services
-              </Link>
+              {/* Services with submenu */}
+              <div className="w-full">
+                <button 
+                  className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2 flex items-center justify-between w-full"
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                >
+                  Services
+                  {servicesOpen ? (
+                    <ChevronUp className="w-4 h-4" />
+                  ) : (
+                    <ChevronDown className="w-4 h-4" />
+                  )}
+                </button>
+                
+                {servicesOpen && (
+                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-velocity-accent/20 pl-4">
+                    <Link 
+                      to="/services" 
+                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      onClick={onClose}
+                    >
+                      All Services
+                    </Link>
+                    <Link 
+                      to="/services/data-cleaning" 
+                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      onClick={onClose}
+                    >
+                      Data Cleaning
+                    </Link>
+                  </div>
+                )}
+              </div>
+              
               <Link 
                 to="/power-automate" 
                 className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"

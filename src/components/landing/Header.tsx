@@ -1,9 +1,15 @@
 
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu } from "lucide-react";
+import { Menu, ChevronDown } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import MobileMenu from "./MobileMenu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,9 +40,21 @@ const Header = () => {
           
           <div className="flex items-center gap-6">
             <nav className="hidden md:flex items-center gap-8">
-              <Link to="/services" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
-                Services
-              </Link>
+              {/* Services Dropdown */}
+              <DropdownMenu>
+                <DropdownMenuTrigger className="text-velocity-muted hover:text-velocity-light transition-colors font-bold flex items-center gap-1 focus:outline-none">
+                  Services <ChevronDown className="w-4 h-4" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="bg-[#1A1F2C] border-velocity-accent/20 text-velocity-light min-w-[200px] rounded-md shadow-lg p-1 z-50">
+                  <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
+                    <Link to="/services" className="w-full">All Services</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
+                    <Link to="/services/data-cleaning" className="w-full">Data Cleaning</Link>
+                  </DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
+              
               <Link to="/power-automate" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Power Automate
               </Link>
