@@ -17,7 +17,7 @@ const Header = () => {
   return (
     <header className="border-b border-white/10 bg-black/20 backdrop-blur-md z-50 sticky top-0">
       <div className="container mx-auto px-4">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             {/* Logo - hidden on mobile */}
             <Link to="/" className="hidden md:flex items-center">
