@@ -64,9 +64,6 @@ const Header = () => {
               <Link to="/savings-calculator" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Savings Calculator
               </Link>
-              <Link to="/events/lunch-and-learn" className="text-velocity-accent hover:text-velocity-light transition-colors font-bold">
-                Event
-              </Link>
             </nav>
             <DiscoveryButton className="text-sm" text="Contact Us" />
           </div>

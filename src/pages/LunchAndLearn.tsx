@@ -34,7 +34,11 @@ const LunchAndLearn = () => {
                 <span>Hybrid (In-Person + Zoom)</span>
               </div>
             </div>
-            <DiscoveryButton text="Register Now" className="animate-fade-up" />
+            <DiscoveryButton 
+              text="Register Now" 
+              url="https://www.eventbrite.com/e/1302953963379?aff=oddtdtcreator" 
+              className="animate-fade-up" 
+            />
           </div>
         </div>
       </section>
@@ -130,7 +134,10 @@ const LunchAndLearn = () => {
               <p className="text-velocity-muted mb-8">
                 Join us in-person for a complimentary lunch or online via Zoom
               </p>
-              <DiscoveryButton text="Register Now" />
+              <DiscoveryButton 
+                text="Register Now" 
+                url="https://www.eventbrite.com/e/1302953963379?aff=oddtdtcreator" 
+              />
             </div>
           </div>
         </div>
