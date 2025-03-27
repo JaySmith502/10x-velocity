@@ -26,6 +26,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import DataCleaning from "./pages/services/DataCleaning";
+import LunchAndLearn from "./pages/LunchAndLearn";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
             <Route path="/case-studies/inspyrd" element={<Inspyrd />} />
             <Route path="/case-studies/transportation-director" element={<TransportationDirector />} />
             <Route path="/savings-calculator" element={<SavingsCalculator />} />
+            <Route path="/events/lunch-and-learn" element={<LunchAndLearn />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />

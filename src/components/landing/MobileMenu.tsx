@@ -117,6 +117,13 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               >
                 Savings Calculator
               </Link>
+              <Link 
+                to="/events/lunch-and-learn" 
+                className="text-velocity-accent hover:text-velocity-light transition-colors font-bold py-2"
+                onClick={onClose}
+              >
+                Event
+              </Link>
               <a href="https://calendly.com/therootofpi/15-minute-quick-chat" 
                 className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-bold px-6 py-3 rounded-lg w-full text-center mt-4"
                 onClick={onClose}
