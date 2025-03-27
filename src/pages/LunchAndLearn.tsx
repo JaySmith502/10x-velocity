@@ -4,6 +4,7 @@ import { Calendar, Clock, MapPin, Check, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const LunchAndLearn = () => {
   return (
@@ -46,13 +47,13 @@ const LunchAndLearn = () => {
               Don't let technology slap you in the face!
             </h2>
             
-            <Card className="bg-transparent border-velocity-accent/20 overflow-hidden max-w-xl mx-auto">
+            <Card className="bg-transparent border-velocity-accent/20 overflow-hidden max-w-2xl mx-auto">
               <CardContent className="p-0">
-                <div className="relative aspect-video bg-black/40">
+                <div className="w-full">
                   <img 
                     src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.png" 
                     alt="SpongeBob AI Meme" 
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </CardContent>
