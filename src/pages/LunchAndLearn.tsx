@@ -1,16 +1,8 @@
 
 import { useState } from "react";
 import { Calendar, Clock, MapPin, Check, ArrowRight } from "lucide-react";
-import { 
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const LunchAndLearn = () => {
@@ -46,7 +38,7 @@ const LunchAndLearn = () => {
         </div>
       </section>
 
-      {/* Meme Carousel Section */}
+      {/* Meme Section */}
       <section className="py-16 bg-velocity-dark/80">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -54,83 +46,17 @@ const LunchAndLearn = () => {
               Don't let technology slap you in the face!
             </h2>
             
-            <Tabs defaultValue="toggle" className="w-full">
-              <div className="flex justify-center mb-8">
-                <TabsList className="grid w-full max-w-md grid-cols-2">
-                  <TabsTrigger value="toggle">Toggle View</TabsTrigger>
-                  <TabsTrigger value="carousel">Carousel</TabsTrigger>
-                </TabsList>
-              </div>
-              
-              <TabsContent value="toggle" className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <Card className="bg-transparent border-velocity-accent/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="relative aspect-video bg-black/40">
-                        <img 
-                          src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.png" 
-                          alt="SpongeBob AI Meme" 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
-                  
-                  <Card className="bg-transparent border-velocity-accent/20 overflow-hidden">
-                    <CardContent className="p-0">
-                      <div className="relative aspect-video bg-black/40">
-                        <img 
-                          src="/lovable-uploads/3566a499-a11a-45d6-a2cf-dbdc14dae7a6.png" 
-                          alt="Batman AI Meme" 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
+            <Card className="bg-transparent border-velocity-accent/20 overflow-hidden max-w-xl mx-auto">
+              <CardContent className="p-0">
+                <div className="relative aspect-video bg-black/40">
+                  <img 
+                    src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.png" 
+                    alt="SpongeBob AI Meme" 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-              </TabsContent>
-              
-              <TabsContent value="carousel">
-                <Carousel className="w-full max-w-xl mx-auto">
-                  <CarouselContent>
-                    <CarouselItem>
-                      <div className="p-1">
-                        <Card className="bg-transparent border-velocity-accent/20 overflow-hidden">
-                          <CardContent className="p-0">
-                            <div className="relative aspect-video bg-black/40">
-                              <img 
-                                src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.png" 
-                                alt="SpongeBob AI Meme" 
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                    <CarouselItem>
-                      <div className="p-1">
-                        <Card className="bg-transparent border-velocity-accent/20 overflow-hidden">
-                          <CardContent className="p-0">
-                            <div className="relative aspect-video bg-black/40">
-                              <img 
-                                src="/lovable-uploads/3566a499-a11a-45d6-a2cf-dbdc14dae7a6.png" 
-                                alt="Batman AI Meme" 
-                                className="w-full h-full object-cover"
-                              />
-                            </div>
-                          </CardContent>
-                        </Card>
-                      </div>
-                    </CarouselItem>
-                  </CarouselContent>
-                  <div className="flex justify-center mt-4 gap-2">
-                    <CarouselPrevious className="relative static left-0 right-0 translate-y-0" />
-                    <CarouselNext className="relative static left-0 right-0 translate-y-0" />
-                  </div>
-                </Carousel>
-              </TabsContent>
-            </Tabs>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -151,56 +77,48 @@ const LunchAndLearn = () => {
                 <AgendaItem 
                   number="1" 
                   title="Welcome & Introductions" 
-                  duration="5 mins" 
                   description="Meet the Co-Founders: Jay Smith & Kirk Hilbrecht - Their backgrounds, vision, and why 10xVelocity exists"
                 />
                 
                 <AgendaItem 
                   number="2" 
                   title="What is 10xVelocity?" 
-                  duration="5 mins" 
                   description="What we do / What we don't do - Who we help and how we help them"
                 />
                 
                 <AgendaItem 
                   number="3" 
                   title="What is AI in 2025?" 
-                  duration="10 mins" 
                   description="Today's AI: Co-pilots, not replacements - What AI will look like in 2026"
                 />
                 
                 <AgendaItem 
                   number="4" 
                   title="AI Security: What to Actually Worry About" 
-                  duration="5 mins" 
                   description="The online banking comparison - Responsible use and best practices"
                 />
                 
                 <AgendaItem 
                   number="5" 
                   title="The Cost of NOT Using AI" 
-                  duration="5 mins" 
                   description="Competitor advantage - Lost time, missed opportunities"
                 />
                 
                 <AgendaItem 
                   number="6" 
                   title="Where AI Can Transform Your Business" 
-                  duration="10 mins" 
                   description="15 Business Functions AI Can 10x - Tools you can use today"
                 />
                 
                 <AgendaItem 
                   number="7" 
                   title="Building Your AI Workflow" 
-                  duration="10 mins" 
                   description="Where to start - Mapping out your AI playbook - 10xVelocity's free online workflow tool"
                 />
                 
                 <AgendaItem 
                   number="8" 
                   title="Open Q&A" 
-                  duration="10 mins" 
                   description="Real-time examples, burning questions, personalized use cases"
                 />
               </div>
@@ -306,12 +224,10 @@ const LunchAndLearn = () => {
 const AgendaItem = ({ 
   number, 
   title, 
-  duration, 
   description 
 }: { 
   number: string;
   title: string;
-  duration: string;
   description: string;
 }) => {
   return (
@@ -322,9 +238,6 @@ const AgendaItem = ({
       <div className="flex-grow">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
           <h3 className="text-xl font-semibold text-velocity-light">{title}</h3>
-          <span className="text-sm bg-velocity-accent/20 text-velocity-accent px-3 py-1 rounded-full">
-            {duration}
-          </span>
         </div>
         <p className="text-velocity-muted">{description}</p>
       </div>
