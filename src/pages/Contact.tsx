@@ -6,13 +6,14 @@ import Swal from 'sweetalert2';
 const Contact = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
-    const formData = new FormData(event.target);
-
+    const form = event.target;
+    const formData = new FormData(form);
+  
     formData.append("access_key", "53ef4527-c820-423e-a034-5567467e3ca3");
-
+  
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
-
+  
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
@@ -21,8 +22,11 @@ const Contact = () => {
       },
       body: json
     }).then((res) => res.json());
-
+  
     if (res.success) {
+      // Reset form fields
+      form.reset();
+      
       Swal.fire({
         title: "Success!",
         text: "We'll be in touch ASAP!",
