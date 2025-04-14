@@ -74,7 +74,8 @@ const Contact = () => {
           <div className="flex-1">
             <div className="glass-card p-6 md:p-8">
               <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
-              <form onSubmit={handleSubmit} className="space-y-4" data-netlify="true">
+              <form name="contact" onSubmit={handleSubmit} className="space-y-4" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
                     Name
