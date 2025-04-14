@@ -117,7 +117,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               >
                 Savings Calculator
               </Link>
-              <a href="https://calendly.com/therootofpi/15-minute-quick-chat" 
+              <a href="/contact" 
                 className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-bold px-6 py-3 rounded-lg w-full text-center mt-4"
                 onClick={onClose}
               >

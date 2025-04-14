@@ -12,7 +12,7 @@ interface DiscoveryButtonProps {
 const DiscoveryButton: React.FC<DiscoveryButtonProps> = ({ 
   className, 
   text = "15 minute discovery",
-  url = "https://calendly.com/therootofpi/15-minute-quick-chat"
+  url = "/contact"
 }) => {
   return (
     <Button 

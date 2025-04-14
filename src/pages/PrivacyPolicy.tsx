@@ -151,7 +151,7 @@ const PrivacyPolicy = () => {
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>By email: info@10xvelocity.com</li>
-              <li>By visiting the contact page on our website: <a href="https://calendly.com/therootofpi/15-minute-quick-chat" className="text-velocity-accent hover:underline">Contact Us</a></li>
+              <li>By visiting the contact page on our website: <a href="/contact" className="text-velocity-accent hover:underline">Contact Us</a></li>
             </ul>
           </section>
         </div>
