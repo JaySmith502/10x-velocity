@@ -1,8 +1,7 @@
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { useToast } from "@/hooks/use-toast";
-import { ArrowRight, Check } from "lucide-react";
+import Swal from 'sweetalert2';
+
 
 const Contact = () => {
   const onSubmit = async (event) => {
@@ -24,7 +23,11 @@ const Contact = () => {
     }).then((res) => res.json());
 
     if (res.success) {
-      console.log("Success", res);
+      Swal.fire({
+        title: "Success!",
+        text: "We'll be in touch ASAP!",
+        icon: "success"
+      });
     }
   };
 
@@ -120,7 +123,7 @@ const Contact = () => {
                   />
                 </div>
                 
-                <Button 
+                <Button
                   type="submit"
                   className="w-full bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all mt-4"
                 >Submit Info
