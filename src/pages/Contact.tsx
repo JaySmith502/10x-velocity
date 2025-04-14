@@ -5,38 +5,27 @@ import { useToast } from "@/hooks/use-toast";
 import { ArrowRight, Check } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
+    formData.append("access_key", "53ef4527-c820-423e-a034-5567467e3ca3");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      toast({
-        title: "Message sent!",
-        description: "We'll get back to you as soon as possible.",
-      });
-      setFormData({
-        name: "",
-        email: "",
-        company: "",
-        message: "",
-      });
-    }, 1000);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+    }
   };
 
   return (
@@ -74,7 +63,7 @@ const Contact = () => {
           <div className="flex-1">
             <div className="glass-card p-6 md:p-8">
               <h2 className="text-2xl font-semibold mb-6">Send us a message</h2>
-              <form name="contact" onSubmit={handleSubmit} className="space-y-4" data-netlify="true" netlify>
+              <form name="contact" onSubmit={onSubmit} className="space-y-4" data-netlify="true">
               <input type="hidden" name="form-name" value="contact" />
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-1">
@@ -84,8 +73,6 @@ const Contact = () => {
                     type="text"
                     id="name"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-2 bg-[#1A1F2C]/50 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-velocity-accent/50"
                     placeholder="Your name"
@@ -100,8 +87,6 @@ const Contact = () => {
                     type="email"
                     id="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-2 bg-[#1A1F2C]/50 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-velocity-accent/50"
                     placeholder="your.email@example.com"
@@ -116,8 +101,6 @@ const Contact = () => {
                     type="text"
                     id="company"
                     name="company"
-                    value={formData.company}
-                    onChange={handleChange}
                     className="w-full px-4 py-2 bg-[#1A1F2C]/50 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-velocity-accent/50"
                     placeholder="Your company name"
                   />
@@ -130,8 +113,6 @@ const Contact = () => {
                   <textarea
                     id="message"
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     required
                     rows={4}
                     className="w-full px-4 py-2 bg-[#1A1F2C]/50 border border-white/10 rounded-md focus:outline-none focus:ring-2 focus:ring-velocity-accent/50"
@@ -141,16 +122,8 @@ const Contact = () => {
                 
                 <Button 
                   type="submit"
-                  disabled={isSubmitting}
                   className="w-full bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all mt-4"
-                >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      Send Message <ArrowRight className="ml-2 h-4 w-4" />
-                    </>
-                  )}
+                >Submit Info
                 </Button>
               </form>
             </div>
