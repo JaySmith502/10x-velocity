@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-transparent mx-8" />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="pt-6 pb-6">
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
             <ul className="space-y-2">
@@ -74,7 +74,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex gap-6 items-center">
+          <div className="flex items-center justify-center">
             <img 
               src="/lovable-uploads/093e4cf4-8793-474f-a7d9-6ca869d392f7.png"
               alt="VOSB Verified Logo"
