@@ -82,6 +82,17 @@ const Footer = () => {
               alt="ESGR Logo"
               className="h-16 w-auto"
             />
+            <a 
+              href="https://canopyky.org" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                src="/lovable-uploads/1078ef2b-dcf2-4e80-8022-0643ec9653ed.png"
+                alt="Canopy Certified Logo"
+                className="h-16 w-auto"
+              />
+            </a>
           </div>
           <p className="text-velocity-muted text-right">
             Louisville, Kentucky
