@@ -49,24 +49,25 @@ const Footer = () => {
               <li><Link to="/privacy-policy#cookie-policy" className="text-velocity-muted hover:text-velocity-accent transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
-          <div>
-            <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
-            <ul className="space-y-2">
-              <li>
-                <a 
-                  href="mailto:info@10xvelocity.ai" 
-                  className="text-velocity-muted hover:text-velocity-accent transition-colors"
-                >
-                  info@10xvelocity.ai
-                </a>
-              </li>
-              <li className="text-velocity-muted">
-                10440 Bluegrass Pkwy
-                <br />
-                Louisville, KY 40299
-              </li>
-            </ul>
-          </div>
+        </div>
+        <div className="h-[1.5px] w-full bg-gradient-to-r from-velocity-accent via-[#D946EF] to-[#9b87f5] mb-12" />
+        <div>
+          <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
+          <ul className="space-y-2">
+            <li>
+              <a 
+                href="mailto:info@10xvelocity.ai" 
+                className="text-velocity-muted hover:text-velocity-accent transition-colors"
+              >
+                info@10xvelocity.ai
+              </a>
+            </li>
+            <li className="text-velocity-muted">
+              10440 Bluegrass Pkwy
+              <br />
+              Louisville, KY 40299
+            </li>
+          </ul>
         </div>
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-velocity-muted">
