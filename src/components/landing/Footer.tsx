@@ -60,6 +60,11 @@ const Footer = () => {
                   info@10xvelocity.ai
                 </a>
               </li>
+              <li className="text-velocity-muted">
+                10440 Bluegrass Pkwy
+                <br />
+                Louisville, KY 40299
+              </li>
             </ul>
           </div>
         </div>
