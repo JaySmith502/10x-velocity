@@ -9,7 +9,19 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
-              <li><a href="/contact" target="_blank" rel="noopener noreferrer">Contact</a></li>
+              <li>
+                <a 
+                  href="mailto:info@10xvelocity.ai" 
+                  className="text-velocity-muted hover:text-velocity-accent transition-colors"
+                >
+                  info@10xvelocity.ai
+                </a>
+              </li>
+              <li className="text-velocity-muted">
+                10440 Bluegrass Pkwy
+                <br />
+                Louisville, KY 40299
+              </li>
               <li className="hidden md:block mt-12">
                 <Link to="/">
                   <img 
@@ -54,24 +66,6 @@ const Footer = () => {
           <div className="absolute inset-0 flex items-center">
             <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-transparent mx-8" />
           </div>
-        </div>
-        <div className="pt-6 pb-6">
-          <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
-          <ul className="space-y-2">
-            <li>
-              <a 
-                href="mailto:info@10xvelocity.ai" 
-                className="text-velocity-muted hover:text-velocity-accent transition-colors"
-              >
-                info@10xvelocity.ai
-              </a>
-            </li>
-            <li className="text-velocity-muted">
-              10440 Bluegrass Pkwy
-              <br />
-              Louisville, KY 40299
-            </li>
-          </ul>
         </div>
         <div className="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           <p className="text-velocity-muted">
