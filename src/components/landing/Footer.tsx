@@ -55,43 +55,41 @@ const Footer = () => {
             <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-transparent mx-8" />
           </div>
         </div>
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="pt-6 pb-6">
-            <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
-            <ul className="space-y-2">
-              <li>
-                <a 
-                  href="mailto:info@10xvelocity.ai" 
-                  className="text-velocity-muted hover:text-velocity-accent transition-colors"
-                >
-                  info@10xvelocity.ai
-                </a>
-              </li>
-              <li className="text-velocity-muted">
-                10440 Bluegrass Pkwy
-                <br />
-                Louisville, KY 40299
-              </li>
-            </ul>
-          </div>
+        <div className="pt-6 pb-6">
+          <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
+          <ul className="space-y-2">
+            <li>
+              <a 
+                href="mailto:info@10xvelocity.ai" 
+                className="text-velocity-muted hover:text-velocity-accent transition-colors"
+              >
+                info@10xvelocity.ai
+              </a>
+            </li>
+            <li className="text-velocity-muted">
+              10440 Bluegrass Pkwy
+              <br />
+              Louisville, KY 40299
+            </li>
+          </ul>
+        </div>
+        <div className="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+          <p className="text-velocity-muted">
+            © 2024 10x Velocity. All rights reserved.
+          </p>
           <div className="flex items-center justify-center gap-6">
             <img 
               src="/lovable-uploads/093e4cf4-8793-474f-a7d9-6ca869d392f7.png"
               alt="VOSB Verified Logo"
-              className="h-24 w-auto"
+              className="h-16 w-auto"
             />
             <img 
               src="/lovable-uploads/177aec5f-3604-4fb9-aac0-ec91a10d1639.png"
               alt="ESGR Logo"
-              className="h-24 w-auto"
+              className="h-16 w-auto"
             />
           </div>
-        </div>
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-velocity-muted">
-            © 2024 10x Velocity. All rights reserved.
-          </p>
-          <p className="text-velocity-muted mt-4 md:mt-0">
+          <p className="text-velocity-muted text-right">
             Louisville, Kentucky
           </p>
         </div>
