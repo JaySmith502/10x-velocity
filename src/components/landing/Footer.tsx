@@ -30,7 +30,7 @@ const Footer = () => {
               <li className="hidden md:block mt-12">
                 <Link to="/">
                   <img 
-                    src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
+                    src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.png" 
                     alt="10x Velocity Logo" 
                     className="h-16 w-auto"
                   />

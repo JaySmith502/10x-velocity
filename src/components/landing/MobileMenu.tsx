@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { X, ChevronDown, ChevronUp } from "lucide-react";
@@ -26,17 +25,15 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
 
   return (
     <div className="fixed inset-0 z-50 flex">
-      {/* Dark overlay */}
       <div 
         className="absolute inset-0 bg-black/70"
         onClick={onClose}
       />
       
-      {/* Menu panel */}
       <div 
         className="relative w-4/5 max-w-xs h-full z-10 bg-[#1A1F2C]"
         style={{
-          backgroundColor: "#1A1F2C" // Explicit background color
+          backgroundColor: "#1A1F2C"
         }}
       >
         <div className="flex flex-col h-full">
@@ -54,7 +51,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             <div className="mb-6">
               <Link to="/" className="flex items-center" onClick={onClose}>
                 <img 
-                  src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
+                  src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.png" 
                   alt="10x Velocity Logo" 
                   className="h-10 w-auto"
                 />
@@ -62,7 +59,6 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             </div>
             
             <nav className="flex flex-col items-start w-full space-y-6">
-              {/* Services with submenu */}
               <div className="w-full">
                 <button 
                   className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2 flex items-center justify-between w-full"
