@@ -52,10 +52,10 @@ const Footer = () => {
         </div>
         <div className="relative py-12">
           <div className="absolute inset-0 flex items-center">
-            <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-[#9b87f5] to-90% mx-8" />
+            <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-transparent mx-8" />
           </div>
         </div>
-        <div className="py-12">
+        <div className="py-6">
           <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
           <ul className="space-y-2">
             <li>
