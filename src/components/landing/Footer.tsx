@@ -56,7 +56,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
-          <div className="pt-6">
+          <div className="pt-6 pb-6">
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Contact</h3>
             <ul className="space-y-2">
               <li>
