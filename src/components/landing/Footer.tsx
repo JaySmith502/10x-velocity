@@ -4,6 +4,11 @@ const Footer = () => {
   return (
     <footer className="mt-auto py-16 border-t border-white/10 bg-black/20">
       <div className="container mx-auto px-4">
+        <div className="relative pb-12">
+          <div className="absolute inset-0 flex items-center">
+            <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-transparent mx-8" />
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Company</h3>
@@ -17,7 +22,7 @@ const Footer = () => {
                   info@10xvelocity.ai
                 </a>
               </li>
-              <li className="text-velocity-muted">
+              <li className="text-velocity-muted pb-4">
                 10440 Bluegrass Pkwy
                 <br />
                 Louisville, KY 40299
@@ -60,11 +65,6 @@ const Footer = () => {
               <li><Link to="/terms-of-service" className="text-velocity-muted hover:text-velocity-accent transition-colors">Terms of Service</Link></li>
               <li><Link to="/privacy-policy#cookie-policy" className="text-velocity-muted hover:text-velocity-accent transition-colors">Cookie Policy</Link></li>
             </ul>
-          </div>
-        </div>
-        <div className="relative py-12">
-          <div className="absolute inset-0 flex items-center">
-            <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-transparent mx-8" />
           </div>
         </div>
         <div className="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
