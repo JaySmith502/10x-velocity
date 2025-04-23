@@ -74,10 +74,15 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center gap-6">
             <img 
               src="/lovable-uploads/093e4cf4-8793-474f-a7d9-6ca869d392f7.png"
               alt="VOSB Verified Logo"
+              className="h-24 w-auto"
+            />
+            <img 
+              src="/lovable-uploads/177aec5f-3604-4fb9-aac0-ec91a10d1639.png"
+              alt="ESGR Logo"
               className="h-24 w-auto"
             />
           </div>
