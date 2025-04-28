@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -57,16 +58,6 @@ export default {
           light: "#F1F1F1",
           accent: "#33C3F0",
           muted: "#C8C8C9",
-          purple: {
-            light: "#D6BCFA",
-            primary: "#9b87f5",
-            secondary: "#7E69AB"
-          },
-          pink: {
-            light: "#FFDEE2",
-            magenta: "#D946EF",
-            peach: "#FDE1D3"
-          }
         },
       },
       keyframes: {
@@ -92,10 +83,6 @@ export default {
       animation: {
         "fade-up": "fade-up 0.5s ease-out",
         "fade-in": "fade-in 0.5s ease-out",
-      },
-      backgroundImage: {
-        'gradient-light': 'linear-gradient(102.3deg, rgba(147,39,143,1) 5.9%, rgba(234,172,232,1) 64%, rgba(246,219,245,1) 89%)',
-        'gradient-peach': 'linear-gradient(to right, #ee9ca7, #ffdde1)',
       },
     },
   },

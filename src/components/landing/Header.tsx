@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
-import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import MobileMenu from "./MobileMenu";
 import {
@@ -15,7 +14,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="border-b border-white/10 bg-black/20 dark:bg-black/20 bg-gradient-peach/50 dark:bg-none backdrop-blur-md z-50 sticky top-0">
+    <header className="border-b border-white/10 bg-black/20 backdrop-blur-md z-50 sticky top-0">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
@@ -68,10 +67,7 @@ const Header = () => {
                 Savings Calculator
               </Link>
             </nav>
-            <div className="flex items-center gap-4">
-              <ThemeToggle />
-              <DiscoveryButton className="text-sm" text="Contact Us" />
-            </div>
+            <DiscoveryButton className="text-sm" text="Contact Us" />
           </div>
         </div>
       </div>
