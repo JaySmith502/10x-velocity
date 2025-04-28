@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -27,6 +26,7 @@ import TermsOfService from "./pages/TermsOfService";
 import NotFound from "./pages/NotFound";
 import DataCleaning from "./pages/services/DataCleaning";
 import LunchAndLearn from "./pages/LunchAndLearn";
+import PhoneVoiceAgents from "./pages/services/PhoneVoiceAgents";
 
 const queryClient = new QueryClient();
 
