@@ -89,6 +89,13 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                       Data Cleaning
                     </Link>
                     <Link 
+                      to="/services/phone-voice-agents" 
+                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      onClick={onClose}
+                    >
+                      Phone Voice Agents
+                    </Link>
+                    <Link 
                       to="/power-automate" 
                       className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
                       onClick={onClose}
@@ -96,11 +103,11 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                       Power Automate
                     </Link>
                     <Link 
-                      to="/services/phone-voice-agents" 
+                      to="/services/ai-workshops" 
                       className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
                       onClick={onClose}
                     >
-                      Phone Voice Agents
+                      AI Workshops
                     </Link>
                   </div>
                 )}

@@ -49,10 +49,13 @@ const Header = () => {
                     <Link to="/services/data-cleaning" className="w-full">Data Cleaning</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
+                    <Link to="/services/phone-voice-agents" className="w-full">Phone Voice Agents</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
                     <Link to="/power-automate" className="w-full">Power Automate</Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
-                    <Link to="/services/phone-voice-agents" className="w-full">Phone Voice Agents</Link>
+                    <Link to="/services/ai-workshops" className="w-full">AI Workshops</Link>
                   </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
