@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
@@ -19,16 +18,14 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
-            {/* Logo - hidden on mobile */}
             <Link to="/" className="hidden md:flex items-center">
               <img 
-                src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
+                src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.png" 
                 alt="10x Velocity Logo" 
                 className="h-10 md:h-12 w-auto"
               />
             </Link>
             
-            {/* Mobile hamburger menu button */}
             <button 
               className="md:hidden text-velocity-muted hover:text-velocity-light p-2 -ml-2"
               onClick={() => setMobileMenuOpen(true)}
@@ -40,7 +37,6 @@ const Header = () => {
           
           <div className="flex items-center gap-6">
             <nav className="hidden md:flex items-center gap-8">
-              {/* Services Dropdown */}
               <DropdownMenu>
                 <DropdownMenuTrigger className="text-velocity-muted hover:text-velocity-light transition-colors font-bold flex items-center gap-1 focus:outline-none">
                   Services <ChevronDown className="w-4 h-4" />
@@ -52,12 +48,15 @@ const Header = () => {
                   <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
                     <Link to="/services/data-cleaning" className="w-full">Data Cleaning</Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
+                    <Link to="/power-automate" className="w-full">Power Automate</Link>
+                  </DropdownMenuItem>
+                  <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
+                    <Link to="/services/phone-voice-agents" className="w-full">Phone Voice Agents</Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               
-              <Link to="/power-automate" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
-                Power Automate
-              </Link>
               <Link to="/case-studies" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Case Studies
               </Link>
@@ -70,7 +69,6 @@ const Header = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
       <MobileMenu 
         isOpen={mobileMenuOpen} 
         onClose={() => setMobileMenuOpen(false)} 

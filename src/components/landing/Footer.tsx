@@ -4,16 +4,33 @@ const Footer = () => {
   return (
     <footer className="mt-auto py-16 border-t border-white/10 bg-black/20">
       <div className="container mx-auto px-4">
+        <div className="relative pb-12">
+          <div className="absolute inset-0 flex items-center">
+            <div className="h-[1.5px] w-full bg-gradient-to-r from-transparent via-[#33C3F0] via-[#D946EF] to-transparent mx-8" />
+          </div>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Company</h3>
             <ul className="space-y-2">
               <li><Link to="/" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
-              <li><a href="/contact" target="_blank" rel="noopener noreferrer">Contact</a></li>
+              <li>
+                <a 
+                  href="mailto:info@10xvelocity.ai" 
+                  className="text-velocity-muted hover:text-velocity-accent transition-colors"
+                >
+                  info@10xvelocity.ai
+                </a>
+              </li>
+              <li className="text-velocity-muted pb-4">
+                10440 Bluegrass Pkwy
+                <br />
+                Louisville, KY 40299
+              </li>
               <li className="hidden md:block mt-12">
                 <Link to="/">
                   <img 
-                    src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
+                    src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.png" 
                     alt="10x Velocity Logo" 
                     className="h-16 w-auto"
                   />
@@ -28,6 +45,7 @@ const Footer = () => {
               <li><Link to="/services#data-analytics" className="text-velocity-muted hover:text-velocity-accent transition-colors">Data Analytics</Link></li>
               <li><Link to="/services#team-augmentation" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Augmentation</Link></li>
               <li><Link to="/services#process-mining" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Mining</Link></li>
+              <li><Link to="/services/phone-voice-agents" className="text-velocity-muted hover:text-velocity-accent transition-colors">Phone Voice Agents</Link></li>
               <li><Link to="/services#team-training" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Training</Link></li>
               <li><Link to="/services#opportunity-discovery" className="text-velocity-muted hover:text-velocity-accent transition-colors">Opportunity Discovery</Link></li>
             </ul>
@@ -50,11 +68,34 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center">
+        <div className="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           <p className="text-velocity-muted">
             © 2024 10x Velocity. All rights reserved.
           </p>
-          <p className="text-velocity-muted mt-4 md:mt-0">
+          <div className="flex items-center justify-center gap-6">
+            <img 
+              src="/lovable-uploads/093e4cf4-8793-474f-a7d9-6ca869d392f7.png"
+              alt="VOSB Verified Logo"
+              className="h-16 w-auto"
+            />
+            <img 
+              src="/lovable-uploads/177aec5f-3604-4fb9-aac0-ec91a10d1639.png"
+              alt="ESGR Logo"
+              className="h-16 w-auto"
+            />
+            <a 
+              href="https://canopyky.org" 
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              <img 
+                src="/lovable-uploads/1078ef2b-dcf2-4e80-8022-0643ec9653ed.png"
+                alt="Canopy Certified Logo"
+                className="h-16 w-auto"
+              />
+            </a>
+          </div>
+          <p className="text-velocity-muted text-right">
             Louisville, Kentucky
           </p>
         </div>
