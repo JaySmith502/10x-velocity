@@ -52,12 +52,12 @@ const Header = () => {
                   <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
                     <Link to="/services/data-cleaning" className="w-full">Data Cleaning</Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
+                    <Link to="/power-automate" className="w-full">Power Automate</Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               
-              <Link to="/power-automate" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
-                Power Automate
-              </Link>
               <Link to="/case-studies" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Case Studies
               </Link>
@@ -80,3 +80,4 @@ const Header = () => {
 };
 
 export default Header;
+

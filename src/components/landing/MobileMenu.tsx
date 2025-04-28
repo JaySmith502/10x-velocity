@@ -88,17 +88,17 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     >
                       Data Cleaning
                     </Link>
+                    <Link 
+                      to="/power-automate" 
+                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      onClick={onClose}
+                    >
+                      Power Automate
+                    </Link>
                   </div>
                 )}
               </div>
               
-              <Link 
-                to="/power-automate" 
-                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
-                onClick={onClose}
-              >
-                Power Automate
-              </Link>
               <Link 
                 to="/case-studies" 
                 className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
