@@ -2,26 +2,6 @@
 import { useEffect, useRef } from "react";
 
 const OnboardingForm = () => {
-  const formRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Load the n8n form
-    const script = document.createElement("script");
-    script.src = "https://n8n.services.hiprag.com/form/b29820a7-4580-4504-82f4-18671da724e6";
-    script.async = true;
-    
-    if (formRef.current) {
-      formRef.current.innerHTML = "";
-      formRef.current.appendChild(script);
-    }
-    
-    return () => {
-      if (formRef.current) {
-        formRef.current.innerHTML = "";
-      }
-    };
-  }, []);
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
       <div className="container mx-auto px-4">
@@ -66,9 +46,13 @@ const OnboardingForm = () => {
           
           {/* Right side - Form */}
           <div className="bg-white rounded-lg shadow-xl overflow-hidden h-[600px]">
-            <div ref={formRef} className="w-full h-full" id="n8n-form">
-              {/* Form will be loaded here */}
-            </div>
+            <iframe 
+              src="https://n8n.services.hiprag.com/form/b29820a7-4580-4504-82f4-18671da724e6"
+              width="100%" 
+              height="600px" 
+              style={{ border: "none" }}
+              title="10x Velocity Demo Form"
+            />
           </div>
         </div>
       </div>
