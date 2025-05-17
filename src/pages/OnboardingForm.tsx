@@ -1,5 +1,6 @@
 
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 const OnboardingForm = () => {
   return (
@@ -38,9 +39,12 @@ const OnboardingForm = () => {
             </ul>
             
             <div className="mt-4">
-              <span className="inline-flex items-center px-4 py-2 bg-red-600 text-white font-medium rounded">
+              <Link 
+                to="/contact" 
+                className="inline-flex items-center px-4 py-2 bg-red-600 text-white font-medium rounded hover:bg-red-700 transition-colors"
+              >
                 Free Strategy Call
-              </span>
+              </Link>
             </div>
           </div>
           
