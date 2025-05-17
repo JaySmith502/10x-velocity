@@ -6,7 +6,21 @@ const OnboardingForm = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
       <div className="container mx-auto px-4">
-        <div className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-8 md:gap-12">
+        <div className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-8 md:gap-12 relative">
+          {/* Curved Arrow SVG */}
+          <div className="absolute right-1/2 top-20 transform translate-x-6 hidden md:block z-10">
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path 
+                d="M10 10 C30 10, 70 20, 90 50 L83 46 L90 50 L85 56" 
+                stroke="#9b87f5" 
+                strokeWidth="3" 
+                strokeLinecap="round"
+                fill="none"
+                className="animate-pulse"
+              />
+            </svg>
+          </div>
+
           {/* Left side - Content */}
           <div className="flex flex-col justify-center space-y-6 animate-fade-up">
             <h1 className="text-4xl md:text-5xl font-bold heading-gradient">
