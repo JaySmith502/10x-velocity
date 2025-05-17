@@ -29,6 +29,7 @@ import DataCleaning from "./pages/services/DataCleaning";
 import LunchAndLearn from "./pages/LunchAndLearn";
 import PhoneVoiceAgents from "./pages/services/PhoneVoiceAgents";
 import AIWorkshops from "./pages/services/AIWorkshops";
+import OnboardingForm from "./pages/OnboardingForm";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/case-studies/transportation-director" element={<TransportationDirector />} />
             <Route path="/savings-calculator" element={<SavingsCalculator />} />
             <Route path="/events/lunch-and-learn" element={<LunchAndLearn />} />
+            <Route path="/demo" element={<OnboardingForm />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />

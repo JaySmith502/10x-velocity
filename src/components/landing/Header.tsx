@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, ChevronDown } from "lucide-react";
@@ -65,6 +66,9 @@ const Header = () => {
               </Link>
               <Link to="/savings-calculator" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Savings Calculator
+              </Link>
+              <Link to="/demo" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
+                Get Demo
               </Link>
             </nav>
             <DiscoveryButton className="text-sm" text="Contact Us" />

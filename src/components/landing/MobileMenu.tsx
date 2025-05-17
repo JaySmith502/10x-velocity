@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { X, ChevronDown, ChevronUp } from "lucide-react";
@@ -126,6 +127,13 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 onClick={onClose}
               >
                 Savings Calculator
+              </Link>
+              <Link 
+                to="/demo" 
+                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
+                onClick={onClose}
+              >
+                Get Demo
               </Link>
               <a href="/contact" 
                 className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-bold px-6 py-3 rounded-lg w-full text-center mt-4"

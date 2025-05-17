@@ -1,0 +1,79 @@
+
+import { useEffect, useRef } from "react";
+
+const OnboardingForm = () => {
+  const formRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load the n8n form
+    const script = document.createElement("script");
+    script.src = "https://n8n.services.hiprag.com/form/b29820a7-4580-4504-82f4-18671da724e6";
+    script.async = true;
+    
+    if (formRef.current) {
+      formRef.current.innerHTML = "";
+      formRef.current.appendChild(script);
+    }
+    
+    return () => {
+      if (formRef.current) {
+        formRef.current.innerHTML = "";
+      }
+    };
+  }, []);
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
+      <div className="container mx-auto px-4">
+        <div className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-8 md:gap-12">
+          {/* Left side - Content */}
+          <div className="flex flex-col justify-center space-y-6 animate-fade-up">
+            <h1 className="text-4xl md:text-5xl font-bold heading-gradient">
+              Get A Demo For Your Business Now
+            </h1>
+            
+            <p className="text-velocity-light text-lg">
+              Experience our Voice Lead Capture Technology that works 24/7 for your business. Here's how it works:
+            </p>
+            
+            <ul className="space-y-4">
+              <li className="flex items-start">
+                <span className="bg-velocity-accent/20 p-1 rounded-full mr-3 mt-1">
+                  <span className="flex items-center justify-center w-5 h-5 bg-velocity-accent rounded-full text-black font-bold">1</span>
+                </span>
+                <span className="text-velocity-light">Enter your information in the form</span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-velocity-accent/20 p-1 rounded-full mr-3 mt-1">
+                  <span className="flex items-center justify-center w-5 h-5 bg-velocity-accent rounded-full text-black font-bold">2</span>
+                </span>
+                <span className="text-velocity-light">Our system will collect your business information and call your phone</span>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-velocity-accent/20 p-1 rounded-full mr-3 mt-1">
+                  <span className="flex items-center justify-center w-5 h-5 bg-velocity-accent rounded-full text-black font-bold">3</span>
+                </span>
+                <span className="text-velocity-light">Experience how customers can get custom information or leave their needs with your business 24/7</span>
+              </li>
+            </ul>
+            
+            <div className="mt-4">
+              <span className="inline-flex items-center px-4 py-2 bg-red-600 text-white font-medium rounded">
+                Free Strategy Call
+              </span>
+            </div>
+          </div>
+          
+          {/* Right side - Form */}
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden h-[600px]">
+            <div ref={formRef} className="w-full h-full" id="n8n-form">
+              {/* Form will be loaded here */}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default OnboardingForm;
