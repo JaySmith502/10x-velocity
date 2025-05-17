@@ -45,11 +45,11 @@ const OnboardingForm = () => {
           </div>
           
           {/* Right side - Form */}
-          <div className="bg-white rounded-lg shadow-xl overflow-hidden h-[600px]">
+          <div className="bg-white rounded-lg shadow-xl overflow-hidden h-[1000px]">
             <iframe 
               src="https://n8n.services.hiprag.com/form/b29820a7-4580-4504-82f4-18671da724e6"
               width="100%" 
-              height="600px" 
+              height="1000px" 
               style={{ border: "none" }}
               title="10x Velocity Demo Form"
             />
