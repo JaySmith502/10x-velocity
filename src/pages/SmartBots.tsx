@@ -71,6 +71,25 @@ const SmartBots = () => {
                   </div>
                 </div>
 
+                <div className="text-center">
+                  <DiscoveryButton text="Build Your Smart Bot" className="text-lg px-8 py-4" />
+                </div>
+              </div>
+
+              {/* Right side - Demo Description and Why RAG */}
+              <div className="lg:sticky lg:top-8 space-y-8">
+                <div className="glass-card p-6">
+                  <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
+                    Try Our Smart Bot Demo
+                  </h3>
+                  <p className="text-velocity-light text-center mb-4">
+                    This chatbot is specifically trained on gamification and game theory concepts. Ask it anything about game mechanics, player motivation, behavioral psychology, or how to apply gamification strategies to your business!
+                  </p>
+                  <p className="text-velocity-muted text-center text-sm">
+                    Chat widget appears in the bottom right corner of your screen
+                  </p>
+                </div>
+
                 <div className="glass-card p-8">
                   <h2 className="text-2xl font-bold mb-4 text-velocity-accent">
                     Why RAG-Enabled Chatbots?
@@ -93,28 +112,6 @@ const SmartBots = () => {
                       <span><strong>24/7 Availability:</strong> Never miss a question, even outside business hours</span>
                     </li>
                   </ul>
-                </div>
-
-                <div className="text-center">
-                  <DiscoveryButton text="Build Your Smart Bot" className="text-lg px-8 py-4" />
-                </div>
-              </div>
-
-              {/* Right side - Demo Description */}
-              <div className="lg:sticky lg:top-8">
-                <div className="glass-card p-6">
-                  <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
-                    Try Our Smart Bot Demo
-                  </h3>
-                  <p className="text-velocity-muted text-center mb-6">
-                    Ask questions about 10x Velocity's services, processes, or methodology. This bot is trained on our knowledge base!
-                  </p>
-                  
-                  <div className="bg-white/10 rounded-lg p-4 min-h-[200px] flex items-center justify-center">
-                    <p className="text-velocity-muted text-center">
-                      Chat widget will appear in the bottom right corner of your screen
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
