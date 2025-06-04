@@ -76,22 +76,8 @@ const SmartBots = () => {
                 </div>
               </div>
 
-              {/* Right side - Chatbot Demo and Why RAG */}
+              {/* Right side - Why RAG and Game Theory Bot */}
               <div className="lg:sticky lg:top-8 space-y-8">
-                <div className="glass-card p-6">
-                  <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
-                    Try Our Game Theory Smart Bot
-                  </h3>
-                  <p className="text-velocity-muted text-center mb-6">
-                    This bot is specially trained on game theory and gamification principles. Ask it anything about game mechanics, behavioral economics, or strategic decision-making!
-                  </p>
-                  
-                  <needle-widget
-                    client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
-                    collection-id="clt_01JT0S48710W0VC34C7S991YS8"
-                  />
-                </div>
-
                 <div className="glass-card p-8">
                   <h2 className="text-2xl font-bold mb-4 text-velocity-accent">
                     Why RAG-Enabled Chatbots?
@@ -115,9 +101,33 @@ const SmartBots = () => {
                     </li>
                   </ul>
                 </div>
+
+                <div className="glass-card p-6">
+                  <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
+                    Try Our Game Theory Smart Bot
+                  </h3>
+                  <p className="text-velocity-muted text-center mb-6">
+                    This bot is specially trained on game theory and gamification principles. Ask it anything about game mechanics, behavioral economics, or strategic decision-making!
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Floating Chat Widget */}
+      <div className="fixed bottom-6 right-6 z-50 w-80 h-96 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden">
+        <div className="bg-velocity-accent/20 p-3 border-b border-white/10">
+          <h4 className="text-sm font-semibold text-velocity-light text-center">
+            Game Theory Smart Bot
+          </h4>
+        </div>
+        <div className="h-full">
+          <needle-widget
+            client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
+            collection-id="clt_01JT0S48710W0VC34C7S991YS8"
+          />
         </div>
       </div>
     </main>
