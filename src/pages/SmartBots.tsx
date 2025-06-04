@@ -106,9 +106,6 @@ const SmartBots = () => {
                   <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
                     Try Our Game Theory Smart Bot
                   </h3>
-                  <p className="text-velocity-muted text-center mb-6">
-                    This bot is specially trained on game theory and gamification principles. Ask it anything about game mechanics, behavioral economics, or strategic decision-making!
-                  </p>
                 </div>
               </div>
             </div>
@@ -117,13 +114,13 @@ const SmartBots = () => {
       </div>
 
       {/* Floating Chat Widget */}
-      <div className="fixed bottom-6 right-6 z-50 w-80 min-h-[60px] max-h-[500px] bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden flex flex-col">
-        <div className="bg-velocity-accent/20 p-3 border-b border-white/10 flex-shrink-0">
+      <div className="fixed bottom-6 right-6 z-50 w-80 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden">
+        <div className="bg-velocity-accent/20 p-3 border-b border-white/10">
           <h4 className="text-sm font-semibold text-velocity-light text-center">
             Game Theory Smart Bot
           </h4>
         </div>
-        <div className="flex-1 min-h-0">
+        <div className="h-[400px]">
           <needle-widget
             client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
             collection-id="clt_01JT0S48710W0VC34C7S991YS8"
