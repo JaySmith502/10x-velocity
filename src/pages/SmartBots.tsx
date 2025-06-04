@@ -61,7 +61,7 @@ const SmartBots = () => {
                     
                     <div className="flex items-start gap-4">
                       <div className="bg-velocity-accent/20 p-2 rounded-full mt-1">
-                        <span className="flex items-center justify-center w-6 h-6 bg-velocity-accent rounded-full text-black font-bold text-sm">💼</span>
+                        <span className="flex items-center justify-center w-6 h-6 bg-velocity-accent rounded-full text-sm">💼</span>
                       </div>
                       <div>
                         <h3 className="font-semibold text-velocity-light mb-2">Leadership</h3>
@@ -71,13 +71,6 @@ const SmartBots = () => {
                   </div>
                 </div>
 
-                <div className="text-center">
-                  <DiscoveryButton text="Build Your Smart Bot" className="text-lg px-8 py-4" />
-                </div>
-              </div>
-
-              {/* Right side - Why RAG and Game Theory Bot */}
-              <div className="lg:sticky lg:top-8 space-y-8">
                 <div className="glass-card p-8">
                   <h2 className="text-2xl font-bold mb-4 text-velocity-accent">
                     Why RAG-Enabled Chatbots?
@@ -102,29 +95,31 @@ const SmartBots = () => {
                   </ul>
                 </div>
 
+                <div className="text-center">
+                  <DiscoveryButton text="Build Your Smart Bot" className="text-lg px-8 py-4" />
+                </div>
+              </div>
+
+              {/* Right side - Chatbot Demo */}
+              <div className="lg:sticky lg:top-8">
                 <div className="glass-card p-6">
                   <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
-                    Try Our Game Theory Smart Bot
+                    Try Our Smart Bot Demo
                   </h3>
+                  <p className="text-velocity-muted text-center mb-6">
+                    Ask questions about 10x Velocity's services, processes, or methodology. This bot is trained on our knowledge base!
+                  </p>
+                  
+                  <div className="bg-white/10 rounded-lg p-4 min-h-[400px] flex items-center justify-center">
+                    <needle-widget
+                      client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
+                      collection-id="clt_01JT0S48710W0VC34C7S991YS8"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Floating Chat Widget */}
-      <div className="fixed bottom-6 right-6 z-50 w-80 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden">
-        <div className="bg-velocity-accent/20 p-3 border-b border-white/10">
-          <h4 className="text-sm font-semibold text-velocity-light text-center">
-            Game Theory Smart Bot
-          </h4>
-        </div>
-        <div className="h-[400px]">
-          <needle-widget
-            client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
-            collection-id="clt_01JT0S48710W0VC34C7S991YS8"
-          />
         </div>
       </div>
     </main>
