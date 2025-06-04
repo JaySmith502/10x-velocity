@@ -61,7 +61,7 @@ const SmartBots = () => {
                     
                     <div className="flex items-start gap-4">
                       <div className="bg-velocity-accent/20 p-2 rounded-full mt-1">
-                        <span className="flex items-center justify-center w-6 h-6 bg-velocity-accent rounded-full text-sm">💼</span>
+                        <span className="flex items-center justify-center w-6 h-6 bg-velocity-accent rounded-full text-black font-bold text-sm">💼</span>
                       </div>
                       <div>
                         <h3 className="font-semibold text-velocity-light mb-2">Leadership</h3>
@@ -117,13 +117,13 @@ const SmartBots = () => {
       </div>
 
       {/* Floating Chat Widget */}
-      <div className="fixed bottom-6 right-6 z-50 w-80 h-96 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden">
-        <div className="bg-velocity-accent/20 p-3 border-b border-white/10">
+      <div className="fixed bottom-6 right-6 z-50 w-80 min-h-[60px] max-h-[500px] bg-white/10 backdrop-blur-md border border-white/20 rounded-lg shadow-2xl overflow-hidden flex flex-col">
+        <div className="bg-velocity-accent/20 p-3 border-b border-white/10 flex-shrink-0">
           <h4 className="text-sm font-semibold text-velocity-light text-center">
             Game Theory Smart Bot
           </h4>
         </div>
-        <div className="h-full">
+        <div className="flex-1 min-h-0">
           <needle-widget
             client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
             collection-id="clt_01JT0S48710W0VC34C7S991YS8"
