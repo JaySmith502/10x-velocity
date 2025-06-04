@@ -104,13 +104,13 @@ const SmartBots = () => {
               <div className="lg:sticky lg:top-8">
                 <div className="glass-card p-6">
                   <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
-                    Try Our Smart Bot Demo
+                    Try Our Game Theory Smart Bot
                   </h3>
                   <p className="text-velocity-muted text-center mb-6">
-                    Ask questions about 10x Velocity's services, processes, or methodology. This bot is trained on our knowledge base!
+                    This bot is specially trained on game theory and gamification principles. Ask it anything about game mechanics, behavioral economics, or strategic decision-making!
                   </p>
                   
-                  <div className="bg-white/10 rounded-lg p-4 min-h-[400px] flex items-center justify-center">
+                  <div className="bg-white/5 rounded-lg p-4 min-h-[400px] flex items-center justify-center">
                     <needle-widget
                       client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
                       collection-id="clt_01JT0S48710W0VC34C7S991YS8"
