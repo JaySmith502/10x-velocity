@@ -1,4 +1,3 @@
-
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const SmartBots = () => {
@@ -84,9 +83,6 @@ const SmartBots = () => {
                   </h3>
                   <p className="text-velocity-light text-center mb-4">
                     This chatbot is specifically trained on gamification and game theory concepts. Ask it anything about game mechanics, player motivation, behavioral psychology, or how to apply gamification strategies to your business!
-                  </p>
-                  <p className="text-velocity-muted text-center text-sm">
-                    Chat widget appears in the bottom right corner of your screen
                   </p>
                 </div>
 
