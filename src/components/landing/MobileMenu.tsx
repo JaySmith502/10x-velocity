@@ -97,6 +97,13 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                       Phone Voice Agents
                     </Link>
                     <Link 
+                      to="/services/smart-bots" 
+                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      onClick={onClose}
+                    >
+                      Smart Bots
+                    </Link>
+                    <Link 
                       to="/power-automate" 
                       className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
                       onClick={onClose}
