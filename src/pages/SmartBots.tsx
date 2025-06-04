@@ -100,7 +100,7 @@ const SmartBots = () => {
                 </div>
               </div>
 
-              {/* Right side - Chatbot Demo */}
+              {/* Right side - Demo Description */}
               <div className="lg:sticky lg:top-8">
                 <div className="glass-card p-6">
                   <h3 className="text-xl font-bold mb-4 text-center text-velocity-accent">
@@ -110,17 +110,24 @@ const SmartBots = () => {
                     Ask questions about 10x Velocity's services, processes, or methodology. This bot is trained on our knowledge base!
                   </p>
                   
-                  <div className="bg-white/10 rounded-lg p-4 min-h-[400px] flex items-center justify-center">
-                    <needle-widget
-                      client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
-                      collection-id="clt_01JT0S48710W0VC34C7S991YS8"
-                    />
+                  <div className="bg-white/10 rounded-lg p-4 min-h-[200px] flex items-center justify-center">
+                    <p className="text-velocity-muted text-center">
+                      Chat widget will appear in the bottom right corner of your screen
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+
+      {/* Chat Widget positioned on the page */}
+      <div className="fixed bottom-4 right-4 z-50">
+        <needle-widget
+          client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
+          collection-id="clt_01JT0S48710W0VC34C7S991YS8"
+        />
       </div>
     </main>
   );
