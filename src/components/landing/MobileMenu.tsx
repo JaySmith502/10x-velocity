@@ -111,6 +111,13 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                       Power Automate
                     </Link>
                     <Link 
+                      to="/lexi-file" 
+                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      onClick={onClose}
+                    >
+                      Lexi-File
+                    </Link>
+                    <Link 
                       to="/services/ai-workshops" 
                       className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
                       onClick={onClose}
