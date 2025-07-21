@@ -73,7 +73,7 @@ const LexiFile = () => {
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
-            Lexi-File
+            Lexi-File<sup className="text-2xl md:text-3xl">™</sup>
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-velocity-light">
             AI-Powered Document Search & Retrieval for High-Volume Knowledge Work
