@@ -19,17 +19,17 @@ const LexiFile = () => {
     {
       icon: Settings,
       title: "Fully Customized to Your Stack",
-      description: "We configure and maintain the system for your exact workflow—legal, financial, nonprofit, or otherwise. From setup to governance, we handle the complexity so you don't have to."
+      description: "We configure and maintain the system for your exact workflow-legal, financial, nonprofit, or otherwise. From setup to governance, we handle the complexity so you don't have to."
     },
     {
       icon: Zap,
       title: "Setup in Days, Not Months",
-      description: "Forget long IT deployments. Your private assistant can be up and running in a week—with no data migration or end-user training needed."
+      description: "Forget long IT deployments. Your private assistant can be up and running in a week-with no data migration or end-user training needed."
     },
     {
       icon: Brain,
       title: "Built for Non-Technical Teams",
-      description: "Anyone on your team can use the assistant with simple language—no Boolean search, coding, or database queries required."
+      description: "Anyone on your team can use the assistant with simple language-no Boolean search, coding, or database queries required."
     },
     {
       icon: CheckCircle,
@@ -41,7 +41,7 @@ const LexiFile = () => {
   const useCases = [
     {
       title: "Law Firms",
-      description: "Instantly locate case references, client files, or policy changes across your entire knowledge base",
+      description: "Instantly locate case references, client files, or policy changes across your entire knowledge base-on demand",
       icon: FileSearch
     },
     {
@@ -51,7 +51,7 @@ const LexiFile = () => {
     },
     {
       title: "Nonprofits",
-      description: "Quickly find grant requirements, program data, or board meeting notes—on demand",
+      description: "Quickly find grant requirements, program data, or board meeting notes-on demand",
       icon: Users
     }
   ];
@@ -79,7 +79,7 @@ const LexiFile = () => {
             AI-Powered Document Search & Retrieval for High-Volume Knowledge Work
           </h2>
           <p className="text-lg md:text-xl text-velocity-muted mb-8">
-            Cut Research Time in Half—Without Sacrificing Accuracy
+            Cut Research Time in Half-Without Sacrificing Accuracy
           </p>
           <p className="text-lg text-velocity-muted mb-8 max-w-3xl mx-auto">
             For law firms, accounting practices, nonprofits, and other document-heavy organizations, 
@@ -88,7 +88,7 @@ const LexiFile = () => {
           </p>
           <p className="text-lg text-velocity-muted mb-8 max-w-3xl mx-auto">
             We deploy a private, secure AI system that lets your team ask plain-language questions 
-            and get immediate, accurate answers—grounded only in your data.
+            and get immediate, accurate answers-grounded only in your data.
           </p>
         </div>
       </section>
@@ -131,7 +131,7 @@ const LexiFile = () => {
               you'll get 30 days to evaluate the system inside your real environment.
             </p>
             <p className="text-lg text-velocity-muted mb-6">
-              If you decide not to continue, we'll refund 50% of your onboarding fee—because we believe in shared commitment, not just easy exits.
+              If you decide not to continue, we'll refund 50% of your onboarding fee-because we believe in shared commitment, not just easy exits.
             </p>
             <p className="text-lg font-medium text-emerald-300 mb-8">
               Most of our clients see value within days. But we'll let the results speak for themselves.
@@ -225,7 +225,7 @@ const LexiFile = () => {
           <div className="glass-card p-8 animate-fade-up">
             <p className="text-lg text-velocity-muted mb-6">
               We combine deep expertise in automation, secure system integration, and industry-specific AI implementation. 
-              Our team has helped law firms, nonprofits, and regulated businesses adopt AI responsibly and at speed—without the tech overhead.
+              Our team has helped law firms, nonprofits, and regulated businesses adopt AI responsibly and at speed-without the tech overhead.
             </p>
             <p className="text-xl font-semibold text-velocity-light">
               We don't just sell software. We deliver working systems.
