@@ -133,9 +133,17 @@ const LexiFile = () => {
             <p className="text-lg text-velocity-muted mb-6">
               If you decide not to continue, we'll refund 50% of your onboarding fee—because we believe in shared commitment, not just easy exits.
             </p>
-            <p className="text-lg font-medium text-emerald-300">
+            <p className="text-lg font-medium text-emerald-300 mb-8">
               Most of our clients see value within days. But we'll let the results speak for themselves.
             </p>
+            <Button 
+              asChild
+              className="bg-gradient-to-r from-emerald-400 to-green-300 text-black font-semibold hover:from-emerald-300 hover:to-green-200 shadow-[0_0_20px_rgba(52,211,153,0.6)] hover:shadow-[0_0_30px_rgba(52,211,153,0.8)] transition-all duration-300"
+            >
+              <Link to="/contact">
+                Start Your Risk-Free Trial <ArrowRight className="w-5 h-5 ml-2" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
