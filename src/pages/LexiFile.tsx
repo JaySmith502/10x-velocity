@@ -121,7 +121,11 @@ const LexiFile = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <div className="bg-gradient-to-r from-emerald-500/10 to-green-400/10 border border-emerald-500/20 rounded-xl p-8 animate-fade-up">
-            <h3 className="text-2xl font-bold mb-6 text-emerald-400">Our Satisfaction Guarantee</h3>
+            <h3 className="text-2xl font-bold mb-4 text-emerald-400">Our Satisfaction Guarantee</h3>
+            <div className="relative mb-8">
+              <div className="w-24 h-0.5 bg-gradient-to-r from-emerald-400 to-green-300 mx-auto shadow-[0_0_20px_rgba(52,211,153,0.8)]"></div>
+              <div className="absolute inset-0 w-24 h-0.5 bg-gradient-to-r from-emerald-400 to-green-300 mx-auto blur-sm opacity-75"></div>
+            </div>
             <p className="text-lg text-velocity-muted mb-6">
               We're confident this solution will transform how your team works. After onboarding (usually completed in one week), 
               you'll get 30 days to evaluate the system inside your real environment.
