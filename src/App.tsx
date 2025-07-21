@@ -31,6 +31,7 @@ import PhoneVoiceAgents from "./pages/services/PhoneVoiceAgents";
 import AIWorkshops from "./pages/services/AIWorkshops";
 import OnboardingForm from "./pages/OnboardingForm";
 import SmartBots from "./pages/SmartBots";
+import LexiFile from "./pages/LexiFile";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
             <Route path="/services/phone-voice-agents" element={<PhoneVoiceAgents />} />
             <Route path="/services/ai-workshops" element={<AIWorkshops />} />
             <Route path="/services/smart-bots" element={<SmartBots />} />
+            <Route path="/lexi-file" element={<LexiFile />} />
             <Route path="/power-automate" element={<PowerAutomate />} />
             <Route path="/case-studies" element={<CaseStudies />} />
             <Route path="/case-studies/innes-young" element={<InnesYoung />} />
