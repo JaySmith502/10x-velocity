@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowRight, Lock, Lightbulb, Settings, Zap, Brain, FileSearch, Shield, Users, Calendar } from "lucide-react";
+import { ArrowRight, Lock, Lightbulb, Settings, Zap, Brain, FileSearch, Shield, Users, Calendar, CheckCircle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -30,6 +30,11 @@ const LexiFile = () => {
       icon: Brain,
       title: "Built for Non-Technical Teams",
       description: "Anyone on your team can use the assistant with simple language—no Boolean search, coding, or database queries required."
+    },
+    {
+      icon: CheckCircle,
+      title: "No Long-Term Commitment",
+      description: "Our relationship works month to month, and we're with you every step of the way. Whenever you need support adding or removing users or file connections, just reach out and we'll handle it."
     }
   ];
 
@@ -112,14 +117,20 @@ const LexiFile = () => {
         </div>
       </section>
 
-      {/* Month-to-Month Commitment */}
+      {/* Satisfaction Guarantee */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="glass-card p-8 animate-fade-up">
-            <h3 className="text-2xl font-bold mb-4 text-velocity-light">No Long-Term Commitment</h3>
-            <p className="text-lg text-velocity-muted">
-              Our relationship works month to month, and we're with you every step of the way. 
-              Whenever you need any support adding or removing users or file connections....just reach out and we'll handle it.
+          <div className="bg-gradient-to-r from-emerald-500/10 to-green-400/10 border border-emerald-500/20 rounded-xl p-8 animate-fade-up">
+            <h3 className="text-2xl font-bold mb-6 text-emerald-400">Our Satisfaction Guarantee</h3>
+            <p className="text-lg text-velocity-muted mb-6">
+              We're confident this solution will transform how your team works. After onboarding (usually completed in one week), 
+              you'll get 30 days to evaluate the system inside your real environment.
+            </p>
+            <p className="text-lg text-velocity-muted mb-6">
+              If you decide not to continue, we'll refund 50% of your onboarding fee—because we believe in shared commitment, not just easy exits.
+            </p>
+            <p className="text-lg font-medium text-emerald-300">
+              Most of our clients see value within days. But we'll let the results speak for themselves.
             </p>
           </div>
         </div>
