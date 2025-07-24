@@ -11,6 +11,16 @@ declare module "react" {
 }
 
 const SmartBots = () => {
+  // Get environment variables for the Needle widget
+  const clientKey = import.meta.env.VITE_NEEDLE_CLIENT_KEY;
+  const collectionId = import.meta.env.VITE_NEEDLE_COLLECTION_ID;
+  const isDevelopment = import.meta.env.DEV;
+
+  // Show error message if environment variables are missing
+  if (!clientKey || !collectionId) {
+    console.error('Missing Needle widget environment variables. Please check your .env.local file.');
+  }
+
   return (
     <main className="flex-1">
       <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
@@ -34,10 +44,45 @@ const SmartBots = () => {
                 </h2>
                 <div className="flex justify-center">
                   <div className="w-full max-w-none sm:w-4/5 lg:w-3/5">
-                  <needle-embedded-widget
-                    client-key="clk_01JWXE9Q7W1P9JN3RNX2G6ZPEJ"
-                    collection-id="clt_01JT0S48710W0VC34C7S991YS8"
-                  />
+                  {clientKey && collectionId ? (
+                    isDevelopment ? (
+                      // Mock widget for development (CORS workaround)
+                      <div className="bg-gray-800 rounded-lg p-6 border border-gray-600">
+                        <div className="text-center mb-4">
+                          <p className="text-yellow-400 mb-2">🚧 Development Mode</p>
+                          <p className="text-velocity-light text-sm mb-4">
+                            Needle AI widget will work on live site. CORS blocks localhost.
+                          </p>
+                        </div>
+                        <div className="bg-gray-900 rounded p-4 min-h-[300px] flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="animate-pulse mb-4">
+                              <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
+                            </div>
+                            <p className="text-gray-400">Needle AI Chat Widget</p>
+                            <p className="text-gray-500 text-sm mt-2">
+                              Client Key: {clientKey.substring(0, 8)}...
+                            </p>
+                            <p className="text-gray-500 text-sm">
+                              Collection: {collectionId.substring(0, 8)}...
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <needle-embedded-widget
+                        client-key={clientKey}
+                        collection-id={collectionId}
+                      />
+                    )
+                  ) : (
+                    <div className="text-center py-8">
+                      <p className="text-red-400 mb-2">⚠️ Widget Configuration Missing</p>
+                      <p className="text-velocity-light text-sm">
+                        Please configure your environment variables in .env.local
+                      </p>
+                    </div>
+                  )}
                 </div>
                 </div>
               </div>
