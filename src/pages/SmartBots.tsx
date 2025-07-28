@@ -75,7 +75,7 @@ const SmartBots = () => {
                         collection-id={collectionId}
                         title="10x Chat"
                         initial-message="Hi, I am a Gamification expert. How can I help you?"
-                        theme="system"
+                        theme="dark"
                       />
                     )
                   ) : (
