@@ -4,8 +4,11 @@ import DiscoveryButton from "@/components/ui/DiscoveryButton";
 declare module "react" {
     interface IntrinsicElements {
       'needle-embedded-widget': {
-        'client-key': string;
-        'collection-id': string;
+        'client-key'?: string;
+        'collection-id'?: string;
+        title?: string;
+        'initial-message'?: string;
+        theme?: string;
       };
     }
 }
