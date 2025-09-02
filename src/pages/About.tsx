@@ -20,7 +20,7 @@ const About = () => {
               </p>
               
               <p className="text-lg leading-relaxed">
-                Too often, technology is sold as a silver bullet—software to plug in, processes to automate, jobs to eliminate. That view misses the point. The real power of AI is not in erasing human work, but in amplifying human genius. It is an unlock, not a replacement.
+                Too often, technology is sold as a silver bullet or a software to plug in, processes to automate, jobs to eliminate. That view misses the point. The real power of AI is not in erasing human work, but in amplifying human genius. It is an unlock, not a replacement.
               </p>
             </div>
 
@@ -31,7 +31,7 @@ const About = () => {
               
               <div className="space-y-4">
                 <p className="text-lg leading-relaxed">
-                  We're influenced by thinkers like Ethan Mollick (Wharton professor, The Unicorn's Shadow) and Jeremy Utley (Ideaflow), who both remind us that creativity and innovation are not side effects of work—they are its core.
+                  We're influenced by thinkers like Ethan Mollick (Wharton professor, The Unicorn's Shadow) and Jeremy Utley (Ideaflow), who both remind us that creativity and innovation are not side effects of work, they are its core.
                 </p>
                 
                 <p className="text-lg leading-relaxed">
@@ -47,7 +47,7 @@ const About = () => {
               
               <div className="space-y-6">
                 <p className="text-lg leading-relaxed">
-                  We bring a structured, pragmatic approach to transformation—but we never lose sight of the bigger picture.
+                  We bring a structured, pragmatic approach to transformation, but we never lose sight of the bigger picture.
                 </p>
                 
                 <div className="grid gap-6 md:grid-cols-2">
@@ -105,7 +105,7 @@ const About = () => {
                 </p>
                 
                 <p className="text-lg leading-relaxed">
-                  10x Velocity is not just about automation—it's about giving people back the time and space to think, to build, to lead. Because when humans are freed to focus on the meaningful, the results don't just improve—they multiply.
+                  10x Velocity is not just about automation it's about giving people back the time and space to think, to build, to lead. Because when humans are freed to focus on the meaningful, the results don't just improve...they multiply.
                 </p>
                 
                 <div className="text-center pt-8">
