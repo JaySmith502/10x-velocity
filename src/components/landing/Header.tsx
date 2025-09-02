@@ -67,6 +67,10 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
               
+              <Link to="/about" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
+                About
+              </Link>
+              
               <Link to="/case-studies" className="text-velocity-muted hover:text-velocity-light transition-colors font-bold">
                 Case Studies
               </Link>

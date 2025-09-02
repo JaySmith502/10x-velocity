@@ -129,6 +129,14 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               </div>
               
               <Link 
+                to="/about" 
+                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
+                onClick={onClose}
+              >
+                About
+              </Link>
+              
+              <Link 
                 to="/case-studies" 
                 className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
                 onClick={onClose}
