@@ -5,6 +5,9 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
+import ContactPopup from "./components/ui/ContactPopup";
+import { ContactPopupProvider } from "./contexts/ContactPopupContext";
+import { useContactPopupContext } from "./hooks/useContactPopupContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -36,44 +39,61 @@ import LexiFile from "./pages/LexiFile";
 
 const queryClient = new QueryClient();
 
+const AppContent = () => {
+  const { isVisible, hidePopup } = useContactPopupContext();
+
+  return (
+    <>
+      <Routes>
+        <Route element={<RootLayout />}>
+          <Route path="/" element={<Index />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/services/data-cleaning" element={<DataCleaning />} />
+          <Route path="/services/phone-voice-agents" element={<PhoneVoiceAgents />} />
+          <Route path="/services/ai-workshops" element={<AIWorkshops />} />
+          <Route path="/services/smart-bots" element={<SmartBots />} />
+          <Route path="/lexi-file" element={<LexiFile />} />
+          <Route path="/power-automate" element={<PowerAutomate />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
+          <Route path="/case-studies/innes-young" element={<InnesYoung />} />
+          <Route path="/case-studies/ecatalyst" element={<ECatalyst />} />
+          <Route path="/case-studies/hillcrest-partners" element={<HillcrestPartners />} />
+          <Route path="/case-studies/catalyst-group" element={<CatalystGroup />} />
+          <Route path="/case-studies/director-of-marketing" element={<DirectorOfMarketing />} />
+          <Route path="/case-studies/birchwood-real-estate" element={<BirchwoodRealEstate />} />
+          <Route path="/case-studies/govbrokers" element={<GovBrokers />} />
+          <Route path="/case-studies/inspyrd" element={<Inspyrd />} />
+          <Route path="/case-studies/transportation-director" element={<TransportationDirector />} />
+          <Route path="/savings-calculator" element={<SavingsCalculator />} />
+          <Route path="/events/lunch-and-learn" element={<LunchAndLearn />} />
+          <Route path="/demo" element={<OnboardingForm />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
+      </Routes>
+      <ContactPopup isVisible={isVisible} onClose={hidePopup} />
+    </>
+  );
+};
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route element={<RootLayout />}>
-            <Route path="/" element={<Index />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/services/data-cleaning" element={<DataCleaning />} />
-            <Route path="/services/phone-voice-agents" element={<PhoneVoiceAgents />} />
-            <Route path="/services/ai-workshops" element={<AIWorkshops />} />
-            <Route path="/services/smart-bots" element={<SmartBots />} />
-            <Route path="/lexi-file" element={<LexiFile />} />
-            <Route path="/power-automate" element={<PowerAutomate />} />
-            <Route path="/case-studies" element={<CaseStudies />} />
-            <Route path="/case-studies/innes-young" element={<InnesYoung />} />
-            <Route path="/case-studies/ecatalyst" element={<ECatalyst />} />
-            <Route path="/case-studies/hillcrest-partners" element={<HillcrestPartners />} />
-            <Route path="/case-studies/catalyst-group" element={<CatalystGroup />} />
-            <Route path="/case-studies/director-of-marketing" element={<DirectorOfMarketing />} />
-            <Route path="/case-studies/birchwood-real-estate" element={<BirchwoodRealEstate />} />
-            <Route path="/case-studies/govbrokers" element={<GovBrokers />} />
-            <Route path="/case-studies/inspyrd" element={<Inspyrd />} />
-            <Route path="/case-studies/transportation-director" element={<TransportationDirector />} />
-            <Route path="/savings-calculator" element={<SavingsCalculator />} />
-            <Route path="/events/lunch-and-learn" element={<LunchAndLearn />} />
-            <Route path="/demo" element={<OnboardingForm />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/blog/:id" element={<BlogPost />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/terms-of-service" element={<TermsOfService />} />
-            <Route path="*" element={<NotFound />} />
-          </Route>
-        </Routes>
+        <ContactPopupProvider
+          autoShow={true}
+          showDelay={10000}
+          showOnExit={true}
+        >
+          <AppContent />
+        </ContactPopupProvider>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
