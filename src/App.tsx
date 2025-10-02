@@ -3,7 +3,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import ContactPopup from "./components/ui/ContactPopup";
 import { ContactPopupProvider } from "./contexts/ContactPopupContext";
@@ -41,6 +41,10 @@ const queryClient = new QueryClient();
 
 const AppContent = () => {
   const { isVisible, hidePopup } = useContactPopupContext();
+  const location = useLocation();
+  
+  // Only show popup on home page
+  const isHomePage = location.pathname === '/';
 
   return (
     <>
@@ -76,7 +80,7 @@ const AppContent = () => {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-      <ContactPopup isVisible={isVisible} onClose={hidePopup} />
+      {isHomePage && <ContactPopup isVisible={isVisible} onClose={hidePopup} />}
     </>
   );
 };
