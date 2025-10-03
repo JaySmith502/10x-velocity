@@ -52,8 +52,9 @@ export const IndustryCard = ({ name, icon, toolCount, onClick, isSelected }: Ind
     <button
       onClick={onClick}
       className={`
-        glass-card p-8 hover-scale cursor-pointer transition-all duration-300
+        glass-card p-8 cursor-pointer transition-all duration-300
         h-full min-h-[200px] w-full
+        hover:-translate-y-2 hover:bg-white/15 hover:shadow-xl
         ${isSelected ? 'ring-2 ring-velocity-accent' : ''}
       `}
     >
