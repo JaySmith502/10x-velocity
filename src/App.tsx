@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import ContactPopup from "./components/ui/ContactPopup";
 import { ContactPopupProvider } from "./contexts/ContactPopupContext";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { useContactPopupContext } from "./hooks/useContactPopupContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -49,6 +50,7 @@ const AppContent = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route element={<RootLayout />}>
           <Route path="/" element={<Index />} />
