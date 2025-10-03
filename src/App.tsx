@@ -36,6 +36,7 @@ import AIWorkshops from "./pages/services/AIWorkshops";
 import OnboardingForm from "./pages/OnboardingForm";
 import SmartBots from "./pages/SmartBots";
 import LexiFile from "./pages/LexiFile";
+import IndustryTools from "./pages/IndustryTools";
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const AppContent = () => {
           <Route path="/services/ai-workshops" element={<AIWorkshops />} />
           <Route path="/services/smart-bots" element={<SmartBots />} />
           <Route path="/lexi-file" element={<LexiFile />} />
+          <Route path="/industry-tools" element={<IndustryTools />} />
           <Route path="/power-automate" element={<PowerAutomate />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/innes-young" element={<InnesYoung />} />
