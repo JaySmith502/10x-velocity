@@ -32,9 +32,26 @@ const ContactPopup: React.FC<ContactPopupProps> = ({
   }, []);
 
   useEffect(() => {
-    // Handle iframe visibility
+    // Handle iframe visibility and cleanup
     if (iframeRef.current) {
       iframeRef.current.style.display = isVisible ? 'block' : 'none';
+    }
+    
+    // When closing, also remove any GHL-created elements
+    if (!isVisible) {
+      // Remove duplicate iframes with the same ID
+      const ghlIframes = document.querySelectorAll('iframe[id*="popup-mYtM8nnkSBtAzcDroeEO"]');
+      ghlIframes.forEach(iframe => {
+        if (iframe !== iframeRef.current) {
+          iframe.remove();
+        }
+      });
+      
+      // Remove any GHL overlay or backdrop elements
+      const ghlOverlays = document.querySelectorAll('[class*="ghl-"], [id*="ghl-"]');
+      ghlOverlays.forEach(element => {
+        element.remove();
+      });
     }
   }, [isVisible]);
 
