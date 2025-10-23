@@ -37,6 +37,8 @@ import AIWorkshops from "./pages/services/AIWorkshops";
 import OnboardingForm from "./pages/OnboardingForm";
 import SmartBots from "./pages/SmartBots";
 import LexiFile from "./pages/LexiFile";
+import Prototypes from "./pages/Prototypes";
+import IndustryTools from "./pages/IndustryTools";
 
 const queryClient = new QueryClient();
 
