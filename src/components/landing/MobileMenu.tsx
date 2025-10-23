@@ -124,6 +124,13 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                     >
                       AI Workshops
                     </Link>
+                    <Link 
+                      to="/prototypes" 
+                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      onClick={onClose}
+                    >
+                      Rapid Prototypes
+                    </Link>
                   </div>
                 )}
               </div>

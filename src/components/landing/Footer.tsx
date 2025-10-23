@@ -48,6 +48,7 @@ const Footer = () => {
               <li><Link to="/services/phone-voice-agents" className="text-velocity-muted hover:text-velocity-accent transition-colors">Phone Voice Agents</Link></li>
               <li><Link to="/services#team-training" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Training</Link></li>
               <li><Link to="/services#opportunity-discovery" className="text-velocity-muted hover:text-velocity-accent transition-colors">Opportunity Discovery</Link></li>
+              <li><Link to="/prototypes" className="text-velocity-muted hover:text-velocity-accent transition-colors">Rapid Prototypes</Link></li>
             </ul>
           </div>
           <div>

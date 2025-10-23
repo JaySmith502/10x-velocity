@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText } from "lucide-react";
+import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText, Rocket } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
@@ -166,6 +166,19 @@ const services = [
       "Reduce training costs for specialized tasks",
       "Improve team productivity with AI assistance"
     ]
+  },
+  {
+    id: "rapid-prototypes",
+    title: "Rapid Prototype Sprint",
+    description: "Turn your automation or AI idea into a working prototype in 10 days—fast enough to test, pitch, or secure buy-in.",
+    icon: Rocket,
+    benefits: [
+      "Validate ideas before investing $100K+ in development",
+      "Clickable prototype with real logic and AI components",
+      "Architecture overview and executive brief included",
+      "Know exactly what's next in just 10 days"
+    ],
+    link: "/prototypes"
   }
 ];
 

@@ -64,6 +64,9 @@ const Header = () => {
                   <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
                     <Link to="/services/ai-workshops" className="w-full">AI Workshops</Link>
                   </DropdownMenuItem>
+                  <DropdownMenuItem className="py-2 px-3 cursor-pointer hover:bg-velocity-accent/10 rounded-sm">
+                    <Link to="/prototypes" className="w-full">Rapid Prototypes</Link>
+                  </DropdownMenuItem>
                 </DropdownMenuContent>
               </DropdownMenu>
               
