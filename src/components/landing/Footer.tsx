@@ -54,6 +54,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4 text-velocity-light">Resources</h3>
             <ul className="space-y-2">
+              <li><Link to="/industry-tools" className="text-velocity-muted hover:text-velocity-accent transition-colors">Tool Explorer</Link></li>
               <li><Link to="/case-studies" className="text-velocity-muted hover:text-velocity-accent transition-colors">Case Studies</Link></li>
               <li><Link to="https://resources.10xvelocity.ai/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Documentation</Link></li>
               <li><Link to="https://resources.10xvelocity.ai/docs/intro" className="text-velocity-muted hover:text-velocity-accent transition-colors">Playbooks</Link></li>

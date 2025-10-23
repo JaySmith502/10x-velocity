@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import ContactPopup from "./components/ui/ContactPopup";
 import { ContactPopupProvider } from "./contexts/ContactPopupContext";
+import { ScrollToTop } from "./components/ScrollToTop";
 import { useContactPopupContext } from "./hooks/useContactPopupContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
@@ -36,7 +37,6 @@ import AIWorkshops from "./pages/services/AIWorkshops";
 import OnboardingForm from "./pages/OnboardingForm";
 import SmartBots from "./pages/SmartBots";
 import LexiFile from "./pages/LexiFile";
-import Prototypes from "./pages/Prototypes";
 
 const queryClient = new QueryClient();
 
@@ -49,6 +49,7 @@ const AppContent = () => {
 
   return (
     <>
+      <ScrollToTop />
       <Routes>
         <Route element={<RootLayout />}>
           <Route path="/" element={<Index />} />
@@ -59,6 +60,7 @@ const AppContent = () => {
           <Route path="/services/ai-workshops" element={<AIWorkshops />} />
           <Route path="/services/smart-bots" element={<SmartBots />} />
           <Route path="/lexi-file" element={<LexiFile />} />
+          <Route path="/industry-tools" element={<IndustryTools />} />
           <Route path="/power-automate" element={<PowerAutomate />} />
           <Route path="/prototypes" element={<Prototypes />} />
           <Route path="/case-studies" element={<CaseStudies />} />
