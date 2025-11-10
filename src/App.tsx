@@ -5,10 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
-import ContactPopup from "./components/ui/ContactPopup";
-import { ContactPopupProvider } from "./contexts/ContactPopupContext";
 import { ScrollToTop } from "./components/ScrollToTop";
-import { useContactPopupContext } from "./hooks/useContactPopupContext";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import Services from "./pages/Services";
@@ -43,12 +40,6 @@ import IndustryTools from "./pages/IndustryTools";
 const queryClient = new QueryClient();
 
 const AppContent = () => {
-  const { isVisible, hidePopup } = useContactPopupContext();
-  const location = useLocation();
-  
-  // Only show popup on home page
-  const isHomePage = location.pathname === '/';
-
   return (
     <>
       <ScrollToTop />
@@ -86,7 +77,6 @@ const AppContent = () => {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
-      {isHomePage && <ContactPopup isVisible={isVisible} onClose={hidePopup} />}
     </>
   );
 };
@@ -97,13 +87,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <ContactPopupProvider
-          autoShow={true}
-          showDelay={10000}
-          showOnExit={true}
-        >
-          <AppContent />
-        </ContactPopupProvider>
+        <AppContent />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
