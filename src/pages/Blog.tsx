@@ -97,7 +97,7 @@ const Blog = () => {
                       asChild
                       className="w-full bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all"
                     >
-                      <a href="https://calendly.com/therootofpi/15-minute-quick-chat" target="_blank" rel="noopener noreferrer">
+                      <a href="https://level.10xvelocity.ai/widget/bookings/jay-smith-10xvelocity" target="_blank" rel="noopener noreferrer">
                         Schedule a 15 minute call <ArrowRight className="ml-2 h-4 w-4" />
                       </a>
                     </Button>

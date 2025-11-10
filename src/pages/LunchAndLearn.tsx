@@ -214,7 +214,7 @@ const LunchAndLearn = () => {
             
             <div className="text-center">
               <a 
-                href="https://calendly.com/therootofpi/15-minute-quick-chat" 
+                href="https://level.10xvelocity.ai/widget/bookings/jay-smith-10xvelocity" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-velocity-accent hover:text-velocity-light transition-colors"
