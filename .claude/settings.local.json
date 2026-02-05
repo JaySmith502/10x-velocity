@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git -C \"c:\\\\Users\\\\smith\\\\Documents\\\\1 Projects\\\\10x-velocity\" log --oneline -15)",
+      "Bash(npm run build:*)"
+    ]
+  }
+}

@@ -36,6 +36,7 @@ import SmartBots from "./pages/SmartBots";
 import LexiFile from "./pages/LexiFile";
 import Prototypes from "./pages/Prototypes";
 import IndustryTools from "./pages/IndustryTools";
+import AIGuideCertification from "./pages/AIGuideCertification";
 
 const queryClient = new QueryClient();
 
@@ -56,6 +57,7 @@ const AppContent = () => {
           <Route path="/industry-tools" element={<IndustryTools />} />
           <Route path="/power-automate" element={<PowerAutomate />} />
           <Route path="/prototypes" element={<Prototypes />} />
+          <Route path="/programs/ai-guide-certification" element={<AIGuideCertification />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/innes-young" element={<InnesYoung />} />
           <Route path="/case-studies/ecatalyst" element={<ECatalyst />} />
