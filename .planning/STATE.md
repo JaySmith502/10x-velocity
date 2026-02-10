@@ -5,33 +5,33 @@
 See: .planning/PROJECT.md (updated 2026-02-10)
 
 **Core value:** Every page on 10xvelocity.ai must be discoverable, properly indexed, and richly described to search engines and AI systems.
-**Current focus:** Phase 2 - Per-Page Meta Tags (completing)
+**Current focus:** Phase 3 - Social & Open Graph (next up)
 
 ## Current Position
 
-Phase: 2 of 5 (Per-Page Meta Tags)
-Plan: 2 of 3 in current phase complete (02-01 pending)
-Status: Plans 02-02 and 02-03 complete
-Last activity: 2026-02-10 -- Completed 02-02-PLAN.md (case studies, products, legal, blog meta)
+Phase: 2 of 5 (Per-Page Meta Tags) -- COMPLETE
+Plan: 3 of 3 in current phase
+Status: Phase 2 complete, ready for Phase 3
+Last activity: 2026-02-10 -- Completed 02-01-PLAN.md (top-level, service, event page meta tags)
 
-Progress: [████░░░░░░] 40%
+Progress: [████░░░░░░] 38%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 8 min
-- Total execution time: 0.5 hours
+- Total plans completed: 5
+- Average duration: 9 min
+- Total execution time: 0.7 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Foundation & Crawlability | 2/2 | 6 min | 3 min |
-| 2. Per-Page Meta Tags | 2/3 | 25 min | 12.5 min |
+| 2. Per-Page Meta Tags | 3/3 | 39 min | 13 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (13 min), 02-03 (12 min), 01-02 (3 min), 01-01 (3 min)
+- Last 5 plans: 02-01 (14 min), 02-02 (13 min), 02-03 (12 min), 01-02 (3 min), 01-01 (3 min)
 - Trend: Phase 2 plans longer due to more files per plan
 
 *Updated after each plan completion*
@@ -52,6 +52,8 @@ Recent decisions affecting current work:
 - [01-02]: External URLs must always use native `<a>` tags, never React Router `<Link>`
 - [01-02]: Copyright year must always use `new Date().getFullYear()`, never hardcoded
 - [01-02]: FIX-02 (LeadConnector form links) requires manual GoHighLevel admin config -- not fixable in code
+- [02-01]: SavingsCalculator Helmet placed inside TooltipProvider (already root element)
+- [02-01]: Root canonical URL uses trailing slash; all other pages no trailing slash
 - [02-02]: Blog title truncation at 44 chars with '...' keeps total under 60 with ' | 10x Velocity'
 - [02-02]: Blog excerpts used directly as meta descriptions (150-160 chars)
 - [02-03]: Two-pronged H1 fix: CSS fallback + JS MutationObserver for chat widget duplicate H1
@@ -68,6 +70,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-10T16:04:51Z
-Stopped at: Completed 02-02-PLAN.md
+Last session: 2026-02-10T16:05:37Z
+Stopped at: Completed 02-01-PLAN.md (Phase 2 complete)
 Resume file: None
