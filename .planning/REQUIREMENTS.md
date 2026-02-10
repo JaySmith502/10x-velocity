@@ -9,14 +9,14 @@
 
 - [x] **CRAWL-01**: robots.txt serves as proper text file with sitemap reference
 - [x] **CRAWL-02**: XML sitemap lists all indexable pages with priorities
-- [ ] **CRAWL-03**: Canonical tags on every page point to correct canonical URL
+- [x] **CRAWL-03**: Canonical tags on every page point to correct canonical URL
 - [x] **CRAWL-04**: 404 page returns proper HTTP 404 status (not soft 200)
 
 ### On-Page SEO
 
-- [ ] **ONPG-01**: Every page has a unique, keyword-rich title tag (under 60 chars)
-- [ ] **ONPG-02**: Every page has a unique meta description (150-160 chars)
-- [ ] **ONPG-03**: Each page has exactly one H1 tag (fix chat widget duplicate)
+- [x] **ONPG-01**: Every page has a unique, keyword-rich title tag (under 60 chars)
+- [x] **ONPG-02**: Every page has a unique meta description (150-160 chars)
+- [x] **ONPG-03**: Each page has exactly one H1 tag (fix chat widget duplicate)
 - [x] **ONPG-04**: Dynamic copyright year in footer
 - [x] **ONPG-05**: noopener/noreferrer on all external links
 
@@ -94,10 +94,10 @@
 | FIX-02 | Phase 1 | Complete |
 | ONPG-04 | Phase 1 | Complete |
 | ONPG-05 | Phase 1 | Complete |
-| ONPG-01 | Phase 2 | Pending |
-| ONPG-02 | Phase 2 | Pending |
-| ONPG-03 | Phase 2 | Pending |
-| CRAWL-03 | Phase 2 | Pending |
+| ONPG-01 | Phase 2 | Complete |
+| ONPG-02 | Phase 2 | Complete |
+| ONPG-03 | Phase 2 | Complete |
+| CRAWL-03 | Phase 2 | Complete |
 | SOCL-01 | Phase 3 | Pending |
 | SOCL-02 | Phase 3 | Pending |
 | SOCL-03 | Phase 3 | Pending |
@@ -124,4 +124,4 @@
 
 ---
 *Requirements defined: 2026-02-10*
-*Last updated: 2026-02-10 after Phase 1 completion*
+*Last updated: 2026-02-10 after Phase 2 completion*
