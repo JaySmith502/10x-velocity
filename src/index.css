@@ -46,7 +46,15 @@
   }
 
   .heading-gradient {
-    @apply bg-gradient-to-r from-velocity-accent to-velocity-light 
+    @apply bg-gradient-to-r from-velocity-accent to-velocity-light
            bg-clip-text text-transparent;
   }
+}
+
+/* Fix duplicate H1 from n8n chat widget - demote to non-heading visual style */
+.chat-layout .chat-header h1 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+  display: inline;
 }
