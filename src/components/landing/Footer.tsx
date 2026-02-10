@@ -56,9 +56,9 @@ const Footer = () => {
             <ul className="space-y-2">
               <li><Link to="/industry-tools" className="text-velocity-muted hover:text-velocity-accent transition-colors">Tool Explorer</Link></li>
               <li><Link to="/case-studies" className="text-velocity-muted hover:text-velocity-accent transition-colors">Case Studies</Link></li>
-              <li><Link to="https://resources.10xvelocity.ai/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Documentation</Link></li>
-              <li><Link to="https://resources.10xvelocity.ai/" className="text-velocity-muted hover:text-velocity-accent transition-colors">Playbooks</Link></li>
-              <li><Link to="https://resources.10xvelocity.ai/blog" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</Link></li>
+              <li><a href="https://resources.10xvelocity.ai/" target="_blank" rel="noopener noreferrer" className="text-velocity-muted hover:text-velocity-accent transition-colors">Documentation</a></li>
+              <li><a href="https://resources.10xvelocity.ai/" target="_blank" rel="noopener noreferrer" className="text-velocity-muted hover:text-velocity-accent transition-colors">Playbooks</a></li>
+              <li><a href="https://resources.10xvelocity.ai/blog" target="_blank" rel="noopener noreferrer" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</a></li>
             </ul>
           </div>
           <div>
@@ -72,7 +72,7 @@ const Footer = () => {
         </div>
         <div className="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
           <p className="text-velocity-muted">
-            © 2024 10x Velocity. All rights reserved.
+            © {new Date().getFullYear()} 10x Velocity. All rights reserved.
           </p>
           <div className="flex items-center justify-center gap-6">
             <img 
