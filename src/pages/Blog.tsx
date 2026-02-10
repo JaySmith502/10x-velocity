@@ -1,5 +1,6 @@
 
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Calendar, Tag, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,14 @@ import { blogPosts } from "@/data/blogPosts";
 const Blog = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+          ]),
+        ]}
+      >
         <title>AI & Automation Insights Blog | 10x Velocity</title>
         <meta
           name="description"

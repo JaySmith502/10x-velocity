@@ -1,5 +1,6 @@
 import { ArrowRight, Zap, Target, Users, FileText, Presentation, Rocket } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
@@ -11,7 +12,14 @@ const Prototypes = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Prototypes", path: "/prototypes" },
+          ]),
+        ]}
+      >
         <title>Rapid AI Prototype Sprint | 10x Velocity</title>
         <meta name="description" content="Go from idea to interactive proof in just 10 days with our rapid prototype sprint. 10x Velocity builds functional AI prototypes to validate your concept." />
         <link rel="canonical" href="https://10xvelocity.ai/prototypes" />

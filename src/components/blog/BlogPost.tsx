@@ -1,6 +1,7 @@
 
 import { ArrowLeft, Calendar, Tag, User } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { NotFound } from "@/pages/NotFound";
@@ -22,7 +23,15 @@ const BlogPost = () => {
 
   return (
     <main className="flex-1">
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path: `/blog/${id}` },
+          ]),
+        ]}
+      >
         <title>{`${blogTitle} | 10x Velocity`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={`https://10xvelocity.ai/blog/${post.id}`} />

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ArrowRight, Check, CheckCircle2, Bot, ChartLine, Users, Database } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
@@ -11,7 +12,14 @@ const PowerAutomate = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Power Automate", path: "/power-automate" },
+          ]),
+        ]}
+      >
         <title>Microsoft Power Automate Consulting | 10x Velocity</title>
         <meta name="description" content="Expert Microsoft Power Automate consulting and implementation services. Automate repetitive tasks and streamline business workflows with 10x Velocity." />
         <link rel="canonical" href="https://10xvelocity.ai/power-automate" />

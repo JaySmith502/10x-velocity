@@ -2,11 +2,19 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 
 const TermsOfService = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Terms of Service", path: "/terms-of-service" },
+          ]),
+        ]}
+      >
         <title>Terms of Service | 10x Velocity</title>
         <meta name="description" content="Review the 10x Velocity terms of service agreement. Understand the terms and conditions governing your use of our website, AI tools, and consulting work." />
         <link rel="canonical" href="https://10xvelocity.ai/terms-of-service" />

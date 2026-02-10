@@ -1,11 +1,19 @@
 
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 
 const Contact = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
+      >
         <title>Contact Us | 10x Velocity</title>
         <meta
           name="description"

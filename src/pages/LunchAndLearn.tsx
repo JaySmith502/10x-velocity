@@ -1,6 +1,7 @@
 
 import { useState } from "react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Calendar, Clock, MapPin, Check, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,14 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 const LunchAndLearn = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Lunch & Learn", path: "/events/lunch-and-learn" },
+          ]),
+        ]}
+      >
         <title>AI Lunch & Learn Event | 10x Velocity</title>
         <meta
           name="description"

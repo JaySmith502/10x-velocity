@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { industries, categories, Tool } from "@/data/industryTools";
 import { IndustryCard } from "@/components/industry-tools/IndustryCard";
 import { CategoryFilter } from "@/components/industry-tools/CategoryFilter";
@@ -40,7 +41,14 @@ const IndustryTools = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Industry Tools", path: "/industry-tools" },
+          ]),
+        ]}
+      >
         <title>AI & Automation Tool Explorer by Industry | 10x Velocity</title>
         <meta
           name="description"

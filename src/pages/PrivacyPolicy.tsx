@@ -2,11 +2,19 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 
 const PrivacyPolicy = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Privacy Policy", path: "/privacy-policy" },
+          ]),
+        ]}
+      >
         <title>Privacy Policy | 10x Velocity</title>
         <meta name="description" content="Read the 10x Velocity privacy policy. Learn how we collect, use, store, and protect your personal information when you visit our website and use services." />
         <link rel="canonical" href="https://10xvelocity.ai/privacy-policy" />

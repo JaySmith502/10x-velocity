@@ -1,5 +1,6 @@
 
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -8,7 +9,14 @@ import DiscoveryButton from "@/components/ui/DiscoveryButton";
 const CaseStudies = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+          ]),
+        ]}
+      >
         <title>AI Case Studies & Client Results | 10x Velocity</title>
         <meta
           name="description"

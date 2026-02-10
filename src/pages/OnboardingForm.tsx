@@ -1,12 +1,20 @@
 
 import { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
 
 const OnboardingForm = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Demo", path: "/demo" },
+          ]),
+        ]}
+      >
         <title>Get a Demo | 10x Velocity</title>
         <meta
           name="description"

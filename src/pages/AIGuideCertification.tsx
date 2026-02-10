@@ -1,11 +1,19 @@
 import { Check, BookOpen, Users, Award, Heart, Clock, GraduationCap, MessageCircle, Search, Lightbulb } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const AIGuideCertification = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "AI Guide Certification", path: "/programs/ai-guide-certification" },
+          ]),
+        ]}
+      >
         <title>AI Guide Certification Program | 10x Velocity</title>
         <meta name="description" content="Earn your AI Guide Certification with 10x Velocity. Our comprehensive training program prepares you to become a certified AI implementation specialist." />
         <link rel="canonical" href="https://10xvelocity.ai/programs/ai-guide-certification" />

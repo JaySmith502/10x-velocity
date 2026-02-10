@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, Lock, Lightbulb, Settings, Zap, Brain, FileSearch, Shield, Users, Calendar, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -68,7 +69,14 @@ const LexiFile = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Lexi File", path: "/lexi-file" },
+          ]),
+        ]}
+      >
         <title>Lexi-File AI Document Management | 10x Velocity</title>
         <meta name="description" content="Lexi-File by 10x Velocity brings AI-powered document management to your business. Organize, search, and extract actionable insights from any file type." />
         <link rel="canonical" href="https://10xvelocity.ai/lexi-file" />

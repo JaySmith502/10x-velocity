@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import InputControls from "@/components/savings-calculator/InputControls";
 import ResultsDisplay from "@/components/savings-calculator/ResultsDisplay";
 import { calculateSavings, SavingsInputs, SavingsResults } from "@/utils/savingsCalculator";
@@ -39,7 +40,14 @@ const SavingsCalculator = () => {
 
   return (
     <TooltipProvider>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Savings Calculator", path: "/savings-calculator" },
+          ]),
+        ]}
+      >
         <title>Automation Savings Calculator | 10x Velocity</title>
         <meta
           name="description"
