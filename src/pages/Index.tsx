@@ -1,11 +1,20 @@
 import { ArrowRight, Bot, ChartLine, Users, Database, Calculator } from "lucide-react";
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
+      <Helmet>
+        <title>AI & Automation Consulting | 10x Velocity</title>
+        <meta
+          name="description"
+          content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. Based in Louisville, KY."
+        />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -166,6 +175,7 @@ const Index = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
