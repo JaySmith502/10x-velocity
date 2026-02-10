@@ -78,12 +78,12 @@ Plans:
   3. All interior pages contain valid BreadcrumbList JSON-LD matching the page hierarchy
   4. Services page and Voice Agents page contain valid FAQPage JSON-LD with real Q&A pairs
   5. Each case study page contains valid Article or CaseStudy JSON-LD with metrics and client info
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: Organization, LocalBusiness, and WebSite schema on homepage (SCHM-01, SCHM-06, SOCL-04 sameAs)
-- [ ] 04-02: Service schema on service pages (SCHM-02)
-- [ ] 04-03: BreadcrumbList, FAQPage, and CaseStudy schema across the site (SCHM-03, SCHM-04, SCHM-05)
+- [ ] 04-01-PLAN.md -- Install react-schemaorg/schema-dts, create schema helpers, Organization + ProfessionalService + WebSite JSON-LD on homepage (SCHM-01, SCHM-06, SOCL-04)
+- [ ] 04-02-PLAN.md -- Service + FAQPage + BreadcrumbList JSON-LD on all service pages (SCHM-02, SCHM-04, SCHM-03 partial)
+- [ ] 04-03-PLAN.md -- Article JSON-LD on case studies + BreadcrumbList on all remaining interior pages (SCHM-05, SCHM-03 complete)
 
 ### Phase 5: Content Structure & Images
 **Goal**: Users can navigate via breadcrumbs, find answers in FAQs, discover the blog, and experience fast-loading optimized images
