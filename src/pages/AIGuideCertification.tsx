@@ -1,10 +1,17 @@
 import { Check, BookOpen, Users, Award, Heart, Clock, GraduationCap, MessageCircle, Search, Lightbulb } from "lucide-react";
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const AIGuideCertification = () => {
   return (
-    <main className="flex-1">
-      {/* Hero Section */}
+    <>
+      <Helmet>
+        <title>AI Guide Certification Program | 10x Velocity</title>
+        <meta name="description" content="Earn your AI Guide Certification with 10x Velocity. Our comprehensive training program prepares you to become a certified AI implementation specialist." />
+        <link rel="canonical" href="https://10xvelocity.ai/programs/ai-guide-certification" />
+      </Helmet>
+      <main className="flex-1">
+        {/* Hero Section */}
       <section id="ai-guide-certification" className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0" />
         <div className="container mx-auto px-4 relative z-10">
@@ -169,6 +176,7 @@ const AIGuideCertification = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

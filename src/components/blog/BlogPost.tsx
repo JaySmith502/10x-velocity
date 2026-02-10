@@ -1,5 +1,6 @@
 
 import { ArrowLeft, Calendar, Tag, User } from "lucide-react";
+import { Helmet } from "react-helmet";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { NotFound } from "@/pages/NotFound";
@@ -15,8 +16,17 @@ const BlogPost = () => {
     return <NotFound />;
   }
 
+  const blogTitle = post.title.length > 44
+    ? post.title.substring(0, 41) + '...'
+    : post.title;
+
   return (
     <main className="flex-1">
+      <Helmet>
+        <title>{`${blogTitle} | 10x Velocity`}</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://10xvelocity.ai/blog/${post.id}`} />
+      </Helmet>
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         {/* Back button */}
         <div className="mb-8">

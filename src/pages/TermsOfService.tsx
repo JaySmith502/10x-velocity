@@ -1,10 +1,17 @@
 
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 const TermsOfService = () => {
   return (
-    <main className="container mx-auto px-4 py-16">
+    <>
+      <Helmet>
+        <title>Terms of Service | 10x Velocity</title>
+        <meta name="description" content="Review the 10x Velocity terms of service agreement. Understand the terms and conditions governing your use of our website, AI tools, and consulting work." />
+        <link rel="canonical" href="https://10xvelocity.ai/terms-of-service" />
+      </Helmet>
+      <main className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-velocity-muted hover:text-velocity-accent transition-colors">
@@ -117,6 +124,7 @@ const TermsOfService = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

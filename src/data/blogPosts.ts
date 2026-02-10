@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 1,
     title: "10 Ways AI Can Streamline Your Business Operations",
-    excerpt: "Discover how artificial intelligence technologies can transform your business processes and boost efficiency across departments.",
+    excerpt: "Discover how artificial intelligence technologies can transform your everyday business processes, boost efficiency across departments, and reduce costs.",
     author: "Sarah Johnson",
     date: "May 15, 2024",
     category: "Business",
@@ -26,7 +26,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 2,
     title: "The Future of Work: AI and Human Collaboration",
-    excerpt: "Explore how AI and human workers can complement each other to create more efficient and innovative workplaces.",
+    excerpt: "Explore how AI and human workers can complement each other to create more efficient, innovative, and productive workplaces for the future of your business.",
     author: "Michael Chen",
     date: "May 8, 2024",
     category: "Technology",
@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 3,
     title: "Case Study: How We Helped a Healthcare Provider Save $2M Annually",
-    excerpt: "Learn how our AI solutions helped a major healthcare provider automate patient intake and reduce operational costs significantly.",
+    excerpt: "Learn how our AI-powered solutions helped a major healthcare provider automate patient intake, streamline daily operations, and cut costs by $2M per year.",
     author: "Jessica Williams",
     date: "April 30, 2024",
     category: "Case Study",
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 4,
     title: "Nonprofits and AI: Maximizing Impact with Limited Resources",
-    excerpt: "Discover how nonprofit organizations can leverage AI to extend their reach and maximize their impact without straining limited budgets.",
+    excerpt: "Discover how nonprofit organizations can leverage AI tools to extend their reach, maximize community impact, and do more without straining limited budgets.",
     author: "David Miller",
     date: "April 22, 2024",
     category: "Nonprofit",
@@ -56,7 +56,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 5,
     title: "The ROI of AI Implementation: What to Expect",
-    excerpt: "A comprehensive breakdown of the return on investment you can expect when implementing AI solutions across different business functions.",
+    excerpt: "A detailed breakdown of the return on investment your business can expect when implementing AI and automation solutions across key functions and workflows.",
     author: "Lisa Thompson",
     date: "April 15, 2024",
     category: "Business",

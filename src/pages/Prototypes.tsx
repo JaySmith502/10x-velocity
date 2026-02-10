@@ -1,4 +1,5 @@
 import { ArrowRight, Zap, Target, Users, FileText, Presentation, Rocket } from "lucide-react";
+import { Helmet } from "react-helmet";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
@@ -9,9 +10,15 @@ const Prototypes = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
+    <>
+      <Helmet>
+        <title>Rapid AI Prototype Sprint | 10x Velocity</title>
+        <meta name="description" content="Go from idea to interactive proof in just 10 days with our rapid prototype sprint. 10x Velocity builds functional AI prototypes to validate your concept." />
+        <link rel="canonical" href="https://10xvelocity.ai/prototypes" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        {/* Hero Section */}
+        <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         
@@ -185,6 +192,7 @@ const Prototypes = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -1,10 +1,17 @@
 
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
   return (
-    <main className="container mx-auto px-4 py-16">
+    <>
+      <Helmet>
+        <title>Privacy Policy | 10x Velocity</title>
+        <meta name="description" content="Read the 10x Velocity privacy policy. Learn how we collect, use, store, and protect your personal information when you visit our website and use services." />
+        <link rel="canonical" href="https://10xvelocity.ai/privacy-policy" />
+      </Helmet>
+      <main className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-velocity-muted hover:text-velocity-accent transition-colors">
@@ -161,6 +168,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 
