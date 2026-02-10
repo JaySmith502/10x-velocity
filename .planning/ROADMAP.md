@@ -55,22 +55,23 @@ Plans:
 ### Phase 3: Social & Open Graph
 **Goal**: Every page is shareable on social platforms with rich previews showing correct titles, descriptions, and images
 **Depends on**: Phase 2 (per-page titles and descriptions available for OG reuse)
-**Requirements**: SOCL-01, SOCL-02, SOCL-03, SOCL-04, IMG-04
+**Requirements**: SOCL-01, SOCL-02, SOCL-03, IMG-04
+**Note**: SOCL-04 (sameAs schema) deferred to Phase 4 -- the Organization JSON-LD in plan 04-01 will include the LinkedIn URL as sameAs
 **Success Criteria** (what must be TRUE):
   1. Sharing any page URL on Facebook/LinkedIn shows a rich preview with page-specific title, description, and image (not generic SPA fallback)
   2. Sharing any page URL on Twitter/X shows a summary_large_image card with page-specific content
   3. Footer contains links to all active social media profiles
   4. OG image meta tags use absolute URLs (https://10xvelocity.ai/og-image.png)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: OG and Twitter Card meta tags on all pages (SOCL-01, SOCL-02, IMG-04)
-- [ ] 03-02: Social media links in footer and schema preparation (SOCL-03, SOCL-04)
+- [ ] 03-01-PLAN.md -- OG and Twitter Card meta tags on all 30 pages + index.html absolute URL fix (SOCL-01, SOCL-02, IMG-04)
+- [ ] 03-02-PLAN.md -- LinkedIn company link in footer (SOCL-03)
 
 ### Phase 4: Schema Markup
 **Goal**: Search engines understand the site's entities (business, services, pages, FAQs, case studies) through structured data
 **Depends on**: Phase 1 (React Helmet for injecting JSON-LD)
-**Requirements**: SCHM-01, SCHM-02, SCHM-03, SCHM-04, SCHM-05, SCHM-06
+**Requirements**: SCHM-01, SCHM-02, SCHM-03, SCHM-04, SCHM-05, SCHM-06, SOCL-04
 **Success Criteria** (what must be TRUE):
   1. Homepage contains valid Organization + LocalBusiness + WebSite JSON-LD (verifiable via Google Rich Results Test)
   2. Services page and individual service pages contain valid Service JSON-LD for each offering
@@ -80,7 +81,7 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 04-01: Organization, LocalBusiness, and WebSite schema on homepage (SCHM-01, SCHM-06)
+- [ ] 04-01: Organization, LocalBusiness, and WebSite schema on homepage (SCHM-01, SCHM-06, SOCL-04 sameAs)
 - [ ] 04-02: Service schema on service pages (SCHM-02)
 - [ ] 04-03: BreadcrumbList, FAQPage, and CaseStudy schema across the site (SCHM-03, SCHM-04, SCHM-05)
 
