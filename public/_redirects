@@ -1,1 +1,25 @@
-/* /index.html 200
+# Netlify redirects - first match wins
+# Static files (robots.txt, sitemap.xml, favicon.ico, etc.) served automatically via shadowing
+
+# SPA routes - serve index.html with 200 status
+/                                    /index.html   200
+/about                               /index.html   200
+/services                            /index.html   200
+/services/*                          /index.html   200
+/lexi-file                           /index.html   200
+/industry-tools                      /index.html   200
+/power-automate                      /index.html   200
+/prototypes                          /index.html   200
+/programs/*                          /index.html   200
+/case-studies                        /index.html   200
+/case-studies/*                      /index.html   200
+/savings-calculator                  /index.html   200
+/events/*                            /index.html   200
+/demo                                /index.html   200
+/blog                                /index.html   200
+/blog/*                              /index.html   200
+/contact                             /index.html   200
+/privacy-policy                      /index.html   200
+/terms-of-service                    /index.html   200
+# Catch-all: any unmatched route returns 404 status
+/*                                   /index.html   404
