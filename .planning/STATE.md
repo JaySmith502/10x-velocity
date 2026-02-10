@@ -10,16 +10,16 @@ See: .planning/PROJECT.md (updated 2026-02-10)
 ## Current Position
 
 Phase: 4 of 5 (Schema Markup)
-Plan: 1 of 3 in current phase
+Plan: 2 of 3 in current phase
 Status: In progress
-Last activity: 2026-02-10 -- Completed 04-01-PLAN.md
+Last activity: 2026-02-10 -- Completed 04-02-PLAN.md
 
-Progress: [████████░░] 67%
+Progress: [█████████░] 75%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
+- Total plans completed: 9
 - Average duration: 7 min
 - Total execution time: 1.0 hours
 
@@ -30,11 +30,11 @@ Progress: [████████░░] 67%
 | 1. Foundation & Crawlability | 2/2 | 6 min | 3 min |
 | 2. Per-Page Meta Tags | 3/3 | 39 min | 13 min |
 | 3. Social & Open Graph | 2/2 | 10 min | 5 min |
-| 4. Schema Markup | 1/3 | 3 min | 3 min |
+| 4. Schema Markup | 2/3 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (3 min), 03-01 (7 min), 03-02 (3 min), 02-01 (14 min), 02-02 (13 min)
-- Trend: Schema foundation plan fast due to clean setup with established Helmet patterns
+- Last 5 plans: 04-02 (2 min), 04-01 (3 min), 03-01 (7 min), 03-02 (3 min), 02-01 (14 min)
+- Trend: Schema plans consistently fast due to established patterns from prior phases
 
 *Updated after each plan completion*
 
@@ -68,6 +68,9 @@ Recent decisions affecting current work:
 - [04-01]: Omitted SearchAction from WebSite schema -- site has no search; Google deprecated Sitelinks Search Box Nov 2024
 - [04-01]: ProfessionalService (not generic LocalBusiness) as @type for consulting firm
 - [04-01]: SOCL-04 fulfilled via Organization sameAs with LinkedIn URL
+- [04-02]: Services index maps over existing services array for DRY Service JSON-LD generation
+- [04-02]: AIWorkshops FAQPage maps existing faqs array (question/answer fields) for schema consistency with visible content
+- [04-02]: Services and PhoneVoiceAgents get authored FAQ content in schema-only (visible FAQ UI deferred to Phase 5 CONT-02)
 
 ### Pending Todos
 
@@ -80,6 +83,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-10T18:45:03Z
-Stopped at: Completed 04-01-PLAN.md (schema foundation)
+Last session: 2026-02-10T18:49:28Z
+Stopped at: Completed 04-02-PLAN.md (service page schemas)
 Resume file: None
