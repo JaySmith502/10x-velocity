@@ -42,6 +42,12 @@ const Inspyrd = () => {
         <title>Inspyrd Trauma Recovery Program Case Study | 10x Velocity</title>
         <meta name="description" content="See how 10x Velocity empowered Inspyrd to launch a transformational trauma recovery program in the U.S. using AI-powered operations and workflow systems." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/inspyrd" />
+        <meta property="og:title" content="Inspyrd Trauma Recovery Program Case Study | 10x Velocity" />
+        <meta property="og:description" content="See how 10x Velocity empowered Inspyrd to launch a transformational trauma recovery program in the U.S. using AI-powered operations and workflow systems." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/inspyrd" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
         <article className="container mx-auto px-4 py-20">

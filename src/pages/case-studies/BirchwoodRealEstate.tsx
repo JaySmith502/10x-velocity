@@ -10,6 +10,12 @@ const BirchwoodRealEstate = () => {
         <title>Birchwood Real Estate Case Study | 10x Velocity</title>
         <meta name="description" content="Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/birchwood-real-estate" />
+        <meta property="og:title" content="Birchwood Real Estate Case Study | 10x Velocity" />
+        <meta property="og:description" content="Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/birchwood-real-estate" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
         <section className="container mx-auto px-4 py-20">

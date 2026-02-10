@@ -26,6 +26,12 @@ const BlogPost = () => {
         <title>{`${blogTitle} | 10x Velocity`}</title>
         <meta name="description" content={post.excerpt} />
         <link rel="canonical" href={`https://10xvelocity.ai/blog/${post.id}`} />
+        <meta property="og:title" content={`${blogTitle} | 10x Velocity`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`https://10xvelocity.ai/blog/${post.id}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={post.image} />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         {/* Back button */}

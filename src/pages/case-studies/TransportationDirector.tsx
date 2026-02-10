@@ -11,6 +11,12 @@ const TransportationDirector = () => {
         <title>Transportation Director Logistics Case Study | 10x Velocity</title>
         <meta name="description" content="How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/transportation-director" />
+        <meta property="og:title" content="Transportation Director Logistics Case Study | 10x Velocity" />
+        <meta property="og:description" content="How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/transportation-director" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen">
       {/* Hero Section */}

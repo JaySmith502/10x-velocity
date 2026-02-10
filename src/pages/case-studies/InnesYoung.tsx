@@ -42,6 +42,12 @@ const InnesYoung = () => {
         <title>Innes & Young AI PR Case Study | 10x Velocity</title>
         <meta name="description" content="See how 10x Velocity helped Innes & Young evolve their PR agency with AI-powered media monitoring, content generation, and smart workflow automation tools." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/innes-young" />
+        <meta property="og:title" content="Innes & Young AI PR Case Study | 10x Velocity" />
+        <meta property="og:description" content="See how 10x Velocity helped Innes & Young evolve their PR agency with AI-powered media monitoring, content generation, and smart workflow automation tools." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/innes-young" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
         <article className="container mx-auto px-4 py-20">

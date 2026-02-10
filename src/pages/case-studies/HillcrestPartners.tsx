@@ -44,6 +44,12 @@ const HillcrestPartners = () => {
         <title>Hillcrest Partners Real Estate Case Study | 10x Velocity</title>
         <meta name="description" content="How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/hillcrest-partners" />
+        <meta property="og:title" content="Hillcrest Partners Real Estate Case Study | 10x Velocity" />
+        <meta property="og:description" content="How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/hillcrest-partners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
         <article className="container mx-auto px-4 py-20">

@@ -43,6 +43,12 @@ const DirectorOfMarketing = () => {
         <title>Director of Marketing AI Case Study | 10x Velocity</title>
         <meta name="description" content="How 10x Velocity transformed Director of Marketing Inc into a high-performance social media marketing agency using AI-powered workflows and smart tools." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/director-of-marketing" />
+        <meta property="og:title" content="Director of Marketing AI Case Study | 10x Velocity" />
+        <meta property="og:description" content="How 10x Velocity transformed Director of Marketing Inc into a high-performance social media marketing agency using AI-powered workflows and smart tools." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/director-of-marketing" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
         <article className="container mx-auto px-4 py-20">

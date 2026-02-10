@@ -42,6 +42,12 @@ const ECatalyst = () => {
         <title>eCatalyst Operational Excellence Case Study | 10x Velocity</title>
         <meta name="description" content="Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/ecatalyst" />
+        <meta property="og:title" content="eCatalyst Operational Excellence Case Study | 10x Velocity" />
+        <meta property="og:description" content="Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/ecatalyst" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
         <article className="container mx-auto px-4 py-20">
