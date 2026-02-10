@@ -13,6 +13,7 @@ const Index = () => {
           name="description"
           content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. Based in Louisville, KY."
         />
+        <link rel="canonical" href="https://10xvelocity.ai/" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
       {/* Hero Section */}

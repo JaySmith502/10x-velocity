@@ -42,10 +42,11 @@ const IndustryTools = () => {
     <>
       <Helmet>
         <title>AI & Automation Tool Explorer by Industry | 10x Velocity</title>
-        <meta 
-          name="description" 
-          content="Discover curated AI and automation tools for your industry. Browse tools for home services, legal, insurance, real estate, accounting, and healthcare." 
+        <meta
+          name="description"
+          content="Discover curated AI and automation tools for your industry. Browse tools for home services, legal, insurance, real estate, accounting, and healthcare."
         />
+        <link rel="canonical" href="https://10xvelocity.ai/industry-tools" />
       </Helmet>
 
       <div className="min-h-screen bg-velocity-dark py-20">

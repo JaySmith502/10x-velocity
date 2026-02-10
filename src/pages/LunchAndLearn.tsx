@@ -1,5 +1,6 @@
 
 import { useState } from "react";
+import { Helmet } from "react-helmet";
 import { Calendar, Clock, MapPin, Check, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,16 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const LunchAndLearn = () => {
   return (
-    <div className="min-h-screen bg-velocity-dark">
+    <>
+      <Helmet>
+        <title>AI Lunch & Learn Event | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Join our AI as Your Performance Enhancer lunch and learn session. Discover practical AI applications for your business in a hands-on interactive setting."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/events/lunch-and-learn" />
+      </Helmet>
+      <div className="min-h-screen bg-velocity-dark">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0"></div>
@@ -226,6 +236,7 @@ const LunchAndLearn = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

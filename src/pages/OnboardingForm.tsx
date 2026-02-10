@@ -1,10 +1,20 @@
 
 import { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 
 const OnboardingForm = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
+    <>
+      <Helmet>
+        <title>Get a Demo | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Request a personalized demo of our AI and automation solutions. See firsthand how 10x Velocity can transform your business operations and cut costs fast."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/demo" />
+      </Helmet>
+      <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
       <div className="container mx-auto px-4">
         <div className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Left side - Content */}
@@ -61,6 +71,7 @@ const OnboardingForm = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
