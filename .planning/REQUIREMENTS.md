@@ -31,9 +31,9 @@
 
 ### Social & Open Graph
 
-- [ ] **SOCL-01**: Full OG tags (title, description, image, url, type) on every page with absolute URLs
-- [ ] **SOCL-02**: Twitter Card meta tags on every page
-- [ ] **SOCL-03**: Social media profile links in footer
+- [x] **SOCL-01**: Full OG tags (title, description, image, url, type) on every page with absolute URLs
+- [x] **SOCL-02**: Twitter Card meta tags on every page
+- [x] **SOCL-03**: Social media profile links in footer
 - [ ] **SOCL-04**: Social links in Organization schema (sameAs)
 
 ### Images
@@ -41,7 +41,7 @@
 - [ ] **IMG-01**: Images converted to WebP format where possible
 - [ ] **IMG-02**: Explicit width/height attributes on all images
 - [ ] **IMG-03**: Lazy loading on below-fold images
-- [ ] **IMG-04**: OG image uses absolute URL
+- [x] **IMG-04**: OG image uses absolute URL
 
 ### Content Structure
 
@@ -98,11 +98,11 @@
 | ONPG-02 | Phase 2 | Complete |
 | ONPG-03 | Phase 2 | Complete |
 | CRAWL-03 | Phase 2 | Complete |
-| SOCL-01 | Phase 3 | Pending |
-| SOCL-02 | Phase 3 | Pending |
-| SOCL-03 | Phase 3 | Pending |
-| SOCL-04 | Phase 3 | Pending |
-| IMG-04 | Phase 3 | Pending |
+| SOCL-01 | Phase 3 | Complete |
+| SOCL-02 | Phase 3 | Complete |
+| SOCL-03 | Phase 3 | Complete |
+| SOCL-04 | Phase 4 | Pending |
+| IMG-04 | Phase 3 | Complete |
 | SCHM-01 | Phase 4 | Pending |
 | SCHM-02 | Phase 4 | Pending |
 | SCHM-03 | Phase 4 | Pending |
@@ -124,4 +124,4 @@
 
 ---
 *Requirements defined: 2026-02-10*
-*Last updated: 2026-02-10 after Phase 2 completion*
+*Last updated: 2026-02-10 after Phase 3 completion*
