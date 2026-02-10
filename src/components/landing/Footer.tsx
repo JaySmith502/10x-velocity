@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -26,6 +27,17 @@ const Footer = () => {
                 10440 Bluegrass Pkwy
                 <br />
                 Louisville, KY 40299
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/10x-velocity"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-velocity-muted hover:text-velocity-accent transition-colors inline-flex items-center gap-2"
+                >
+                  <Linkedin className="w-4 h-4" />
+                  LinkedIn
+                </a>
               </li>
               <li className="hidden md:block mt-12">
                 <Link to="/">
