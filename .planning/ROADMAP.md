@@ -66,7 +66,7 @@ Plans:
 
 Plans:
 - [ ] 03-01-PLAN.md -- OG and Twitter Card meta tags on all 30 pages + index.html absolute URL fix (SOCL-01, SOCL-02, IMG-04)
-- [ ] 03-02-PLAN.md -- LinkedIn company link in footer (SOCL-03)
+- [x] 03-02-PLAN.md -- LinkedIn company link in footer (SOCL-03)
 
 ### Phase 4: Schema Markup
 **Goal**: Search engines understand the site's entities (business, services, pages, FAQs, case studies) through structured data
@@ -113,6 +113,6 @@ Note: Phases 3 and 4 depend only on Phase 1/2, not on each other. With paralleli
 |-------|----------------|--------|-----------|
 | 1. Foundation & Crawlability | 2/2 | Complete | 2026-02-10 |
 | 2. Per-Page Meta Tags | 3/3 | ✓ Complete | 2026-02-10 |
-| 3. Social & Open Graph | 0/2 | Not started | - |
+| 3. Social & Open Graph | 1/2 | In progress | - |
 | 4. Schema Markup | 0/3 | Not started | - |
 | 5. Content Structure & Images | 0/3 | Not started | - |
