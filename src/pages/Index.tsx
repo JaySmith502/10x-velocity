@@ -11,7 +11,7 @@ const Index = () => {
         <title>AI & Automation Consulting | 10x Velocity</title>
         <meta
           name="description"
-          content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. Based in Louisville, KY."
+          content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. AI consulting and automation services based in Louisville, KY."
         />
         <link rel="canonical" href="https://10xvelocity.ai/" />
       </Helmet>
