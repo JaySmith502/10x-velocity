@@ -150,7 +150,7 @@ const PrivacyPolicy = () => {
               If you have any questions about this Privacy Policy, you can contact us:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>By email: info@10xvelocity.com</li>
+              <li>By email: info@10xvelocity.ai</li>
               <li>By visiting the contact page on our website: <a href="/contact" className="text-velocity-accent hover:underline">Contact Us</a></li>
             </ul>
           </section>

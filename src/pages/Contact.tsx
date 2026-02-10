@@ -17,7 +17,7 @@ const Contact = () => {
             <div className="glass-card p-6 md:p-8 flex-1">
               <h3 className="font-semibold text-lg mb-2">Contact Information</h3>
               <p className="text-velocity-muted mb-4">
-                Email: <a href="mailto:info@10xvelocity.com" className="text-velocity-accent hover:underline">info@10xvelocity.com</a>
+                Email: <a href="mailto:info@10xvelocity.ai" className="text-velocity-accent hover:underline">info@10xvelocity.ai</a>
               </p>
               <p className="text-velocity-muted">
                 Hours: Monday-Friday, 9am-5pm EST
