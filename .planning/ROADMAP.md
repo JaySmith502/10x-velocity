@@ -95,12 +95,12 @@ Plans:
   3. Visiting /blog shows a styled empty-state page (e.g., "Coming soon") with proper meta tags
   4. Each case study page has a unique title, unique meta description, and internal links to related services
   5. Images across the site use WebP format where possible, have explicit width/height attributes, and below-fold images use lazy loading
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 05-01: Visual breadcrumb component and FAQ sections (CONT-01, CONT-02)
-- [ ] 05-02: Blog route and case study SEO (CONT-03, CONT-04)
-- [ ] 05-03: Image optimization (IMG-01, IMG-02, IMG-03)
+- [ ] 05-01-PLAN.md -- VisualBreadcrumb component, FAQ Accordion sections on Services and PhoneVoiceAgents (CONT-01 partial, CONT-02)
+- [ ] 05-02-PLAN.md -- Visual breadcrumbs on all remaining 25 interior pages, case study service links (CONT-01 complete, CONT-03, CONT-04)
+- [ ] 05-03-PLAN.md -- PNG-to-WebP conversion, width/height attributes, lazy loading, delete unused image (IMG-01, IMG-02, IMG-03)
 
 ## Progress
 
