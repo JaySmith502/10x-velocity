@@ -1,8 +1,19 @@
 
+import { Helmet } from "react-helmet";
+
 const Contact = () => {
 
   return (
-    <div className="container mx-auto px-4 py-12 md:py-24">
+    <>
+      <Helmet>
+        <title>Contact Us | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Get in touch with 10x Velocity for AI and automation consulting services. Schedule a free discovery call to discuss how we can transform your operations."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/contact" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-12 md:py-24">
       <div className="max-w-5xl mx-auto">
         {/* Header and Contact Cards - Centered */}
         <div className="text-center mb-12">
@@ -60,6 +71,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

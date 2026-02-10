@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet";
 import { ArrowRight, Calendar, Tag, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,16 @@ import { blogPosts } from "@/data/blogPosts";
 
 const Blog = () => {
   return (
-    <main className="flex-1">
+    <>
+      <Helmet>
+        <title>AI & Automation Insights Blog | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Expert insights on AI implementation, business automation, and digital transformation strategies. Practical advice and tips from 10x Velocity consultants."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/blog" />
+      </Helmet>
+      <main className="flex-1">
       {/* Header Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
@@ -109,6 +119,7 @@ const Blog = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

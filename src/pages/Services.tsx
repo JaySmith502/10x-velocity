@@ -1,12 +1,22 @@
 
 import React from "react";
+import { Helmet } from "react-helmet";
 import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText, Rocket } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
+      <Helmet>
+        <title>AI & Automation Services | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Explore our full suite of AI and automation services including voice agents, smart bots, data cleaning, and workshops. Transform your business operations."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -78,6 +88,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

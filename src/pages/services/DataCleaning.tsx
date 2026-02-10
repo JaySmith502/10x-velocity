@@ -1,12 +1,22 @@
 
 import React from "react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import { Database, FileText, Check, ArrowRight } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const DataCleaning = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
+      <Helmet>
+        <title>Data Cleaning Services | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Professional data cleaning and preparation services that ensure your AI and automation initiatives launch with accurate, reliable, and quality data foundations."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services/data-cleaning" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -146,6 +156,7 @@ const DataCleaning = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

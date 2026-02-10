@@ -1,10 +1,20 @@
 
+import { Helmet } from "react-helmet";
 import { Sparkle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const PhoneVoiceAgents = () => {
   return (
-    <main className="flex-1">
+    <>
+      <Helmet>
+        <title>AI Phone & Voice Agents | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Supercharge your customer calls with AI-powered phone and voice agents. Automate inbound and outbound calling while delivering great customer service."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services/phone-voice-agents" />
+      </Helmet>
+      <main className="flex-1">
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 heading-gradient">
@@ -87,6 +97,7 @@ const PhoneVoiceAgents = () => {
         <DiscoveryButton text="Schedule Free Demo" className="text-lg" />
       </section>
     </main>
+    </>
   );
 };
 

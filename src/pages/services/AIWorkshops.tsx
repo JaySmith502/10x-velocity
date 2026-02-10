@@ -1,11 +1,21 @@
 
+import { Helmet } from "react-helmet";
 import { ArrowRight, Sparkle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const AIWorkshops = () => {
   return (
-    <main className="flex-1">
+    <>
+      <Helmet>
+        <title>AI Workshops for Teams | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Hands-on AI workshops that empower your team to leverage automation tools effectively. Customized training for businesses in Louisville, KY and beyond."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services/ai-workshops" />
+      </Helmet>
+      <main className="flex-1">
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 heading-gradient">
@@ -110,6 +120,7 @@ const AIWorkshops = () => {
         <DiscoveryButton text="Schedule Free Consultation" className="text-lg" />
       </section>
     </main>
+    </>
   );
 };
 

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 // Declare the custom element type for TypeScript
@@ -25,7 +26,16 @@ const SmartBots = () => {
   }
 
   return (
-    <main className="flex-1">
+    <>
+      <Helmet>
+        <title>Smart Bots with Custom Knowledge | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Deploy intelligent chatbots trained on your business knowledge base. Custom AI assistants that understand your products, services, and customer needs."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services/smart-bots" />
+      </Helmet>
+      <main className="flex-1">
       <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
@@ -98,6 +108,7 @@ const SmartBots = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

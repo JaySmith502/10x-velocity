@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import InputControls from "@/components/savings-calculator/InputControls";
 import ResultsDisplay from "@/components/savings-calculator/ResultsDisplay";
 import { calculateSavings, SavingsInputs, SavingsResults } from "@/utils/savingsCalculator";
@@ -38,6 +39,14 @@ const SavingsCalculator = () => {
 
   return (
     <TooltipProvider>
+      <Helmet>
+        <title>Automation Savings Calculator | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Calculate how much time and money your business could save with AI and automation. Use our free interactive savings calculator to estimate your ROI today."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/savings-calculator" />
+      </Helmet>
       <div className="min-h-screen py-12 bg-velocity-dark">
         <div className="container mx-auto px-4">
           {/* Header */}

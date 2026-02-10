@@ -1,4 +1,5 @@
 
+import { Helmet } from "react-helmet";
 import { ArrowRight, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
@@ -6,7 +7,16 @@ import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const CaseStudies = () => {
   return (
-    <main className="flex-1">
+    <>
+      <Helmet>
+        <title>AI Case Studies & Client Results | 10x Velocity</title>
+        <meta
+          name="description"
+          content="See real results from our AI and automation implementations. Detailed case studies showing measurable ROI across multiple industries and business sizes."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies" />
+      </Helmet>
+      <main className="flex-1">
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
@@ -199,6 +209,7 @@ const CaseStudies = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

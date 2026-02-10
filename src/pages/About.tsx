@@ -1,6 +1,17 @@
+import { Helmet } from "react-helmet";
+
 const About = () => {
   return (
-    <main className="min-h-screen bg-velocity-dark">
+    <>
+      <Helmet>
+        <title>About Us - AI & Automation Consulting | 10x Velocity</title>
+        <meta
+          name="description"
+          content="10x Velocity uses AI to amplify human potential, not replace it. Learn about our human-centered approach to automation consulting based in Louisville, KY."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/about" />
+      </Helmet>
+      <main className="min-h-screen bg-velocity-dark">
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -119,6 +130,7 @@ const About = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 
