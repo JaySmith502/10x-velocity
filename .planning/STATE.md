@@ -5,23 +5,23 @@
 See: .planning/PROJECT.md (updated 2026-02-10)
 
 **Core value:** Every page on 10xvelocity.ai must be discoverable, properly indexed, and richly described to search engines and AI systems.
-**Current focus:** Phase 4 - Schema Markup
+**Current focus:** Phase 4 complete - Phase 5 next (Content Structure & Images)
 
 ## Current Position
 
 Phase: 4 of 5 (Schema Markup)
-Plan: 2 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-10 -- Completed 04-02-PLAN.md
+Plan: 3 of 3 in current phase
+Status: Phase complete
+Last activity: 2026-02-10 -- Completed 04-03-PLAN.md
 
-Progress: [█████████░] 75%
+Progress: [██████████] 100% (of planned work; Phase 5 not yet planned)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 9
+- Total plans completed: 10
 - Average duration: 7 min
-- Total execution time: 1.0 hours
+- Total execution time: 1.1 hours
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [█████████░] 75%
 | 1. Foundation & Crawlability | 2/2 | 6 min | 3 min |
 | 2. Per-Page Meta Tags | 3/3 | 39 min | 13 min |
 | 3. Social & Open Graph | 2/2 | 10 min | 5 min |
-| 4. Schema Markup | 2/3 | 5 min | 2.5 min |
+| 4. Schema Markup | 3/3 | 9 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (2 min), 04-01 (3 min), 03-01 (7 min), 03-02 (3 min), 02-01 (14 min)
-- Trend: Schema plans consistently fast due to established patterns from prior phases
+- Last 5 plans: 04-03 (4 min), 04-02 (2 min), 04-01 (3 min), 03-01 (7 min), 03-02 (3 min)
+- Trend: Schema plans consistently fast due to established patterns and reusable helpers
 
 *Updated after each plan completion*
 
@@ -71,6 +71,9 @@ Recent decisions affecting current work:
 - [04-02]: Services index maps over existing services array for DRY Service JSON-LD generation
 - [04-02]: AIWorkshops FAQPage maps existing faqs array (question/answer fields) for schema consistency with visible content
 - [04-02]: Services and PhoneVoiceAgents get authored FAQ content in schema-only (visible FAQ UI deferred to Phase 5 CONT-02)
+- [04-03]: Nested routes (events/, programs/) use 2-item breadcrumbs since parent routes don't exist
+- [04-03]: Article schema omits datePublished/dateModified -- no dates in codebase; valid per Google docs
+- [04-03]: BlogPost breadcrumb uses full post.title (not truncated blogTitle) for clarity
 
 ### Pending Todos
 
@@ -83,6 +86,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-10T18:49:28Z
-Stopped at: Completed 04-02-PLAN.md (service page schemas)
+Last session: 2026-02-10T18:50:39Z
+Stopped at: Completed 04-03-PLAN.md (case study + remaining interior page schemas) -- Phase 4 complete
 Resume file: None
