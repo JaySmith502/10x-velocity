@@ -12,6 +12,12 @@ const Contact = () => {
           content="Get in touch with 10x Velocity for AI and automation consulting services. Schedule a free discovery call to discuss how we can transform your operations."
         />
         <link rel="canonical" href="https://10xvelocity.ai/contact" />
+        <meta property="og:title" content="Contact Us | 10x Velocity" />
+        <meta property="og:description" content="Get in touch with 10x Velocity for AI and automation consulting services. Schedule a free discovery call to discuss how we can transform your operations." />
+        <meta property="og:url" content="https://10xvelocity.ai/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="container mx-auto px-4 py-12 md:py-24">
       <div className="max-w-5xl mx-auto">

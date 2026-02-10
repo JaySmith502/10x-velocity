@@ -10,6 +10,12 @@ const About = () => {
           content="10x Velocity uses AI to amplify human potential, not replace it. Learn about our human-centered approach to automation consulting based in Louisville, KY."
         />
         <link rel="canonical" href="https://10xvelocity.ai/about" />
+        <meta property="og:title" content="About Us - AI & Automation Consulting | 10x Velocity" />
+        <meta property="og:description" content="10x Velocity uses AI to amplify human potential, not replace it. Learn about our human-centered approach to automation consulting based in Louisville, KY." />
+        <meta property="og:url" content="https://10xvelocity.ai/about" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="min-h-screen bg-velocity-dark">
       {/* Hero Section */}

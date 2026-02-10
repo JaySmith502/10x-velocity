@@ -13,6 +13,12 @@ const OnboardingForm = () => {
           content="Request a personalized demo of our AI and automation solutions. See firsthand how 10x Velocity can transform your business operations and cut costs fast."
         />
         <link rel="canonical" href="https://10xvelocity.ai/demo" />
+        <meta property="og:title" content="Get a Demo | 10x Velocity" />
+        <meta property="og:description" content="Request a personalized demo of our AI and automation solutions. See firsthand how 10x Velocity can transform your business operations and cut costs fast." />
+        <meta property="og:url" content="https://10xvelocity.ai/demo" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
       <div className="container mx-auto px-4">

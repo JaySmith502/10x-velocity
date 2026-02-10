@@ -14,6 +14,12 @@ const AIWorkshops = () => {
           content="Hands-on AI workshops that empower your team to leverage automation tools effectively. Customized training for businesses in Louisville, KY and beyond."
         />
         <link rel="canonical" href="https://10xvelocity.ai/services/ai-workshops" />
+        <meta property="og:title" content="AI Workshops for Teams | 10x Velocity" />
+        <meta property="og:description" content="Hands-on AI workshops that empower your team to leverage automation tools effectively. Customized training for businesses in Louisville, KY and beyond." />
+        <meta property="og:url" content="https://10xvelocity.ai/services/ai-workshops" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
       {/* Hero Section */}

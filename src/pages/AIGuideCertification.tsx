@@ -9,6 +9,12 @@ const AIGuideCertification = () => {
         <title>AI Guide Certification Program | 10x Velocity</title>
         <meta name="description" content="Earn your AI Guide Certification with 10x Velocity. Our comprehensive training program prepares you to become a certified AI implementation specialist." />
         <link rel="canonical" href="https://10xvelocity.ai/programs/ai-guide-certification" />
+        <meta property="og:title" content="AI Guide Certification Program | 10x Velocity" />
+        <meta property="og:description" content="Earn your AI Guide Certification with 10x Velocity. Our comprehensive training program prepares you to become a certified AI implementation specialist." />
+        <meta property="og:url" content="https://10xvelocity.ai/programs/ai-guide-certification" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
         {/* Hero Section */}

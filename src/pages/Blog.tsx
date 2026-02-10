@@ -15,6 +15,12 @@ const Blog = () => {
           content="Expert insights on AI implementation, business automation, and digital transformation strategies. Practical advice and tips from 10x Velocity consultants."
         />
         <link rel="canonical" href="https://10xvelocity.ai/blog" />
+        <meta property="og:title" content="AI & Automation Insights Blog | 10x Velocity" />
+        <meta property="og:description" content="Expert insights on AI implementation, business automation, and digital transformation strategies. Practical advice and tips from 10x Velocity consultants." />
+        <meta property="og:url" content="https://10xvelocity.ai/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
       {/* Header Section */}

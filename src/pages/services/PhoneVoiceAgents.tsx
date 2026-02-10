@@ -13,6 +13,12 @@ const PhoneVoiceAgents = () => {
           content="Supercharge your customer calls with AI-powered phone and voice agents. Automate inbound and outbound calling while delivering great customer service."
         />
         <link rel="canonical" href="https://10xvelocity.ai/services/phone-voice-agents" />
+        <meta property="og:title" content="AI Phone & Voice Agents | 10x Velocity" />
+        <meta property="og:description" content="Supercharge your customer calls with AI-powered phone and voice agents. Automate inbound and outbound calling while delivering great customer service." />
+        <meta property="og:url" content="https://10xvelocity.ai/services/phone-voice-agents" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
       {/* Hero Section */}

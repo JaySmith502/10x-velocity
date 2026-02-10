@@ -14,6 +14,12 @@ const Index = () => {
           content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. AI consulting and automation services based in Louisville, KY."
         />
         <link rel="canonical" href="https://10xvelocity.ai/" />
+        <meta property="og:title" content="AI & Automation Consulting | 10x Velocity" />
+        <meta property="og:description" content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. AI consulting and automation services based in Louisville, KY." />
+        <meta property="og:url" content="https://10xvelocity.ai/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
       {/* Hero Section */}

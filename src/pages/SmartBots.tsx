@@ -34,6 +34,12 @@ const SmartBots = () => {
           content="Deploy intelligent chatbots trained on your business knowledge base. Custom AI assistants that understand your products, services, and customer needs."
         />
         <link rel="canonical" href="https://10xvelocity.ai/services/smart-bots" />
+        <meta property="og:title" content="Smart Bots with Custom Knowledge | 10x Velocity" />
+        <meta property="og:description" content="Deploy intelligent chatbots trained on your business knowledge base. Custom AI assistants that understand your products, services, and customer needs." />
+        <meta property="og:url" content="https://10xvelocity.ai/services/smart-bots" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
       <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">

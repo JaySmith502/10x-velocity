@@ -15,6 +15,12 @@ const DataCleaning = () => {
           content="Professional data cleaning and preparation services that ensure your AI and automation initiatives launch with accurate, reliable, and quality data foundations."
         />
         <link rel="canonical" href="https://10xvelocity.ai/services/data-cleaning" />
+        <meta property="og:title" content="Data Cleaning Services | 10x Velocity" />
+        <meta property="og:description" content="Professional data cleaning and preparation services that ensure your AI and automation initiatives launch with accurate, reliable, and quality data foundations." />
+        <meta property="og:url" content="https://10xvelocity.ai/services/data-cleaning" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
       {/* Hero Section */}

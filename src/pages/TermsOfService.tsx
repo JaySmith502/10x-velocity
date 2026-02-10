@@ -10,6 +10,12 @@ const TermsOfService = () => {
         <title>Terms of Service | 10x Velocity</title>
         <meta name="description" content="Review the 10x Velocity terms of service agreement. Understand the terms and conditions governing your use of our website, AI tools, and consulting work." />
         <link rel="canonical" href="https://10xvelocity.ai/terms-of-service" />
+        <meta property="og:title" content="Terms of Service | 10x Velocity" />
+        <meta property="og:description" content="Review the 10x Velocity terms of service agreement. Understand the terms and conditions governing your use of our website, AI tools, and consulting work." />
+        <meta property="og:url" content="https://10xvelocity.ai/terms-of-service" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">

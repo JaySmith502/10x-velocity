@@ -15,6 +15,12 @@ const Prototypes = () => {
         <title>Rapid AI Prototype Sprint | 10x Velocity</title>
         <meta name="description" content="Go from idea to interactive proof in just 10 days with our rapid prototype sprint. 10x Velocity builds functional AI prototypes to validate your concept." />
         <link rel="canonical" href="https://10xvelocity.ai/prototypes" />
+        <meta property="og:title" content="Rapid AI Prototype Sprint | 10x Velocity" />
+        <meta property="og:description" content="Go from idea to interactive proof in just 10 days with our rapid prototype sprint. 10x Velocity builds functional AI prototypes to validate your concept." />
+        <meta property="og:url" content="https://10xvelocity.ai/prototypes" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
         {/* Hero Section */}

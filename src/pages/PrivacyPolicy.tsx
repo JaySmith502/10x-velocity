@@ -10,6 +10,12 @@ const PrivacyPolicy = () => {
         <title>Privacy Policy | 10x Velocity</title>
         <meta name="description" content="Read the 10x Velocity privacy policy. Learn how we collect, use, store, and protect your personal information when you visit our website and use services." />
         <link rel="canonical" href="https://10xvelocity.ai/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy | 10x Velocity" />
+        <meta property="og:description" content="Read the 10x Velocity privacy policy. Learn how we collect, use, store, and protect your personal information when you visit our website and use services." />
+        <meta property="og:url" content="https://10xvelocity.ai/privacy-policy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">

@@ -17,6 +17,12 @@ const LunchAndLearn = () => {
           content="Join our AI as Your Performance Enhancer lunch and learn session. Discover practical AI applications for your business in a hands-on interactive setting."
         />
         <link rel="canonical" href="https://10xvelocity.ai/events/lunch-and-learn" />
+        <meta property="og:title" content="AI Lunch & Learn Event | 10x Velocity" />
+        <meta property="og:description" content="Join our AI as Your Performance Enhancer lunch and learn session. Discover practical AI applications for your business in a hands-on interactive setting." />
+        <meta property="og:url" content="https://10xvelocity.ai/events/lunch-and-learn" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen bg-velocity-dark">
       {/* Hero Section */}

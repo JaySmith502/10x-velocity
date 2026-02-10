@@ -15,6 +15,12 @@ const PowerAutomate = () => {
         <title>Microsoft Power Automate Consulting | 10x Velocity</title>
         <meta name="description" content="Expert Microsoft Power Automate consulting and implementation services. Automate repetitive tasks and streamline business workflows with 10x Velocity." />
         <link rel="canonical" href="https://10xvelocity.ai/power-automate" />
+        <meta property="og:title" content="Microsoft Power Automate Consulting | 10x Velocity" />
+        <meta property="og:description" content="Expert Microsoft Power Automate consulting and implementation services. Automate repetitive tasks and streamline business workflows with 10x Velocity." />
+        <meta property="og:url" content="https://10xvelocity.ai/power-automate" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
         <section className="container mx-auto px-4 py-20 relative overflow-hidden">

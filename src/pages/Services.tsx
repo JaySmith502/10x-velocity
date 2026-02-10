@@ -15,6 +15,12 @@ const Services = () => {
           content="Explore our full suite of AI and automation services including voice agents, smart bots, data cleaning, and workshops. Transform your business operations."
         />
         <link rel="canonical" href="https://10xvelocity.ai/services" />
+        <meta property="og:title" content="AI & Automation Services | 10x Velocity" />
+        <meta property="og:description" content="Explore our full suite of AI and automation services including voice agents, smart bots, data cleaning, and workshops. Transform your business operations." />
+        <meta property="og:url" content="https://10xvelocity.ai/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
       {/* Hero Section */}

@@ -46,6 +46,12 @@ const SavingsCalculator = () => {
           content="Calculate how much time and money your business could save with AI and automation. Use our free interactive savings calculator to estimate your ROI today."
         />
         <link rel="canonical" href="https://10xvelocity.ai/savings-calculator" />
+        <meta property="og:title" content="Automation Savings Calculator | 10x Velocity" />
+        <meta property="og:description" content="Calculate how much time and money your business could save with AI and automation. Use our free interactive savings calculator to estimate your ROI today." />
+        <meta property="og:url" content="https://10xvelocity.ai/savings-calculator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen py-12 bg-velocity-dark">
         <div className="container mx-auto px-4">
