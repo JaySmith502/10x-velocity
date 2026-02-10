@@ -10,29 +10,29 @@ See: .planning/PROJECT.md (updated 2026-02-10)
 ## Current Position
 
 Phase: 2 of 5 (Per-Page Meta Tags)
-Plan: 3 of 3 in current phase
-Status: Plan 02-03 complete
-Last activity: 2026-02-10 -- Completed 02-03-PLAN.md (infrastructure fixes)
+Plan: 2 of 3 in current phase complete (02-01 pending)
+Status: Plans 02-02 and 02-03 complete
+Last activity: 2026-02-10 -- Completed 02-02-PLAN.md (case studies, products, legal, blog meta)
 
-Progress: [████░░░░░░] 38%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 6 min
-- Total execution time: 0.3 hours
+- Total plans completed: 4
+- Average duration: 8 min
+- Total execution time: 0.5 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | 1. Foundation & Crawlability | 2/2 | 6 min | 3 min |
-| 2. Per-Page Meta Tags | 1/3 | 12 min | 12 min |
+| 2. Per-Page Meta Tags | 2/3 | 25 min | 12.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-03 (12 min), 01-02 (3 min), 01-01 (3 min)
-- Trend: Slightly longer for infrastructure fixes with verification
+- Last 5 plans: 02-02 (13 min), 02-03 (12 min), 01-02 (3 min), 01-01 (3 min)
+- Trend: Phase 2 plans longer due to more files per plan
 
 *Updated after each plan completion*
 
@@ -52,6 +52,8 @@ Recent decisions affecting current work:
 - [01-02]: External URLs must always use native `<a>` tags, never React Router `<Link>`
 - [01-02]: Copyright year must always use `new Date().getFullYear()`, never hardcoded
 - [01-02]: FIX-02 (LeadConnector form links) requires manual GoHighLevel admin config -- not fixable in code
+- [02-02]: Blog title truncation at 44 chars with '...' keeps total under 60 with ' | 10x Velocity'
+- [02-02]: Blog excerpts used directly as meta descriptions (150-160 chars)
 - [02-03]: Two-pronged H1 fix: CSS fallback + JS MutationObserver for chat widget duplicate H1
 - [02-03]: Post-deploy verification needed for chat widget shadow DOM vs light DOM behavior
 
@@ -66,6 +68,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-10T16:04:12Z
-Stopped at: Completed 02-03-PLAN.md
+Last session: 2026-02-10T16:04:51Z
+Stopped at: Completed 02-02-PLAN.md
 Resume file: None
