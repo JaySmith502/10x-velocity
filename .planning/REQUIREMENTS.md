@@ -86,42 +86,42 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| CRAWL-01 | — | Pending |
-| CRAWL-02 | — | Pending |
-| CRAWL-03 | — | Pending |
-| CRAWL-04 | — | Pending |
-| ONPG-01 | — | Pending |
-| ONPG-02 | — | Pending |
-| ONPG-03 | — | Pending |
-| ONPG-04 | — | Pending |
-| ONPG-05 | — | Pending |
-| SCHM-01 | — | Pending |
-| SCHM-02 | — | Pending |
-| SCHM-03 | — | Pending |
-| SCHM-04 | — | Pending |
-| SCHM-05 | — | Pending |
-| SCHM-06 | — | Pending |
-| SOCL-01 | — | Pending |
-| SOCL-02 | — | Pending |
-| SOCL-03 | — | Pending |
-| SOCL-04 | — | Pending |
-| IMG-01 | — | Pending |
-| IMG-02 | — | Pending |
-| IMG-03 | — | Pending |
-| IMG-04 | — | Pending |
-| CONT-01 | — | Pending |
-| CONT-02 | — | Pending |
-| CONT-03 | — | Pending |
-| CONT-04 | — | Pending |
-| FIX-01 | — | Pending |
-| FIX-02 | — | Pending |
-| FIX-03 | — | Pending |
+| FIX-03 | Phase 1 | Pending |
+| CRAWL-01 | Phase 1 | Pending |
+| CRAWL-02 | Phase 1 | Pending |
+| CRAWL-04 | Phase 1 | Pending |
+| FIX-01 | Phase 1 | Pending |
+| FIX-02 | Phase 1 | Pending |
+| ONPG-04 | Phase 1 | Pending |
+| ONPG-05 | Phase 1 | Pending |
+| ONPG-01 | Phase 2 | Pending |
+| ONPG-02 | Phase 2 | Pending |
+| ONPG-03 | Phase 2 | Pending |
+| CRAWL-03 | Phase 2 | Pending |
+| SOCL-01 | Phase 3 | Pending |
+| SOCL-02 | Phase 3 | Pending |
+| SOCL-03 | Phase 3 | Pending |
+| SOCL-04 | Phase 3 | Pending |
+| IMG-04 | Phase 3 | Pending |
+| SCHM-01 | Phase 4 | Pending |
+| SCHM-02 | Phase 4 | Pending |
+| SCHM-03 | Phase 4 | Pending |
+| SCHM-04 | Phase 4 | Pending |
+| SCHM-05 | Phase 4 | Pending |
+| SCHM-06 | Phase 4 | Pending |
+| CONT-01 | Phase 5 | Pending |
+| CONT-02 | Phase 5 | Pending |
+| CONT-03 | Phase 5 | Pending |
+| CONT-04 | Phase 5 | Pending |
+| IMG-01 | Phase 5 | Pending |
+| IMG-02 | Phase 5 | Pending |
+| IMG-03 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 30 total
-- Mapped to phases: 0
-- Unmapped: 30 ⚠️
+- Mapped to phases: 30
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-02-10*
-*Last updated: 2026-02-10 after initial definition*
+*Last updated: 2026-02-10 after roadmap creation*
