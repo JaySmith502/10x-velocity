@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation & Crawlability** - React Helmet infrastructure, robots.txt, sitemap, 404, and quick content fixes
 - [x] **Phase 2: Per-Page Meta Tags** - Unique titles, descriptions, canonicals, and H1 fix on every page
 - [x] **Phase 3: Social & Open Graph** - Full OG and Twitter Card tags, social media links, absolute OG image URL
-- [ ] **Phase 4: Schema Markup** - All JSON-LD structured data (Organization, Service, Breadcrumb, FAQ, CaseStudy, WebSite)
+- [x] **Phase 4: Schema Markup** - All JSON-LD structured data (Organization, Service, Breadcrumb, FAQ, CaseStudy, WebSite)
 - [ ] **Phase 5: Content Structure & Images** - Breadcrumbs, FAQ sections, blog route, case study SEO, image optimization
 
 ## Phase Details
@@ -81,9 +81,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md -- Install react-schemaorg/schema-dts, create schema helpers, Organization + ProfessionalService + WebSite JSON-LD on homepage (SCHM-01, SCHM-06, SOCL-04)
-- [ ] 04-02-PLAN.md -- Service + FAQPage + BreadcrumbList JSON-LD on all service pages (SCHM-02, SCHM-04, SCHM-03 partial)
-- [ ] 04-03-PLAN.md -- Article JSON-LD on case studies + BreadcrumbList on all remaining interior pages (SCHM-05, SCHM-03 complete)
+- [x] 04-01-PLAN.md -- Install react-schemaorg/schema-dts, create schema helpers, Organization + ProfessionalService + WebSite JSON-LD on homepage (SCHM-01, SCHM-06, SOCL-04)
+- [x] 04-02-PLAN.md -- Service + FAQPage + BreadcrumbList JSON-LD on all service pages (SCHM-02, SCHM-04, SCHM-03 partial)
+- [x] 04-03-PLAN.md -- Article JSON-LD on case studies + BreadcrumbList on all remaining interior pages (SCHM-05, SCHM-03 complete)
 
 ### Phase 5: Content Structure & Images
 **Goal**: Users can navigate via breadcrumbs, find answers in FAQs, discover the blog, and experience fast-loading optimized images
@@ -114,5 +114,5 @@ Note: Phases 3 and 4 depend only on Phase 1/2, not on each other. With paralleli
 | 1. Foundation & Crawlability | 2/2 | Complete | 2026-02-10 |
 | 2. Per-Page Meta Tags | 3/3 | ✓ Complete | 2026-02-10 |
 | 3. Social & Open Graph | 2/2 | ✓ Complete | 2026-02-10 |
-| 4. Schema Markup | 0/3 | Not started | - |
+| 4. Schema Markup | 3/3 | ✓ Complete | 2026-02-10 |
 | 5. Content Structure & Images | 0/3 | Not started | - |

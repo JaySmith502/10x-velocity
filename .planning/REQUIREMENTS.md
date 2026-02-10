@@ -22,19 +22,19 @@
 
 ### Schema Markup
 
-- [ ] **SCHM-01**: Organization + LocalBusiness JSON-LD on homepage
-- [ ] **SCHM-02**: Service JSON-LD on services and individual service pages
-- [ ] **SCHM-03**: BreadcrumbList JSON-LD on all pages
-- [ ] **SCHM-04**: FAQPage JSON-LD on services and voice agents pages
-- [ ] **SCHM-05**: Article/CaseStudy JSON-LD on each case study page
-- [ ] **SCHM-06**: WebSite JSON-LD with SearchAction on homepage
+- [x] **SCHM-01**: Organization + LocalBusiness JSON-LD on homepage
+- [x] **SCHM-02**: Service JSON-LD on services and individual service pages
+- [x] **SCHM-03**: BreadcrumbList JSON-LD on all pages
+- [x] **SCHM-04**: FAQPage JSON-LD on services and voice agents pages
+- [x] **SCHM-05**: Article/CaseStudy JSON-LD on each case study page
+- [x] **SCHM-06**: WebSite JSON-LD with SearchAction on homepage
 
 ### Social & Open Graph
 
 - [x] **SOCL-01**: Full OG tags (title, description, image, url, type) on every page with absolute URLs
 - [x] **SOCL-02**: Twitter Card meta tags on every page
 - [x] **SOCL-03**: Social media profile links in footer
-- [ ] **SOCL-04**: Social links in Organization schema (sameAs)
+- [x] **SOCL-04**: Social links in Organization schema (sameAs)
 
 ### Images
 
@@ -101,14 +101,14 @@
 | SOCL-01 | Phase 3 | Complete |
 | SOCL-02 | Phase 3 | Complete |
 | SOCL-03 | Phase 3 | Complete |
-| SOCL-04 | Phase 4 | Pending |
+| SOCL-04 | Phase 4 | Complete |
 | IMG-04 | Phase 3 | Complete |
-| SCHM-01 | Phase 4 | Pending |
-| SCHM-02 | Phase 4 | Pending |
-| SCHM-03 | Phase 4 | Pending |
-| SCHM-04 | Phase 4 | Pending |
-| SCHM-05 | Phase 4 | Pending |
-| SCHM-06 | Phase 4 | Pending |
+| SCHM-01 | Phase 4 | Complete |
+| SCHM-02 | Phase 4 | Complete |
+| SCHM-03 | Phase 4 | Complete |
+| SCHM-04 | Phase 4 | Complete |
+| SCHM-05 | Phase 4 | Complete |
+| SCHM-06 | Phase 4 | Complete |
 | CONT-01 | Phase 5 | Pending |
 | CONT-02 | Phase 5 | Pending |
 | CONT-03 | Phase 5 | Pending |
@@ -124,4 +124,4 @@
 
 ---
 *Requirements defined: 2026-02-10*
-*Last updated: 2026-02-10 after Phase 3 completion*
+*Last updated: 2026-02-10 after Phase 4 completion*
