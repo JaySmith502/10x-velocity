@@ -1,5 +1,6 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -36,10 +37,16 @@ const solutions = [
 
 const InnesYoung = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-start mb-6">
+    <>
+      <Helmet>
+        <title>Innes & Young AI PR Case Study | 10x Velocity</title>
+        <meta name="description" content="See how 10x Velocity helped Innes & Young evolve their PR agency with AI-powered media monitoring, content generation, and smart workflow automation tools." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/innes-young" />
+      </Helmet>
+      <main className="flex-1">
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex justify-start mb-6">
             <img 
               src="/lovable-uploads/d8541ecf-d7f8-4c54-b92a-91f0aa1face0.png" 
               alt="Innes & Young Logo" 
@@ -129,6 +136,7 @@ const InnesYoung = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

@@ -1,5 +1,6 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -37,11 +38,17 @@ const solutions = [
 
 const DirectorOfMarketing = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            10x Velocity Transforms Director of Marketing Inc (DMI) into a High-Performance Social Media Marketing Agency
+    <>
+      <Helmet>
+        <title>Director of Marketing AI Case Study | 10x Velocity</title>
+        <meta name="description" content="How 10x Velocity transformed Director of Marketing Inc into a high-performance social media marketing agency using AI-powered workflows and smart tools." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/director-of-marketing" />
+      </Helmet>
+      <main className="flex-1">
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              10x Velocity Transforms Director of Marketing Inc (DMI) into a High-Performance Social Media Marketing Agency
           </h1>
           
           {/* Client Overview */}
@@ -129,6 +136,7 @@ const DirectorOfMarketing = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

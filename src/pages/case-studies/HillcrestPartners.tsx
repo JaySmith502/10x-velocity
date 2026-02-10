@@ -1,6 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -38,11 +39,17 @@ const solutions = [
 
 const HillcrestPartners = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            10x Velocity Transforms Hillcrest Partners into a High-Growth Real Estate Powerhouse
+    <>
+      <Helmet>
+        <title>Hillcrest Partners Real Estate Case Study | 10x Velocity</title>
+        <meta name="description" content="How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/hillcrest-partners" />
+      </Helmet>
+      <main className="flex-1">
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              10x Velocity Transforms Hillcrest Partners into a High-Growth Real Estate Powerhouse
           </h1>
           
           {/* Client Overview */}
@@ -130,6 +137,7 @@ const HillcrestPartners = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

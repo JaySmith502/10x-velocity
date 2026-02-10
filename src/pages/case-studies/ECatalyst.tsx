@@ -1,5 +1,6 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -36,11 +37,17 @@ const solutions = [
 
 const ECatalyst = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            eCatalyst: 10x Velocity Boosts Operational Excellence
+    <>
+      <Helmet>
+        <title>eCatalyst Operational Excellence Case Study | 10x Velocity</title>
+        <meta name="description" content="Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/ecatalyst" />
+      </Helmet>
+      <main className="flex-1">
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              eCatalyst: 10x Velocity Boosts Operational Excellence
           </h1>
           
           {/* Client Overview */}
@@ -127,6 +134,7 @@ const ECatalyst = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

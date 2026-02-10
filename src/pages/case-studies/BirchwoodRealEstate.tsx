@@ -1,11 +1,18 @@
 
 import { ArrowRight, CheckIcon, House, BarChart, Rocket } from "lucide-react";
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const BirchwoodRealEstate = () => {
   return (
-    <main className="flex-1">
-      <section className="container mx-auto px-4 py-20">
+    <>
+      <Helmet>
+        <title>Birchwood Real Estate Case Study | 10x Velocity</title>
+        <meta name="description" content="Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/birchwood-real-estate" />
+      </Helmet>
+      <main className="flex-1">
+        <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <a href="/case-studies" className="text-velocity-accent hover:underline flex items-center mb-4">
@@ -212,6 +219,7 @@ const BirchwoodRealEstate = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

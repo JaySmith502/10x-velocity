@@ -1,5 +1,6 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -37,11 +38,17 @@ const solutions = [
 
 const CatalystGroup = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            10x Velocity Propels The Catalyst Group to Unprecedented Growth in Business Investment & Acquisitions
+    <>
+      <Helmet>
+        <title>Catalyst Group Growth Case Study | 10x Velocity</title>
+        <meta name="description" content="See how 10x Velocity propelled The Catalyst Group to unprecedented growth in business investment and acquisitions through AI-powered automation solutions." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/catalyst-group" />
+      </Helmet>
+      <main className="flex-1">
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              10x Velocity Propels The Catalyst Group to Unprecedented Growth in Business Investment & Acquisitions
           </h1>
           
           {/* Client Overview */}
@@ -129,6 +136,7 @@ const CatalystGroup = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

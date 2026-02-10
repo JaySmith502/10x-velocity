@@ -1,11 +1,18 @@
 
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const TransportationDirector = () => {
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet>
+        <title>Transportation Director Logistics Case Study | 10x Velocity</title>
+        <meta name="description" content="How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/transportation-director" />
+      </Helmet>
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -145,6 +152,7 @@ const TransportationDirector = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
