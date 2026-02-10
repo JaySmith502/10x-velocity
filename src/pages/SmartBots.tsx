@@ -1,4 +1,6 @@
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 // Declare the custom element type for TypeScript
@@ -27,7 +29,20 @@ const SmartBots = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Smart Bots with Custom Knowledge",
+            description: "Deploy intelligent chatbots trained on your business knowledge base. Custom AI assistants that understand your products, services, and customer needs.",
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "AI Chatbots",
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Smart Bots", path: "/services/smart-bots" }]),
+        ]}
+      >
         <title>Smart Bots with Custom Knowledge | 10x Velocity</title>
         <meta
           name="description"

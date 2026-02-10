@@ -1,6 +1,8 @@
 
 import React from "react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
 import { Database, FileText, Check, ArrowRight } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
@@ -8,7 +10,20 @@ import DiscoveryButton from "@/components/ui/DiscoveryButton";
 const DataCleaning = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Data Cleaning Services",
+            description: "Professional data cleaning and preparation services that ensure your AI and automation initiatives launch with accurate, reliable, and quality data foundations.",
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "Data Cleaning",
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Data Cleaning", path: "/services/data-cleaning" }]),
+        ]}
+      >
         <title>Data Cleaning Services | 10x Velocity</title>
         <meta
           name="description"

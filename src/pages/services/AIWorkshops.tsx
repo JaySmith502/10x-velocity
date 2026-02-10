@@ -1,5 +1,7 @@
 
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Sparkle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -7,7 +9,32 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const AIWorkshops = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "AI Workshops for Teams",
+            description: "Hands-on AI workshops that empower your team to leverage automation tools effectively. Customized training for businesses in Louisville, KY and beyond.",
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "AI Training",
+          }),
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(faq => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "AI Workshops", path: "/services/ai-workshops" }]),
+        ]}
+      >
         <title>AI Workshops for Teams | 10x Velocity</title>
         <meta
           name="description"

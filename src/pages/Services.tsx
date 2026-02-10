@@ -1,6 +1,8 @@
 
 import React from "react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText, Rocket } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
@@ -8,7 +10,58 @@ import { Link } from "react-router-dom";
 const Services = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          ...services.map(svc => helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: svc.title,
+            description: svc.description,
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "AI Consulting",
+          })),
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "What AI and automation services does 10x Velocity offer?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We offer a comprehensive suite of AI services including process automation, data cleaning, voice agents, smart bots, team training workshops, opportunity discovery, data analytics, and rapid prototype sprints.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How long does it take to see results from AI automation?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most clients see measurable results within 30 to 90 days. Our rapid prototype sprints deliver a working prototype in just 10 business days, so you can validate your idea quickly.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Do I need technical expertise to work with 10x Velocity?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "No. We handle the technical implementation and provide training so your team can manage the tools independently. Our workshops are designed for all skill levels.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What industries does 10x Velocity serve?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We serve businesses and nonprofits across industries including real estate, PR and marketing, government contracting, manufacturing, and professional services. Our solutions adapt to any industry's workflows.",
+                },
+              },
+            ],
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]),
+        ]}
+      >
         <title>AI & Automation Services | 10x Velocity</title>
         <meta
           name="description"

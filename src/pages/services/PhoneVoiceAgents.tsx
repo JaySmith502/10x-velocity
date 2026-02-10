@@ -1,12 +1,65 @@
 
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Sparkle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const PhoneVoiceAgents = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "AI Phone & Voice Agents",
+            description: "Supercharge your customer calls with AI-powered phone and voice agents. Automate inbound and outbound calling while delivering great customer service.",
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "AI Voice Agents",
+          }),
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "How do AI voice agents handle customer calls?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our AI voice agents use natural language processing to understand and respond to callers in real time. They can qualify leads, answer common questions, schedule appointments, and transfer complex calls to your team—all while sounding natural and professional.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can AI voice agents work with my existing phone system?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. Our voice agents integrate directly with your existing phone systems and CRM tools, so there is no need to replace your current infrastructure. Setup typically takes just a few days.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "What languages do the AI voice agents support?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Our AI voice agents support multiple languages and can switch between them during a single call. This ensures every caller gets help in their preferred language, 24 hours a day, 7 days a week.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How much can AI voice agents reduce my call center costs?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Most businesses see a 40 to 70 percent reduction in call handling costs. AI voice agents handle routine inquiries automatically, freeing your team to focus on complex, high-value conversations.",
+                },
+              },
+            ],
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Phone Voice Agents", path: "/services/phone-voice-agents" }]),
+        ]}
+      >
         <title>AI Phone & Voice Agents | 10x Velocity</title>
         <meta
           name="description"
