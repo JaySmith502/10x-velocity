@@ -45,11 +45,12 @@ Plans:
   2. Every page renders a unique meta description between 150-160 characters
   3. Every page renders a canonical link tag pointing to its own canonical URL (https://10xvelocity.ai/...)
   4. Every page has exactly one H1 tag (the chat widget no longer injects a duplicate H1)
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 02-01: Page-by-page title and description metadata
-- [ ] 02-02: Canonical tags and H1 fix
+- [ ] 02-01-PLAN.md -- Helmet metadata for top-level pages, service pages, and canonical tags on existing Helmet pages (14 pages)
+- [ ] 02-02-PLAN.md -- Helmet metadata for case studies, product/program pages, legal pages, and dynamic BlogPost (16 files)
+- [ ] 02-03-PLAN.md -- Fix www->non-www in sitemap/robots and duplicate H1 from chat widget
 
 ### Phase 3: Social & Open Graph
 **Goal**: Every page is shareable on social platforms with rich previews showing correct titles, descriptions, and images
@@ -109,8 +110,8 @@ Note: Phases 3 and 4 depend only on Phase 1/2, not on each other. With paralleli
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Crawlability | 2/2 | ✓ Complete | 2026-02-10 |
-| 2. Per-Page Meta Tags | 0/2 | Not started | - |
+| 1. Foundation & Crawlability | 2/2 | Complete | 2026-02-10 |
+| 2. Per-Page Meta Tags | 0/3 | Planned | - |
 | 3. Social & Open Graph | 0/2 | Not started | - |
 | 4. Schema Markup | 0/3 | Not started | - |
 | 5. Content Structure & Images | 0/3 | Not started | - |
