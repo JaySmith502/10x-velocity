@@ -1,12 +1,47 @@
 
 import { ArrowRight, CheckIcon, House, BarChart, Rocket } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const BirchwoodRealEstate = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Birchwood Real Estate Case Study",
+            description: "Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/birchwood-real-estate",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Birchwood Real Estate", path: "/case-studies/birchwood-real-estate" },
+          ]),
+        ]}
+      >
         <title>Birchwood Real Estate Case Study | 10x Velocity</title>
         <meta name="description" content="Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/birchwood-real-estate" />

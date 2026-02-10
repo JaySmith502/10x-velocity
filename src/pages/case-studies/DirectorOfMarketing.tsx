@@ -1,6 +1,9 @@
 
 import { CheckCircle2 } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -39,7 +42,39 @@ const solutions = [
 const DirectorOfMarketing = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Director of Marketing AI Case Study",
+            description: "How 10x Velocity transformed Director of Marketing Inc into a high-performance social media marketing agency using AI-powered workflows and smart tools.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/director-of-marketing",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Director of Marketing", path: "/case-studies/director-of-marketing" },
+          ]),
+        ]}
+      >
         <title>Director of Marketing AI Case Study | 10x Velocity</title>
         <meta name="description" content="How 10x Velocity transformed Director of Marketing Inc into a high-performance social media marketing agency using AI-powered workflows and smart tools." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/director-of-marketing" />

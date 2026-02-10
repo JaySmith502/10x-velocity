@@ -1,6 +1,9 @@
 
 import { CheckCircle2 } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -39,7 +42,39 @@ const solutions = [
 const CatalystGroup = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Catalyst Group Growth Case Study",
+            description: "See how 10x Velocity propelled The Catalyst Group to unprecedented growth in business investment and acquisitions through AI-powered automation solutions.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/catalyst-group",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Catalyst Group", path: "/case-studies/catalyst-group" },
+          ]),
+        ]}
+      >
         <title>Catalyst Group Growth Case Study | 10x Velocity</title>
         <meta name="description" content="See how 10x Velocity propelled The Catalyst Group to unprecedented growth in business investment and acquisitions through AI-powered automation solutions." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/catalyst-group" />

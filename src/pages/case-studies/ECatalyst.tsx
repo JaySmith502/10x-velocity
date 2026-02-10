@@ -1,6 +1,9 @@
 
 import { CheckCircle2 } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -38,7 +41,39 @@ const solutions = [
 const ECatalyst = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "eCatalyst Operational Excellence Case Study",
+            description: "Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/ecatalyst",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "eCatalyst", path: "/case-studies/ecatalyst" },
+          ]),
+        ]}
+      >
         <title>eCatalyst Operational Excellence Case Study | 10x Velocity</title>
         <meta name="description" content="Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/ecatalyst" />

@@ -2,6 +2,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -40,7 +43,39 @@ const solutions = [
 const HillcrestPartners = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Hillcrest Partners Real Estate Case Study",
+            description: "How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/hillcrest-partners",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Hillcrest Partners", path: "/case-studies/hillcrest-partners" },
+          ]),
+        ]}
+      >
         <title>Hillcrest Partners Real Estate Case Study | 10x Velocity</title>
         <meta name="description" content="How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/hillcrest-partners" />

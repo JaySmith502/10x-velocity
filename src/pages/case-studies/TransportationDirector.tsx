@@ -1,13 +1,48 @@
 
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const TransportationDirector = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Transportation Director Logistics Case Study",
+            description: "How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/transportation-director",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Transportation Director", path: "/case-studies/transportation-director" },
+          ]),
+        ]}
+      >
         <title>Transportation Director Logistics Case Study | 10x Velocity</title>
         <meta name="description" content="How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/transportation-director" />

@@ -1,6 +1,9 @@
 
 import { CheckCircle2 } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 const results = [
@@ -38,7 +41,39 @@ const solutions = [
 const GovBrokers = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "GovBrokers Government Contracting Case Study",
+            description: "How 10x Velocity transformed GovBrokers into a high-performance government contracting powerhouse with AI-driven process automation and smart workflows.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/govbrokers",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "GovBrokers", path: "/case-studies/govbrokers" },
+          ]),
+        ]}
+      >
         <title>GovBrokers Government Contracting Case Study | 10x Velocity</title>
         <meta name="description" content="How 10x Velocity transformed GovBrokers into a high-performance government contracting powerhouse with AI-driven process automation and smart workflows." />
         <link rel="canonical" href="https://10xvelocity.ai/case-studies/govbrokers" />
