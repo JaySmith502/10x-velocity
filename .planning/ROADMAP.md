@@ -30,11 +30,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Visiting /sitemap.xml returns valid XML listing all indexable pages with priorities
   4. Visiting a non-existent URL (e.g., /does-not-exist) shows a 404 page and Netlify returns HTTP 404 status
   5. All instances of email on the site read info@10xvelocity.ai, footer copyright shows current year, all external links have noopener/noreferrer, and LeadConnector form links point to actual privacy/terms pages
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: React Helmet setup and static file crawlability (FIX-03, CRAWL-01, CRAWL-02, CRAWL-04)
-- [ ] 01-02: Quick content fixes (FIX-01, FIX-02, ONPG-04, ONPG-05)
+- [ ] 01-01-PLAN.md -- React Helmet on homepage, robots.txt, sitemap.xml, and _redirects for proper 404
+- [ ] 01-02-PLAN.md -- Email fixes (.com to .ai), dynamic copyright year, footer external link tags
 
 ### Phase 2: Per-Page Meta Tags
 **Goal**: Every page has unique, optimized metadata that search engines use for indexing and ranking
@@ -109,7 +109,7 @@ Note: Phases 3 and 4 depend only on Phase 1/2, not on each other. With paralleli
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Crawlability | 0/2 | Not started | - |
+| 1. Foundation & Crawlability | 0/2 | Planned | - |
 | 2. Per-Page Meta Tags | 0/2 | Not started | - |
 | 3. Social & Open Graph | 0/2 | Not started | - |
 | 4. Schema Markup | 0/3 | Not started | - |
