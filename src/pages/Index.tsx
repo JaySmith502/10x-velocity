@@ -1,13 +1,68 @@
 import { ArrowRight, Bot, ChartLine, Users, Database, Calculator } from "lucide-react";
 import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
+import { BUSINESS_DATA } from "@/schemas/organization";
 
 const Index = () => {
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": `${BUSINESS_DATA.url}#organization`,
+                name: BUSINESS_DATA.name,
+                url: BUSINESS_DATA.url,
+                logo: { "@type": "ImageObject", url: BUSINESS_DATA.logo },
+                description: BUSINESS_DATA.description,
+                email: BUSINESS_DATA.email,
+                sameAs: [BUSINESS_DATA.linkedIn],
+                address: {
+                  "@type": "PostalAddress",
+                  ...BUSINESS_DATA.address,
+                },
+              },
+              {
+                "@type": "ProfessionalService",
+                "@id": `${BUSINESS_DATA.url}#localbusiness`,
+                name: BUSINESS_DATA.name,
+                url: BUSINESS_DATA.url,
+                image: BUSINESS_DATA.image,
+                address: {
+                  "@type": "PostalAddress",
+                  ...BUSINESS_DATA.address,
+                },
+                openingHoursSpecification: {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "09:00",
+                  closes: "17:00",
+                },
+              },
+              {
+                "@type": "WebSite",
+                "@id": `${BUSINESS_DATA.url}#website`,
+                url: BUSINESS_DATA.url,
+                name: BUSINESS_DATA.name,
+                description: "AI & Automation Consulting",
+                publisher: { "@id": `${BUSINESS_DATA.url}#organization` },
+              },
+            ],
+          }),
+        ]}
+      >
         <title>AI & Automation Consulting | 10x Velocity</title>
         <meta
           name="description"
