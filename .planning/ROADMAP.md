@@ -12,7 +12,7 @@ This roadmap transforms 10xvelocity.ai from a 38/100 SEO score to 90+ by impleme
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation & Crawlability** - React Helmet infrastructure, robots.txt, sitemap, 404, and quick content fixes
+- [x] **Phase 1: Foundation & Crawlability** - React Helmet infrastructure, robots.txt, sitemap, 404, and quick content fixes
 - [ ] **Phase 2: Per-Page Meta Tags** - Unique titles, descriptions, canonicals, and H1 fix on every page
 - [ ] **Phase 3: Social & Open Graph** - Full OG and Twitter Card tags, social media links, absolute OG image URL
 - [ ] **Phase 4: Schema Markup** - All JSON-LD structured data (Organization, Service, Breadcrumb, FAQ, CaseStudy, WebSite)
@@ -33,8 +33,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- React Helmet on homepage, robots.txt, sitemap.xml, and _redirects for proper 404
-- [ ] 01-02-PLAN.md -- Email fixes (.com to .ai), dynamic copyright year, footer external link tags
+- [x] 01-01-PLAN.md -- React Helmet on homepage, robots.txt, sitemap.xml, and _redirects for proper 404
+- [x] 01-02-PLAN.md -- Email fixes (.com to .ai), dynamic copyright year, footer external link tags
 
 ### Phase 2: Per-Page Meta Tags
 **Goal**: Every page has unique, optimized metadata that search engines use for indexing and ranking
@@ -109,7 +109,7 @@ Note: Phases 3 and 4 depend only on Phase 1/2, not on each other. With paralleli
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation & Crawlability | 0/2 | Planned | - |
+| 1. Foundation & Crawlability | 2/2 | ✓ Complete | 2026-02-10 |
 | 2. Per-Page Meta Tags | 0/2 | Not started | - |
 | 3. Social & Open Graph | 0/2 | Not started | - |
 | 4. Schema Markup | 0/3 | Not started | - |

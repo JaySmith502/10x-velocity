@@ -7,18 +7,18 @@
 
 ### Crawlability
 
-- [ ] **CRAWL-01**: robots.txt serves as proper text file with sitemap reference
-- [ ] **CRAWL-02**: XML sitemap lists all indexable pages with priorities
+- [x] **CRAWL-01**: robots.txt serves as proper text file with sitemap reference
+- [x] **CRAWL-02**: XML sitemap lists all indexable pages with priorities
 - [ ] **CRAWL-03**: Canonical tags on every page point to correct canonical URL
-- [ ] **CRAWL-04**: 404 page returns proper HTTP 404 status (not soft 200)
+- [x] **CRAWL-04**: 404 page returns proper HTTP 404 status (not soft 200)
 
 ### On-Page SEO
 
 - [ ] **ONPG-01**: Every page has a unique, keyword-rich title tag (under 60 chars)
 - [ ] **ONPG-02**: Every page has a unique meta description (150-160 chars)
 - [ ] **ONPG-03**: Each page has exactly one H1 tag (fix chat widget duplicate)
-- [ ] **ONPG-04**: Dynamic copyright year in footer
-- [ ] **ONPG-05**: noopener/noreferrer on all external links
+- [x] **ONPG-04**: Dynamic copyright year in footer
+- [x] **ONPG-05**: noopener/noreferrer on all external links
 
 ### Schema Markup
 
@@ -52,9 +52,9 @@
 
 ### Fixes
 
-- [ ] **FIX-01**: Email standardized to info@10xvelocity.ai on all pages
-- [ ] **FIX-02**: LeadConnector form privacy/terms links point to actual site pages
-- [ ] **FIX-03**: Per-page dynamic meta tags via React Helmet (or equivalent)
+- [x] **FIX-01**: Email standardized to info@10xvelocity.ai on all pages
+- [x] **FIX-02**: LeadConnector form privacy/terms links point to actual site pages *(manual GoHighLevel config required)*
+- [x] **FIX-03**: Per-page dynamic meta tags via React Helmet (or equivalent)
 
 ## v2 Requirements
 
@@ -86,14 +86,14 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FIX-03 | Phase 1 | Pending |
-| CRAWL-01 | Phase 1 | Pending |
-| CRAWL-02 | Phase 1 | Pending |
-| CRAWL-04 | Phase 1 | Pending |
-| FIX-01 | Phase 1 | Pending |
-| FIX-02 | Phase 1 | Pending |
-| ONPG-04 | Phase 1 | Pending |
-| ONPG-05 | Phase 1 | Pending |
+| FIX-03 | Phase 1 | Complete |
+| CRAWL-01 | Phase 1 | Complete |
+| CRAWL-02 | Phase 1 | Complete |
+| CRAWL-04 | Phase 1 | Complete |
+| FIX-01 | Phase 1 | Complete |
+| FIX-02 | Phase 1 | Complete |
+| ONPG-04 | Phase 1 | Complete |
+| ONPG-05 | Phase 1 | Complete |
 | ONPG-01 | Phase 2 | Pending |
 | ONPG-02 | Phase 2 | Pending |
 | ONPG-03 | Phase 2 | Pending |
@@ -124,4 +124,4 @@
 
 ---
 *Requirements defined: 2026-02-10*
-*Last updated: 2026-02-10 after roadmap creation*
+*Last updated: 2026-02-10 after Phase 1 completion*
