@@ -4,6 +4,8 @@ import { helmetJsonLdProp } from "react-schemaorg";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Sparkle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const PhoneVoiceAgents = () => {
   return (
@@ -22,40 +24,14 @@ const PhoneVoiceAgents = () => {
           helmetJsonLdProp<any>({
             "@context": "https://schema.org",
             "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "How do AI voice agents handle customer calls?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Our AI voice agents use natural language processing to understand and respond to callers in real time. They can qualify leads, answer common questions, schedule appointments, and transfer complex calls to your team—all while sounding natural and professional.",
-                },
+            mainEntity: faqs.map(faq => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
               },
-              {
-                "@type": "Question",
-                name: "Can AI voice agents work with my existing phone system?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes. Our voice agents integrate directly with your existing phone systems and CRM tools, so there is no need to replace your current infrastructure. Setup typically takes just a few days.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "What languages do the AI voice agents support?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Our AI voice agents support multiple languages and can switch between them during a single call. This ensures every caller gets help in their preferred language, 24 hours a day, 7 days a week.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "How much can AI voice agents reduce my call center costs?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Most businesses see a 40 to 70 percent reduction in call handling costs. AI voice agents handle routine inquiries automatically, freeing your team to focus on complex, high-value conversations.",
-                },
-              },
-            ],
+            })),
           }),
           breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Phone Voice Agents", path: "/services/phone-voice-agents" }]),
         ]}
@@ -74,6 +50,7 @@ const PhoneVoiceAgents = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Phone Voice Agents", path: "/services/phone-voice-agents" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 heading-gradient">
@@ -147,6 +124,23 @@ const PhoneVoiceAgents = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+          <div className="glass-card p-8">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Customer Communication?</h3>
@@ -197,6 +191,25 @@ const features = [
   "Custom Voice & Personality Design",
   "Automated Follow-up Scheduling",
   "Call Transfer & Escalation Logic"
+];
+
+const faqs = [
+  {
+    question: "How do AI voice agents handle customer calls?",
+    answer: "Our AI voice agents use natural language processing to understand and respond to callers in real time. They can qualify leads, answer common questions, schedule appointments, and transfer complex calls to your team—all while sounding natural and professional.",
+  },
+  {
+    question: "Can AI voice agents work with my existing phone system?",
+    answer: "Yes. Our voice agents integrate directly with your existing phone systems and CRM tools, so there is no need to replace your current infrastructure. Setup typically takes just a few days.",
+  },
+  {
+    question: "What languages do the AI voice agents support?",
+    answer: "Our AI voice agents support multiple languages and can switch between them during a single call. This ensures every caller gets help in their preferred language, 24 hours a day, 7 days a week.",
+  },
+  {
+    question: "How much can AI voice agents reduce my call center costs?",
+    answer: "Most businesses see a 40 to 70 percent reduction in call handling costs. AI voice agents handle routine inquiries automatically, freeing your team to focus on complex, high-value conversations.",
+  },
 ];
 
 export default PhoneVoiceAgents;
