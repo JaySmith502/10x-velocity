@@ -6,6 +6,7 @@ import { BUSINESS_DATA } from "@/schemas/organization";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const TransportationDirector = () => {
   return (
@@ -54,6 +55,7 @@ const TransportationDirector = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Transportation Director", path: "/case-studies/transportation-director" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -183,6 +185,9 @@ const TransportationDirector = () => {
           </h2>
           <p className="text-lg text-velocity-muted mb-8">
             Discover how Power Automate solutions can eliminate bottlenecks and revolutionize your workflow efficiency.
+          </p>
+          <p className="text-velocity-muted mb-8">
+            See how our <Link to="/services" className="text-velocity-accent hover:underline">full suite of AI services</Link> can drive similar automation wins for your business.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <DiscoveryButton text="Book a Consultation" />

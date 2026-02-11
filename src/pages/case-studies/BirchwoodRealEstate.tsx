@@ -5,6 +5,8 @@ import { helmetJsonLdProp } from "react-schemaorg";
 import { BUSINESS_DATA } from "@/schemas/organization";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const BirchwoodRealEstate = () => {
   return (
@@ -53,6 +55,7 @@ const BirchwoodRealEstate = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Birchwood Real Estate", path: "/case-studies/birchwood-real-estate" }]} />
         <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
@@ -249,8 +252,11 @@ const BirchwoodRealEstate = () => {
               With optimized operations, Birchwood is now expanding into nationwide wholesaling, AI-driven virtual wholesaling, 
               and predictive seller behavior modeling, ensuring continued 10x scalability.
             </p>
+            <p className="text-velocity-muted mb-6">
+              Discover how our <Link to="/services/phone-voice-agents" className="text-velocity-accent hover:underline">AI voice agents</Link> and <Link to="/services" className="text-velocity-accent hover:underline">process automation services</Link> can transform your customer communication.
+            </p>
             <p className="text-velocity-muted mb-8">
-              Want to achieve 10x results in your real estate wholesaling business? Partner with 10x Velocity today and revolutionize your 
+              Want to achieve 10x results in your real estate wholesaling business? Partner with 10x Velocity today and revolutionize your
               deal flow with AI-driven precision.
             </p>
             <div className="flex justify-center">

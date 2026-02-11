@@ -5,6 +5,8 @@ import { helmetJsonLdProp } from "react-schemaorg";
 import { BUSINESS_DATA } from "@/schemas/organization";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "40% reduction in PPC costs, maximizing client ROI",
@@ -86,6 +88,7 @@ const DirectorOfMarketing = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Director of Marketing", path: "/case-studies/director-of-marketing" }]} />
         <article className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
@@ -166,6 +169,9 @@ const DirectorOfMarketing = () => {
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
             <p className="text-velocity-muted mb-6">
               With optimized operations, DMI is expanding into AI-powered video marketing, predictive customer analytics, and omnichannel automation, ensuring continued 10x scalability.
+            </p>
+            <p className="text-velocity-muted mb-6">
+              Explore our <Link to="/services" className="text-velocity-accent hover:underline">data analytics services</Link> to optimize your marketing performance with AI-driven insights.
             </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">

@@ -5,6 +5,8 @@ import { helmetJsonLdProp } from "react-schemaorg";
 import { BUSINESS_DATA } from "@/schemas/organization";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "5x increase in media placements due to AI targeting",
@@ -85,6 +87,7 @@ const InnesYoung = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Innes & Young", path: "/case-studies/innes-young" }]} />
         <article className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-start mb-6">
@@ -169,6 +172,9 @@ const InnesYoung = () => {
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
             <p className="text-velocity-muted mb-6">
               With enhanced efficiency, Innes & Young is considering global expansion and AI-powered content generation, further solidifying its industry leadership.
+            </p>
+            <p className="text-velocity-muted mb-6">
+              Discover how our <Link to="/services" className="text-velocity-accent hover:underline">AI process automation services</Link> can transform your operations the way they did for Innes & Young.
             </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">
