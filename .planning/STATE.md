@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-10)
 ## Current Position
 
 Phase: 5 of 5 (Content Structure & Images)
-Plan: 1 of 3 in current phase
-Status: In progress
-Last activity: 2026-02-10 -- Completed 05-01-PLAN.md (FAQ sections + VisualBreadcrumb)
+Plan: 3 of 3 in current phase
+Status: In progress (05-02 pending)
+Last activity: 2026-02-10 -- Completed 05-03-PLAN.md (Image Optimization)
 
-Progress: [████████░░] 85%
+Progress: [█████████░] 92%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: 6 min
-- Total execution time: 1.15 hours
+- Total execution time: 1.22 hours
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [████████░░] 85%
 | 2. Per-Page Meta Tags | 3/3 | 39 min | 13 min |
 | 3. Social & Open Graph | 2/2 | 10 min | 5 min |
 | 4. Schema Markup | 3/3 | 9 min | 3 min |
-| 5. Content Structure & Images | 1/3 | 3 min | 3 min |
+| 5. Content Structure & Images | 2/3 | 7 min | 3.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 05-01 (3 min), 04-03 (4 min), 04-02 (2 min), 04-01 (3 min), 03-01 (7 min)
-- Trend: Consistent fast execution with established patterns
+- Last 5 plans: 05-03 (4 min), 05-01 (3 min), 04-03 (4 min), 04-02 (2 min), 04-01 (3 min)
+- Trend: Consistent fast execution
 
 *Updated after each plan completion*
 
@@ -77,6 +77,10 @@ Recent decisions affecting current work:
 - [04-03]: BlogPost breadcrumb uses full post.title (not truncated blogTitle) for clarity
 - [05-01]: VisualBreadcrumb defines BreadcrumbItemData locally (not imported from schemas) to avoid coupling
 - [05-01]: FAQ sections placed before CTA sections matching AIWorkshops.tsx pattern
+- [05-03]: WebP quality 80 used for all conversions via sharp (temp dev dep, uninstalled after)
+- [05-03]: Above-fold images (Header, MobileMenu, Index hero) load eagerly; below-fold use loading=lazy
+- [05-03]: BlogPost featured image loads eagerly (above fold on post page); Blog card images lazy
+- [05-03]: Unsplash blog images get width/height matching URL crop params (600x400 cards, 1200x600 featured)
 
 ### Pending Todos
 
@@ -89,6 +93,6 @@ None.
 
 ## Session Continuity
 
-Last session: 2026-02-11T00:44:12Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-02-11T00:46:14Z
+Stopped at: Completed 05-03-PLAN.md
 Resume file: None
