@@ -6,6 +6,7 @@ import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { NotFound } from "@/pages/NotFound";
 import { blogPosts } from "@/data/blogPosts";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -23,6 +24,7 @@ const BlogPost = () => {
 
   return (
     <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.id}` }]} />
       <Helmet
         script={[
           breadcrumbJsonLd([

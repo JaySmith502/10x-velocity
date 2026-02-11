@@ -5,6 +5,7 @@ import { ArrowRight, Calendar, Tag, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogPosts";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const Blog = () => {
   return (
@@ -31,6 +32,7 @@ const Blog = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }]} />
       {/* Header Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">

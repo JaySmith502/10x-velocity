@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const Prototypes = () => {
   const scrollToContact = () => {
@@ -31,6 +32,7 @@ const Prototypes = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Prototypes", path: "/prototypes" }]} />
         {/* Hero Section */}
         <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />

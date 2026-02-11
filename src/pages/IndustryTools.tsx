@@ -8,6 +8,7 @@ import { ToolCard } from "@/components/industry-tools/ToolCard";
 import { ToolModal } from "@/components/industry-tools/ToolModal";
 import { LeadCaptureModal } from "@/components/industry-tools/LeadCaptureModal";
 import { Download } from "lucide-react";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const IndustryTools = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
@@ -65,6 +66,7 @@ const IndustryTools = () => {
 
       <div className="min-h-screen bg-velocity-dark py-20">
         <div className="container mx-auto px-4">
+          <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Industry Tools", path: "/industry-tools" }]} />
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 heading-gradient">

@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const About = () => {
   return (
@@ -26,6 +27,7 @@ const About = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="min-h-screen bg-velocity-dark">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">

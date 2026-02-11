@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const OnboardingForm = () => {
   return (
@@ -29,6 +30,7 @@ const OnboardingForm = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Demo", path: "/demo" }]} />
       <div className="container mx-auto px-4">
         <div className="glass-card p-8 md:p-12 grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Left side - Content */}

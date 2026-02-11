@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const TermsOfService = () => {
   return (
@@ -26,6 +27,7 @@ const TermsOfService = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="container mx-auto px-4 py-16">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Terms of Service", path: "/terms-of-service" }]} />
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-velocity-muted hover:text-velocity-accent transition-colors">
@@ -33,7 +35,7 @@ const TermsOfService = () => {
             Back to Home
           </Link>
         </div>
-        
+
         <h1 className="text-4xl font-bold mb-8 text-velocity-light">Terms of Service</h1>
         
         <div className="space-y-8 text-velocity-muted">

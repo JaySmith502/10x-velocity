@@ -1,6 +1,7 @@
 
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const Contact = () => {
 
@@ -28,6 +29,7 @@ const Contact = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="container mx-auto px-4 py-12 md:py-24">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
       <div className="max-w-5xl mx-auto">
         {/* Header and Contact Cards - Centered */}
         <div className="text-center mb-12">

@@ -7,6 +7,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const LunchAndLearn = () => {
   return (
@@ -33,6 +34,7 @@ const LunchAndLearn = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen bg-velocity-dark">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lunch & Learn", path: "/events/lunch-and-learn" }]} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0"></div>

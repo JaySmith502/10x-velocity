@@ -2,6 +2,7 @@ import { Helmet } from "react-helmet";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 // Declare the custom element type for TypeScript
 declare module "react" {
@@ -57,6 +58,7 @@ const SmartBots = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Smart Bots", path: "/services/smart-bots" }]} />
       <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">

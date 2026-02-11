@@ -7,6 +7,7 @@ import ResultsDisplay from "@/components/savings-calculator/ResultsDisplay";
 import { calculateSavings, SavingsInputs, SavingsResults } from "@/utils/savingsCalculator";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const SavingsCalculator = () => {
   // Input state
@@ -63,6 +64,7 @@ const SavingsCalculator = () => {
       </Helmet>
       <div className="min-h-screen py-12 bg-velocity-dark">
         <div className="container mx-auto px-4">
+          <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Savings Calculator", path: "/savings-calculator" }]} />
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold heading-gradient mb-4">

@@ -2,6 +2,7 @@ import { Check, BookOpen, Users, Award, Heart, Clock, GraduationCap, MessageCirc
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const AIGuideCertification = () => {
   return (
@@ -25,6 +26,7 @@ const AIGuideCertification = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "AI Guide Certification", path: "/programs/ai-guide-certification" }]} />
         {/* Hero Section */}
       <section id="ai-guide-certification" className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0" />

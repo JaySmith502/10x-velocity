@@ -5,6 +5,7 @@ import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Sparkle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const AIWorkshops = () => {
   return (
@@ -49,6 +50,7 @@ const AIWorkshops = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "AI Workshops", path: "/services/ai-workshops" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 heading-gradient">

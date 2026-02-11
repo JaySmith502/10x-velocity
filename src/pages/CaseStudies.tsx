@@ -5,6 +5,7 @@ import { ArrowRight, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Badge } from "@/components/ui/badge";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const CaseStudies = () => {
   return (
@@ -31,6 +32,7 @@ const CaseStudies = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }]} />
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-7xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">

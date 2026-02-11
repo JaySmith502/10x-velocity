@@ -5,6 +5,7 @@ import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const LexiFile = () => {
   const features = [
@@ -88,6 +89,7 @@ const LexiFile = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lexi-File", path: "/lexi-file" }]} />
         {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />

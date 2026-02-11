@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 type TabType = 'overview' | 'features' | 'benefits' | 'cases';
 
@@ -31,6 +32,7 @@ const PowerAutomate = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Power Automate", path: "/power-automate" }]} />
         <section className="container mx-auto px-4 py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />

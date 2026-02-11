@@ -6,6 +6,7 @@ import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
 import { Database, FileText, Check, ArrowRight } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const DataCleaning = () => {
   return (
@@ -38,6 +39,7 @@ const DataCleaning = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <div className="min-h-screen flex flex-col">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Data Cleaning", path: "/services/data-cleaning" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
