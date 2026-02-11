@@ -52,10 +52,13 @@ const Blog = () => {
               className="glass-card overflow-hidden flex flex-col h-full animate-fade-up hover:bg-white/10 transition-colors"
             >
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={`${post.image}?w=600&h=400&fit=crop&q=80`} 
+                <img
+                  src={`${post.image}?w=600&h=400&fit=crop&q=80`}
                   alt={post.title}
                   className="w-full h-full object-cover"
+                  width={600}
+                  height={400}
+                  loading="lazy"
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col">

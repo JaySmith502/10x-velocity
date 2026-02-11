@@ -51,10 +51,12 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <div className="px-4 py-2 flex flex-col items-start bg-[#1A1F2C]">
             <div className="mb-6">
               <Link to="/" className="flex items-center" onClick={onClose}>
-                <img 
-                  src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.png" 
-                  alt="10x Velocity Logo" 
+                <img
+                  src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.webp"
+                  alt="10x Velocity Logo"
                   className="h-10 w-auto"
+                  width={1920}
+                  height={1160}
                 />
               </Link>
             </div>

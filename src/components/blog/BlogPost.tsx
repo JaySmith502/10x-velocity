@@ -58,10 +58,12 @@ const BlogPost = () => {
 
         {/* Featured image */}
         <div className="mb-8 rounded-lg overflow-hidden h-[400px]">
-          <img 
-            src={`${post.image}?w=1200&h=600&fit=crop&q=90`} 
+          <img
+            src={`${post.image}?w=1200&h=600&fit=crop&q=90`}
             alt={post.title}
             className="w-full h-full object-cover"
+            width={1200}
+            height={600}
           />
         </div>
 

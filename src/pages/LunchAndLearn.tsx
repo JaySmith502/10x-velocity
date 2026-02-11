@@ -78,10 +78,13 @@ const LunchAndLearn = () => {
             <Card className="bg-transparent border-velocity-accent/20 overflow-hidden max-w-2xl mx-auto">
               <CardContent className="p-0">
                 <div className="w-full">
-                  <img 
-                    src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.png" 
-                    alt="SpongeBob AI Meme" 
+                  <img
+                    src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.webp"
+                    alt="SpongeBob AI Meme"
                     className="w-full h-auto object-contain"
+                    width={1041}
+                    height={810}
+                    loading="lazy"
                   />
                 </div>
               </CardContent>

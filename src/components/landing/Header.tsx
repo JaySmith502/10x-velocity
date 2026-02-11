@@ -20,10 +20,12 @@ const Header = () => {
         <div className="flex h-20 items-center justify-between">
           <div className="flex items-center">
             <Link to="/" className="hidden md:flex items-center">
-              <img 
-                src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.png" 
-                alt="10x Velocity Logo" 
+              <img
+                src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.webp"
+                alt="10x Velocity Logo"
                 className="h-10 md:h-12 w-auto"
+                width={1920}
+                height={1160}
               />
             </Link>
             

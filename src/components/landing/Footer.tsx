@@ -41,10 +41,13 @@ const Footer = () => {
               </li>
               <li className="hidden md:block mt-12">
                 <Link to="/">
-                  <img 
-                    src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.png" 
-                    alt="10x Velocity Logo" 
+                  <img
+                    src="/lovable-uploads/d113002f-f6b2-41b5-aa96-2057ce8f4046.webp"
+                    alt="10x Velocity Logo"
                     className="h-16 w-auto"
+                    width={1920}
+                    height={1160}
+                    loading="lazy"
                   />
                 </Link>
               </li>
@@ -87,25 +90,34 @@ const Footer = () => {
             © {new Date().getFullYear()} 10x Velocity. All rights reserved.
           </p>
           <div className="flex items-center justify-center gap-6">
-            <img 
-              src="/lovable-uploads/093e4cf4-8793-474f-a7d9-6ca869d392f7.png"
+            <img
+              src="/lovable-uploads/093e4cf4-8793-474f-a7d9-6ca869d392f7.webp"
               alt="VOSB Verified Logo"
               className="h-16 w-auto"
+              width={500}
+              height={500}
+              loading="lazy"
             />
-            <img 
-              src="/lovable-uploads/177aec5f-3604-4fb9-aac0-ec91a10d1639.png"
+            <img
+              src="/lovable-uploads/177aec5f-3604-4fb9-aac0-ec91a10d1639.webp"
               alt="ESGR Logo"
               className="h-16 w-auto"
+              width={500}
+              height={500}
+              loading="lazy"
             />
             <a 
               href="https://canopyky.org" 
               target="_blank" 
               rel="noopener noreferrer"
             >
-              <img 
-                src="/lovable-uploads/1078ef2b-dcf2-4e80-8022-0643ec9653ed.png"
+              <img
+                src="/lovable-uploads/1078ef2b-dcf2-4e80-8022-0643ec9653ed.webp"
                 alt="Canopy Certified Logo"
                 className="h-16 w-auto"
+                width={1635}
+                height={1920}
+                loading="lazy"
               />
             </a>
           </div>

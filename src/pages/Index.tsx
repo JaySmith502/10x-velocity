@@ -84,10 +84,12 @@ const Index = () => {
         
         {/* Mobile Logo */}
         <div className="md:hidden flex justify-center mb-8">
-          <img 
-            src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
-            alt="10x Velocity Logo" 
+          <img
+            src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.webp"
+            alt="10x Velocity Logo"
             className="h-14 w-auto"
+            width={400}
+            height={200}
           />
         </div>
         
