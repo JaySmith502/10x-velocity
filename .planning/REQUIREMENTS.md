@@ -38,17 +38,17 @@
 
 ### Images
 
-- [ ] **IMG-01**: Images converted to WebP format where possible
-- [ ] **IMG-02**: Explicit width/height attributes on all images
-- [ ] **IMG-03**: Lazy loading on below-fold images
+- [x] **IMG-01**: Images converted to WebP format where possible
+- [x] **IMG-02**: Explicit width/height attributes on all images
+- [x] **IMG-03**: Lazy loading on below-fold images
 - [x] **IMG-04**: OG image uses absolute URL
 
 ### Content Structure
 
-- [ ] **CONT-01**: Visual breadcrumb navigation on interior pages
-- [ ] **CONT-02**: FAQ sections added to services page and voice agents page
-- [ ] **CONT-03**: /blog route created with empty state
-- [ ] **CONT-04**: Each case study has unique title, meta description, and internal links
+- [x] **CONT-01**: Visual breadcrumb navigation on interior pages
+- [x] **CONT-02**: FAQ sections added to services page and voice agents page
+- [x] **CONT-03**: /blog route created with empty state
+- [x] **CONT-04**: Each case study has unique title, meta description, and internal links
 
 ### Fixes
 
@@ -109,13 +109,13 @@
 | SCHM-04 | Phase 4 | Complete |
 | SCHM-05 | Phase 4 | Complete |
 | SCHM-06 | Phase 4 | Complete |
-| CONT-01 | Phase 5 | Pending |
-| CONT-02 | Phase 5 | Pending |
-| CONT-03 | Phase 5 | Pending |
-| CONT-04 | Phase 5 | Pending |
-| IMG-01 | Phase 5 | Pending |
-| IMG-02 | Phase 5 | Pending |
-| IMG-03 | Phase 5 | Pending |
+| CONT-01 | Phase 5 | Complete |
+| CONT-02 | Phase 5 | Complete |
+| CONT-03 | Phase 5 | Complete |
+| CONT-04 | Phase 5 | Complete |
+| IMG-01 | Phase 5 | Complete |
+| IMG-02 | Phase 5 | Complete |
+| IMG-03 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 30 total
@@ -124,4 +124,4 @@
 
 ---
 *Requirements defined: 2026-02-10*
-*Last updated: 2026-02-10 after Phase 4 completion*
+*Last updated: 2026-02-10 after Phase 5 completion — all v1 requirements complete*
