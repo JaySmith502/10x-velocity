@@ -25,8 +25,10 @@ insights-video
 *.sw?
 
 .trigger
-10x Velocity Homepage.png
-Govbrokers pricing.png
+#10x Velocity Homepage.png
+#Govbrokers pricing.png
 
 # Windows reserved device names
 nul
+10x Velocity Homepage.png
+Govbrokers pricing.png

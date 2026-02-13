@@ -109,10 +109,10 @@ const Packages = () => {
           ]),
         ]}
       >
-        <title>40 in 40: AI & Automation Packages | 10x Velocity</title>
+        <title>AI & Automation Packages | 10x Velocity</title>
         <meta name="description" content="Choose from three AI service tiers: Voice & Chat AI Agents starting at $399/mo, Baseline Diagnostic at $499, or Enterprise Review at $1,999. Fast-start packages from 10x Velocity." />
         <link rel="canonical" href="https://10xvelocity.ai/packages" />
-        <meta property="og:title" content="40 in 40: AI & Automation Packages | 10x Velocity" />
+        <meta property="og:title" content="AI & Automation Packages | 10x Velocity" />
         <meta property="og:description" content="Choose from three AI service tiers: Voice & Chat AI Agents starting at $399/mo, Baseline Diagnostic at $499, or Enterprise Review at $1,999. Fast-start packages from 10x Velocity." />
         <meta property="og:url" content="https://10xvelocity.ai/packages" />
         <meta property="og:type" content="website" />
@@ -127,9 +127,8 @@ const Packages = () => {
           <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">40 in 40</h1>
-            <p className="text-xl md:text-2xl text-velocity-light mb-4">Fast-Start AI & Automation Packages</p>
-            <p className="text-lg text-velocity-muted mb-8 max-w-2xl mx-auto">40 businesses. 40 days. Three ways in. Pick the package that fits your speed, scope, and budget — and let's move.</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">AI & Automation Packages</h1>
+            <p className="text-xl md:text-2xl text-velocity-light mb-4">Choose from three AI service tiers: Voice & Chat AI Agents starting at $399/mo, Baseline Diagnostic at $499, or Enterprise Review at $1,999. Fast-start packages from 10x Velocity.</p>
           </div>
         </section>
 
@@ -189,9 +188,9 @@ const Packages = () => {
           </div>
         </section>
 
-        {/* Timeline — How the 40 in 40 Runs */}
+        {/* Timeline — How the Process Runs */}
         <section className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">How the 40 in 40 Runs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">How the Process Runs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {timeline.map((step) => (
               <div key={step.days} className="glass-card p-6 text-center">
@@ -244,7 +243,7 @@ const Packages = () => {
               Ready to Move?
             </h2>
             <p className="text-lg text-velocity-muted mb-8">
-              The 40 in 40 is filling up. Book a free discovery call to lock in your spot.
+              Book a free discovery call to lock in your spot.
             </p>
             <DiscoveryButton />
           </div>
