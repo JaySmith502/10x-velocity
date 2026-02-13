@@ -10,7 +10,7 @@ See: .planning/PROJECT.md (updated 2026-02-13)
 ## Current Position
 
 Milestone: v1.1 — 40-in-40 Packages Landing Page
-Status: Not Planned (roadmap created, phase not yet planned)
+Status: Planned (1 plan, ready to execute)
 Phase: 6 — Packages Landing Page
 Last activity: 2026-02-13 — Milestone v1.1 initialized (13 requirements, 1 phase)
 
@@ -22,7 +22,7 @@ Last activity: 2026-02-13 — Milestone v1.1 initialized (13 requirements, 1 pha
 
 ## Next Steps
 
-Run `/gsd:plan-phase 6` to create execution plan for the packages landing page.
+Run `/gsd:execute-phase 6` to build the packages landing page.
 
 ---
 *Updated: 2026-02-13*
