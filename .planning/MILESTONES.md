@@ -27,5 +27,28 @@
 
 **Archive:** `.planning/milestones/v1.0-ROADMAP.md`, `.planning/milestones/v1.0-REQUIREMENTS.md`
 
+## v1.1 — 40-in-40 Packages Landing Page (SHIPPED 2026-02-13)
+
+**Goal:** Create a standalone campaign landing page at `/packages` with 3 tiered service packages, GoHighLevel payment integration, and full SEO treatment.
+
+**Stats:**
+- 1 phase, 1 plan, 13 requirements
+- 10 commits, 3 files changed, +263 lines
+- ~4 minutes execution time
+- Audit: 13/13 requirements, 5/5 must-haves, 6/6 integration, 3/3 flows
+
+**Accomplishments:**
+- Campaign landing page at `/packages` with hero, 3 pricing cards, timeline, audience, advantage, and CTA sections
+- Featured Baseline Diagnostic card with scale-105, accent border, "Most Popular" badge
+- GoHighLevel payment button placeholders on all 3 cards (operational config pending)
+- Full SEO: Helmet title/description, canonical, OG/Twitter tags, BreadcrumbList JSON-LD, visual breadcrumbs
+- Lazy-loaded route, sitemap entry at priority 0.8
+
+**Tech Debt:**
+- Payment buttons use `href="#"` — GoHighLevel links need manual configuration
+- `/packages` not in site navigation (intentional — direct URL from marketing channels)
+
+**Archive:** `.planning/milestones/v1.1-ROADMAP.md`, `.planning/milestones/v1.1-REQUIREMENTS.md`
+
 ---
-*Last updated: 2026-02-10*
+*Last updated: 2026-02-13*

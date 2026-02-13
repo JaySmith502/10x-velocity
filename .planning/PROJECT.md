@@ -2,21 +2,15 @@
 
 ## What This Is
 
-Marketing website for 10xVelocity, an AI & automation consulting firm. React SPA deployed to Netlify. v1.0 shipped comprehensive SEO overhaul (38/100 → 90+). Now building a "40 in 40" campaign landing page with tiered service packages and GoHighLevel payment integration.
+Marketing website for 10xVelocity, an AI & automation consulting firm. React SPA deployed to Netlify. v1.0 shipped comprehensive SEO overhaul (38/100 → 90+). v1.1 shipped "40 in 40" campaign landing page with tiered service packages and GoHighLevel payment integration.
 
 ## Core Value
 
 10xvelocity.ai converts visitors into paying clients by clearly communicating services, results, and a fast path to engagement.
 
-## Current Milestone: v1.1 — 40-in-40 Packages Landing Page
+## Current Milestone: None
 
-**Goal:** Create a standalone campaign landing page at `/packages` with 3 tiered service cards, payment buttons via GoHighLevel, and supporting campaign content — all in the 10x Velocity brand style.
-
-**Target features:**
-- 3 pricing cards: Voice & Chat AI Agents ($399/mo), Baseline Diagnostic ($499, featured), Enterprise Review ($1,999)
-- GoHighLevel/LeadConnector payment button on each card
-- Campaign sections: hero, timeline, "who it's for", 10xVelocity advantage, CTA
-- Full SEO treatment (Helmet, OG tags, schema, breadcrumbs) matching v1.0 patterns
+No active milestone. v1.1 shipped 2026-02-13.
 
 ## Requirements
 
@@ -54,19 +48,15 @@ Marketing website for 10xVelocity, an AI & automation consulting firm. React SPA
 - ✓ Dynamic copyright year in footer — v1.0
 - ✓ noopener/noreferrer on all external links — v1.0
 - ✓ FAQ accordion sections on services and voice agents pages — v1.0
+- ✓ Standalone `/packages` campaign landing page with hero, pricing cards, timeline, audience, advantage, CTA — v1.1
+- ✓ 3 tiered pricing cards (Voice Agents $399/mo, Baseline Diagnostic $499 featured, Enterprise Review $1,999) — v1.1
+- ✓ GoHighLevel/LeadConnector payment button placeholders on each card — v1.1
+- ✓ Full SEO on /packages: Helmet, OG/Twitter, canonical, BreadcrumbList JSON-LD, visual breadcrumbs — v1.1
+- ✓ Lazy-loaded route in App.tsx, sitemap entry at priority 0.8 — v1.1
 
 ### Active
 
-- [ ] Standalone `/packages` page with campaign hero section
-- [ ] 3 tiered pricing cards with feature lists (Voice Agents, Baseline Diagnostic, Enterprise Review)
-- [ ] Baseline Diagnostic card visually featured/highlighted
-- [ ] GoHighLevel/LeadConnector payment buttons on each card
-- [ ] Campaign timeline section ("How the 40 in 40 Runs")
-- [ ] "Who This Is For" section
-- [ ] "10xVelocity Advantage" section
-- [ ] Bottom CTA section
-- [ ] Full SEO: Helmet meta, OG/Twitter tags, canonical, breadcrumbs, JSON-LD schema
-- [ ] Route added to App.tsx, sitemap updated
+*(None — no active milestone)*
 
 ### Out of Scope
 
@@ -117,9 +107,9 @@ Marketing website for 10xVelocity, an AI & automation consulting firm. React SPA
 | Single-sourced FAQ data | One array serves both Accordion UI and FAQPage JSON-LD | ✓ Shipped — prevents data drift |
 | Two-pronged H1 fix | CSS fallback + JS MutationObserver for chat widget | ✓ Shipped — needs live verification |
 
-| 3 tiers not 4 | "Simple Apps" too niche for landing page, needs sales conversation first | — Pending |
-| GoHighLevel for payments | Already using LeadConnector, consistent CRM integration | — Pending |
-| Baseline Diagnostic as featured | $499 is lowest-friction entry point for new prospects | — Pending |
+| 3 tiers not 4 | "Simple Apps" too niche for landing page, needs sales conversation first | ✓ Shipped |
+| GoHighLevel for payments | Already using LeadConnector, consistent CRM integration | ✓ Shipped (placeholder URLs) |
+| Baseline Diagnostic as featured | $499 is lowest-friction entry point for new prospects | ✓ Shipped |
 
 ---
-*Last updated: 2026-02-13 after v1.1 milestone initialization*
+*Last updated: 2026-02-13 after v1.1 milestone completion*
