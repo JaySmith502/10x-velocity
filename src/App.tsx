@@ -36,6 +36,7 @@ const AIWorkshops = lazy(() => import("./pages/services/AIWorkshops"));
 const OnboardingForm = lazy(() => import("./pages/OnboardingForm"));
 const SmartBots = lazy(() => import("./pages/SmartBots"));
 const LexiFile = lazy(() => import("./pages/LexiFile"));
+const Packages = lazy(() => import("./pages/Packages"));
 const Prototypes = lazy(() => import("./pages/Prototypes"));
 const IndustryTools = lazy(() => import("./pages/IndustryTools"));
 const AIGuideCertification = lazy(() => import("./pages/AIGuideCertification"));
@@ -79,6 +80,7 @@ const AppContent = () => {
           <Route path="/case-studies/transportation-director" element={<TransportationDirector />} />
           <Route path="/savings-calculator" element={<SavingsCalculator />} />
           <Route path="/events/lunch-and-learn" element={<LunchAndLearn />} />
+          <Route path="/packages" element={<Packages />} />
           <Route path="/demo" element={<OnboardingForm />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
