@@ -18,7 +18,8 @@
       "Bash(test:*)",
       "Bash(powershell -Command:*)",
       "Bash(python3 -c \"import os; os.remove\\(r''\\\\?\\\\C:\\\\Users\\\\smith\\\\Documents\\\\1 Projects\\\\10x-velocity\\\\nul''\\)\")",
-      "Bash(python -c \"import os; os.remove\\(r''\\\\?\\\\C:\\\\Users\\\\smith\\\\Documents\\\\1 Projects\\\\10x-velocity\\\\nul''\\)\")"
+      "Bash(python -c \"import os; os.remove\\(r''\\\\?\\\\C:\\\\Users\\\\smith\\\\Documents\\\\1 Projects\\\\10x-velocity\\\\nul''\\)\")",
+      "Bash(npm uninstall:*)"
     ]
   }
 }

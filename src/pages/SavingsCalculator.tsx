@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import InputControls from "@/components/savings-calculator/InputControls";
 import ResultsDisplay from "@/components/savings-calculator/ResultsDisplay";
-import { calculateSavings, SavingsInputs, SavingsResults } from "@/utils/savingsCalculator";
+import { calculateSavings, SavingsInputs } from "@/utils/savingsCalculator";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
@@ -18,12 +18,8 @@ const SavingsCalculator = () => {
     hourlyRate: 35
   });
 
-  // Results state
-  const [results, setResults] = useState<SavingsResults>({
-    weeklySavings: 0,
-    annualSavings: 0,
-    timeReclaimed: 0
-  });
+  // Derive results directly from inputs — no extra state or effect needed
+  const results = useMemo(() => calculateSavings(inputs), [inputs]);
 
   // Handle input changes
   const handleInputChange = (name: keyof SavingsInputs, value: number) => {
@@ -32,12 +28,6 @@ const SavingsCalculator = () => {
       [name]: value
     }));
   };
-
-  // Calculate savings whenever inputs change
-  useEffect(() => {
-    const calculatedResults = calculateSavings(inputs);
-    setResults(calculatedResults);
-  }, [inputs]);
 
   return (
     <TooltipProvider>
