@@ -40,6 +40,7 @@ const Packages = lazy(() => import("./pages/Packages"));
 const Prototypes = lazy(() => import("./pages/Prototypes"));
 const IndustryTools = lazy(() => import("./pages/IndustryTools"));
 const AIGuideCertification = lazy(() => import("./pages/AIGuideCertification"));
+const AIGuideThankYou = lazy(() => import("./pages/AIGuideThankYou"));
 
 const queryClient = new QueryClient();
 
@@ -68,6 +69,7 @@ const AppContent = () => {
           <Route path="/power-automate" element={<PowerAutomate />} />
           <Route path="/prototypes" element={<Prototypes />} />
           <Route path="/programs/ai-guide-certification" element={<AIGuideCertification />} />
+          <Route path="/programs/ai-guide-certification/thank-you" element={<AIGuideThankYou />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/case-studies/innes-young" element={<InnesYoung />} />
           <Route path="/case-studies/ecatalyst" element={<ECatalyst />} />
