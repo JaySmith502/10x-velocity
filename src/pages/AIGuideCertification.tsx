@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Check, BookOpen, Users, Award, Heart, Clock, GraduationCap, MessageCircle, Search, Lightbulb } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
@@ -5,6 +6,15 @@ import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const AIGuideCertification = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://level.10xvelocity.ai/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
     <>
       <Helmet
@@ -188,7 +198,25 @@ const AIGuideCertification = () => {
           <p className="text-velocity-muted mb-8 max-w-2xl mx-auto">
             Join the pilot cohort and become one of the first certified AI Guides.
           </p>
-          <DiscoveryButton text="Register for Certification" url="/contact" className="text-lg" />
+          <div className="max-w-2xl mx-auto">
+            <iframe
+              src="https://level.10xvelocity.ai/widget/form/8I6MK8Tz0qvOIWjUU5jM"
+              style={{ width: "100%", height: "800px", border: "none", borderRadius: "0px" }}
+              id="inline-8I6MK8Tz0qvOIWjUU5jM"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="10XVelocity Internship Interest Form"
+              data-height="undefined"
+              data-layout-iframe-id="inline-8I6MK8Tz0qvOIWjUU5jM"
+              data-form-id="8I6MK8Tz0qvOIWjUU5jM"
+              title="10XVelocity Internship Interest Form"
+            />
+          </div>
         </div>
       </section>
     </main>
