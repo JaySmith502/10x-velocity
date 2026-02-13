@@ -11,6 +11,7 @@ node_modules
 dist
 dist-ssr
 *.local
+insights-video
 
 # Editor directories and files
 .vscode/*
@@ -24,3 +25,5 @@ dist-ssr
 *.sw?
 
 .trigger
+10x Velocity Homepage.png
+Govbrokers pricing.png
