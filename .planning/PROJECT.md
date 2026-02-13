@@ -1,12 +1,22 @@
-# 10x Velocity SEO Overhaul
+# 10x Velocity
 
 ## What This Is
 
-A comprehensive SEO optimization project for 10xvelocity.ai, an existing React SPA marketing site for an AI & automation consulting firm. The v1.0 milestone shipped all technical SEO fixes, pushing the site from 38/100 to 90+ coverage across crawlability, on-page SEO, schema markup, image optimization, and search engine readiness.
+Marketing website for 10xVelocity, an AI & automation consulting firm. React SPA deployed to Netlify. v1.0 shipped comprehensive SEO overhaul (38/100 → 90+). Now building a "40 in 40" campaign landing page with tiered service packages and GoHighLevel payment integration.
 
 ## Core Value
 
-Every page on 10xvelocity.ai must be discoverable, properly indexed, and richly described to search engines and AI systems — turning an invisible site into one that ranks.
+10xvelocity.ai converts visitors into paying clients by clearly communicating services, results, and a fast path to engagement.
+
+## Current Milestone: v1.1 — 40-in-40 Packages Landing Page
+
+**Goal:** Create a standalone campaign landing page at `/packages` with 3 tiered service cards, payment buttons via GoHighLevel, and supporting campaign content — all in the 10x Velocity brand style.
+
+**Target features:**
+- 3 pricing cards: Voice & Chat AI Agents ($399/mo), Baseline Diagnostic ($499, featured), Enterprise Review ($1,999)
+- GoHighLevel/LeadConnector payment button on each card
+- Campaign sections: hero, timeline, "who it's for", 10xVelocity advantage, CTA
+- Full SEO treatment (Helmet, OG tags, schema, breadcrumbs) matching v1.0 patterns
 
 ## Requirements
 
@@ -47,7 +57,16 @@ Every page on 10xvelocity.ai must be discoverable, properly indexed, and richly 
 
 ### Active
 
-*(No active requirements — next milestone not yet planned)*
+- [ ] Standalone `/packages` page with campaign hero section
+- [ ] 3 tiered pricing cards with feature lists (Voice Agents, Baseline Diagnostic, Enterprise Review)
+- [ ] Baseline Diagnostic card visually featured/highlighted
+- [ ] GoHighLevel/LeadConnector payment buttons on each card
+- [ ] Campaign timeline section ("How the 40 in 40 Runs")
+- [ ] "Who This Is For" section
+- [ ] "10xVelocity Advantage" section
+- [ ] Bottom CTA section
+- [ ] Full SEO: Helmet meta, OG/Twitter tags, canonical, breadcrumbs, JSON-LD schema
+- [ ] Route added to App.tsx, sitemap updated
 
 ### Out of Scope
 
@@ -70,6 +89,10 @@ Every page on 10xvelocity.ai must be discoverable, properly indexed, and richly 
 - Blog exists at /blog with 5 posts and full meta tags
 - n8n chat widget H1 fix deployed (CSS + MutationObserver) — needs live site verification
 - LeadConnector form privacy/terms links require manual GoHighLevel admin config (FIX-02)
+- "40 in 40" is a time-boxed sales campaign: 40 days to close 40 fast-yes service engagements
+- GovBrokers pricing page (`Govbrokers pricing.png`) is the visual reference for card layout
+- Content source: `new-landing-page.md` at repo root
+- "Simple Apps / Rebuilt Nodes" tier excluded — too niche, only discoverable after discussion
 
 ## Constraints
 
@@ -94,5 +117,9 @@ Every page on 10xvelocity.ai must be discoverable, properly indexed, and richly 
 | Single-sourced FAQ data | One array serves both Accordion UI and FAQPage JSON-LD | ✓ Shipped — prevents data drift |
 | Two-pronged H1 fix | CSS fallback + JS MutationObserver for chat widget | ✓ Shipped — needs live verification |
 
+| 3 tiers not 4 | "Simple Apps" too niche for landing page, needs sales conversation first | — Pending |
+| GoHighLevel for payments | Already using LeadConnector, consistent CRM integration | — Pending |
+| Baseline Diagnostic as featured | $499 is lowest-friction entry point for new prospects | — Pending |
+
 ---
-*Last updated: 2026-02-10 after v1.0 milestone completion*
+*Last updated: 2026-02-13 after v1.1 milestone initialization*
