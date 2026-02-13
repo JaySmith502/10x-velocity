@@ -1,4 +1,4 @@
-
+import { lazy, Suspense } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,43 +7,52 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import RootLayout from "./components/layout/RootLayout";
 import { ScrollToTop } from "./components/ScrollToTop";
 import Index from "./pages/Index";
-import About from "./pages/About";
-import Services from "./pages/Services";
-import PowerAutomate from "./pages/PowerAutomate";
-import CaseStudies from "./pages/CaseStudies";
-import InnesYoung from "./pages/case-studies/InnesYoung";
-import ECatalyst from "./pages/case-studies/ECatalyst";
-import HillcrestPartners from "./pages/case-studies/HillcrestPartners";
-import CatalystGroup from "./pages/case-studies/CatalystGroup";
-import DirectorOfMarketing from "./pages/case-studies/DirectorOfMarketing";
-import BirchwoodRealEstate from "./pages/case-studies/BirchwoodRealEstate";
-import GovBrokers from "./pages/case-studies/GovBrokers";
-import Inspyrd from "./pages/case-studies/Inspyrd";
-import TransportationDirector from "./pages/case-studies/TransportationDirector";
-import SavingsCalculator from "./pages/SavingsCalculator";
-import Blog from "./pages/Blog";
-import BlogPost from "./components/blog/BlogPost";
-import Contact from "./pages/Contact";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import TermsOfService from "./pages/TermsOfService";
-import NotFound from "./pages/NotFound";
-import DataCleaning from "./pages/services/DataCleaning";
-import LunchAndLearn from "./pages/LunchAndLearn";
-import PhoneVoiceAgents from "./pages/services/PhoneVoiceAgents";
-import AIWorkshops from "./pages/services/AIWorkshops";
-import OnboardingForm from "./pages/OnboardingForm";
-import SmartBots from "./pages/SmartBots";
-import LexiFile from "./pages/LexiFile";
-import Prototypes from "./pages/Prototypes";
-import IndustryTools from "./pages/IndustryTools";
-import AIGuideCertification from "./pages/AIGuideCertification";
+
+// Lazy-loaded page components — split into separate chunks
+const About = lazy(() => import("./pages/About"));
+const Services = lazy(() => import("./pages/Services"));
+const PowerAutomate = lazy(() => import("./pages/PowerAutomate"));
+const CaseStudies = lazy(() => import("./pages/CaseStudies"));
+const InnesYoung = lazy(() => import("./pages/case-studies/InnesYoung"));
+const ECatalyst = lazy(() => import("./pages/case-studies/ECatalyst"));
+const HillcrestPartners = lazy(() => import("./pages/case-studies/HillcrestPartners"));
+const CatalystGroup = lazy(() => import("./pages/case-studies/CatalystGroup"));
+const DirectorOfMarketing = lazy(() => import("./pages/case-studies/DirectorOfMarketing"));
+const BirchwoodRealEstate = lazy(() => import("./pages/case-studies/BirchwoodRealEstate"));
+const GovBrokers = lazy(() => import("./pages/case-studies/GovBrokers"));
+const Inspyrd = lazy(() => import("./pages/case-studies/Inspyrd"));
+const TransportationDirector = lazy(() => import("./pages/case-studies/TransportationDirector"));
+const SavingsCalculator = lazy(() => import("./pages/SavingsCalculator"));
+const Blog = lazy(() => import("./pages/Blog"));
+const BlogPost = lazy(() => import("./components/blog/BlogPost"));
+const Contact = lazy(() => import("./pages/Contact"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const TermsOfService = lazy(() => import("./pages/TermsOfService"));
+const NotFound = lazy(() => import("./pages/NotFound"));
+const DataCleaning = lazy(() => import("./pages/services/DataCleaning"));
+const LunchAndLearn = lazy(() => import("./pages/LunchAndLearn"));
+const PhoneVoiceAgents = lazy(() => import("./pages/services/PhoneVoiceAgents"));
+const AIWorkshops = lazy(() => import("./pages/services/AIWorkshops"));
+const OnboardingForm = lazy(() => import("./pages/OnboardingForm"));
+const SmartBots = lazy(() => import("./pages/SmartBots"));
+const LexiFile = lazy(() => import("./pages/LexiFile"));
+const Prototypes = lazy(() => import("./pages/Prototypes"));
+const IndustryTools = lazy(() => import("./pages/IndustryTools"));
+const AIGuideCertification = lazy(() => import("./pages/AIGuideCertification"));
 
 const queryClient = new QueryClient();
+
+const PageLoader = () => (
+  <div className="min-h-screen flex items-center justify-center">
+    <div className="w-8 h-8 border-2 border-velocity-accent border-t-transparent rounded-full animate-spin" />
+  </div>
+);
 
 const AppContent = () => {
   return (
     <>
       <ScrollToTop />
+      <Suspense fallback={<PageLoader />}>
       <Routes>
         <Route element={<RootLayout />}>
           <Route path="/" element={<Index />} />
@@ -79,6 +88,7 @@ const AppContent = () => {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      </Suspense>
     </>
   );
 };

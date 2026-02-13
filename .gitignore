@@ -24,3 +24,6 @@ dist-ssr
 *.sw?
 
 .trigger
+
+# Windows reserved device names
+nul
