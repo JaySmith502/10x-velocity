@@ -2,7 +2,7 @@
 
 **Status:** In Progress
 **Phases:** 6
-**Total Plans:** 0 (not yet planned)
+**Total Plans:** 1
 
 ## Overview
 
@@ -20,16 +20,16 @@ Build a standalone campaign landing page at `/packages` for the "40 in 40" sales
   3. Each pricing card displays correct price, feature list, "best for" line, and a clickable payment button
   4. Page has unique Helmet title/description, OG/Twitter tags, canonical URL, breadcrumbs, and JSON-LD schema
   5. `/packages` appears in sitemap.xml
-**Plans**: 0 plans
+**Plans**: 1 plan
 
 Plans:
-- [ ] TBD (run /gsd:plan-phase 6 to break down)
+- [ ] 06-01-PLAN.md -- Full packages page (Packages.tsx + route + sitemap), hero, 3 pricing cards, timeline, audience, advantage, CTA, full SEO
 
 ## Progress
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 6. Packages Landing Page | 0/? | Not Planned | — |
+| 6. Packages Landing Page | 0/1 | Planned | — |
 
 ---
-*Created: 2026-02-13*
+*Updated: 2026-02-13*
