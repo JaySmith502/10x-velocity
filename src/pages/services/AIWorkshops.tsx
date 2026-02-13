@@ -1,11 +1,56 @@
 
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Sparkle } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const AIWorkshops = () => {
   return (
-    <main className="flex-1">
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "AI Workshops for Teams",
+            description: "Hands-on AI workshops that empower your team to leverage automation tools effectively. Customized training for businesses in Louisville, KY and beyond.",
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "AI Training",
+          }),
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(faq => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "AI Workshops", path: "/services/ai-workshops" }]),
+        ]}
+      >
+        <title>AI Workshops for Teams | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Hands-on AI workshops that empower your team to leverage automation tools effectively. Customized training for businesses in Louisville, KY and beyond."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services/ai-workshops" />
+        <meta property="og:title" content="AI Workshops for Teams | 10x Velocity" />
+        <meta property="og:description" content="Hands-on AI workshops that empower your team to leverage automation tools effectively. Customized training for businesses in Louisville, KY and beyond." />
+        <meta property="og:url" content="https://10xvelocity.ai/services/ai-workshops" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "AI Workshops", path: "/services/ai-workshops" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16">
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 heading-gradient">
@@ -110,6 +155,7 @@ const AIWorkshops = () => {
         <DiscoveryButton text="Schedule Free Consultation" className="text-lg" />
       </section>
     </main>
+    </>
   );
 };
 

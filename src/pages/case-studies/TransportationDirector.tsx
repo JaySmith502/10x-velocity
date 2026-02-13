@@ -1,11 +1,61 @@
 
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const TransportationDirector = () => {
   return (
-    <div className="min-h-screen">
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Transportation Director Logistics Case Study",
+            description: "How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/transportation-director",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Transportation Director", path: "/case-studies/transportation-director" },
+          ]),
+        ]}
+      >
+        <title>Transportation Director Logistics Case Study | 10x Velocity</title>
+        <meta name="description" content="How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/transportation-director" />
+        <meta property="og:title" content="Transportation Director Logistics Case Study | 10x Velocity" />
+        <meta property="og:description" content="How 10x Velocity revolutionized logistics management for Transportation Director with AI automation, intelligent routing, and operational optimization." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/transportation-director" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="min-h-screen">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Transportation Director", path: "/case-studies/transportation-director" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -136,6 +186,9 @@ const TransportationDirector = () => {
           <p className="text-lg text-velocity-muted mb-8">
             Discover how Power Automate solutions can eliminate bottlenecks and revolutionize your workflow efficiency.
           </p>
+          <p className="text-velocity-muted mb-8">
+            See how our <Link to="/services" className="text-velocity-accent hover:underline">full suite of AI services</Link> can drive similar automation wins for your business.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <DiscoveryButton text="Book a Consultation" />
             <Link to="/power-automate" className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2">
@@ -145,6 +198,7 @@ const TransportationDirector = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

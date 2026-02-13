@@ -1,10 +1,33 @@
 
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const PrivacyPolicy = () => {
   return (
-    <main className="container mx-auto px-4 py-16">
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Privacy Policy", path: "/privacy-policy" },
+          ]),
+        ]}
+      >
+        <title>Privacy Policy | 10x Velocity</title>
+        <meta name="description" content="Read the 10x Velocity privacy policy. Learn how we collect, use, store, and protect your personal information when you visit our website and use services." />
+        <link rel="canonical" href="https://10xvelocity.ai/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy | 10x Velocity" />
+        <meta property="og:description" content="Read the 10x Velocity privacy policy. Learn how we collect, use, store, and protect your personal information when you visit our website and use services." />
+        <meta property="og:url" content="https://10xvelocity.ai/privacy-policy" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="container mx-auto px-4 py-16">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy-policy" }]} />
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-velocity-muted hover:text-velocity-accent transition-colors">
@@ -12,7 +35,7 @@ const PrivacyPolicy = () => {
             Back to Home
           </Link>
         </div>
-        
+
         <h1 className="text-4xl font-bold mb-8 text-velocity-light">Privacy Policy</h1>
         
         <div className="space-y-8 text-velocity-muted">
@@ -150,7 +173,7 @@ const PrivacyPolicy = () => {
               If you have any questions about this Privacy Policy, you can contact us:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>By email: info@10xvelocity.com</li>
+              <li>By email: info@10xvelocity.ai</li>
               <li>By visiting the contact page on our website: <a href="/contact" className="text-velocity-accent hover:underline">Contact Us</a></li>
             </ul>
           </section>
@@ -161,6 +184,7 @@ const PrivacyPolicy = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

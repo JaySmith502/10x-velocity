@@ -1,6 +1,12 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "50% reduction in proposal processing time, improving contract submission efficiency",
@@ -36,11 +42,56 @@ const solutions = [
 
 const GovBrokers = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            10x Velocity Transforms GovBrokers into a High-Performance Government Contracting Powerhouse
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "GovBrokers Government Contracting Case Study",
+            description: "How 10x Velocity transformed GovBrokers into a high-performance government contracting powerhouse with AI-driven process automation and smart workflows.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/govbrokers",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "GovBrokers", path: "/case-studies/govbrokers" },
+          ]),
+        ]}
+      >
+        <title>GovBrokers Government Contracting Case Study | 10x Velocity</title>
+        <meta name="description" content="How 10x Velocity transformed GovBrokers into a high-performance government contracting powerhouse with AI-driven process automation and smart workflows." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/govbrokers" />
+        <meta property="og:title" content="GovBrokers Government Contracting Case Study | 10x Velocity" />
+        <meta property="og:description" content="How 10x Velocity transformed GovBrokers into a high-performance government contracting powerhouse with AI-driven process automation and smart workflows." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/govbrokers" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "GovBrokers", path: "/case-studies/govbrokers" }]} />
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              10x Velocity Transforms GovBrokers into a High-Performance Government Contracting Powerhouse
           </h1>
           
           {/* Client Overview */}
@@ -118,6 +169,9 @@ const GovBrokers = () => {
             <p className="text-velocity-muted mb-6">
               With optimized operations, GovBrokers is now expanding into AI-driven subcontracting matchmaking, automated compliance monitoring, and predictive contract award modeling, ensuring continued 10x scalability.
             </p>
+            <p className="text-velocity-muted mb-6">
+              Learn how our <Link to="/services" className="text-velocity-accent hover:underline">AI process automation services</Link> can accelerate your proposal workflows and deal management.
+            </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your government contracting business?
@@ -128,6 +182,7 @@ const GovBrokers = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

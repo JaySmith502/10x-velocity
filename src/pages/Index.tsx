@@ -1,11 +1,82 @@
 import { ArrowRight, Bot, ChartLine, Users, Database, Calculator } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
+import { BUSINESS_DATA } from "@/schemas/organization";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Organization",
+                "@id": `${BUSINESS_DATA.url}#organization`,
+                name: BUSINESS_DATA.name,
+                url: BUSINESS_DATA.url,
+                logo: { "@type": "ImageObject", url: BUSINESS_DATA.logo },
+                description: BUSINESS_DATA.description,
+                email: BUSINESS_DATA.email,
+                sameAs: [BUSINESS_DATA.linkedIn],
+                address: {
+                  "@type": "PostalAddress",
+                  ...BUSINESS_DATA.address,
+                },
+              },
+              {
+                "@type": "ProfessionalService",
+                "@id": `${BUSINESS_DATA.url}#localbusiness`,
+                name: BUSINESS_DATA.name,
+                url: BUSINESS_DATA.url,
+                image: BUSINESS_DATA.image,
+                address: {
+                  "@type": "PostalAddress",
+                  ...BUSINESS_DATA.address,
+                },
+                openingHoursSpecification: {
+                  "@type": "OpeningHoursSpecification",
+                  dayOfWeek: [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                  ],
+                  opens: "09:00",
+                  closes: "17:00",
+                },
+              },
+              {
+                "@type": "WebSite",
+                "@id": `${BUSINESS_DATA.url}#website`,
+                url: BUSINESS_DATA.url,
+                name: BUSINESS_DATA.name,
+                description: "AI & Automation Consulting",
+                publisher: { "@id": `${BUSINESS_DATA.url}#organization` },
+              },
+            ],
+          }),
+        ]}
+      >
+        <title>AI & Automation Consulting | 10x Velocity</title>
+        <meta
+          name="description"
+          content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. AI consulting and automation services based in Louisville, KY."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/" />
+        <meta property="og:title" content="AI & Automation Consulting | 10x Velocity" />
+        <meta property="og:description" content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. AI consulting and automation services based in Louisville, KY." />
+        <meta property="og:url" content="https://10xvelocity.ai/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -13,10 +84,12 @@ const Index = () => {
         
         {/* Mobile Logo */}
         <div className="md:hidden flex justify-center mb-8">
-          <img 
-            src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.png" 
-            alt="10x Velocity Logo" 
+          <img
+            src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.webp"
+            alt="10x Velocity Logo"
             className="h-14 w-auto"
+            width={400}
+            height={200}
           />
         </div>
         
@@ -166,6 +239,7 @@ const Index = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

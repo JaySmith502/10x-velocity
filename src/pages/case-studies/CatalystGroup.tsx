@@ -1,6 +1,12 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "50% faster deal evaluation, allowing for rapid investment decisions",
@@ -37,11 +43,56 @@ const solutions = [
 
 const CatalystGroup = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            10x Velocity Propels The Catalyst Group to Unprecedented Growth in Business Investment & Acquisitions
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Catalyst Group Growth Case Study",
+            description: "See how 10x Velocity propelled The Catalyst Group to unprecedented growth in business investment and acquisitions through AI-powered automation solutions.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/catalyst-group",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Catalyst Group", path: "/case-studies/catalyst-group" },
+          ]),
+        ]}
+      >
+        <title>Catalyst Group Growth Case Study | 10x Velocity</title>
+        <meta name="description" content="See how 10x Velocity propelled The Catalyst Group to unprecedented growth in business investment and acquisitions through AI-powered automation solutions." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/catalyst-group" />
+        <meta property="og:title" content="Catalyst Group Growth Case Study | 10x Velocity" />
+        <meta property="og:description" content="See how 10x Velocity propelled The Catalyst Group to unprecedented growth in business investment and acquisitions through AI-powered automation solutions." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/catalyst-group" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Catalyst Group", path: "/case-studies/catalyst-group" }]} />
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              10x Velocity Propels The Catalyst Group to Unprecedented Growth in Business Investment & Acquisitions
           </h1>
           
           {/* Client Overview */}
@@ -119,6 +170,9 @@ const CatalystGroup = () => {
             <p className="text-velocity-muted mb-6">
               With optimized deal flow management and investor engagement, TCG is expanding into AI-driven risk assessment, automated due diligence modeling, and global investment outreach, ensuring continued 10x scalability.
             </p>
+            <p className="text-velocity-muted mb-6">
+              See how our <Link to="/services" className="text-velocity-accent hover:underline">AI automation and analytics services</Link> can accelerate your deal flow and market intelligence.
+            </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your investment firm?
@@ -129,6 +183,7 @@ const CatalystGroup = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

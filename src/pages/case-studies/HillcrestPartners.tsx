@@ -1,7 +1,13 @@
 
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "50% faster property flips, reducing holding costs and increasing profitability",
@@ -38,11 +44,56 @@ const solutions = [
 
 const HillcrestPartners = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            10x Velocity Transforms Hillcrest Partners into a High-Growth Real Estate Powerhouse
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Hillcrest Partners Real Estate Case Study",
+            description: "How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/hillcrest-partners",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Hillcrest Partners", path: "/case-studies/hillcrest-partners" },
+          ]),
+        ]}
+      >
+        <title>Hillcrest Partners Real Estate Case Study | 10x Velocity</title>
+        <meta name="description" content="How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/hillcrest-partners" />
+        <meta property="og:title" content="Hillcrest Partners Real Estate Case Study | 10x Velocity" />
+        <meta property="og:description" content="How 10x Velocity transformed Hillcrest Partners into a high-growth real estate powerhouse using AI automation, data-driven strategies, and smart workflows." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/hillcrest-partners" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Hillcrest Partners", path: "/case-studies/hillcrest-partners" }]} />
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              10x Velocity Transforms Hillcrest Partners into a High-Growth Real Estate Powerhouse
           </h1>
           
           {/* Client Overview */}
@@ -120,6 +171,9 @@ const HillcrestPartners = () => {
             <p className="text-velocity-muted mb-6">
               With its optimized operations, HCP is now expanding into multi-property acquisition strategies, AI-driven home valuation modeling, and enhanced nationwide wholesaling, ensuring continued 10x scalability.
             </p>
+            <p className="text-velocity-muted mb-6">
+              Explore our <Link to="/services/data-cleaning" className="text-velocity-accent hover:underline">data cleaning services</Link> and <Link to="/services" className="text-velocity-accent hover:underline">analytics solutions</Link> to consolidate your data the same way.
+            </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your real estate business?
@@ -130,6 +184,7 @@ const HillcrestPartners = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

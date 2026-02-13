@@ -1,14 +1,40 @@
 
 import { useState } from "react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Calendar, Clock, MapPin, Check, ArrowRight } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const LunchAndLearn = () => {
   return (
-    <div className="min-h-screen bg-velocity-dark">
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Lunch & Learn", path: "/events/lunch-and-learn" },
+          ]),
+        ]}
+      >
+        <title>AI Lunch & Learn Event | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Join our AI as Your Performance Enhancer lunch and learn session. Discover practical AI applications for your business in a hands-on interactive setting."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/events/lunch-and-learn" />
+        <meta property="og:title" content="AI Lunch & Learn Event | 10x Velocity" />
+        <meta property="og:description" content="Join our AI as Your Performance Enhancer lunch and learn session. Discover practical AI applications for your business in a hands-on interactive setting." />
+        <meta property="og:url" content="https://10xvelocity.ai/events/lunch-and-learn" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="min-h-screen bg-velocity-dark">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lunch & Learn", path: "/events/lunch-and-learn" }]} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0"></div>
@@ -54,10 +80,13 @@ const LunchAndLearn = () => {
             <Card className="bg-transparent border-velocity-accent/20 overflow-hidden max-w-2xl mx-auto">
               <CardContent className="p-0">
                 <div className="w-full">
-                  <img 
-                    src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.png" 
-                    alt="SpongeBob AI Meme" 
+                  <img
+                    src="/lovable-uploads/cb4bc5ad-603d-48d9-b4fe-0749e28a4217.webp"
+                    alt="SpongeBob AI Meme"
                     className="w-full h-auto object-contain"
+                    width={1041}
+                    height={810}
+                    loading="lazy"
                   />
                 </div>
               </CardContent>
@@ -226,6 +255,7 @@ const LunchAndLearn = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

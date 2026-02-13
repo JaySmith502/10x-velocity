@@ -1,10 +1,13 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useMemo } from "react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import InputControls from "@/components/savings-calculator/InputControls";
 import ResultsDisplay from "@/components/savings-calculator/ResultsDisplay";
-import { calculateSavings, SavingsInputs, SavingsResults } from "@/utils/savingsCalculator";
+import { calculateSavings, SavingsInputs } from "@/utils/savingsCalculator";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const SavingsCalculator = () => {
   // Input state
@@ -15,12 +18,8 @@ const SavingsCalculator = () => {
     hourlyRate: 35
   });
 
-  // Results state
-  const [results, setResults] = useState<SavingsResults>({
-    weeklySavings: 0,
-    annualSavings: 0,
-    timeReclaimed: 0
-  });
+  // Derive results directly from inputs — no extra state or effect needed
+  const results = useMemo(() => calculateSavings(inputs), [inputs]);
 
   // Handle input changes
   const handleInputChange = (name: keyof SavingsInputs, value: number) => {
@@ -30,16 +29,32 @@ const SavingsCalculator = () => {
     }));
   };
 
-  // Calculate savings whenever inputs change
-  useEffect(() => {
-    const calculatedResults = calculateSavings(inputs);
-    setResults(calculatedResults);
-  }, [inputs]);
-
   return (
     <TooltipProvider>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Savings Calculator", path: "/savings-calculator" },
+          ]),
+        ]}
+      >
+        <title>Automation Savings Calculator | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Calculate how much time and money your business could save with AI and automation. Use our free interactive savings calculator to estimate your ROI today."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/savings-calculator" />
+        <meta property="og:title" content="Automation Savings Calculator | 10x Velocity" />
+        <meta property="og:description" content="Calculate how much time and money your business could save with AI and automation. Use our free interactive savings calculator to estimate your ROI today." />
+        <meta property="og:url" content="https://10xvelocity.ai/savings-calculator" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <div className="min-h-screen py-12 bg-velocity-dark">
         <div className="container mx-auto px-4">
+          <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Savings Calculator", path: "/savings-calculator" }]} />
           {/* Header */}
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold heading-gradient mb-4">

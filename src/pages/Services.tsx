@@ -1,12 +1,58 @@
 
 import React from "react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText, Rocket } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const Services = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
+      <Helmet
+        script={[
+          ...services.map(svc => helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: svc.title,
+            description: svc.description,
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "AI Consulting",
+          })),
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: faqs.map(faq => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]),
+        ]}
+      >
+        <title>AI & Automation Services | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Explore our full suite of AI and automation services including voice agents, smart bots, data cleaning, and workshops. Transform your business operations."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services" />
+        <meta property="og:title" content="AI & Automation Services | 10x Velocity" />
+        <meta property="og:description" content="Explore our full suite of AI and automation services including voice agents, smart bots, data cleaning, and workshops. Transform your business operations." />
+        <meta property="og:url" content="https://10xvelocity.ai/services" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -63,6 +109,23 @@ const Services = () => {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="container mx-auto px-4 py-16">
+        <div className="max-w-4xl mx-auto">
+          <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
+          <div className="glass-card p-8">
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`}>
+                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
+                  <AccordionContent>{faq.answer}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center glass-card p-12 relative overflow-hidden">
@@ -78,6 +141,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
@@ -180,6 +244,25 @@ const services = [
     ],
     link: "/prototypes"
   }
+];
+
+const faqs = [
+  {
+    question: "What AI and automation services does 10x Velocity offer?",
+    answer: "We offer a comprehensive suite of AI services including process automation, data cleaning, voice agents, smart bots, team training workshops, opportunity discovery, data analytics, and rapid prototype sprints.",
+  },
+  {
+    question: "How long does it take to see results from AI automation?",
+    answer: "Most clients see measurable results within 30 to 90 days. Our rapid prototype sprints deliver a working prototype in just 10 business days, so you can validate your idea quickly.",
+  },
+  {
+    question: "Do I need technical expertise to work with 10x Velocity?",
+    answer: "No. We handle the technical implementation and provide training so your team can manage the tools independently. Our workshops are designed for all skill levels.",
+  },
+  {
+    question: "What industries does 10x Velocity serve?",
+    answer: "We serve businesses and nonprofits across industries including real estate, PR and marketing, government contracting, manufacturing, and professional services. Our solutions adapt to any industry's workflows.",
+  },
 ];
 
 export default Services;

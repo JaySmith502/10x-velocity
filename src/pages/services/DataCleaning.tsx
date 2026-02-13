@@ -1,12 +1,45 @@
 
 import React from "react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link } from "react-router-dom";
 import { Database, FileText, Check, ArrowRight } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const DataCleaning = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Service",
+            name: "Data Cleaning Services",
+            description: "Professional data cleaning and preparation services that ensure your AI and automation initiatives launch with accurate, reliable, and quality data foundations.",
+            provider: { "@type": "Organization", "@id": "https://10xvelocity.ai/#organization" },
+            areaServed: { "@type": "Country", name: "US" },
+            serviceType: "Data Cleaning",
+          }),
+          breadcrumbJsonLd([{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Data Cleaning", path: "/services/data-cleaning" }]),
+        ]}
+      >
+        <title>Data Cleaning Services | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Professional data cleaning and preparation services that ensure your AI and automation initiatives launch with accurate, reliable, and quality data foundations."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/services/data-cleaning" />
+        <meta property="og:title" content="Data Cleaning Services | 10x Velocity" />
+        <meta property="og:description" content="Professional data cleaning and preparation services that ensure your AI and automation initiatives launch with accurate, reliable, and quality data foundations." />
+        <meta property="og:url" content="https://10xvelocity.ai/services/data-cleaning" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Data Cleaning", path: "/services/data-cleaning" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
@@ -146,6 +179,7 @@ const DataCleaning = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

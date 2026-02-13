@@ -1,12 +1,38 @@
 
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Calendar, Tag, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogPosts";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const Blog = () => {
   return (
-    <main className="flex-1">
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+          ]),
+        ]}
+      >
+        <title>AI & Automation Insights Blog | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Expert insights on AI implementation, business automation, and digital transformation strategies. Practical advice and tips from 10x Velocity consultants."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/blog" />
+        <meta property="og:title" content="AI & Automation Insights Blog | 10x Velocity" />
+        <meta property="og:description" content="Expert insights on AI implementation, business automation, and digital transformation strategies. Practical advice and tips from 10x Velocity consultants." />
+        <meta property="og:url" content="https://10xvelocity.ai/blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }]} />
       {/* Header Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
@@ -28,10 +54,13 @@ const Blog = () => {
               className="glass-card overflow-hidden flex flex-col h-full animate-fade-up hover:bg-white/10 transition-colors"
             >
               <div className="h-48 overflow-hidden">
-                <img 
-                  src={`${post.image}?w=600&h=400&fit=crop&q=80`} 
+                <img
+                  src={`${post.image}?w=600&h=400&fit=crop&q=80`}
                   alt={post.title}
                   className="w-full h-full object-cover"
+                  width={600}
+                  height={400}
+                  loading="lazy"
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col">
@@ -79,7 +108,7 @@ const Blog = () => {
                   <div className="glass-card p-6 md:p-8 mb-8">
                     <h3 className="font-semibold text-lg mb-2">Contact Information</h3>
                     <p className="text-velocity-muted mb-4">
-                      Email: <a href="mailto:info@10xvelocity.com" className="text-velocity-accent hover:underline">info@10xvelocity.com</a>
+                      Email: <a href="mailto:info@10xvelocity.ai" className="text-velocity-accent hover:underline">info@10xvelocity.ai</a>
                     </p>
                     <p className="text-velocity-muted">
                       Hours: Monday-Friday, 9am-5pm PST
@@ -109,6 +138,7 @@ const Blog = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 

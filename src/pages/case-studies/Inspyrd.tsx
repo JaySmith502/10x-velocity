@@ -1,6 +1,12 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "300% increase in outreach engagement, connecting with more first responders and reservists",
@@ -36,11 +42,56 @@ const solutions = [
 
 const Inspyrd = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            10x Velocity Empowers Inspyrd to Launch a Transformational Trauma Recovery Program in the U.S.
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Inspyrd Trauma Recovery Program Case Study",
+            description: "See how 10x Velocity empowered Inspyrd to launch a transformational trauma recovery program in the U.S. using AI-powered operations and workflow systems.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/inspyrd",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Inspyrd", path: "/case-studies/inspyrd" },
+          ]),
+        ]}
+      >
+        <title>Inspyrd Trauma Recovery Program Case Study | 10x Velocity</title>
+        <meta name="description" content="See how 10x Velocity empowered Inspyrd to launch a transformational trauma recovery program in the U.S. using AI-powered operations and workflow systems." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/inspyrd" />
+        <meta property="og:title" content="Inspyrd Trauma Recovery Program Case Study | 10x Velocity" />
+        <meta property="og:description" content="See how 10x Velocity empowered Inspyrd to launch a transformational trauma recovery program in the U.S. using AI-powered operations and workflow systems." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/inspyrd" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Inspyrd", path: "/case-studies/inspyrd" }]} />
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              10x Velocity Empowers Inspyrd to Launch a Transformational Trauma Recovery Program in the U.S.
           </h1>
           
           {/* Client Overview */}
@@ -118,6 +169,9 @@ const Inspyrd = () => {
             <p className="text-velocity-muted mb-6">
               With optimized operations, Inspyrd is now expanding into AI-driven telehealth solutions, virtual trauma coaching, and nationwide partnerships with first responder organizations, ensuring continued 10x scalability.
             </p>
+            <p className="text-velocity-muted mb-6">
+              Explore our <Link to="/services/ai-workshops" className="text-velocity-accent hover:underline">AI workshops</Link> and <Link to="/services" className="text-velocity-accent hover:underline">automation services</Link> to supercharge your outreach and data operations.
+            </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your trauma recovery initiative?
@@ -128,6 +182,7 @@ const Inspyrd = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

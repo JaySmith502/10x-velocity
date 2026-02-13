@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { ArrowRight, Check, CheckCircle2, Bot, ChartLine, Users, Database } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 type TabType = 'overview' | 'features' | 'benefits' | 'cases';
 
@@ -9,8 +12,28 @@ const PowerAutomate = () => {
   const [activeTab, setActiveTab] = useState<TabType>('overview');
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Power Automate", path: "/power-automate" },
+          ]),
+        ]}
+      >
+        <title>Microsoft Power Automate Consulting | 10x Velocity</title>
+        <meta name="description" content="Expert Microsoft Power Automate consulting and implementation services. Automate repetitive tasks and streamline business workflows with 10x Velocity." />
+        <link rel="canonical" href="https://10xvelocity.ai/power-automate" />
+        <meta property="og:title" content="Microsoft Power Automate Consulting | 10x Velocity" />
+        <meta property="og:description" content="Expert Microsoft Power Automate consulting and implementation services. Automate repetitive tasks and streamline business workflows with 10x Velocity." />
+        <meta property="og:url" content="https://10xvelocity.ai/power-automate" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Power Automate", path: "/power-automate" }]} />
+        <section className="container mx-auto px-4 py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         
@@ -211,6 +234,7 @@ const PowerAutomate = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

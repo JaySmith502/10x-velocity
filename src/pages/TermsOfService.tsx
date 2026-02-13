@@ -1,10 +1,33 @@
 
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const TermsOfService = () => {
   return (
-    <main className="container mx-auto px-4 py-16">
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Terms of Service", path: "/terms-of-service" },
+          ]),
+        ]}
+      >
+        <title>Terms of Service | 10x Velocity</title>
+        <meta name="description" content="Review the 10x Velocity terms of service agreement. Understand the terms and conditions governing your use of our website, AI tools, and consulting work." />
+        <link rel="canonical" href="https://10xvelocity.ai/terms-of-service" />
+        <meta property="og:title" content="Terms of Service | 10x Velocity" />
+        <meta property="og:description" content="Review the 10x Velocity terms of service agreement. Understand the terms and conditions governing your use of our website, AI tools, and consulting work." />
+        <meta property="og:url" content="https://10xvelocity.ai/terms-of-service" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="container mx-auto px-4 py-16">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Terms of Service", path: "/terms-of-service" }]} />
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-velocity-muted hover:text-velocity-accent transition-colors">
@@ -12,7 +35,7 @@ const TermsOfService = () => {
             Back to Home
           </Link>
         </div>
-        
+
         <h1 className="text-4xl font-bold mb-8 text-velocity-light">Terms of Service</h1>
         
         <div className="space-y-8 text-velocity-muted">
@@ -106,7 +129,7 @@ const TermsOfService = () => {
               If you have any questions about these Terms, please contact us:
             </p>
             <ul className="list-disc pl-6 space-y-2">
-              <li>By email: info@10xvelocity.com</li>
+              <li>By email: info@10xvelocity.ai</li>
               <li>By visiting the contact page on our website: <a href="/contact" className="text-velocity-accent hover:underline">Contact Us</a></li>
             </ul>
           </section>
@@ -117,6 +140,7 @@ const TermsOfService = () => {
         </div>
       </div>
     </main>
+    </>
   );
 };
 

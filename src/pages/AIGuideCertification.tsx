@@ -1,10 +1,43 @@
+import { useEffect } from "react";
 import { Check, BookOpen, Users, Award, Heart, Clock, GraduationCap, MessageCircle, Search, Lightbulb } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const AIGuideCertification = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://level.10xvelocity.ai/js/form_embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
   return (
-    <main className="flex-1">
-      {/* Hero Section */}
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "AI Guide Certification", path: "/programs/ai-guide-certification" },
+          ]),
+        ]}
+      >
+        <title>AI Guide Certification Program | 10x Velocity</title>
+        <meta name="description" content="Earn your AI Guide Certification with 10x Velocity. Our comprehensive training program prepares you to become a certified AI implementation specialist." />
+        <link rel="canonical" href="https://10xvelocity.ai/programs/ai-guide-certification" />
+        <meta property="og:title" content="AI Guide Certification Program | 10x Velocity" />
+        <meta property="og:description" content="Earn your AI Guide Certification with 10x Velocity. Our comprehensive training program prepares you to become a certified AI implementation specialist." />
+        <meta property="og:url" content="https://10xvelocity.ai/programs/ai-guide-certification" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "AI Guide Certification", path: "/programs/ai-guide-certification" }]} />
+        {/* Hero Section */}
       <section id="ai-guide-certification" className="relative overflow-hidden py-20 md:py-28">
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0" />
         <div className="container mx-auto px-4 relative z-10">
@@ -165,10 +198,29 @@ const AIGuideCertification = () => {
           <p className="text-velocity-muted mb-8 max-w-2xl mx-auto">
             Join the pilot cohort and become one of the first certified AI Guides.
           </p>
-          <DiscoveryButton text="Register for Certification" url="/contact" className="text-lg" />
+          <div className="max-w-2xl mx-auto">
+            <iframe
+              src="https://level.10xvelocity.ai/widget/form/8I6MK8Tz0qvOIWjUU5jM"
+              style={{ width: "100%", height: "800px", border: "none", borderRadius: "0px" }}
+              id="inline-8I6MK8Tz0qvOIWjUU5jM"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="10XVelocity Internship Interest Form"
+              data-height="undefined"
+              data-layout-iframe-id="inline-8I6MK8Tz0qvOIWjUU5jM"
+              data-form-id="8I6MK8Tz0qvOIWjUU5jM"
+              title="10XVelocity Internship Interest Form"
+            />
+          </div>
         </div>
       </section>
     </main>
+    </>
   );
 };
 

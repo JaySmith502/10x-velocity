@@ -1,8 +1,11 @@
 import React from "react";
 import { ArrowRight, Lock, Lightbulb, Settings, Zap, Brain, FileSearch, Shield, Users, Calendar, CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const LexiFile = () => {
   const features = [
@@ -66,8 +69,28 @@ const LexiFile = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Lexi File", path: "/lexi-file" },
+          ]),
+        ]}
+      >
+        <title>Lexi-File AI Document Management | 10x Velocity</title>
+        <meta name="description" content="Lexi-File by 10x Velocity brings AI-powered document management to your business. Organize, search, and extract actionable insights from any file type." />
+        <link rel="canonical" href="https://10xvelocity.ai/lexi-file" />
+        <meta property="og:title" content="Lexi-File AI Document Management | 10x Velocity" />
+        <meta property="og:description" content="Lexi-File by 10x Velocity brings AI-powered document management to your business. Organize, search, and extract actionable insights from any file type." />
+        <meta property="og:url" content="https://10xvelocity.ai/lexi-file" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="min-h-screen flex flex-col">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lexi-File", path: "/lexi-file" }]} />
+        {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
@@ -258,6 +281,7 @@ const LexiFile = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

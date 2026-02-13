@@ -1,6 +1,12 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "5x increase in media placements due to AI targeting",
@@ -36,14 +42,62 @@ const solutions = [
 
 const InnesYoung = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <div className="flex justify-start mb-6">
-            <img 
-              src="/lovable-uploads/d8541ecf-d7f8-4c54-b92a-91f0aa1face0.png" 
-              alt="Innes & Young Logo" 
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Innes & Young AI PR Case Study",
+            description: "See how 10x Velocity helped Innes & Young evolve their PR agency with AI-powered media monitoring, content generation, and smart workflow automation tools.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/innes-young",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Innes & Young", path: "/case-studies/innes-young" },
+          ]),
+        ]}
+      >
+        <title>Innes & Young AI PR Case Study | 10x Velocity</title>
+        <meta name="description" content="See how 10x Velocity helped Innes & Young evolve their PR agency with AI-powered media monitoring, content generation, and smart workflow automation tools." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/innes-young" />
+        <meta property="og:title" content="Innes & Young AI PR Case Study | 10x Velocity" />
+        <meta property="og:description" content="See how 10x Velocity helped Innes & Young evolve their PR agency with AI-powered media monitoring, content generation, and smart workflow automation tools." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/innes-young" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Innes & Young", path: "/case-studies/innes-young" }]} />
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="flex justify-start mb-6">
+            <img
+              src="/lovable-uploads/d8541ecf-d7f8-4c54-b92a-91f0aa1face0.webp"
+              alt="Innes & Young Logo"
               className="w-60 md:w-[250px]"
+              width={1441}
+              height={239}
+              loading="lazy"
             />
           </div>
           
@@ -119,6 +173,9 @@ const InnesYoung = () => {
             <p className="text-velocity-muted mb-6">
               With enhanced efficiency, Innes & Young is considering global expansion and AI-powered content generation, further solidifying its industry leadership.
             </p>
+            <p className="text-velocity-muted mb-6">
+              Discover how our <Link to="/services" className="text-velocity-accent hover:underline">AI process automation services</Link> can transform your operations the way they did for Innes & Young.
+            </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve significant results in your business?
@@ -129,6 +186,7 @@ const InnesYoung = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

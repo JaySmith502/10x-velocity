@@ -1,9 +1,12 @@
 
 import { ArrowLeft, Calendar, Tag, User } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { NotFound } from "@/pages/NotFound";
 import { blogPosts } from "@/data/blogPosts";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const BlogPost = () => {
   const { id } = useParams();
@@ -15,8 +18,32 @@ const BlogPost = () => {
     return <NotFound />;
   }
 
+  const blogTitle = post.title.length > 44
+    ? post.title.substring(0, 41) + '...'
+    : post.title;
+
   return (
     <main className="flex-1">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.id}` }]} />
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Blog", path: "/blog" },
+            { name: post.title, path: `/blog/${id}` },
+          ]),
+        ]}
+      >
+        <title>{`${blogTitle} | 10x Velocity`}</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={`https://10xvelocity.ai/blog/${post.id}`} />
+        <meta property="og:title" content={`${blogTitle} | 10x Velocity`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={`https://10xvelocity.ai/blog/${post.id}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content={post.image} />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
       <article className="container mx-auto px-4 py-12 max-w-4xl">
         {/* Back button */}
         <div className="mb-8">
@@ -33,10 +60,12 @@ const BlogPost = () => {
 
         {/* Featured image */}
         <div className="mb-8 rounded-lg overflow-hidden h-[400px]">
-          <img 
-            src={`${post.image}?w=1200&h=600&fit=crop&q=90`} 
+          <img
+            src={`${post.image}?w=1200&h=600&fit=crop&q=90`}
             alt={post.title}
             className="w-full h-full object-cover"
+            width={1200}
+            height={600}
           />
         </div>
 

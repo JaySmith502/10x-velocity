@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { industries, categories, Tool } from "@/data/industryTools";
 import { IndustryCard } from "@/components/industry-tools/IndustryCard";
 import { CategoryFilter } from "@/components/industry-tools/CategoryFilter";
@@ -7,6 +8,7 @@ import { ToolCard } from "@/components/industry-tools/ToolCard";
 import { ToolModal } from "@/components/industry-tools/ToolModal";
 import { LeadCaptureModal } from "@/components/industry-tools/LeadCaptureModal";
 import { Download } from "lucide-react";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const IndustryTools = () => {
   const [selectedIndustry, setSelectedIndustry] = useState<string | null>(null);
@@ -40,16 +42,31 @@ const IndustryTools = () => {
 
   return (
     <>
-      <Helmet>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Industry Tools", path: "/industry-tools" },
+          ]),
+        ]}
+      >
         <title>AI & Automation Tool Explorer by Industry | 10x Velocity</title>
-        <meta 
-          name="description" 
-          content="Discover curated AI and automation tools for your industry. Browse tools for home services, legal, insurance, real estate, accounting, and healthcare." 
+        <meta
+          name="description"
+          content="Discover curated AI and automation tools for your industry. Browse tools for home services, legal, insurance, real estate, accounting, and healthcare."
         />
+        <link rel="canonical" href="https://10xvelocity.ai/industry-tools" />
+        <meta property="og:title" content="AI & Automation Tool Explorer by Industry | 10x Velocity" />
+        <meta property="og:description" content="Discover curated AI and automation tools for your industry. Browse tools for home services, legal, insurance, real estate, accounting, and healthcare." />
+        <meta property="og:url" content="https://10xvelocity.ai/industry-tools" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
       <div className="min-h-screen bg-velocity-dark py-20">
         <div className="container mx-auto px-4">
+          <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Industry Tools", path: "/industry-tools" }]} />
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 heading-gradient">

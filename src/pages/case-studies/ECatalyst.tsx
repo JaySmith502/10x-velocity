@@ -1,6 +1,12 @@
 
 import { CheckCircle2 } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const results = [
   "70% reduction in email triage time",
@@ -36,11 +42,56 @@ const solutions = [
 
 const ECatalyst = () => {
   return (
-    <main className="flex-1">
-      <article className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
-            eCatalyst: 10x Velocity Boosts Operational Excellence
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "eCatalyst Operational Excellence Case Study",
+            description: "Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/ecatalyst",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "eCatalyst", path: "/case-studies/ecatalyst" },
+          ]),
+        ]}
+      >
+        <title>eCatalyst Operational Excellence Case Study | 10x Velocity</title>
+        <meta name="description" content="Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/ecatalyst" />
+        <meta property="og:title" content="eCatalyst Operational Excellence Case Study | 10x Velocity" />
+        <meta property="og:description" content="Discover how 10x Velocity boosted eCatalyst operational excellence with AI-driven automation, improving efficiency and productivity across key processes." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/ecatalyst" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "eCatalyst", path: "/case-studies/ecatalyst" }]} />
+        <article className="container mx-auto px-4 py-20">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+              eCatalyst: 10x Velocity Boosts Operational Excellence
           </h1>
           
           {/* Client Overview */}
@@ -117,6 +168,9 @@ const ECatalyst = () => {
             <p className="text-velocity-muted mb-6">
               With improved efficiency, eCatalyst is expanding into AI-enhanced client management and global fractional business support services, reinforcing its industry leadership.
             </p>
+            <p className="text-velocity-muted mb-6">
+              Learn how our <Link to="/services" className="text-velocity-accent hover:underline">AI process automation services</Link> can streamline your workflows and accelerate growth.
+            </p>
             <div className="glass-card p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your business?
@@ -127,6 +181,7 @@ const ECatalyst = () => {
         </div>
       </article>
     </main>
+    </>
   );
 };
 

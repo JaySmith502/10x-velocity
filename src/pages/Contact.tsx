@@ -1,8 +1,35 @@
 
+import { Helmet } from "react-helmet";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+
 const Contact = () => {
 
   return (
-    <div className="container mx-auto px-4 py-12 md:py-24">
+    <>
+      <Helmet
+        script={[
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Contact", path: "/contact" },
+          ]),
+        ]}
+      >
+        <title>Contact Us | 10x Velocity</title>
+        <meta
+          name="description"
+          content="Get in touch with 10x Velocity for AI and automation consulting services. Schedule a free discovery call to discuss how we can transform your operations."
+        />
+        <link rel="canonical" href="https://10xvelocity.ai/contact" />
+        <meta property="og:title" content="Contact Us | 10x Velocity" />
+        <meta property="og:description" content="Get in touch with 10x Velocity for AI and automation consulting services. Schedule a free discovery call to discuss how we can transform your operations." />
+        <meta property="og:url" content="https://10xvelocity.ai/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <div className="container mx-auto px-4 py-12 md:py-24">
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Contact", path: "/contact" }]} />
       <div className="max-w-5xl mx-auto">
         {/* Header and Contact Cards - Centered */}
         <div className="text-center mb-12">
@@ -17,7 +44,7 @@ const Contact = () => {
             <div className="glass-card p-6 md:p-8 flex-1">
               <h3 className="font-semibold text-lg mb-2">Contact Information</h3>
               <p className="text-velocity-muted mb-4">
-                Email: <a href="mailto:info@10xvelocity.com" className="text-velocity-accent hover:underline">info@10xvelocity.com</a>
+                Email: <a href="mailto:info@10xvelocity.ai" className="text-velocity-accent hover:underline">info@10xvelocity.ai</a>
               </p>
               <p className="text-velocity-muted">
                 Hours: Monday-Friday, 9am-5pm EST
@@ -60,6 +87,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

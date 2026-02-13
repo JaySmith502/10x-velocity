@@ -27,3 +27,6 @@ insights-video
 .trigger
 10x Velocity Homepage.png
 Govbrokers pricing.png
+
+# Windows reserved device names
+nul

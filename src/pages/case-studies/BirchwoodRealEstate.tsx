@@ -1,11 +1,62 @@
 
 import { ArrowRight, CheckIcon, House, BarChart, Rocket } from "lucide-react";
+import { Helmet } from "react-helmet";
+import { helmetJsonLdProp } from "react-schemaorg";
+import { BUSINESS_DATA } from "@/schemas/organization";
+import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
+import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
+import { Link } from "react-router-dom";
 
 const BirchwoodRealEstate = () => {
   return (
-    <main className="flex-1">
-      <section className="container mx-auto px-4 py-20">
+    <>
+      <Helmet
+        script={[
+          helmetJsonLdProp<any>({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: "Birchwood Real Estate Case Study",
+            description: "Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems.",
+            author: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              url: BUSINESS_DATA.url,
+            },
+            publisher: {
+              "@type": "Organization",
+              name: BUSINESS_DATA.name,
+              logo: {
+                "@type": "ImageObject",
+                url: BUSINESS_DATA.logo,
+              },
+            },
+            image: BUSINESS_DATA.image,
+            mainEntityOfPage: {
+              "@type": "WebPage",
+              "@id": "https://10xvelocity.ai/case-studies/birchwood-real-estate",
+            },
+          }),
+          breadcrumbJsonLd([
+            { name: "Home", path: "/" },
+            { name: "Case Studies", path: "/case-studies" },
+            { name: "Birchwood Real Estate", path: "/case-studies/birchwood-real-estate" },
+          ]),
+        ]}
+      >
+        <title>Birchwood Real Estate Case Study | 10x Velocity</title>
+        <meta name="description" content="Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems." />
+        <link rel="canonical" href="https://10xvelocity.ai/case-studies/birchwood-real-estate" />
+        <meta property="og:title" content="Birchwood Real Estate Case Study | 10x Velocity" />
+        <meta property="og:description" content="Discover how 10x Velocity drove Birchwood Real Estate Partners to new heights in real estate wholesaling through AI-powered automation and smart systems." />
+        <meta property="og:url" content="https://10xvelocity.ai/case-studies/birchwood-real-estate" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Helmet>
+      <main className="flex-1">
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Birchwood Real Estate", path: "/case-studies/birchwood-real-estate" }]} />
+        <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
           <div className="mb-12">
             <a href="/case-studies" className="text-velocity-accent hover:underline flex items-center mb-4">
@@ -201,8 +252,11 @@ const BirchwoodRealEstate = () => {
               With optimized operations, Birchwood is now expanding into nationwide wholesaling, AI-driven virtual wholesaling, 
               and predictive seller behavior modeling, ensuring continued 10x scalability.
             </p>
+            <p className="text-velocity-muted mb-6">
+              Discover how our <Link to="/services/phone-voice-agents" className="text-velocity-accent hover:underline">AI voice agents</Link> and <Link to="/services" className="text-velocity-accent hover:underline">process automation services</Link> can transform your customer communication.
+            </p>
             <p className="text-velocity-muted mb-8">
-              Want to achieve 10x results in your real estate wholesaling business? Partner with 10x Velocity today and revolutionize your 
+              Want to achieve 10x results in your real estate wholesaling business? Partner with 10x Velocity today and revolutionize your
               deal flow with AI-driven precision.
             </p>
             <div className="flex justify-center">
@@ -212,6 +266,7 @@ const BirchwoodRealEstate = () => {
         </div>
       </section>
     </main>
+    </>
   );
 };
 
