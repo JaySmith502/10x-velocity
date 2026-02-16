@@ -2,6 +2,18 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## General Behavior
+
+When I ask you to review or assess something, DO NOT proceed to install, build, or execute unless I explicitly ask. Default to analysis and recommendations first.
+
+## Project Context
+
+Primary stack: Python. Deployment targets include Cloudflare Workers, RunPod (serverless GPU), and Docker containers. Always verify base image tags and dependency compatibility before attempting Docker builds.
+
+## Docker & Deployment
+
+Before running a Docker build, first validate: (1) all referenced files (setup.py, requirements.txt) exist, (2) base image tags are real and available, (3) dependency version constraints don't conflict. List these checks before building.
+
 ## Project Overview
 
 10x Velocity is a React SPA marketing website for an AI & automation consulting firm. It was originally scaffolded via the Lovable platform and is deployed to Netlify. The site showcases services, case studies, industry tools, a savings calculator, and a blog.
