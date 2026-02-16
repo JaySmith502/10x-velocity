@@ -1,7 +1,8 @@
 import { useEffect } from "react";
-import { Check, BookOpen, Users, Award, Heart, Clock, GraduationCap, MessageCircle, Search, Lightbulb } from "lucide-react";
+import { Check, BookOpen, Users, Award, Heart, Clock, GraduationCap, MessageCircle, Search, Lightbulb, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { Button } from "@/components/ui/button";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
@@ -51,11 +52,12 @@ const AIGuideCertification = () => {
             <p className="text-lg text-velocity-light/80 max-w-3xl mx-auto mb-10 animate-fade-up">
               Thousands of small business owners are smart, successful, and completely overwhelmed by generative AI. They don't need a tech genius—they need someone patient who can meet them where they are. That's where you come in.
             </p>
-            <DiscoveryButton
-              text="Register Now"
-              url="/contact"
-              className="animate-fade-up"
-            />
+            <Button
+              onClick={() => document.getElementById("register-form")?.scrollIntoView({ behavior: "smooth" })}
+              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all text-lg animate-fade-up"
+            >
+              Register Now <ArrowRight className="w-5 h-5" />
+            </Button>
           </div>
         </div>
       </section>
@@ -190,7 +192,7 @@ const AIGuideCertification = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-velocity-dark/80 text-center">
+      <section id="register-form" className="py-16 bg-velocity-dark/80 text-center">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
             Ready to Get Started?
