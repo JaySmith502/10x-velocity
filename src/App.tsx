@@ -34,6 +34,7 @@ const LunchAndLearn = lazy(() => import("./pages/LunchAndLearn"));
 const PhoneVoiceAgents = lazy(() => import("./pages/services/PhoneVoiceAgents"));
 const AIWorkshops = lazy(() => import("./pages/services/AIWorkshops"));
 const OnboardingForm = lazy(() => import("./pages/OnboardingForm"));
+const OnboardingConfirmation = lazy(() => import("./pages/OnboardingConfirmation"));
 const SmartBots = lazy(() => import("./pages/SmartBots"));
 const LexiFile = lazy(() => import("./pages/LexiFile"));
 const Packages = lazy(() => import("./pages/Packages"));
@@ -84,6 +85,7 @@ const AppContent = () => {
           <Route path="/events/lunch-and-learn" element={<LunchAndLearn />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/demo" element={<OnboardingForm />} />
+          <Route path="/confirmation" element={<OnboardingConfirmation />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/contact" element={<Contact />} />
