@@ -23,6 +23,7 @@ const packages = [
     bestFor: "Companies that want an informed starting point before choosing the right AI stack.",
     featured: false,
     ctaText: "Start with a Diagnostic Review",
+    paymentLink: "https://level.10xvelocity.ai/payment-link/69a872752769e62083195257",
   },
   {
     id: "essential-ai-stack",
@@ -42,6 +43,7 @@ const packages = [
     bestFor: "Companies with internal IT support or team members who can manage straightforward setup and rollout.",
     featured: true,
     ctaText: "Get the Essential AI Stack",
+    paymentLink: "https://level.10xvelocity.ai/payment-link/69a870bc45bed148f39e8a94",
   },
   {
     id: "advanced-ai-stack",
@@ -61,6 +63,7 @@ const packages = [
     bestFor: "Companies that want a more hands-on deployment with expert implementation support.",
     featured: false,
     ctaText: "Request the Advanced AI Stack",
+    paymentLink: "https://level.10xvelocity.ai/payment-link/69a8722843b911350484265b",
   },
   {
     id: "ai-advantage-plan",
@@ -80,6 +83,7 @@ const packages = [
     bestFor: "Companies that want continued expert guidance, periodic upgrades, and a proactive partner to help maintain their competitive edge.",
     featured: false,
     ctaText: "Join the AI Advantage Plan",
+    paymentLink: "https://level.10xvelocity.ai/payment-link/69b1b30d1e612162507ef2b6",
   },
 ];
 
@@ -193,13 +197,11 @@ const Packages = () => {
                   {pkg.bestFor}
                 </p>
                 {pkg.featured ? (
-                  <a href="#" className="block w-full text-center px-6 py-3 bg-velocity-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors">
-                    {/* TODO: Replace # with GoHighLevel payment link */}
+                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 bg-velocity-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors">
                     {pkg.ctaText}
                   </a>
                 ) : (
-                  <a href="#" className="block w-full text-center px-6 py-3 border border-velocity-accent text-velocity-accent font-medium rounded-lg hover:bg-velocity-accent/10 transition-colors">
-                    {/* TODO: Replace # with GoHighLevel payment link */}
+                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 border border-velocity-accent text-velocity-accent font-medium rounded-lg hover:bg-velocity-accent/10 transition-colors">
                     {pkg.ctaText}
                   </a>
                 )}
