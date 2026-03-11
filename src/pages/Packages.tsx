@@ -6,61 +6,80 @@ import { CheckCircle2, ArrowRight, Clock, Users, Shield, Zap } from "lucide-reac
 
 const packages = [
   {
-    id: "voice-chat-agents",
-    name: "Voice & Chat AI Agents",
-    subtitle: "Door Opener",
-    price: "$399",
-    priceNote: "/ month",
-    priceDetail: "3-month minimum",
-    description: "Custom AI agents designed to handle repetitive communication and operational tasks without adding headcount.",
+    id: "ai-diagnostic-review",
+    name: "AI Diagnostic Review",
+    subtitle: "10xV Core OS",
+    price: "$129",
+    priceNote: "",
+    priceDetail: "One-Time Fee",
+    description: "Get a focused expert review before you commit to tools or implementation. 10xV’s Chief Automation Engineer reviews your current workflows, technology posture, and operational needs to identify where artificial intelligence can create the greatest immediate impact inside your business.",
     items: [
-      "AI receptionists",
-      "Website chat agents",
-      "Intake and triage agents",
-      "Internal knowledge assistants",
+      "Workflow and operational review",
+      "Technology posture assessment",
+      "Priority impact areas identified",
+      "Expert recommendation on next-step AI options",
     ],
-    itemsLabel: "Common use cases:",
-    bestFor: "Service-based businesses looking to reduce response time and operational load.",
+    itemsLabel: "Includes:",
+    bestFor: "Companies that want an informed starting point before choosing the right AI stack.",
     featured: false,
+    ctaText: "Start with a Diagnostic Review",
   },
   {
-    id: "baseline-diagnostic",
-    name: "Baseline Diagnostic",
-    subtitle: "",
+    id: "essential-ai-stack",
+    name: "Essential AI Stack",
+    subtitle: "10xV Core OS",
     price: "$499",
     priceNote: "",
     priceDetail: "One-Time Fee",
-    description: "A focused systems assessment designed to quickly identify friction, inefficiencies, and near-term automation opportunities.",
+    description: "Get a tailored AI plan your team can implement internally. 10xV’s Chief Automation Engineer conducts a remote audit of your business needs and delivers a customized AI Stack Plan with clear implementation guidance so your team can move forward with confidence.",
     items: [
-      "30-minute preliminary interview",
-      "1-hour system assessment",
-      "1-hour debrief and written report",
-      "High-level tech and automation recommendations",
-      "Clear next-step prioritization",
+      "Remote needs audit",
+      "Tailored AI Stack Plan",
+      "Recommended tools and use cases",
+      "Clear implementation guidance for internal deployment",
     ],
     itemsLabel: "Includes:",
-    bestFor: "Businesses that want fast clarity before making automation or AI investments.",
+    bestFor: "Companies with internal IT support or team members who can manage straightforward setup and rollout.",
     featured: true,
+    ctaText: "Get the Essential AI Stack",
   },
   {
-    id: "enterprise-review",
-    name: "Enterprise Review",
-    subtitle: "",
-    price: "$1,999",
+    id: "advanced-ai-stack",
+    name: "Advanced AI Stack",
+    subtitle: "10xV Core OS",
+    price: "$999",
     priceNote: "",
-    priceDetail: "One-Time Fee",
-    description: "A comprehensive, hands-on systems review and working session designed to support enterprise-level decisions and execution planning.",
+    priceDetail: "Starting at",
+    description: "Move from recommendation to execution with done-for-you support. 10xV’s Chief Automation Engineer refines your recommended AI stack, implements the solution on your behalf, and develops a forward-looking plan for future upgrades and expansion.",
     items: [
-      "30-minute preliminary interview",
-      "1-hour system assessment",
-      "3-hour working workshop",
-      "Deep-dive system mapping and workflow analysis",
-      "Prioritized automation roadmap",
-      "Written debrief and implementation guidance",
+      "Refined AI Stack Plan",
+      "Hands-on implementation support",
+      "Guided configuration and rollout",
+      "Forward-looking upgrade roadmap",
     ],
     itemsLabel: "Includes:",
-    bestFor: "Operators and leadership teams who want decision-grade clarity and a concrete execution plan.",
+    bestFor: "Companies that want a more hands-on deployment with expert implementation support.",
     featured: false,
+    ctaText: "Request the Advanced AI Stack",
+  },
+  {
+    id: "ai-advantage-plan",
+    name: "AI Advantage Plan",
+    subtitle: "10xV Core OS",
+    price: "$49",
+    priceNote: "/ month",
+    priceDetail: "Ongoing",
+    description: "Stay current as AI changes fast. 10xV’s Automation Engineer team provides ongoing oversight of your AI stack to help ensure your systems remain current, effective, and aligned with emerging technology and changing business needs.",
+    items: [
+      "Ongoing AI stack oversight",
+      "Periodic recommendations and updates",
+      "Proactive guidance as tools evolve",
+      "Continued alignment with business goals",
+    ],
+    itemsLabel: "Includes:",
+    bestFor: "Companies that want continued expert guidance, periodic upgrades, and a proactive partner to help maintain their competitive edge.",
+    featured: false,
+    ctaText: "Join the AI Advantage Plan",
   },
 ];
 
@@ -110,10 +129,10 @@ const Packages = () => {
         ]}
       >
         <title>AI & Automation Packages | 10x Velocity</title>
-        <meta name="description" content="Choose from three AI service tiers: Voice & Chat AI Agents starting at $399/mo, Baseline Diagnostic at $499, or Enterprise Review at $1,999. Fast-start packages from 10x Velocity." />
+        <meta name="description" content="Choose the 10xV Core OS package that fits where your business is today. Expert recommendation, tailored plans, or hands-on implementation from 10xVelocity." />
         <link rel="canonical" href="https://10xvelocity.ai/packages" />
         <meta property="og:title" content="AI & Automation Packages | 10x Velocity" />
-        <meta property="og:description" content="Choose from three AI service tiers: Voice & Chat AI Agents starting at $399/mo, Baseline Diagnostic at $499, or Enterprise Review at $1,999. Fast-start packages from 10x Velocity." />
+        <meta property="og:description" content="Choose the 10xV Core OS package that fits where your business is today. Expert recommendation, tailored plans, or hands-on implementation from 10xVelocity." />
         <meta property="og:url" content="https://10xvelocity.ai/packages" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
@@ -128,19 +147,20 @@ const Packages = () => {
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">AI & Automation Packages</h1>
-            <p className="text-xl md:text-2xl text-velocity-light mb-4">Choose from three AI service tiers: Voice & Chat AI Agents starting at $399/mo, Baseline Diagnostic at $499, or Enterprise Review at $1,999. Fast-start packages from 10x Velocity.</p>
+            <p className="text-xl md:text-2xl text-velocity-light mb-4 text-balance">Choose the 10xV Core OS package that fits where your business is today.</p>
+            <p className="text-lg md:text-xl text-velocity-muted mb-4 text-pretty">Whether you need a clear expert recommendation, a tailored AI software plan, or hands-on implementation support, 10xVelocity helps you adopt artificial intelligence with clarity, control, and momentum.</p>
           </div>
         </section>
 
         {/* Pricing Cards */}
         <section className="container mx-auto px-4 py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-[90rem] mx-auto items-stretch">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
                 className={
                   pkg.featured
-                    ? "glass-card p-8 flex flex-col h-full relative transform lg:scale-105 border-2 border-velocity-accent"
+                    ? "glass-card p-8 flex flex-col h-full relative transform xl:-translate-y-2 border-2 border-velocity-accent"
                     : "glass-card p-8 flex flex-col h-full"
                 }
               >
@@ -175,16 +195,25 @@ const Packages = () => {
                 {pkg.featured ? (
                   <a href="#" className="block w-full text-center px-6 py-3 bg-velocity-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors">
                     {/* TODO: Replace # with GoHighLevel payment link */}
-                    Get Started
+                    {pkg.ctaText}
                   </a>
                 ) : (
                   <a href="#" className="block w-full text-center px-6 py-3 border border-velocity-accent text-velocity-accent font-medium rounded-lg hover:bg-velocity-accent/10 transition-colors">
                     {/* TODO: Replace # with GoHighLevel payment link */}
-                    Get Started
+                    {pkg.ctaText}
                   </a>
                 )}
               </div>
             ))}
+          </div>
+
+          <div className="mt-16 text-center max-w-2xl mx-auto glass-card p-10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-velocity-accent/10 rounded-full blur-2xl -z-10" />
+            <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -z-10" />
+            <h3 className="text-2xl md:text-3xl font-bold mb-4 heading-gradient">Not sure where to start?</h3>
+            <p className="text-lg text-velocity-muted">
+              Begin with the <span className="text-velocity-light font-medium">AI Diagnostic Review</span> and get a clear expert recommendation before selecting the right implementation path.
+            </p>
           </div>
         </section>
 
