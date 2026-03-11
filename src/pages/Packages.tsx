@@ -214,7 +214,7 @@ const Packages = () => {
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -z-10" />
             <h3 className="text-2xl md:text-3xl font-bold mb-4 heading-gradient">Not sure where to start?</h3>
             <p className="text-lg text-velocity-muted">
-              Begin with the <span className="text-velocity-light font-medium">AI Diagnostic Review</span> and get a clear expert recommendation before selecting the right implementation path.
+              Begin with the <a href="https://level.10xvelocity.ai/widget/form/q29C5iSULP1AO63r4Vjl" target="_blank" rel="noopener noreferrer" className="text-velocity-light font-medium hover:text-velocity-accent transition-colors border-b border-velocity-light hover:border-velocity-accent">AI Diagnostic Review</a> and get a clear expert recommendation before selecting the right implementation path.
             </p>
           </div>
         </section>
