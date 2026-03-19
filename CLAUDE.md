@@ -83,3 +83,32 @@ shadcn-ui theme colors use HSL CSS variables defined in `src/index.css`. Custom 
 
 1. Create the page component in `src/pages/`
 2. Import it in `src/App.tsx` and add a `<Route>` inside the `<RootLayout />` group
+
+## Design Context
+
+### Users
+Mid-market executives (VP/Director-level) at companies with 50-500 employees, evaluating AI and automation vendors. They arrive via search, referral, or physical marketing materials. Secondary audience: nonprofit leaders seeking operational efficiency. These buyers need to feel confident this firm can deliver before they'll book a call.
+
+### Brand Personality
+**3 words:** Confident, energetic, approachable
+
+Authoritative expertise delivered with human warmth and forward energy. Not cold/corporate. Not hype/startup-bro. The smartest person in the room who's also easy to work with.
+
+**Emotional goal:** Within 3 seconds — "These people know what they're doing."
+
+### Aesthetic Direction
+Premium-approachable. Stripe's polish meets Apple's confidence, with Notion's warmth. Light mode primary, dark mode via toggle. Stands out from the sea of dark AI sites.
+
+**Brand colors (from physical materials — must keep):**
+- Cyan: #33C3F0 — sharp accent, not dominant
+- Purple/Magenta: #D043E6 — secondary accent for energy
+- Foundation should be warm, tinted neutrals
+
+**Anti-references:** Cyan-on-dark AI templates, glassmorphism, gradient text, blur orbs, identical card grids, anything that reads as "AI generated this."
+
+### Design Principles
+1. **Authority through restraint** — Precision, not decoration. White space is confidence.
+2. **Results over promises** — Lead with proof (case studies, numbers, outcomes).
+3. **Warmth at scale** — Premium doesn't mean cold. Human language, approachable typography.
+4. **Intentional energy** — Forward momentum through design efficiency, not animation quantity.
+5. **Light by default** — Light foundation signals establishment and professionalism.

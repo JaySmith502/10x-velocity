@@ -1,0 +1,185 @@
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+<h2>Homepage Layout</h2>
+<p class="subtitle">Breaking the center-everything, identical-card-grid, glass-card pattern. Click the approach that feels right.</p>
+
+<div class="cards">
+
+  <!-- Option A: Editorial/Asymmetric -->
+  <div class="card" data-choice="a" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 0; overflow: hidden;">
+      <div style="background: #FAFAF8; padding: 24px; min-height: 500px; font-family: 'Plus Jakarta Sans', sans-serif; color: #1C1917; position: relative;">
+
+        <!-- Nav mock -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid #E7E5E0; margin-bottom: 40px;">
+          <div style="font-weight: 700; font-size: 14px; color: #1C1917;">10x Velocity</div>
+          <div style="display: flex; gap: 20px; font-size: 12px; color: #57534E;">
+            <span>Services</span><span>Case Studies</span><span>About</span>
+            <span style="background: #1C1917; color: #FAFAF8; padding: 4px 12px; border-radius: 4px; font-size: 11px;">Contact Us</span>
+          </div>
+        </div>
+
+        <!-- Hero: Left-aligned, asymmetric -->
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: start; margin-bottom: 48px;">
+          <div>
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #33C3F0; margin-bottom: 12px;">AI & Automation Consulting</div>
+            <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 32px; line-height: 1.1; margin-bottom: 16px; color: #1C1917;">Your team is capable.<br>Your systems aren't keeping up.</div>
+            <div style="font-family: 'Source Serif 4', serif; font-size: 14px; color: #57534E; line-height: 1.7; margin-bottom: 24px;">We help mid-market companies automate the work that slows them down — so your team can focus on the work that moves you forward.</div>
+            <div style="display: flex; gap: 12px;">
+              <div style="background: #1C1917; color: #FAFAF8; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;">See Our Results</div>
+              <div style="border: 1px solid #E7E5E0; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 500; color: #57534E;">Book a Call</div>
+            </div>
+          </div>
+          <!-- Proof panel -->
+          <div style="background: #FFFFFF; border: 1px solid #E7E5E0; border-radius: 10px; padding: 24px;">
+            <div style="font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #57534E; margin-bottom: 16px;">Client Results</div>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid #E7E5E0;">
+                <span style="font-size: 12px; color: #57534E;">GovBrokers</span>
+                <span style="font-weight: 700; font-size: 20px; color: #1C1917;">85% faster</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 12px; border-bottom: 1px solid #E7E5E0;">
+                <span style="font-size: 12px; color: #57534E;">Innes & Young</span>
+                <span style="font-weight: 700; font-size: 20px; color: #1C1917;">$240K saved</span>
+              </div>
+              <div style="display: flex; justify-content: space-between; align-items: baseline;">
+                <span style="font-size: 12px; color: #57534E;">eCatalyst</span>
+                <span style="font-weight: 700; font-size: 20px; color: #1C1917;">10x output</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services: Varied layout, not identical cards -->
+        <div style="border-top: 1px solid #E7E5E0; padding-top: 32px;">
+          <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 20px;">
+            <div style="font-weight: 700; font-size: 18px;">What we do</div>
+            <div style="font-size: 12px; color: #33C3F0; font-weight: 500;">All services →</div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 1px; background: #E7E5E0; border: 1px solid #E7E5E0; border-radius: 8px; overflow: hidden;">
+            <div style="background: #FAFAF8; padding: 20px;">
+              <div style="font-weight: 700; font-size: 13px; margin-bottom: 6px;">Process Automation</div>
+              <div style="font-size: 11px; color: #57534E; line-height: 1.5;">Workflows that learn and adapt</div>
+            </div>
+            <div style="background: #FAFAF8; padding: 20px;">
+              <div style="font-weight: 700; font-size: 13px; margin-bottom: 6px;">Data Analytics</div>
+              <div style="font-size: 11px; color: #57534E; line-height: 1.5;">Actionable insights from your data</div>
+            </div>
+            <div style="background: #FAFAF8; padding: 20px;">
+              <div style="font-weight: 700; font-size: 13px; margin-bottom: 6px;">Voice Agents</div>
+              <div style="font-size: 11px; color: #57534E; line-height: 1.5;">AI-powered phone systems</div>
+            </div>
+            <div style="background: #FAFAF8; padding: 20px;">
+              <div style="font-weight: 700; font-size: 13px; margin-bottom: 6px;">AI Workshops</div>
+              <div style="font-size: 11px; color: #57534E; line-height: 1.5;">Train your team on AI tools</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>A: Editorial Authority</h3>
+      <p>Left-aligned hero. Proof panel beside headline — results visible instantly. Services in a clean data-table grid, not floating cards. Minimal color, maximum clarity. Says "we're established and serious."</p>
+    </div>
+  </div>
+
+  <!-- Option B: Bold/Energetic -->
+  <div class="card" data-choice="b" onclick="toggleSelect(this)">
+    <div class="card-image" style="padding: 0; overflow: hidden;">
+      <div style="background: #FAFAF8; padding: 24px; min-height: 500px; font-family: 'Plus Jakarta Sans', sans-serif; color: #1C1917; position: relative;">
+
+        <!-- Nav mock -->
+        <div style="display: flex; justify-content: space-between; align-items: center; padding-bottom: 16px; border-bottom: 1px solid #E7E5E0; margin-bottom: 40px;">
+          <div style="font-weight: 700; font-size: 14px; color: #1C1917;">10x Velocity</div>
+          <div style="display: flex; gap: 20px; font-size: 12px; color: #57534E;">
+            <span>Services</span><span>Case Studies</span><span>About</span>
+            <span style="background: #33C3F0; color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 11px;">Contact Us</span>
+          </div>
+        </div>
+
+        <!-- Hero: Full-width statement -->
+        <div style="margin-bottom: 40px;">
+          <div style="font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 40px; line-height: 1.05; margin-bottom: 20px; color: #1C1917; max-width: 600px;">Stop hiring for work machines should do.</div>
+          <div style="display: flex; gap: 32px; align-items: start;">
+            <div style="flex: 1;">
+              <div style="font-family: 'Source Serif 4', serif; font-size: 14px; color: #57534E; line-height: 1.7; margin-bottom: 20px;">AI & automation consulting for companies ready to move faster. Based in Louisville, serving ambitious teams everywhere.</div>
+              <div style="display: flex; gap: 12px;">
+                <div style="background: #33C3F0; color: #fff; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 600;">Book a Discovery Call</div>
+                <div style="border: 1px solid #E7E5E0; padding: 10px 20px; border-radius: 6px; font-size: 13px; font-weight: 500; color: #57534E;">Calculate Savings</div>
+              </div>
+            </div>
+            <!-- Stats strip -->
+            <div style="display: flex; gap: 24px; padding: 20px 24px; background: #1C1917; border-radius: 10px; color: #FAFAF8;">
+              <div style="text-align: center;">
+                <div style="font-weight: 800; font-size: 24px;">85%</div>
+                <div style="font-size: 10px; opacity: 0.6; margin-top: 2px;">Time Saved</div>
+              </div>
+              <div style="width: 1px; background: rgba(255,255,255,0.15);"></div>
+              <div style="text-align: center;">
+                <div style="font-weight: 800; font-size: 24px;">$2.4M</div>
+                <div style="font-size: 10px; opacity: 0.6; margin-top: 2px;">Client Savings</div>
+              </div>
+              <div style="width: 1px; background: rgba(255,255,255,0.15);"></div>
+              <div style="text-align: center;">
+                <div style="font-weight: 800; font-size: 24px;">40+</div>
+                <div style="font-size: 10px; opacity: 0.6; margin-top: 2px;">Projects</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Services: Stacked rows with accent line -->
+        <div style="border-top: 1px solid #E7E5E0; padding-top: 24px;">
+          <div style="font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: #57534E; margin-bottom: 16px;">What we do</div>
+
+          <div style="display: flex; flex-direction: column; gap: 1px;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #E7E5E0;">
+              <div>
+                <span style="font-weight: 700; font-size: 14px;">Process Automation</span>
+                <span style="font-size: 12px; color: #57534E; margin-left: 16px;">Workflows that learn and adapt</span>
+              </div>
+              <span style="font-size: 12px; color: #33C3F0;">→</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #E7E5E0;">
+              <div>
+                <span style="font-weight: 700; font-size: 14px;">Data Analytics</span>
+                <span style="font-size: 12px; color: #57534E; margin-left: 16px;">Actionable insights from your data</span>
+              </div>
+              <span style="font-size: 12px; color: #33C3F0;">→</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 0; border-bottom: 1px solid #E7E5E0;">
+              <div>
+                <span style="font-weight: 700; font-size: 14px;">Voice Agents</span>
+                <span style="font-size: 12px; color: #57534E; margin-left: 16px;">AI-powered phone systems</span>
+              </div>
+              <span style="font-size: 12px; color: #33C3F0;">→</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 14px 0;">
+              <div>
+                <span style="font-weight: 700; font-size: 14px;">AI Workshops</span>
+                <span style="font-size: 12px; color: #57534E; margin-left: 16px;">Train your team on AI tools</span>
+              </div>
+              <span style="font-size: 12px; color: #33C3F0;">→</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>B: Bold Momentum</h3>
+      <p>Big provocative headline. Dark stats strip creates contrast punch. Services as clean list rows with arrows — invites exploration. Cyan CTA button adds energy. Says "we move fast and so should you."</p>
+    </div>
+  </div>
+</div>
+
+<div class="section" style="margin-top: 32px; padding: 20px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+  <h3 style="margin-top: 0;">What both options share (vs current site)</h3>
+  <ul style="line-height: 1.8;">
+    <li><strong>Left-aligned hero</strong> — breaks the center-everything pattern</li>
+    <li><strong>Results visible immediately</strong> — proof before promises</li>
+    <li><strong>No glass cards, no gradient text, no blur orbs</strong></li>
+    <li><strong>Services as data, not identical floating cards</strong></li>
+    <li><strong>Light warm background</strong> — feels established, not "AI startup"</li>
+    <li><strong>Typography does the heavy lifting</strong> — weight and size create hierarchy, not color tricks</li>
+  </ul>
+</div>
