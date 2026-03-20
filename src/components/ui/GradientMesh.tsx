@@ -55,22 +55,22 @@ void main() {
   float n3 = snoise((uv + mouseOffset) * 0.4 + vec2(t * 0.3, -t * 0.4));
   float noise = n1 * 0.5 + n2 * 0.3 + n3 * 0.2;
 
-  // === LIGHT MODE — clean white base with colorful blobs ===
-  vec3 lWhite    = vec3(0.988, 0.985, 0.980); // warm white
-  vec3 lCyan     = vec3(0.75, 0.93, 0.98);    // light cyan cloud
-  vec3 lCyanDeep = vec3(0.55, 0.86, 0.96);    // more saturated cyan
-  vec3 lWarm     = vec3(0.98, 0.96, 0.93);    // warm cream
+  // === LIGHT MODE — pure white base with cyan clouds ===
+  vec3 lWhite    = vec3(0.996, 0.994, 0.992); // near-pure white
+  vec3 lCyan     = vec3(0.78, 0.94, 0.99);    // light cyan cloud
+  vec3 lCyanDeep = vec3(0.60, 0.88, 0.97);    // saturated cyan
+  vec3 lWarm     = vec3(0.996, 0.980, 0.960); // warm ivory (not gray)
 
   vec3 light = lWhite;
   // Large cyan cloud that drifts
   float cyanBlob1 = smoothstep(-0.1, 0.5, n1) * smoothstep(0.1, 0.8, uv.x * 0.6 + uv.y * 0.4 + n3 * 0.3);
-  light = mix(light, lCyan, cyanBlob1 * 0.6);
+  light = mix(light, lCyan, cyanBlob1 * 0.65);
   // Second deeper cyan accent
   float cyanBlob2 = smoothstep(0.0, 0.6, n2) * smoothstep(0.2, 0.9, 1.0 - uv.x * 0.4 + uv.y * 0.6 + n1 * 0.2);
-  light = mix(light, lCyanDeep, cyanBlob2 * 0.3);
-  // Warm area for contrast
+  light = mix(light, lCyanDeep, cyanBlob2 * 0.35);
+  // Warm ivory (not gray) for contrast
   float warmBlob = smoothstep(-0.2, 0.3, -n3) * (1.0 - uv.y * 0.5);
-  light = mix(light, lWarm, warmBlob * 0.4);
+  light = mix(light, lWarm, warmBlob * 0.35);
 
   // === DARK MODE — deeper, more dramatic ===
   vec3 dBase     = vec3(0.071, 0.067, 0.063);  // #121110
@@ -79,14 +79,14 @@ void main() {
   vec3 dWarm     = vec3(0.12, 0.08, 0.06);     // warm ember
 
   vec3 dark = dBase;
-  // Cyan glow pools
-  dark = mix(dark, dCyan, cyanBlob1 * 0.7);
-  dark = mix(dark, dCyanBrt, cyanBlob2 * 0.4);
+  // Cyan glow pools — boosted
+  dark = mix(dark, dCyan, cyanBlob1 * 0.85);
+  dark = mix(dark, dCyanBrt, cyanBlob2 * 0.55);
   // Warm ember contrast
-  dark = mix(dark, dWarm, warmBlob * 0.3);
-  // Additional depth variation
+  dark = mix(dark, dWarm, warmBlob * 0.35);
+  // Depth variation
   float depthNoise = smoothstep(-0.3, 0.3, noise);
-  dark = mix(dark, dark * 0.7, (1.0 - depthNoise) * 0.4);
+  dark = mix(dark, dark * 0.65, (1.0 - depthNoise) * 0.45);
 
   vec3 base = mix(light, dark, uDark);
 
