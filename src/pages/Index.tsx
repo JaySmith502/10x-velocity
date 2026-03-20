@@ -78,7 +78,7 @@ const Index = () => {
               AI & Automation Consulting
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 text-foreground">
-              Stop hiring for work machines should do.
+              Accelerate Your Business Growth with AI & Automation
             </h1>
             <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
               AI & automation consulting for companies ready to move faster. Based in Louisville, serving ambitious teams everywhere.

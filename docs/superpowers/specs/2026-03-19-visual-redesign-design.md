@@ -152,7 +152,7 @@ Old → New mapping for existing component references:
 
 **Left column:**
 - Eyebrow label: "AI & Automation Consulting" (uppercase, small, accent color)
-- H1: "Stop hiring for work machines should do." (Plus Jakarta Sans 800, large fluid size)
+- H1: "Accelerate Your Business Growth with AI & Automation" (Plus Jakarta Sans 800, large fluid size)
 - Body: Source Serif 4, muted-foreground color
 - Two buttons: Primary dark ("Book a Discovery Call"), secondary outline ("Calculate Savings")
 
