@@ -77,14 +77,13 @@ const Index = () => {
       <section className="relative overflow-hidden">
         {/* WebGL gradient mesh — lazy loaded, CSS fallback for no-JS/no-WebGL/reduced-motion */}
         <div
-          className="absolute inset-0 -z-10"
-          style={{ background: "radial-gradient(ellipse at 70% 30%, hsl(195 40% 95%) 0%, hsl(40 20% 98%) 50%, hsl(30 14% 94%) 100%)" }}
+          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]"
         >
           <Suspense fallback={null}>
             <GradientMesh className="absolute inset-0 w-full h-full [&:not([data-active=true])]:hidden" />
           </Suspense>
         </div>
-      <div className="container mx-auto px-4 pt-16 md:pt-24 pb-0">
+      <div className="container mx-auto px-4 pt-16 md:pt-24 pb-16 md:pb-20">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 max-w-6xl mx-auto">
           <div className="md:max-w-xl animate-fade-up">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
