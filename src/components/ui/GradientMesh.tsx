@@ -49,43 +49,58 @@ void main() {
   float t = uTime * 0.06;
   vec2 mouseOffset = (uMouse - 0.5) * 0.05;
 
-  // Three noise layers — larger scale for visible blobs
-  float n1 = snoise((uv + mouseOffset) * 1.2 + vec2(t * 0.7, t * 0.5));
-  float n2 = snoise((uv + mouseOffset) * 2.0 + vec2(-t * 0.5, t * 0.9));
-  float n3 = snoise((uv + mouseOffset) * 0.5 + vec2(t * 0.3, -t * 0.4));
+  // Noise layers — big organic shapes
+  float n1 = snoise((uv + mouseOffset) * 1.0 + vec2(t * 0.7, t * 0.5));
+  float n2 = snoise((uv + mouseOffset) * 1.6 + vec2(-t * 0.5, t * 0.9));
+  float n3 = snoise((uv + mouseOffset) * 0.4 + vec2(t * 0.3, -t * 0.4));
   float noise = n1 * 0.5 + n2 * 0.3 + n3 * 0.2;
 
-  // === LIGHT MODE — wide tonal range ===
-  vec3 lBright   = vec3(0.992, 0.988, 0.980); // near-white warm
-  vec3 lSand     = vec3(0.925, 0.900, 0.860); // visible warm sand
-  vec3 lBlush    = vec3(0.950, 0.920, 0.900); // pink-warm hint
-  vec3 lCool     = vec3(0.910, 0.930, 0.945); // cool blue-gray
+  // === LIGHT MODE — clean white base with colorful blobs ===
+  vec3 lWhite    = vec3(0.988, 0.985, 0.980); // warm white
+  vec3 lCyan     = vec3(0.75, 0.93, 0.98);    // light cyan cloud
+  vec3 lCyanDeep = vec3(0.55, 0.86, 0.96);    // more saturated cyan
+  vec3 lWarm     = vec3(0.98, 0.96, 0.93);    // warm cream
 
-  vec3 light = mix(lBright, lSand, smoothstep(-0.3, 0.3, noise));
-  light = mix(light, lBlush, smoothstep(-0.2, 0.4, n2) * 0.6);
-  light = mix(light, lCool, smoothstep(0.0, 0.6, n3) * 0.4);
+  vec3 light = lWhite;
+  // Large cyan cloud that drifts
+  float cyanBlob1 = smoothstep(-0.1, 0.5, n1) * smoothstep(0.1, 0.8, uv.x * 0.6 + uv.y * 0.4 + n3 * 0.3);
+  light = mix(light, lCyan, cyanBlob1 * 0.6);
+  // Second deeper cyan accent
+  float cyanBlob2 = smoothstep(0.0, 0.6, n2) * smoothstep(0.2, 0.9, 1.0 - uv.x * 0.4 + uv.y * 0.6 + n1 * 0.2);
+  light = mix(light, lCyanDeep, cyanBlob2 * 0.3);
+  // Warm area for contrast
+  float warmBlob = smoothstep(-0.2, 0.3, -n3) * (1.0 - uv.y * 0.5);
+  light = mix(light, lWarm, warmBlob * 0.4);
 
-  // === DARK MODE — visible depth pools ===
+  // === DARK MODE — deeper, more dramatic ===
   vec3 dBase     = vec3(0.071, 0.067, 0.063);  // #121110
-  vec3 dLight    = vec3(0.145, 0.133, 0.120);  // noticeably lighter
-  vec3 dDeep     = vec3(0.040, 0.035, 0.030);  // deep shadow
-  vec3 dWarm     = vec3(0.120, 0.098, 0.082);  // warm brown tint
+  vec3 dCyan     = vec3(0.08, 0.18, 0.25);     // dark cyan pool
+  vec3 dCyanBrt  = vec3(0.10, 0.25, 0.35);     // brighter cyan
+  vec3 dWarm     = vec3(0.12, 0.08, 0.06);     // warm ember
 
-  vec3 dark = mix(dBase, dLight, smoothstep(-0.3, 0.3, noise));
-  dark = mix(dark, dDeep, smoothstep(-0.2, 0.4, n2) * 0.5);
-  dark = mix(dark, dWarm, smoothstep(0.0, 0.6, n3) * 0.4);
+  vec3 dark = dBase;
+  // Cyan glow pools
+  dark = mix(dark, dCyan, cyanBlob1 * 0.7);
+  dark = mix(dark, dCyanBrt, cyanBlob2 * 0.4);
+  // Warm ember contrast
+  dark = mix(dark, dWarm, warmBlob * 0.3);
+  // Additional depth variation
+  float depthNoise = smoothstep(-0.3, 0.3, noise);
+  dark = mix(dark, dark * 0.7, (1.0 - depthNoise) * 0.4);
 
   vec3 base = mix(light, dark, uDark);
 
-  // Cyan wash — visible blob that drifts across the surface
-  vec3 cyan = vec3(0.200, 0.765, 0.941);
-  float cyanNoise = snoise(uv * 1.0 + vec2(t * 0.3, -t * 0.2));
-  float cyanMask = smoothstep(-0.1, 0.5, cyanNoise) * smoothstep(0.0, 0.7, uv.x + uv.y * 0.3);
-  float cyanAmount = mix(0.12, 0.18, uDark);
-  base = mix(base, mix(base, cyan, cyanAmount), cyanMask);
+  // Dot grid overlay
+  vec2 gridUV = gl_FragCoord.xy / (uResolution / vec2(uResolution.x / uResolution.y, 1.0));
+  float gridSize = mix(28.0, 28.0, uDark); // pixel spacing
+  vec2 gridPos = mod(gl_FragCoord.xy, gridSize) - gridSize * 0.5;
+  float dot = smoothstep(1.2, 0.8, length(gridPos));
+  float dotAlpha = mix(0.06, 0.10, uDark); // subtle in light, slightly more in dark
+  vec3 dotColor = mix(vec3(0.0), vec3(1.0), uDark); // black dots on light, white on dark
+  base = mix(base, dotColor, dot * dotAlpha);
 
   // Soft vignette
-  float vigStr = mix(0.10, 0.20, uDark);
+  float vigStr = mix(0.08, 0.18, uDark);
   float vignette = 1.0 - length((uv - 0.5) * vec2(0.8, 1.2)) * vigStr;
   base *= vignette;
 
