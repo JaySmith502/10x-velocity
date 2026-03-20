@@ -90,9 +90,7 @@ const SavingsCalculator = () => {
           </div>
 
           {/* CTA Section - replaced explanatory text with this */}
-          <div className="max-w-4xl mx-auto mt-20 text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
+          <div className="max-w-4xl mx-auto mt-20 text-center bg-surface border border-border rounded-lg p-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Increase Your Velocity?
             </h2>

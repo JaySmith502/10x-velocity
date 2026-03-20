@@ -89,7 +89,7 @@ const Index = () => {
                   Book a Discovery Call <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted font-medium">
+              <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted hover:text-foreground font-medium">
                 <Link to="/savings-calculator">
                   Calculate Savings <Calculator className="w-4 h-4 ml-1" />
                 </Link>
@@ -228,7 +228,7 @@ const Index = () => {
                   Book a Discovery Call <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="border-background/20 text-background hover:bg-background/10 font-medium">
+              <Button asChild variant="outline" className="border-background/30 text-background hover:bg-background/10 font-medium">
                 <Link to="/savings-calculator">
                   Calculate Savings
                 </Link>

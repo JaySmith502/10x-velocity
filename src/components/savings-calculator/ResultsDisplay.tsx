@@ -21,22 +21,22 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
 
       {/* Results Cards */}
       <div className="space-y-6">
-        <div className="bg-black/30 border border-border rounded-lg p-6">
+        <div className="bg-background border border-border rounded-lg p-6">
           <p className="text-muted-foreground">Estimated Weekly Savings</p>
-          <p className="text-3xl font-bold text-accent">${weeklySavings.toFixed(2)}</p>
+          <p className="text-3xl font-bold text-foreground">${weeklySavings.toFixed(2)}</p>
         </div>
-        
-        <div className="bg-black/30 border border-border rounded-lg p-6">
+
+        <div className="bg-background border border-border rounded-lg p-6">
           <p className="text-muted-foreground">Estimated Annual Savings</p>
-          <p className="text-3xl font-bold text-accent">${annualSavings.toLocaleString('en-US', {
+          <p className="text-3xl font-bold text-foreground">${annualSavings.toLocaleString('en-US', {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
           })}</p>
         </div>
-        
-        <div className="bg-black/30 border border-border rounded-lg p-6">
+
+        <div className="bg-background border border-border rounded-lg p-6">
           <p className="text-muted-foreground">Hours Reclaimed Weekly</p>
-          <p className="text-3xl font-bold text-accent">{timeReclaimed.toFixed(1)} hours</p>
+          <p className="text-3xl font-bold text-foreground">{timeReclaimed.toFixed(1)} hours</p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
         <Button 
           asChild
           variant="outline" 
-          className="w-full border-accent text-foreground hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
+          className="w-full border-border text-foreground hover:bg-muted hover:text-foreground text-lg"
         >
           <Link to="/case-studies" className="flex items-center justify-center w-full">
             See some Case Studies
