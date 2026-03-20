@@ -1,8 +1,7 @@
-import { ArrowRight, Bot, ChartLine, Users, Database, Calculator } from "lucide-react";
+import { ArrowRight, Calculator } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { Button } from "@/components/ui/button";
-import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 import { BUSINESS_DATA } from "@/schemas/organization";
 
@@ -40,13 +39,7 @@ const Index = () => {
                 },
                 openingHoursSpecification: {
                   "@type": "OpeningHoursSpecification",
-                  dayOfWeek: [
-                    "Monday",
-                    "Tuesday",
-                    "Wednesday",
-                    "Thursday",
-                    "Friday",
-                  ],
+                  dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
                   opens: "09:00",
                   closes: "17:00",
                 },
@@ -70,215 +63,182 @@ const Index = () => {
         />
         <link rel="canonical" href="https://10xvelocity.ai/" />
         <meta property="og:title" content="AI & Automation Consulting | 10x Velocity" />
-        <meta property="og:description" content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs. AI consulting and automation services based in Louisville, KY." />
+        <meta property="og:description" content="10x Velocity helps businesses automate workflows and leverage AI to save time and cut costs." />
         <meta property="og:url" content="https://10xvelocity.ai/" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="min-h-screen flex flex-col">
-      {/* Hero Section */}
-      <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-        
-        {/* Mobile Logo */}
-        <div className="md:hidden flex justify-center mb-8">
-          <img
-            src="/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.webp"
-            alt="10x Velocity Logo"
-            className="h-14 w-auto"
-            width={400}
-            height={200}
-          />
-        </div>
-        
-        <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Accelerate Your Business Growth with AI & Automation
-          </h1>
-          <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            Transform your business processes with cutting-edge solutions. 
-            Based in Louisville, KY, serving ambitious companies worldwide.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              asChild
-              className="bg-accent text-background font-medium hover:bg-accent/90 transition-all text-lg"
-            >
-              <Link to="/savings-calculator">
-                Savings Calculator <Calculator className="w-5 h-5" />
-              </Link>
-            </Button>
-            <Button 
-              asChild
-              variant="outline" 
-              className="border-accent text-foreground hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
-            >
-              <Link to="/case-studies">
-                View Case Studies <ArrowRight className="w-5 h-5" />
-              </Link>
-            </Button>
-          </div>
-        </div>
-      </section>
 
-      {/* Value Proposition */}
-      <section className="bg-gradient-to-b from-black/20 to-transparent py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Solving Capacity Challenges
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Whether you're a growing business or a nonprofit organization, 
-              we help you break through capacity barriers with intelligent automation.
+      {/* Hero */}
+      <section className="container mx-auto px-4 pt-16 md:pt-24 pb-0">
+        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 max-w-6xl mx-auto">
+          <div className="md:max-w-xl animate-fade-up">
+            <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+              AI & Automation Consulting
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up">
-              <h3 className="text-xl font-semibold mb-4 text-accent">For Businesses</h3>
-              <ul className="space-y-4 text-muted-foreground">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span>Automate repetitive tasks to free up your team for strategic work</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span>Optimize workflows with AI-powered process mining</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
-                  <span>Scale operations without proportionally increasing headcount</span>
-                </li>
-              </ul>
-            </div>
-            <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up delay-150">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">For Nonprofits</h3>
-              <ul className="space-y-4 text-muted-foreground">
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-purple-400 shrink-0 mt-1" />
-                  <span>Streamline donor management and engagement processes</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-purple-400 shrink-0 mt-1" />
-                  <span>Maximize impact with limited resources through automation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-purple-400 shrink-0 mt-1" />
-                  <span>Improve volunteer coordination and program management</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Grid */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Our Solutions
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Comprehensive AI-powered tools and services to transform your operations
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-          {features.map((feature, index) => (
-            <div
-              key={feature.title}
-              className="bg-surface border border-border rounded-lg p-6 animate-fade-up hover:bg-muted transition-colors"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <feature.icon className="w-10 h-10 text-accent mb-4" />
-              <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-muted-foreground">{feature.description}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="bg-gradient-to-b from-transparent to-black/20 py-20">
-        <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Our Approach
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              A structured methodology to transform your operations
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 text-foreground">
+              Stop hiring for work machines should do.
+            </h1>
+            <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
+              AI & automation consulting for companies ready to move faster. Based in Louisville, serving ambitious teams everywhere.
             </p>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button asChild className="bg-foreground text-background hover:bg-foreground/90 font-semibold">
+                <Link to="/contact">
+                  Book a Discovery Call <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="border-border text-foreground hover:bg-muted font-medium">
+                <Link to="/savings-calculator">
+                  Calculate Savings <Calculator className="w-4 h-4 ml-1" />
+                </Link>
+              </Button>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {process.map((step, index) => (
-              <div key={step.title} className="text-center animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-accent">{index + 1}</span>
-                </div>
-                <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-muted-foreground">{step.description}</p>
+
+          {/* Stats strip */}
+          <div className="bg-foreground text-background rounded-xl p-6 md:p-8 flex md:flex-col gap-6 md:gap-8 md:min-w-[200px] animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            {[
+              { value: "85%", label: "Time Saved" },
+              { value: "$2.4M", label: "Client Savings" },
+              { value: "40+", label: "Projects" },
+            ].map((stat, i) => (
+              <div key={stat.label} className={`text-center md:text-left ${i > 0 ? "md:pt-6 md:border-t md:border-background/15" : ""}`}>
+                <div className="font-display text-3xl md:text-4xl font-extrabold">{stat.value}</div>
+                <div className="text-xs text-background/50 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Ready to Increase Your Velocity?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8">
-            Book a free consultation and discover how we can help you achieve 10x growth.
-          </p>
-          <DiscoveryButton />
+      {/* Logo bar */}
+      <section className="bg-muted py-6 mt-16">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
+            <span className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Trusted by</span>
+            {["GovBrokers", "Innes & Young", "eCatalyst", "Hillcrest Partners", "Catalyst Group"].map((name) => (
+              <span key={name} className="text-sm font-semibold text-muted-foreground/60">{name}</span>
+            ))}
+          </div>
         </div>
       </section>
-    </div>
+
+      {/* Featured case study */}
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="max-w-6xl mx-auto">
+          <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-6">Featured Result</p>
+          <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
+            <div className="md:flex-1">
+              <h2 className="font-display text-2xl md:text-3xl font-extrabold leading-tight mb-4 text-foreground">
+                GovBrokers cut processing time by 85% and saved $240K/year
+              </h2>
+              <p className="font-body text-base text-muted-foreground leading-relaxed mb-5">
+                A government services firm drowning in manual document processing. We automated their core workflow in 6 weeks — now their team focuses on clients, not paperwork.
+              </p>
+              <Link to="/case-studies/govbrokers" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1">
+                Read the full story <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-3 md:gap-4 md:flex-1 w-full md:w-auto">
+              {[
+                { value: "85%", label: "Faster processing" },
+                { value: "$240K", label: "Annual savings" },
+                { value: "6 wk", label: "Implementation" },
+                { value: "3 FTE", label: "Hours reclaimed" },
+              ].map((metric) => (
+                <div key={metric.label} className="bg-surface border border-border rounded-lg p-5">
+                  <div className="font-display text-2xl md:text-3xl font-extrabold text-foreground">{metric.value}</div>
+                  <div className="text-xs text-muted-foreground mt-1">{metric.label}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How we work */}
+      <section className="bg-surface border-y border-border py-16 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-10 gap-4">
+              <h2 className="font-display text-2xl md:text-3xl font-extrabold text-foreground">How we work</h2>
+              <p className="font-body text-sm text-muted-foreground md:max-w-xs md:text-right">
+                A structured approach that moves fast without cutting corners.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
+              {[
+                { num: "01", title: "Assess", body: "We map your current processes and identify where automation creates the most leverage." },
+                { num: "02", title: "Build", body: "We implement targeted solutions — typically live within 4–8 weeks, not months." },
+                { num: "03", title: "Scale", body: "We measure results and expand what works. Your team learns the systems alongside us." },
+              ].map((step, i) => (
+                <div
+                  key={step.num}
+                  className={`py-8 md:py-0 ${
+                    i < 2 ? "border-b md:border-b-0 md:border-r border-border" : ""
+                  } ${i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"}`}
+                >
+                  <div className="font-display text-5xl font-extrabold text-border mb-3">{step.num}</div>
+                  <div className="font-display text-lg font-bold text-foreground mb-2">{step.title}</div>
+                  <p className="font-body text-sm text-muted-foreground leading-relaxed">{step.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dual audience */}
+      <section className="container mx-auto px-4 py-16 md:py-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
+            <div className="pb-10 md:pb-0 md:pr-12 border-b md:border-b-0 md:border-r border-border">
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-3">For Businesses</p>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">Scale operations without scaling headcount</h3>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                Automate repetitive tasks. Optimize workflows with AI. Free your team for strategic work that grows revenue.
+              </p>
+            </div>
+            <div className="pt-10 md:pt-0 md:pl-12">
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent-secondary mb-3">For Nonprofits</p>
+              <h3 className="font-display text-xl font-bold text-foreground mb-3">Maximize impact with limited resources</h3>
+              <p className="font-body text-sm text-muted-foreground leading-relaxed">
+                Streamline donor management, volunteer coordination, and program delivery — so you can focus on your mission.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-foreground text-background">
+        <div className="container mx-auto px-4 py-12 md:py-16">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-extrabold mb-2">Ready to move faster?</h2>
+              <p className="font-body text-sm text-background/60">
+                15-minute call. No pitch deck. Just an honest look at what automation could do for you.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+              <Button asChild className="bg-accent text-white hover:bg-accent/90 font-semibold">
+                <Link to="/contact">
+                  Book a Discovery Call <ArrowRight className="w-4 h-4 ml-1" />
+                </Link>
+              </Button>
+              <Button asChild variant="outline" className="border-background/20 text-background hover:bg-background/10 font-medium">
+                <Link to="/savings-calculator">
+                  Calculate Savings
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
     </>
   );
 };
-
-const features = [
-  {
-    title: "AI Process Automation",
-    description: "Streamline your operations with intelligent automation solutions that learn and adapt.",
-    icon: Bot,
-  },
-  {
-    title: "Data Analytics",
-    description: "Transform your data into actionable insights with advanced analytics.",
-    icon: ChartLine,
-  },
-  {
-    title: "Team Augmentation",
-    description: "Enhance your team's capabilities with AI-powered tools and training.",
-    icon: Users,
-  },
-  {
-    title: "Process Mining",
-    description: "Discover optimization opportunities in your business processes automatically.",
-    icon: Database,
-  },
-];
-
-const process = [
-  {
-    title: "Assessment",
-    description: "We analyze your current processes and identify optimization opportunities.",
-  },
-  {
-    title: "Strategy",
-    description: "Develop a tailored implementation plan aligned with your goals.",
-  },
-  {
-    title: "Implementation",
-    description: "Execute the solution with continuous monitoring and refinement.",
-  },
-];
 
 export default Index;
