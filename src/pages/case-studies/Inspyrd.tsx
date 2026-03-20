@@ -90,14 +90,14 @@ const Inspyrd = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Inspyrd", path: "/case-studies/inspyrd" }]} />
         <article className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               10x Velocity Empowers Inspyrd to Launch a Transformational Trauma Recovery Program in the U.S.
           </h1>
           
           {/* Client Overview */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Client Overview</h2>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               Inspyrd is a Canadian-based trauma recovery and mental wellness initiative designed to support individuals affected by trauma, including PTSD, first responders, and military reserve components. The organization focuses on structured therapy programs, resilience training, and mental wellness education to empower individuals on their healing journey. As Inspyrd sought to expand into the U.S. market with a pilot program, they encountered strategic and operational challenges that required advanced automation, workflow integration, and AI-driven outreach.
             </p>
           </section>
@@ -105,10 +105,10 @@ const Inspyrd = () => {
           {/* The Challenge */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               Despite a successful presence in Canada, Inspyrd faced several obstacles in establishing its U.S. pilot program:
             </p>
-            <ul className="list-disc list-inside text-velocity-muted space-y-4 ml-4">
+            <ul className="list-disc list-inside text-muted-foreground space-y-4 ml-4">
               <li>Limited U.S. Market Penetration: Inspyrd lacked a structured plan for reaching first responders and military reserve components in a competitive wellness space.</li>
               <li>Manual Outreach & Engagement: Traditional marketing and outreach efforts were labor-intensive, slowing program enrollment and limiting impact.</li>
               <li>Fragmented Operational Workflows: The organization relied on multiple tools for program management, client tracking, and community engagement, leading to inefficiencies.</li>
@@ -122,11 +122,11 @@ const Inspyrd = () => {
             <h2 className="text-2xl font-bold mb-6">The 10x Velocity Solution</h2>
             <div className="grid gap-8">
               {solutions.map((solution, index) => (
-                <div key={index} className="glass-card p-8">
-                  <h3 className="text-xl font-semibold mb-3 text-velocity-accent">
+                <div key={index} className="bg-surface border border-border rounded-lg p-8">
+                  <h3 className="text-xl font-semibold mb-3 text-accent">
                     {solution.title}
                   </h3>
-                  <p className="text-velocity-muted">
+                  <p className="text-muted-foreground">
                     {solution.description}
                   </p>
                 </div>
@@ -137,15 +137,15 @@ const Inspyrd = () => {
           {/* Results & Impact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">Results & Impact</h2>
-            <div className="glass-card p-8">
-              <p className="text-velocity-muted mb-6">
+            <div className="bg-surface border border-border rounded-lg p-8">
+              <p className="text-muted-foreground mb-6">
                 After six months of AI-driven transformation, Inspyrd successfully launched its U.S. pilot program, achieving remarkable growth and impact:
               </p>
               <div className="grid gap-4">
                 {results.map((result, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-velocity-accent shrink-0" />
-                    <span className="text-velocity-muted">{result}</span>
+                    <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
+                    <span className="text-muted-foreground">{result}</span>
                   </div>
                 ))}
               </div>
@@ -155,10 +155,10 @@ const Inspyrd = () => {
           {/* Conclusion */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               By integrating 10x Velocity's AI-driven automation and strategic workflow enhancements, Inspyrd evolved into a highly efficient, data-driven trauma recovery initiative capable of scaling internationally. With automated outreach, predictive analytics, and streamlined operations, Inspyrd now delivers faster, more effective trauma recovery solutions to first responders and military personnel.
             </p>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               10x Velocity's tailored AI strategies have revolutionized Inspyrd's expansion strategy, setting a new standard for trauma recovery and mental wellness innovation.
             </p>
           </section>
@@ -166,13 +166,13 @@ const Inspyrd = () => {
           {/* What's Next */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               With optimized operations, Inspyrd is now expanding into AI-driven telehealth solutions, virtual trauma coaching, and nationwide partnerships with first responder organizations, ensuring continued 10x scalability.
             </p>
-            <p className="text-velocity-muted mb-6">
-              Explore our <Link to="/services/ai-workshops" className="text-velocity-accent hover:underline">AI workshops</Link> and <Link to="/services" className="text-velocity-accent hover:underline">automation services</Link> to supercharge your outreach and data operations.
+            <p className="text-muted-foreground mb-6">
+              Explore our <Link to="/services/ai-workshops" className="text-accent hover:underline">AI workshops</Link> and <Link to="/services" className="text-accent hover:underline">automation services</Link> to supercharge your outreach and data operations.
             </p>
-            <div className="glass-card p-8 text-center">
+            <div className="bg-surface border border-border rounded-lg p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your trauma recovery initiative?
               </p>

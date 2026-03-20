@@ -59,22 +59,22 @@ const SmartBots = () => {
       </Helmet>
       <main className="flex-1">
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Smart Bots", path: "/services/smart-bots" }]} />
-      <div className="min-h-screen bg-gradient-to-br from-velocity-dark to-black py-16">
+      <div className="min-h-screen bg-gradient-to-br from-background to-black py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header Section */}
             <div className="text-center mb-16 animate-fade-up">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 Smart Bots with Custom Knowledge
               </h1>
-              <p className="text-xl text-velocity-light max-w-3xl mx-auto mb-8">
+              <p className="text-xl text-foreground max-w-3xl mx-auto mb-8">
                 Experience our AI-powered chatbot with custom knowledge base. Ask questions and get intelligent responses tailored to your needs.
               </p>
             </div>
 
             {/* Chatbot Widget Section */}
             <div className="mb-16">
-              <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10">
+              <div className="bg-surface backdrop-blur-sm rounded-2xl p-8 border border-border">
                 <h2 className="text-2xl font-bold text-white mb-6 text-center">
                   Chat with Our AI Assistant
                 </h2>
@@ -86,7 +86,7 @@ const SmartBots = () => {
                       <div className="bg-gray-800 rounded-lg p-6 border border-gray-600">
                         <div className="text-center mb-4">
                           <p className="text-yellow-400 mb-2">🚧 Development Mode</p>
-                          <p className="text-velocity-light text-sm mb-4">
+                          <p className="text-foreground text-sm mb-4">
                             Needle AI widget will work on live site. CORS blocks localhost.
                           </p>
                         </div>
@@ -114,7 +114,7 @@ const SmartBots = () => {
                   ) : (
                     <div className="text-center py-8">
                       <p className="text-red-400 mb-2">⚠️ Widget Configuration Missing</p>
-                      <p className="text-velocity-light text-sm">
+                      <p className="text-foreground text-sm">
                         Please configure your environment variables in .env.local
                       </p>
                     </div>

@@ -33,30 +33,30 @@ const LunchAndLearn = () => {
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="min-h-screen bg-velocity-dark">
+      <div className="min-h-screen bg-background">
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lunch & Learn", path: "/events/lunch-and-learn" }]} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-background/90 z-0"></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 heading-gradient animate-fade-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up">
               AI as Your Performance Enhancer
             </h1>
-            <p className="text-xl md:text-2xl text-velocity-muted mb-8 animate-fade-up">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-up">
               How to Run a 10x Company Playbook
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-10 animate-fade-up">
               <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
-                <Calendar className="w-5 h-5 text-velocity-accent" />
+                <Calendar className="w-5 h-5 text-accent" />
                 <span>April 22, 2025</span>
               </div>
               <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
-                <Clock className="w-5 h-5 text-velocity-accent" />
+                <Clock className="w-5 h-5 text-accent" />
                 <span>12:00-1:00pm ET</span>
               </div>
               <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
-                <MapPin className="w-5 h-5 text-velocity-accent" />
+                <MapPin className="w-5 h-5 text-accent" />
                 <span>Hybrid (In-Person + Zoom)</span>
               </div>
             </div>
@@ -70,14 +70,14 @@ const LunchAndLearn = () => {
       </section>
 
       {/* Meme Section */}
-      <section className="py-16 bg-velocity-dark/80">
+      <section className="py-16 bg-background/80">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Don't let technology slap you in the face!
             </h2>
             
-            <Card className="bg-transparent border-velocity-accent/20 overflow-hidden max-w-2xl mx-auto">
+            <Card className="bg-transparent border-accent/20 overflow-hidden max-w-2xl mx-auto">
               <CardContent className="p-0">
                 <div className="w-full">
                   <img
@@ -96,17 +96,17 @@ const LunchAndLearn = () => {
       </section>
 
       {/* Agenda Section */}
-      <section className="py-16 bg-[#151A24]">
+      <section className="py-16 bg-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Event Agenda
             </h2>
-            <p className="text-center text-velocity-muted mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Join us for this interactive 60-minute session to discover how AI is reshaping business operations and how to build your own 10x playbook.
             </p>
             
-            <div className="glass-card p-8 mb-10">
+            <div className="bg-surface border border-border rounded-lg p-8 mb-10">
               <div className="space-y-8">
                 <AgendaItem 
                   number="1" 
@@ -159,8 +159,8 @@ const LunchAndLearn = () => {
             </div>
             
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4 heading-gradient">Limited In-Person Seating Available</h3>
-              <p className="text-velocity-muted mb-8">
+              <h3 className="text-2xl font-bold mb-4">Limited In-Person Seating Available</h3>
+              <p className="text-muted-foreground mb-8">
                 Join us in-person for a complimentary lunch or online via Zoom
               </p>
               <DiscoveryButton 
@@ -173,68 +173,68 @@ const LunchAndLearn = () => {
       </section>
       
       {/* Benefits Section */}
-      <section className="py-16 bg-velocity-dark/80">
+      <section className="py-16 bg-background/80">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Why Attend This Event?
             </h2>
-            <p className="text-center text-velocity-muted mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Supercharge your business with AI — here's what you'll gain from our free Lunch & Learn:
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              <div className="glass-card p-6">
+              <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-velocity-accent/20 p-2 rounded-full">
-                      <Check className="w-5 h-5 text-velocity-accent" />
+                    <div className="bg-accent/20 p-2 rounded-full">
+                      <Check className="w-5 h-5 text-accent" />
                     </div>
                     <h3 className="text-xl font-semibold">AI Multiplier Effect</h3>
                   </div>
-                  <p className="text-velocity-muted flex-grow">
+                  <p className="text-muted-foreground flex-grow">
                     Learn how AI multiplies team output and efficiency across departments
                   </p>
                 </div>
               </div>
               
-              <div className="glass-card p-6">
+              <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-velocity-accent/20 p-2 rounded-full">
-                      <Check className="w-5 h-5 text-velocity-accent" />
+                    <div className="bg-accent/20 p-2 rounded-full">
+                      <Check className="w-5 h-5 text-accent" />
                     </div>
                     <h3 className="text-xl font-semibold">Practical Tools</h3>
                   </div>
-                  <p className="text-velocity-muted flex-grow">
+                  <p className="text-muted-foreground flex-grow">
                     Get a breakdown of real AI tools you can implement today
                   </p>
                 </div>
               </div>
               
-              <div className="glass-card p-6">
+              <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-velocity-accent/20 p-2 rounded-full">
-                      <Check className="w-5 h-5 text-velocity-accent" />
+                    <div className="bg-accent/20 p-2 rounded-full">
+                      <Check className="w-5 h-5 text-accent" />
                     </div>
                     <h3 className="text-xl font-semibold">Live Demonstrations</h3>
                   </div>
-                  <p className="text-velocity-muted flex-grow">
+                  <p className="text-muted-foreground flex-grow">
                     See AI in action with real-time workflow demonstrations
                   </p>
                 </div>
               </div>
               
-              <div className="glass-card p-6">
+              <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-velocity-accent/20 p-2 rounded-full">
-                      <Check className="w-5 h-5 text-velocity-accent" />
+                    <div className="bg-accent/20 p-2 rounded-full">
+                      <Check className="w-5 h-5 text-accent" />
                     </div>
                     <h3 className="text-xl font-semibold">Workflow Mapping</h3>
                   </div>
-                  <p className="text-velocity-muted flex-grow">
+                  <p className="text-muted-foreground flex-grow">
                     Map your first AI workflow in minutes with expert guidance
                   </p>
                 </div>
@@ -246,7 +246,7 @@ const LunchAndLearn = () => {
                 href="https://level.10xvelocity.ai/widget/bookings/jay-smith-10xvelocity" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-velocity-accent hover:text-velocity-light transition-colors"
+                className="inline-flex items-center gap-2 text-accent hover:text-foreground transition-colors"
               >
                 Learn more about our services <ArrowRight className="w-4 h-4" />
               </a>
@@ -270,14 +270,14 @@ const AgendaItem = ({
 }) => {
   return (
     <div className="flex gap-4">
-      <div className="flex-shrink-0 w-10 h-10 bg-velocity-accent/20 rounded-full flex items-center justify-center text-velocity-accent font-bold">
+      <div className="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold">
         {number}
       </div>
       <div className="flex-grow">
         <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-          <h3 className="text-xl font-semibold text-velocity-light">{title}</h3>
+          <h3 className="text-xl font-semibold text-foreground">{title}</h3>
         </div>
-        <p className="text-velocity-muted">{description}</p>
+        <p className="text-muted-foreground">{description}</p>
       </div>
     </div>
   );

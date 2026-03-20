@@ -3,7 +3,7 @@ import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="mt-auto py-16 border-t border-white/10 bg-black/20">
+    <footer className="mt-auto py-16 border-t border-border bg-muted">
       <div className="container mx-auto px-4">
         <div className="relative pb-12">
           <div className="absolute inset-0 flex items-center">
@@ -12,18 +12,18 @@ const Footer = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-velocity-light">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Company</h3>
             <ul className="space-y-2">
-              <li><Link to="/about" className="text-velocity-muted hover:text-velocity-accent transition-colors">About Us</Link></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-accent transition-colors">About Us</Link></li>
               <li>
                 <a 
                   href="mailto:info@10xvelocity.ai" 
-                  className="text-velocity-muted hover:text-velocity-accent transition-colors"
+                  className="text-muted-foreground hover:text-accent transition-colors"
                 >
                   info@10xvelocity.ai
                 </a>
               </li>
-              <li className="text-velocity-muted pb-4">
+              <li className="text-muted-foreground pb-4">
                 10440 Bluegrass Pkwy
                 <br />
                 Louisville, KY 40299
@@ -33,7 +33,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/10x-velocity"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-velocity-muted hover:text-velocity-accent transition-colors inline-flex items-center gap-2"
+                  className="text-muted-foreground hover:text-accent transition-colors inline-flex items-center gap-2"
                 >
                   <Linkedin className="w-4 h-4" />
                   LinkedIn
@@ -54,39 +54,39 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-velocity-light">Solutions</h3>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Solutions</h3>
             <ul className="space-y-2">
-              <li><Link to="/services#process-automation" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Automation</Link></li>
-              <li><Link to="/services#data-analytics" className="text-velocity-muted hover:text-velocity-accent transition-colors">Data Analytics</Link></li>
-              <li><Link to="/services#team-augmentation" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Augmentation</Link></li>
-              <li><Link to="/services#process-mining" className="text-velocity-muted hover:text-velocity-accent transition-colors">Process Mining</Link></li>
-              <li><Link to="/services/phone-voice-agents" className="text-velocity-muted hover:text-velocity-accent transition-colors">Phone Voice Agents</Link></li>
-              <li><Link to="/services#team-training" className="text-velocity-muted hover:text-velocity-accent transition-colors">Team Training</Link></li>
-              <li><Link to="/services#opportunity-discovery" className="text-velocity-muted hover:text-velocity-accent transition-colors">Opportunity Discovery</Link></li>
-              <li><Link to="/prototypes" className="text-velocity-muted hover:text-velocity-accent transition-colors">Rapid Prototypes</Link></li>
+              <li><Link to="/services#process-automation" className="text-muted-foreground hover:text-accent transition-colors">Process Automation</Link></li>
+              <li><Link to="/services#data-analytics" className="text-muted-foreground hover:text-accent transition-colors">Data Analytics</Link></li>
+              <li><Link to="/services#team-augmentation" className="text-muted-foreground hover:text-accent transition-colors">Team Augmentation</Link></li>
+              <li><Link to="/services#process-mining" className="text-muted-foreground hover:text-accent transition-colors">Process Mining</Link></li>
+              <li><Link to="/services/phone-voice-agents" className="text-muted-foreground hover:text-accent transition-colors">Phone Voice Agents</Link></li>
+              <li><Link to="/services#team-training" className="text-muted-foreground hover:text-accent transition-colors">Team Training</Link></li>
+              <li><Link to="/services#opportunity-discovery" className="text-muted-foreground hover:text-accent transition-colors">Opportunity Discovery</Link></li>
+              <li><Link to="/prototypes" className="text-muted-foreground hover:text-accent transition-colors">Rapid Prototypes</Link></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-velocity-light">Resources</h3>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Resources</h3>
             <ul className="space-y-2">
-              <li><Link to="/industry-tools" className="text-velocity-muted hover:text-velocity-accent transition-colors">Tool Explorer</Link></li>
-              <li><Link to="/case-studies" className="text-velocity-muted hover:text-velocity-accent transition-colors">Case Studies</Link></li>
-              <li><a href="https://resources.10xvelocity.ai/" target="_blank" rel="noopener noreferrer" className="text-velocity-muted hover:text-velocity-accent transition-colors">Documentation</a></li>
-              <li><a href="https://resources.10xvelocity.ai/" target="_blank" rel="noopener noreferrer" className="text-velocity-muted hover:text-velocity-accent transition-colors">Playbooks</a></li>
-              <li><a href="https://resources.10xvelocity.ai/blog" target="_blank" rel="noopener noreferrer" className="text-velocity-muted hover:text-velocity-accent transition-colors">Blog</a></li>
+              <li><Link to="/industry-tools" className="text-muted-foreground hover:text-accent transition-colors">Tool Explorer</Link></li>
+              <li><Link to="/case-studies" className="text-muted-foreground hover:text-accent transition-colors">Case Studies</Link></li>
+              <li><a href="https://resources.10xvelocity.ai/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">Documentation</a></li>
+              <li><a href="https://resources.10xvelocity.ai/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">Playbooks</a></li>
+              <li><a href="https://resources.10xvelocity.ai/blog" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-accent transition-colors">Blog</a></li>
             </ul>
           </div>
           <div>
-            <h3 className="text-lg font-semibold mb-4 text-velocity-light">Legal</h3>
+            <h3 className="text-lg font-semibold mb-4 text-foreground">Legal</h3>
             <ul className="space-y-2">
-              <li><Link to="/privacy-policy" className="text-velocity-muted hover:text-velocity-accent transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/terms-of-service" className="text-velocity-muted hover:text-velocity-accent transition-colors">Terms of Service</Link></li>
-              <li><Link to="/privacy-policy#cookie-policy" className="text-velocity-muted hover:text-velocity-accent transition-colors">Cookie Policy</Link></li>
+              <li><Link to="/privacy-policy" className="text-muted-foreground hover:text-accent transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/terms-of-service" className="text-muted-foreground hover:text-accent transition-colors">Terms of Service</Link></li>
+              <li><Link to="/privacy-policy#cookie-policy" className="text-muted-foreground hover:text-accent transition-colors">Cookie Policy</Link></li>
             </ul>
           </div>
         </div>
-        <div className="pt-8 border-t border-white/10 grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
-          <p className="text-velocity-muted">
+        <div className="pt-8 border-t border-border grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+          <p className="text-muted-foreground">
             © {new Date().getFullYear()} 10x Velocity. All rights reserved.
           </p>
           <div className="flex items-center justify-center gap-6">
@@ -121,7 +121,7 @@ const Footer = () => {
               />
             </a>
           </div>
-          <p className="text-velocity-muted text-right">
+          <p className="text-muted-foreground text-right">
             Louisville, Kentucky
           </p>
         </div>

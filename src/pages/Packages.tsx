@@ -147,12 +147,12 @@ const Packages = () => {
 
         {/* Hero */}
         <section className="container mx-auto px-4 py-20 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">AI & Automation Packages</h1>
-            <p className="text-xl md:text-2xl text-velocity-light mb-4 text-balance">Choose the 10xV Core OS package that fits where your business is today.</p>
-            <p className="text-lg md:text-xl text-velocity-muted mb-4 text-pretty">Whether you need a clear expert recommendation, a tailored AI software plan, or hands-on implementation support, 10xVelocity helps you adopt artificial intelligence with clarity, control, and momentum.</p>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">AI & Automation Packages</h1>
+            <p className="text-xl md:text-2xl text-foreground mb-4 text-balance">Choose the 10xV Core OS package that fits where your business is today.</p>
+            <p className="text-lg md:text-xl text-muted-foreground mb-4 text-pretty">Whether you need a clear expert recommendation, a tailored AI software plan, or hands-on implementation support, 10xVelocity helps you adopt artificial intelligence with clarity, control, and momentum.</p>
           </div>
         </section>
 
@@ -164,44 +164,44 @@ const Packages = () => {
                 key={pkg.id}
                 className={
                   pkg.featured
-                    ? "glass-card p-8 flex flex-col h-full relative transform xl:-translate-y-2 border-2 border-velocity-accent"
-                    : "glass-card p-8 flex flex-col h-full"
+                    ? "bg-surface border border-border rounded-lg p-8 flex flex-col h-full relative transform xl:-translate-y-2 border-2 border-accent"
+                    : "bg-surface border border-border rounded-lg p-8 flex flex-col h-full"
                 }
               >
                 {pkg.featured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-velocity-accent text-white text-sm font-semibold px-4 py-1 rounded-full">Most Popular</div>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full">Most Popular</div>
                 )}
                 <h3 className="text-2xl font-semibold mb-1">{pkg.name}</h3>
                 {pkg.subtitle ? (
-                  <p className="text-velocity-accent text-sm font-medium mb-4">{pkg.subtitle}</p>
+                  <p className="text-accent text-sm font-medium mb-4">{pkg.subtitle}</p>
                 ) : (
                   <div className="mb-4" />
                 )}
                 <div className="mb-4">
-                  <span className="text-4xl font-bold heading-gradient">{pkg.price}</span>
-                  {pkg.priceNote && <span className="text-velocity-muted text-lg"> {pkg.priceNote}</span>}
+                  <span className="text-4xl font-bold">{pkg.price}</span>
+                  {pkg.priceNote && <span className="text-muted-foreground text-lg"> {pkg.priceNote}</span>}
                 </div>
-                <p className="text-sm text-velocity-muted mb-4">{pkg.priceDetail}</p>
-                <p className="text-velocity-muted mb-6">{pkg.description}</p>
-                <p className="text-sm font-medium text-velocity-light mb-3">{pkg.itemsLabel}</p>
+                <p className="text-sm text-muted-foreground mb-4">{pkg.priceDetail}</p>
+                <p className="text-muted-foreground mb-6">{pkg.description}</p>
+                <p className="text-sm font-medium text-foreground mb-3">{pkg.itemsLabel}</p>
                 <ul className="space-y-2 mb-6 flex-grow">
                   {pkg.items.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-velocity-accent shrink-0 mt-0.5" />
-                      <span className="text-velocity-muted text-sm">{item}</span>
+                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <span className="text-muted-foreground text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="text-sm text-velocity-muted mb-6 italic">
-                  <span className="font-medium text-velocity-light not-italic">Best for: </span>
+                <p className="text-sm text-muted-foreground mb-6 italic">
+                  <span className="font-medium text-foreground not-italic">Best for: </span>
                   {pkg.bestFor}
                 </p>
                 {pkg.featured ? (
-                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 bg-velocity-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors">
+                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors">
                     {pkg.ctaText}
                   </a>
                 ) : (
-                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 border border-velocity-accent text-velocity-accent font-medium rounded-lg hover:bg-velocity-accent/10 transition-colors">
+                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 border border-accent text-accent font-medium rounded-lg hover:bg-accent/10 transition-colors">
                     {pkg.ctaText}
                   </a>
                 )}
@@ -209,28 +209,28 @@ const Packages = () => {
             ))}
           </div>
 
-          <div className="mt-16 text-center max-w-2xl mx-auto glass-card p-10 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-velocity-accent/10 rounded-full blur-2xl -z-10" />
+          <div className="mt-16 text-center max-w-2xl mx-auto bg-surface border border-border rounded-lg p-10 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -z-10" />
             <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -z-10" />
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 heading-gradient">Not sure where to start?</h3>
-            <p className="text-lg text-velocity-muted">
-              Begin with the <a href="https://level.10xvelocity.ai/widget/form/q29C5iSULP1AO63r4Vjl" target="_blank" rel="noopener noreferrer" className="text-velocity-light font-medium hover:text-velocity-accent transition-colors border-b border-velocity-light hover:border-velocity-accent">AI Diagnostic Review</a> and get a clear expert recommendation before selecting the right implementation path.
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">Not sure where to start?</h3>
+            <p className="text-lg text-muted-foreground">
+              Begin with the <a href="https://level.10xvelocity.ai/widget/form/q29C5iSULP1AO63r4Vjl" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors border-b border-foreground hover:border-accent">AI Diagnostic Review</a> and get a clear expert recommendation before selecting the right implementation path.
             </p>
           </div>
         </section>
 
         {/* Timeline — How the Process Runs */}
         <section className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">How the Process Runs</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">How the Process Runs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {timeline.map((step) => (
-              <div key={step.days} className="glass-card p-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-velocity-accent/20 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-6 h-6 text-velocity-accent" />
+              <div key={step.days} className="bg-surface border border-border rounded-lg p-6 text-center">
+                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-6 h-6 text-accent" />
                 </div>
-                <p className="text-velocity-accent font-semibold text-sm mb-2">{step.days}</p>
+                <p className="text-accent font-semibold text-sm mb-2">{step.days}</p>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                <p className="text-velocity-muted text-sm">{step.description}</p>
+                <p className="text-muted-foreground text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -239,13 +239,13 @@ const Packages = () => {
         {/* Who This Is For */}
         <section className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">Who This Is For</h2>
-            <div className="glass-card p-8 md:p-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Who This Is For</h2>
+            <div className="bg-surface border border-border rounded-lg p-8 md:p-12">
               <ul className="space-y-4">
                 {audienceBullets.map((text) => (
                   <li key={text} className="flex items-start gap-3">
-                    <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-1" />
-                    <span className="text-lg text-velocity-muted">{text}</span>
+                    <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
+                    <span className="text-lg text-muted-foreground">{text}</span>
                   </li>
                 ))}
               </ul>
@@ -256,24 +256,24 @@ const Packages = () => {
         {/* The 10xVelocity Advantage */}
         <section className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-8 heading-gradient">The 10xVelocity Advantage</h2>
-            <p className="text-lg text-velocity-light mb-8">10xVelocity is pragmatic, human-centered, and contrarian to AI hype.</p>
-            <p className="text-velocity-muted text-lg mb-3">We do not sell complexity.</p>
-            <p className="text-velocity-muted text-lg mb-3">We do not chase shiny tools.</p>
-            <p className="text-velocity-muted text-lg mb-3">We do not automate broken processes.</p>
-            <p className="text-xl font-semibold text-velocity-light mt-6">We simplify first — then scale what matters.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">The 10xVelocity Advantage</h2>
+            <p className="text-lg text-foreground mb-8">10xVelocity is pragmatic, human-centered, and contrarian to AI hype.</p>
+            <p className="text-muted-foreground text-lg mb-3">We do not sell complexity.</p>
+            <p className="text-muted-foreground text-lg mb-3">We do not chase shiny tools.</p>
+            <p className="text-muted-foreground text-lg mb-3">We do not automate broken processes.</p>
+            <p className="text-xl font-semibold text-foreground mt-6">We simplify first — then scale what matters.</p>
           </div>
         </section>
 
         {/* CTA */}
         <section className="container mx-auto px-4 py-20">
-          <div className="max-w-4xl mx-auto text-center glass-card p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+          <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Move?
             </h2>
-            <p className="text-lg text-velocity-muted mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               Book a free discovery call to lock in your spot.
             </p>
             <DiscoveryButton />

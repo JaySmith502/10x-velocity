@@ -40,21 +40,21 @@ const AIGuideCertification = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "AI Guide Certification", path: "/programs/ai-guide-certification" }]} />
         {/* Hero Section */}
       <section id="ai-guide-certification" className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-velocity-dark/90 z-0" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-background/90 z-0" />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 heading-gradient animate-fade-up">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up">
               AI Guide Certification
             </h1>
-            <p className="text-xl md:text-2xl text-velocity-muted mb-6 animate-fade-up">
+            <p className="text-xl md:text-2xl text-muted-foreground mb-6 animate-fade-up">
               Become the bridge between AI and the people who need it most.
             </p>
-            <p className="text-lg text-velocity-light/80 max-w-3xl mx-auto mb-10 animate-fade-up">
+            <p className="text-lg text-foreground/80 max-w-3xl mx-auto mb-10 animate-fade-up">
               Thousands of small business owners are smart, successful, and completely overwhelmed by generative AI. They don't need a tech genius—they need someone patient who can meet them where they are. That's where you come in.
             </p>
             <Button
               onClick={() => document.getElementById("register-form")?.scrollIntoView({ behavior: "smooth" })}
-              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all text-lg animate-fade-up"
+              className="bg-accent text-background font-medium hover:bg-accent/90 transition-all text-lg animate-fade-up"
             >
               Register Now <ArrowRight className="w-5 h-5" />
             </Button>
@@ -63,28 +63,28 @@ const AIGuideCertification = () => {
       </section>
 
       {/* Who This Is For */}
-      <section className="py-16 bg-[#151A24]">
+      <section className="py-16 bg-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               Who This Is For
             </h2>
-            <p className="text-center text-velocity-muted mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               High school students who are ready to turn their tech comfort into real-world impact.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {audience.map((item, index) => (
-                <div key={index} className="glass-card p-6">
+                <div key={index} className="bg-surface border border-border rounded-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-velocity-accent/20 p-2 rounded-full flex-shrink-0 mt-1">
-                      <Check className="w-5 h-5 text-velocity-accent" />
+                    <div className="bg-accent/20 p-2 rounded-full flex-shrink-0 mt-1">
+                      <Check className="w-5 h-5 text-accent" />
                     </div>
-                    <p className="text-velocity-light">{item}</p>
+                    <p className="text-foreground">{item}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <p className="text-center text-velocity-muted mt-8 italic">
+            <p className="text-center text-muted-foreground mt-8 italic">
               No prior professional experience required. Just curiosity, patience, and a willingness to listen more than you talk.
             </p>
           </div>
@@ -92,25 +92,25 @@ const AIGuideCertification = () => {
       </section>
 
       {/* What You'll Learn */}
-      <section className="py-16 bg-velocity-dark/80">
+      <section className="py-16 bg-background/80">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
               What You'll Learn
             </h2>
-            <p className="text-center text-velocity-muted mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               This isn't a ChatGPT tutorial—you'll figure that out on your own. This is a consulting and communication course that uses AI as its context.
             </p>
             <div className="space-y-6">
               {learningAreas.map((area, index) => (
-                <div key={index} className="glass-card p-6">
+                <div key={index} className="bg-surface border border-border rounded-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-velocity-accent/20 p-3 rounded-full flex-shrink-0">
-                      <area.icon className="w-6 h-6 text-velocity-accent" />
+                    <div className="bg-accent/20 p-3 rounded-full flex-shrink-0">
+                      <area.icon className="w-6 h-6 text-accent" />
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-velocity-light mb-2">{area.title}</h3>
-                      <p className="text-velocity-muted">{area.description}</p>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{area.title}</h3>
+                      <p className="text-muted-foreground">{area.description}</p>
                     </div>
                   </div>
                 </div>
@@ -121,22 +121,22 @@ const AIGuideCertification = () => {
       </section>
 
       {/* What You'll Get */}
-      <section className="py-16 bg-[#151A24]">
+      <section className="py-16 bg-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               What You'll Get
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {outcomes.map((outcome, index) => (
-                <div key={index} className="glass-card p-6 hover:scale-105 transition-transform duration-300">
+                <div key={index} className="bg-surface border border-border rounded-lg p-6 hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-velocity-accent/20 p-2 rounded-full">
-                      <outcome.icon className="w-5 h-5 text-velocity-accent" />
+                    <div className="bg-accent/20 p-2 rounded-full">
+                      <outcome.icon className="w-5 h-5 text-accent" />
                     </div>
-                    <h3 className="text-xl font-semibold text-velocity-light">{outcome.title}</h3>
+                    <h3 className="text-xl font-semibold text-foreground">{outcome.title}</h3>
                   </div>
-                  <p className="text-velocity-muted">{outcome.description}</p>
+                  <p className="text-muted-foreground">{outcome.description}</p>
                 </div>
               ))}
             </div>
@@ -145,22 +145,22 @@ const AIGuideCertification = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-16 bg-velocity-dark/80">
+      <section className="py-16 bg-background/80">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               How It Works
             </h2>
-            <div className="glass-card p-8">
+            <div className="bg-surface border border-border rounded-lg p-8">
               <div className="space-y-8">
                 {steps.map((step, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-velocity-accent/20 rounded-full flex items-center justify-center text-velocity-accent font-bold">
+                    <div className="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold">
                       {step.number}
                     </div>
                     <div>
-                      <h3 className="text-xl font-semibold text-velocity-light mb-2">{step.title}</h3>
-                      <p className="text-velocity-muted">{step.description}</p>
+                      <h3 className="text-xl font-semibold text-foreground mb-2">{step.title}</h3>
+                      <p className="text-muted-foreground">{step.description}</p>
                     </div>
                   </div>
                 ))}
@@ -171,18 +171,18 @@ const AIGuideCertification = () => {
       </section>
 
       {/* Program Details */}
-      <section className="py-16 bg-[#151A24]">
+      <section className="py-16 bg-foreground">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Program Details
             </h2>
-            <div className="glass-card p-8">
+            <div className="bg-surface border border-border rounded-lg p-8">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {details.map((detail, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <span className="text-velocity-accent font-semibold whitespace-nowrap">{detail.label}:</span>
-                    <span className="text-velocity-light">{detail.value}</span>
+                    <span className="text-accent font-semibold whitespace-nowrap">{detail.label}:</span>
+                    <span className="text-foreground">{detail.value}</span>
                   </div>
                 ))}
               </div>
@@ -192,12 +192,12 @@ const AIGuideCertification = () => {
       </section>
 
       {/* CTA Section */}
-      <section id="register-form" className="py-16 bg-velocity-dark/80 text-center">
+      <section id="register-form" className="py-16 bg-background/80 text-center">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Get Started?
           </h2>
-          <p className="text-velocity-muted mb-8 max-w-2xl mx-auto">
+          <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
             Join the pilot cohort and become one of the first certified AI Guides.
           </p>
           <div className="max-w-2xl mx-auto">

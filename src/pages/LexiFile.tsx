@@ -92,24 +92,24 @@ const LexiFile = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lexi-File", path: "/lexi-file" }]} />
         {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Lexi-File<sup className="text-2xl md:text-3xl">™</sup>
           </h1>
-          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-velocity-light">
+          <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">
             AI-Powered Document Search & Retrieval for High-Volume Knowledge Work
           </h2>
-          <p className="text-lg md:text-xl text-velocity-muted mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Cut Research Time in Half-Without Sacrificing Accuracy
           </p>
-          <p className="text-lg text-velocity-muted mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             For law firms, accounting practices, nonprofits, and other document-heavy organizations, 
             digging through shared drives, PDFs, emails, or intranets wastes time, introduces errors, 
             and frustrates your team. Our Smart Knowledge Assistant changes that.
           </p>
-          <p className="text-lg text-velocity-muted mb-8 max-w-3xl mx-auto">
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
             We deploy a private, secure AI system that lets your team ask plain-language questions 
             and get immediate, accurate answers-grounded only in your data.
           </p>
@@ -119,21 +119,21 @@ const LexiFile = () => {
       {/* Key Features */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Key Features
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div
                 key={feature.title}
-                className="glass-card p-6 flex flex-col h-full animate-fade-up"
+                className="bg-surface border border-border rounded-lg p-6 flex flex-col h-full animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 rounded-full bg-velocity-accent/20 flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-velocity-accent" />
+                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-velocity-light">{feature.title}</h3>
-                <p className="text-velocity-muted">{feature.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
               </div>
             ))}
           </div>
@@ -149,11 +149,11 @@ const LexiFile = () => {
               <div className="w-24 h-0.5 bg-gradient-to-r from-emerald-400 to-green-300 mx-auto shadow-[0_0_20px_rgba(52,211,153,0.8)]"></div>
               <div className="absolute inset-0 w-24 h-0.5 bg-gradient-to-r from-emerald-400 to-green-300 mx-auto blur-sm opacity-75"></div>
             </div>
-            <p className="text-lg text-velocity-muted mb-6">
+            <p className="text-lg text-muted-foreground mb-6">
               We're confident this solution will transform how your team works. After onboarding (usually completed in one week), 
               you'll get 30 days to evaluate the system inside your real environment.
             </p>
-            <p className="text-lg text-velocity-muted mb-6">
+            <p className="text-lg text-muted-foreground mb-6">
               If you decide not to continue, we'll refund 50% of your onboarding fee-because we believe in shared commitment, not just easy exits.
             </p>
             <p className="text-lg font-medium text-emerald-300 mb-8">
@@ -174,21 +174,21 @@ const LexiFile = () => {
       {/* Who This Is For */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Who This Is For
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {useCases.map((useCase, index) => (
               <div
                 key={useCase.title}
-                className="glass-card p-6 text-center animate-fade-up"
+                className="bg-surface border border-border rounded-lg p-6 text-center animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-16 h-16 rounded-full bg-velocity-accent/20 flex items-center justify-center mb-6 mx-auto">
-                  <useCase.icon className="w-8 h-8 text-velocity-accent" />
+                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6 mx-auto">
+                  <useCase.icon className="w-8 h-8 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 text-velocity-light">{useCase.title}</h3>
-                <p className="text-velocity-muted">{useCase.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-foreground">{useCase.title}</h3>
+                <p className="text-muted-foreground">{useCase.description}</p>
               </div>
             ))}
           </div>
@@ -198,15 +198,15 @@ const LexiFile = () => {
       {/* What You Get */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             What You Get
           </h2>
-          <div className="glass-card p-8 animate-fade-up">
+          <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whatYouGet.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-1" />
-                  <span className="text-velocity-muted">{item}</span>
+                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
+                  <span className="text-muted-foreground">{item}</span>
                 </div>
               ))}
             </div>
@@ -217,22 +217,22 @@ const LexiFile = () => {
       {/* Pricing */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Pricing
           </h2>
-          <div className="glass-card p-8 animate-fade-up">
+          <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up">
             <div className="space-y-6">
-              <div className="border-b border-velocity-muted/20 pb-4">
-                <h3 className="text-xl font-semibold text-velocity-light mb-2">Setup Fee</h3>
-                <p className="text-velocity-muted">Custom based on size and complexity (starts at $2,500)</p>
+              <div className="border-b border-muted-foreground/20 pb-4">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Setup Fee</h3>
+                <p className="text-muted-foreground">Custom based on size and complexity (starts at $2,500)</p>
               </div>
-              <div className="border-b border-velocity-muted/20 pb-4">
-                <h3 className="text-xl font-semibold text-velocity-light mb-2">Monthly Per-User</h3>
-                <p className="text-velocity-muted">$35/user depending on plan tier</p>
+              <div className="border-b border-muted-foreground/20 pb-4">
+                <h3 className="text-xl font-semibold text-foreground mb-2">Monthly Per-User</h3>
+                <p className="text-muted-foreground">$35/user depending on plan tier</p>
               </div>
               <div>
-                <h3 className="text-xl font-semibold text-velocity-light mb-2">Premium Add-ons Available</h3>
-                <p className="text-velocity-muted">Audit logging, advanced compliance configs, CRM syncs</p>
+                <h3 className="text-xl font-semibold text-foreground mb-2">Premium Add-ons Available</h3>
+                <p className="text-muted-foreground">Audit logging, advanced compliance configs, CRM syncs</p>
               </div>
             </div>
           </div>
@@ -242,15 +242,15 @@ const LexiFile = () => {
       {/* Why 10x Velocity */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">
             Why 10x Velocity?
           </h2>
-          <div className="glass-card p-8 animate-fade-up">
-            <p className="text-lg text-velocity-muted mb-6">
+          <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up">
+            <p className="text-lg text-muted-foreground mb-6">
               We combine deep expertise in automation, secure system integration, and industry-specific AI implementation. 
               Our team has helped law firms, nonprofits, and regulated businesses adopt AI responsibly and at speed-without the tech overhead.
             </p>
-            <p className="text-xl font-semibold text-velocity-light">
+            <p className="text-xl font-semibold text-foreground">
               We don't just sell software. We deliver working systems.
             </p>
           </div>
@@ -260,10 +260,10 @@ const LexiFile = () => {
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">
             Book a Discovery Call
           </h2>
-          <p className="text-lg md:text-xl text-velocity-muted mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Let's talk about how this can save hours per week across your team.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -271,7 +271,7 @@ const LexiFile = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-velocity-accent text-[#151A24] hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
+              className="border-accent text-foreground hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
             >
               <Link to="/contact">
                 Contact Us <ArrowRight className="w-5 h-5" />

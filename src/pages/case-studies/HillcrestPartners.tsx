@@ -92,14 +92,14 @@ const HillcrestPartners = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Hillcrest Partners", path: "/case-studies/hillcrest-partners" }]} />
         <article className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               10x Velocity Transforms Hillcrest Partners into a High-Growth Real Estate Powerhouse
           </h1>
           
           {/* Client Overview */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Client Overview</h2>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               Hillcrest Partners (HCP) is a real estate investment and remodeling firm specializing in flipping, buying/holding, and wholesaling properties. Utilizing a data-driven approach, HCP identifies undervalued properties, renovates them for maximum ROI, and leverages digital marketing to sell quickly and efficiently. However, as the business scaled, operational inefficiencies began to slow down growth and profitability.
             </p>
           </section>
@@ -107,10 +107,10 @@ const HillcrestPartners = () => {
           {/* The Challenge */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               Despite HCP's strong market position, several bottlenecks threatened its ability to scale:
             </p>
-            <ul className="list-disc list-inside text-velocity-muted space-y-4 ml-4">
+            <ul className="list-disc list-inside text-muted-foreground space-y-4 ml-4">
               <li>Manual Project Tracking: Disjointed workflows across Trello, FlipperForce, and MLS led to inefficiencies in project management.</li>
               <li>Inconsistent Lead Nurturing: Lack of structured CRM automation (HubSpot) reduced follow-up efficiency for potential sellers and buyers.</li>
               <li>Limited Digital Presence: Social media was underutilized, impacting brand awareness and inbound lead generation.</li>
@@ -124,11 +124,11 @@ const HillcrestPartners = () => {
             <h2 className="text-2xl font-bold mb-6">The 10x Velocity Solution</h2>
             <div className="grid gap-8">
               {solutions.map((solution, index) => (
-                <div key={index} className="glass-card p-8">
-                  <h3 className="text-xl font-semibold mb-3 text-velocity-accent">
+                <div key={index} className="bg-surface border border-border rounded-lg p-8">
+                  <h3 className="text-xl font-semibold mb-3 text-accent">
                     {solution.title}
                   </h3>
-                  <p className="text-velocity-muted">
+                  <p className="text-muted-foreground">
                     {solution.description}
                   </p>
                 </div>
@@ -139,15 +139,15 @@ const HillcrestPartners = () => {
           {/* Results & Impact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">Results & Impact</h2>
-            <div className="glass-card p-8">
-              <p className="text-velocity-muted mb-6">
+            <div className="bg-surface border border-border rounded-lg p-8">
+              <p className="text-muted-foreground mb-6">
                 After six months of implementation, Hillcrest Partners achieved game-changing results:
               </p>
               <div className="grid gap-4">
                 {results.map((result, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-velocity-accent shrink-0" />
-                    <span className="text-velocity-muted">{result}</span>
+                    <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
+                    <span className="text-muted-foreground">{result}</span>
                   </div>
                 ))}
               </div>
@@ -157,10 +157,10 @@ const HillcrestPartners = () => {
           {/* Conclusion */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               By leveraging 10x Velocity's AI automation and workflow optimization, HCP evolved from a successful but process-heavy real estate firm into a lean, tech-driven powerhouse capable of scaling at 10x speed. With predictive analytics, streamlined workflows, and AI-powered marketing, HCP now dominates the real estate investment space with unmatched efficiency.
             </p>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               10x Velocity's strategic intervention has positioned HCP for long-term scalability, maximizing deal flow, reducing overhead, and accelerating revenue growth.
             </p>
           </section>
@@ -168,13 +168,13 @@ const HillcrestPartners = () => {
           {/* What's Next */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               With its optimized operations, HCP is now expanding into multi-property acquisition strategies, AI-driven home valuation modeling, and enhanced nationwide wholesaling, ensuring continued 10x scalability.
             </p>
-            <p className="text-velocity-muted mb-6">
-              Explore our <Link to="/services/data-cleaning" className="text-velocity-accent hover:underline">data cleaning services</Link> and <Link to="/services" className="text-velocity-accent hover:underline">analytics solutions</Link> to consolidate your data the same way.
+            <p className="text-muted-foreground mb-6">
+              Explore our <Link to="/services/data-cleaning" className="text-accent hover:underline">data cleaning services</Link> and <Link to="/services" className="text-accent hover:underline">analytics solutions</Link> to consolidate your data the same way.
             </p>
-            <div className="glass-card p-8 text-center">
+            <div className="bg-surface border border-border rounded-lg p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your real estate business?
               </p>

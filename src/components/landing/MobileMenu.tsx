@@ -27,12 +27,12 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   return (
     <div className="fixed inset-0 z-50 flex">
       <div 
-        className="absolute inset-0 bg-black/70"
+        className="absolute inset-0 bg-foreground/70"
         onClick={onClose}
       />
       
       <div 
-        className="relative w-4/5 max-w-xs h-full z-10 bg-[#1A1F2C]"
+        className="relative w-4/5 max-w-xs h-full z-10 bg-background"
         style={{
           backgroundColor: "#1A1F2C"
         }}
@@ -41,14 +41,14 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
           <div className="p-4 flex justify-end">
             <button 
               onClick={onClose}
-              className="text-velocity-muted hover:text-velocity-light p-2"
+              className="text-muted-foreground hover:text-foreground p-2"
               aria-label="Close menu"
             >
               <X className="w-6 h-6" />
             </button>
           </div>
           
-          <div className="px-4 py-2 flex flex-col items-start bg-[#1A1F2C]">
+          <div className="px-4 py-2 flex flex-col items-start bg-background">
             <div className="mb-6">
               <Link to="/" className="flex items-center" onClick={onClose}>
                 <img
@@ -64,7 +64,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             <nav className="flex flex-col items-start w-full space-y-6">
               <div className="w-full">
                 <button 
-                  className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2 flex items-center justify-between w-full"
+                  className="text-muted-foreground hover:text-foreground transition-colors font-bold py-2 flex items-center justify-between w-full"
                   onClick={() => setServicesOpen(!servicesOpen)}
                 >
                   Services
@@ -76,59 +76,59 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
                 </button>
                 
                 {servicesOpen && (
-                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-velocity-accent/20 pl-4">
+                  <div className="ml-4 mt-2 space-y-2 border-l-2 border-accent/20 pl-4">
                     <Link 
                       to="/services" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       All Services
                     </Link>
                     <Link 
                       to="/services/data-cleaning" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       Data Cleaning
                     </Link>
                     <Link 
                       to="/services/phone-voice-agents" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       Phone Voice Agents
                     </Link>
                     <Link 
                       to="/services/smart-bots" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       Smart Bots
                     </Link>
                     <Link 
                       to="/power-automate" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       Power Automate
                     </Link>
                     <Link 
                       to="/lexi-file" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       Lexi-File
                     </Link>
                     <Link 
                       to="/services/ai-workshops" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       AI Workshops
                     </Link>
                     <Link 
                       to="/prototypes" 
-                      className="block text-velocity-muted hover:text-velocity-light transition-colors py-2"
+                      className="block text-muted-foreground hover:text-foreground transition-colors py-2"
                       onClick={onClose}
                     >
                       Rapid Prototypes
@@ -139,7 +139,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               
               <Link 
                 to="/about" 
-                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
+                className="text-muted-foreground hover:text-foreground transition-colors font-bold py-2"
                 onClick={onClose}
               >
                 About
@@ -147,27 +147,27 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               
               <Link 
                 to="/case-studies" 
-                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
+                className="text-muted-foreground hover:text-foreground transition-colors font-bold py-2"
                 onClick={onClose}
               >
                 Case Studies
               </Link>
               <Link 
                 to="/savings-calculator" 
-                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
+                className="text-muted-foreground hover:text-foreground transition-colors font-bold py-2"
                 onClick={onClose}
               >
                 Savings Calculator
               </Link>
               <Link 
                 to="/demo" 
-                className="text-velocity-muted hover:text-velocity-light transition-colors font-bold py-2"
+                className="text-muted-foreground hover:text-foreground transition-colors font-bold py-2"
                 onClick={onClose}
               >
                 Get Demo
               </Link>
               <a href="/contact" 
-                className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-bold px-6 py-3 rounded-lg w-full text-center mt-4"
+                className="bg-accent text-foreground font-bold px-6 py-3 rounded-lg w-full text-center mt-4"
                 onClick={onClose}
               >
                 Contact Us

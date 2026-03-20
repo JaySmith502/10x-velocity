@@ -91,14 +91,14 @@ const CatalystGroup = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Catalyst Group", path: "/case-studies/catalyst-group" }]} />
         <article className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               10x Velocity Propels The Catalyst Group to Unprecedented Growth in Business Investment & Acquisitions
           </h1>
           
           {/* Client Overview */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Client Overview</h2>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               The Catalyst Group (TCG) is a business portfolio and investment firm specializing in acquisitions, scaling companies from 2x to 10x growth, and unlocking untapped market opportunities. TCG applies a structured approach to identifying high-potential businesses, streamlining operations, and maximizing value creation. However, as deal flow increased, inefficiencies in workflow management, lead tracking, and digital marketing threatened scalability.
             </p>
           </section>
@@ -106,10 +106,10 @@ const CatalystGroup = () => {
           {/* The Challenge */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               Despite a strong acquisition pipeline, TCG faced several operational challenges that hindered rapid expansion and portfolio optimization:
             </p>
-            <ul className="list-disc list-inside text-velocity-muted space-y-4 ml-4">
+            <ul className="list-disc list-inside text-muted-foreground space-y-4 ml-4">
               <li>Fragmented Deal Flow Management: Investment opportunities were scattered across multiple platforms, slowing evaluation and decision-making.</li>
               <li>Inefficient Lead Nurturing & CRM Utilization: The lack of structured automation in HubSpot and LinkedIn outreach (CoPilot AI) resulted in missed investor and acquisition leads.</li>
               <li>Under-Leveraged AI for Market Intelligence: TCG needed deeper AI-driven insights for due diligence, market analysis, and competitor tracking.</li>
@@ -123,11 +123,11 @@ const CatalystGroup = () => {
             <h2 className="text-2xl font-bold mb-6">The 10x Velocity Solution</h2>
             <div className="grid gap-8">
               {solutions.map((solution, index) => (
-                <div key={index} className="glass-card p-8">
-                  <h3 className="text-xl font-semibold mb-3 text-velocity-accent">
+                <div key={index} className="bg-surface border border-border rounded-lg p-8">
+                  <h3 className="text-xl font-semibold mb-3 text-accent">
                     {solution.title}
                   </h3>
-                  <p className="text-velocity-muted">
+                  <p className="text-muted-foreground">
                     {solution.description}
                   </p>
                 </div>
@@ -138,15 +138,15 @@ const CatalystGroup = () => {
           {/* Results & Impact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">Results & Impact</h2>
-            <div className="glass-card p-8">
-              <p className="text-velocity-muted mb-6">
+            <div className="bg-surface border border-border rounded-lg p-8">
+              <p className="text-muted-foreground mb-6">
                 After six months of AI-powered transformation, The Catalyst Group achieved 10x operational efficiency and deal flow acceleration:
               </p>
               <div className="grid gap-4">
                 {results.map((result, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-velocity-accent shrink-0" />
-                    <span className="text-velocity-muted">{result}</span>
+                    <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
+                    <span className="text-muted-foreground">{result}</span>
                   </div>
                 ))}
               </div>
@@ -156,10 +156,10 @@ const CatalystGroup = () => {
           {/* Conclusion */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               By integrating 10x Velocity's AI-driven automation and business intelligence, TCG transformed into a high-performance, data-driven investment powerhouse. AI-powered deal sourcing, automated lead nurturing, and predictive market insights have enabled TCG to scale acquisitions efficiently, strengthen investor relations, and maximize portfolio growth.
             </p>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               10x Velocity's strategic interventions have revolutionized TCG's investment model, setting a new benchmark for AI-enhanced business scaling and acquisitions.
             </p>
           </section>
@@ -167,13 +167,13 @@ const CatalystGroup = () => {
           {/* What's Next */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               With optimized deal flow management and investor engagement, TCG is expanding into AI-driven risk assessment, automated due diligence modeling, and global investment outreach, ensuring continued 10x scalability.
             </p>
-            <p className="text-velocity-muted mb-6">
-              See how our <Link to="/services" className="text-velocity-accent hover:underline">AI automation and analytics services</Link> can accelerate your deal flow and market intelligence.
+            <p className="text-muted-foreground mb-6">
+              See how our <Link to="/services" className="text-accent hover:underline">AI automation and analytics services</Link> can accelerate your deal flow and market intelligence.
             </p>
-            <div className="glass-card p-8 text-center">
+            <div className="bg-surface border border-border rounded-lg p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your investment firm?
               </p>

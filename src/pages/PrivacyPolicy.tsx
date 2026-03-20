@@ -30,17 +30,17 @@ const PrivacyPolicy = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy-policy" }]} />
       <div className="max-w-4xl mx-auto">
         <div className="mb-8">
-          <Link to="/" className="inline-flex items-center text-velocity-muted hover:text-velocity-accent transition-colors">
+          <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-accent transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" />
             Back to Home
           </Link>
         </div>
 
-        <h1 className="text-4xl font-bold mb-8 text-velocity-light">Privacy Policy</h1>
+        <h1 className="text-4xl font-bold mb-8 text-foreground">Privacy Policy</h1>
         
-        <div className="space-y-8 text-velocity-muted">
+        <div className="space-y-8 text-muted-foreground">
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Introduction</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Introduction</h2>
             <p className="mb-4">
               At 10x Velocity, we respect your privacy and are committed to protecting your personal data. This privacy policy will inform you about how we look after your personal data when you visit our website and tell you about your privacy rights and how the law protects you.
             </p>
@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Information We Collect</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Information We Collect</h2>
             <p className="mb-4">
               We collect personal information that you voluntarily provide to us when you express an interest in obtaining information about us or our products and services, when you participate in activities on the website, or otherwise when you contact us.
             </p>
@@ -68,7 +68,7 @@ const PrivacyPolicy = () => {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">How We Use Your Information</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">How We Use Your Information</h2>
             <p className="mb-4">
               We use personal information collected via our website for a variety of business purposes described below:
             </p>
@@ -86,7 +86,7 @@ const PrivacyPolicy = () => {
           </section>
 
           <section id="ai-chatbot">
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">AI-Powered Chatbot</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">AI-Powered Chatbot</h2>
             <p className="mb-4">
               We utilize artificial intelligence (AI) technology to power our chatbot service. By using our chatbot, you acknowledge and agree to the following:
             </p>
@@ -103,7 +103,7 @@ const PrivacyPolicy = () => {
           </section>
           
           <section id="cookie-policy">
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Cookie Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Cookie Policy</h2>
             <p className="mb-4">
               Our website uses cookies to distinguish you from other users of our website. This helps us to provide you with a good experience when you browse our website and also allows us to improve our site.
             </p>
@@ -125,7 +125,7 @@ const PrivacyPolicy = () => {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Cookies and Tracking Technologies</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Cookies and Tracking Technologies</h2>
             <p className="mb-4">
               We use cookies and similar tracking technologies to track the activity on our website and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.
             </p>
@@ -135,7 +135,7 @@ const PrivacyPolicy = () => {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Data Security</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Data Security</h2>
             <p className="mb-4">
               The security of your data is important to us, but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.
             </p>
@@ -145,7 +145,7 @@ const PrivacyPolicy = () => {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Legal Basis for Processing</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Legal Basis for Processing</h2>
             <p className="mb-4">
               We process your personal information, including data processed through our AI systems, on the following legal bases:
             </p>
@@ -158,7 +158,7 @@ const PrivacyPolicy = () => {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Changes to This Privacy Policy</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Changes to This Privacy Policy</h2>
             <p className="mb-4">
               We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
             </p>
@@ -168,19 +168,19 @@ const PrivacyPolicy = () => {
           </section>
           
           <section>
-            <h2 className="text-2xl font-semibold mb-4 text-velocity-light">Contact Us</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-foreground">Contact Us</h2>
             <p className="mb-4">
               If you have any questions about this Privacy Policy, you can contact us:
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>By email: info@10xvelocity.ai</li>
-              <li>By visiting the contact page on our website: <a href="/contact" className="text-velocity-accent hover:underline">Contact Us</a></li>
+              <li>By visiting the contact page on our website: <a href="/contact" className="text-accent hover:underline">Contact Us</a></li>
             </ul>
           </section>
         </div>
         
-        <div className="mt-12 pt-8 border-t border-white/10">
-          <p className="text-velocity-muted">Last updated: July 1, 2024</p>
+        <div className="mt-12 pt-8 border-t border-border">
+          <p className="text-muted-foreground">Last updated: July 1, 2024</p>
         </div>
       </div>
     </main>

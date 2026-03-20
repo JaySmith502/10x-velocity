@@ -55,13 +55,13 @@ const Services = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Our Services
           </h1>
-          <p className="text-lg md:text-xl text-velocity-muted mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Comprehensive AI solutions to transform your operations and accelerate growth.
             We help businesses and nonprofits leverage cutting-edge technology to overcome capacity challenges.
           </p>
@@ -75,30 +75,30 @@ const Services = () => {
             <div
               key={service.title}
               id={service.id}
-              className="glass-card p-8 flex flex-col h-full animate-fade-up"
+              className="bg-surface border border-border rounded-lg p-8 flex flex-col h-full animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="mb-6">
-                <div className="w-14 h-14 rounded-full bg-velocity-accent/20 flex items-center justify-center mb-4">
-                  <service.icon className="w-7 h-7 text-velocity-accent" />
+                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                  <service.icon className="w-7 h-7 text-accent" />
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-velocity-muted mb-4">{service.description}</p>
+                <p className="text-muted-foreground mb-4">{service.description}</p>
               </div>
               <div className="mt-auto">
-                <h4 className="font-medium mb-2 text-velocity-light">Key Benefits:</h4>
+                <h4 className="font-medium mb-2 text-foreground">Key Benefits:</h4>
                 <ul className="space-y-2 mb-6">
                   {service.benefits.map((benefit, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-1" />
-                      <span className="text-velocity-muted">{benefit}</span>
+                      <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
+                      <span className="text-muted-foreground">{benefit}</span>
                     </li>
                   ))}
                 </ul>
                 {service.link && (
                   <Link 
                     to={service.link} 
-                    className="text-velocity-accent hover:text-velocity-light font-medium flex items-center gap-2 mt-4"
+                    className="text-accent hover:text-foreground font-medium flex items-center gap-2 mt-4"
                   >
                     Learn more <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -113,7 +113,7 @@ const Services = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
-          <div className="glass-card p-8">
+          <div className="bg-surface border border-border rounded-lg p-8">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
@@ -128,13 +128,13 @@ const Services = () => {
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center glass-card p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Operations?
           </h2>
-          <p className="text-lg text-velocity-muted mb-8">
+          <p className="text-lg text-muted-foreground mb-8">
             Book a free 15-minute discovery call to discuss how our services can help your organization.
           </p>
           <DiscoveryButton />

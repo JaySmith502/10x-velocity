@@ -34,14 +34,14 @@ const PowerAutomate = () => {
       <div className="min-h-screen flex flex-col">
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Power Automate", path: "/power-automate" }]} />
         <section className="container mx-auto px-4 py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Microsoft Power Automate Expertise
           </h1>
-          <p className="text-lg md:text-xl text-velocity-muted mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Transform your enterprise workflows with our Microsoft Power Automate solutions.
             Automate complex business processes, integrate disparate systems, and unlock new levels of operational efficiency.
           </p>
@@ -50,15 +50,15 @@ const PowerAutomate = () => {
       </section>
 
       <section className="container mx-auto px-4">
-        <div className="glass-card p-1 rounded-lg max-w-4xl mx-auto">
+        <div className="bg-surface border border-border rounded-lg p-1 rounded-lg max-w-4xl mx-auto">
           <div className="grid grid-cols-4 gap-1">
             {tabs.map((tab) => (
               <button
                 key={tab.id}
                 className={`py-3 px-4 rounded-md transition-all text-sm sm:text-base font-medium ${
                   activeTab === tab.id
-                    ? "bg-velocity-accent/20 text-velocity-accent"
-                    : "hover:bg-gray-800/50 text-velocity-muted"
+                    ? "bg-accent/20 text-accent"
+                    : "hover:bg-gray-800/50 text-muted-foreground"
                 }`}
                 onClick={() => setActiveTab(tab.id as TabType)}
               >
@@ -75,39 +75,39 @@ const PowerAutomate = () => {
             <div className="space-y-16 animate-fade">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-3xl font-bold mb-6 heading-gradient">Enterprise-Grade Automation</h2>
-                  <p className="text-velocity-muted mb-6">
+                  <h2 className="text-3xl font-bold mb-6">Enterprise-Grade Automation</h2>
+                  <p className="text-muted-foreground mb-6">
                     Microsoft Power Automate (formerly Flow) is a powerful cloud-based service that allows enterprises to create automated workflows between applications and services.
                     It helps organizations automate repetitive tasks, streamline processes, and improve productivity.
                   </p>
-                  <p className="text-velocity-muted">
+                  <p className="text-muted-foreground">
                     At 10x Velocity, we specialize in harnessing the full potential of Power Automate to create sophisticated
                     automation solutions tailored to your enterprise's unique challenges and objectives.
                   </p>
                 </div>
-                <div className="glass-card p-8 rounded-xl">
+                <div className="bg-surface border border-border rounded-lg p-8 rounded-xl">
                   <h3 className="text-xl font-semibold mb-6 text-center">Our Power Automate Services</h3>
                   <ul className="space-y-4">
                     {services.map((service, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-velocity-accent shrink-0 mt-0.5" />
-                        <span className="text-velocity-muted">{service}</span>
+                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                        <span className="text-muted-foreground">{service}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
               </div>
 
-              <div className="glass-card p-8 rounded-xl">
+              <div className="bg-surface border border-border rounded-lg p-8 rounded-xl">
                 <h2 className="text-2xl font-bold mb-6 text-center">Why Choose 10x Velocity for Power Automate?</h2>
                 <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
                   {reasons.map((reason, index) => (
                     <div key={index} className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-velocity-accent/20 flex items-center justify-center mx-auto mb-4">
-                        <reason.icon className="w-8 h-8 text-velocity-accent" />
+                      <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+                        <reason.icon className="w-8 h-8 text-accent" />
                       </div>
                       <h3 className="font-semibold mb-2">{reason.title}</h3>
-                      <p className="text-sm text-velocity-muted">{reason.description}</p>
+                      <p className="text-sm text-muted-foreground">{reason.description}</p>
                     </div>
                   ))}
                 </div>
@@ -117,21 +117,21 @@ const PowerAutomate = () => {
 
           {activeTab === 'features' && (
             <div className="space-y-12 animate-fade">
-              <h2 className="text-3xl font-bold text-center mb-12 heading-gradient">
+              <h2 className="text-3xl font-bold text-center mb-12">
                 Power Automate Features We Leverage
               </h2>
               
               <div className="grid md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="glass-card p-8 rounded-xl">
-                    <h3 className="text-xl font-semibold mb-4 text-velocity-accent">{feature.title}</h3>
-                    <p className="text-velocity-muted mb-6">{feature.description}</p>
+                  <div key={index} className="bg-surface border border-border rounded-lg p-8 rounded-xl">
+                    <h3 className="text-xl font-semibold mb-4 text-accent">{feature.title}</h3>
+                    <p className="text-muted-foreground mb-6">{feature.description}</p>
                     <h4 className="font-medium mb-3">Common Applications:</h4>
                     <ul className="space-y-2">
                       {feature.applications.map((app, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-0.5" />
-                          <span className="text-velocity-muted">{app}</span>
+                          <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{app}</span>
                         </li>
                       ))}
                     </ul>
@@ -143,20 +143,20 @@ const PowerAutomate = () => {
 
           {activeTab === 'benefits' && (
             <div className="space-y-12 animate-fade">
-              <h2 className="text-3xl font-bold text-center mb-12 heading-gradient">
+              <h2 className="text-3xl font-bold text-center mb-12">
                 Business Benefits of Power Automate
               </h2>
               
-              <div className="glass-card p-8 rounded-xl">
+              <div className="bg-surface border border-border rounded-lg p-8 rounded-xl">
                 <div className="grid md:grid-cols-2 gap-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-velocity-accent/20 flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="w-6 h-6 text-velocity-accent" />
+                      <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                        <CheckCircle2 className="w-6 h-6 text-accent" />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
-                        <p className="text-velocity-muted">{benefit.description}</p>
+                        <p className="text-muted-foreground">{benefit.description}</p>
                       </div>
                     </div>
                   ))}
@@ -174,39 +174,39 @@ const PowerAutomate = () => {
 
           {activeTab === 'cases' && (
             <div className="space-y-12 animate-fade">
-              <h2 className="text-3xl font-bold text-center mb-12 heading-gradient">
+              <h2 className="text-3xl font-bold text-center mb-12">
                 Success Stories
               </h2>
               
               <div className="grid gap-8">
                 {caseStudies.map((study, index) => (
-                  <div key={index} className="glass-card p-8 rounded-xl">
+                  <div key={index} className="bg-surface border border-border rounded-lg p-8 rounded-xl">
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
                         <h3 className="text-xl font-semibold mb-3">{study.title}</h3>
-                        <p className="text-velocity-muted mb-4">{study.description}</p>
+                        <p className="text-muted-foreground mb-4">{study.description}</p>
                         <h4 className="font-medium mb-3">Results:</h4>
                         <ul className="space-y-2">
                           {study.results.map((result, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                              <CheckCircle2 className="w-5 h-5 text-velocity-accent shrink-0 mt-0.5" />
-                              <span className="text-velocity-muted">{result}</span>
+                              <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                              <span className="text-muted-foreground">{result}</span>
                             </li>
                           ))}
                         </ul>
                       </div>
                       
                       <div className="flex flex-col justify-between">
-                        <div className="glass-card p-4 mb-4 bg-black/40">
+                        <div className="bg-surface border border-border rounded-lg p-4 mb-4 bg-black/40">
                           <h4 className="font-medium mb-2">Industry</h4>
-                          <p className="text-velocity-muted">{study.industry}</p>
+                          <p className="text-muted-foreground">{study.industry}</p>
                         </div>
-                        <div className="glass-card p-4 mb-4 bg-black/40">
+                        <div className="bg-surface border border-border rounded-lg p-4 mb-4 bg-black/40">
                           <h4 className="font-medium mb-2">Solutions Used</h4>
-                          <p className="text-velocity-muted">{study.solutions}</p>
+                          <p className="text-muted-foreground">{study.solutions}</p>
                         </div>
                         {study.linkTo && (
-                          <Link to={study.linkTo} className="text-velocity-accent hover:underline inline-flex items-center">
+                          <Link to={study.linkTo} className="text-accent hover:underline inline-flex items-center">
                             View detailed case study <ArrowRight className="ml-2 w-4 h-4" />
                           </Link>
                         )}
@@ -221,13 +221,13 @@ const PowerAutomate = () => {
       </section>
 
       <section className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center glass-card p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Automate Your Enterprise?
           </h2>
-          <p className="text-lg text-velocity-muted mb-8">
+          <p className="text-lg text-muted-foreground mb-8">
             Let's discuss how Microsoft Power Automate can transform your business operations and deliver 10x results.
           </p>
           <DiscoveryButton text="Book Your Strategy Session" />

@@ -26,12 +26,12 @@ const About = () => {
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <main className="min-h-screen bg-velocity-dark">
+      <main className="min-h-screen bg-background">
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "About", path: "/about" }]} />
       {/* Hero Section */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 heading-gradient">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
             About Us
           </h1>
         </div>
@@ -40,7 +40,7 @@ const About = () => {
       {/* Main Content */}
       <section className="pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card p-8 md:p-12 space-y-8 text-velocity-light">
+          <div className="bg-surface border border-border rounded-lg p-8 md:p-12 space-y-8 text-foreground">
             <div className="space-y-6">
               <p className="text-xl leading-relaxed">
                 At 10x Velocity, we start with a conviction: AI isn't here to replace people. It's here to unleash them.
@@ -51,8 +51,8 @@ const About = () => {
               </p>
             </div>
 
-            <div className="border-t border-white/10 pt-8">
-              <h2 className="text-3xl font-bold mb-6 heading-gradient">
+            <div className="border-t border-border pt-8">
+              <h2 className="text-3xl font-bold mb-6">
                 The Human Core of AI
               </h2>
               
@@ -67,8 +67,8 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border-t border-white/10 pt-8">
-              <h2 className="text-3xl font-bold mb-6 heading-gradient">
+            <div className="border-t border-border pt-8">
+              <h2 className="text-3xl font-bold mb-6">
                 How We Work
               </h2>
               
@@ -78,8 +78,8 @@ const About = () => {
                 </p>
                 
                 <div className="grid gap-6 md:grid-cols-2">
-                  <div className="glass-card p-6">
-                    <h3 className="text-xl font-semibold text-velocity-accent mb-3">
+                  <div className="bg-surface border border-border rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-accent mb-3">
                       Unlock, Don't Replace
                     </h3>
                     <p className="text-base leading-relaxed">
@@ -87,8 +87,8 @@ const About = () => {
                     </p>
                   </div>
                   
-                  <div className="glass-card p-6">
-                    <h3 className="text-xl font-semibold text-velocity-accent mb-3">
+                  <div className="bg-surface border border-border rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-accent mb-3">
                       Human-Centered Design
                     </h3>
                     <p className="text-base leading-relaxed">
@@ -96,8 +96,8 @@ const About = () => {
                     </p>
                   </div>
                   
-                  <div className="glass-card p-6">
-                    <h3 className="text-xl font-semibold text-velocity-accent mb-3">
+                  <div className="bg-surface border border-border rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-accent mb-3">
                       Velocity at Scale
                     </h3>
                     <p className="text-base leading-relaxed">
@@ -105,8 +105,8 @@ const About = () => {
                     </p>
                   </div>
                   
-                  <div className="glass-card p-6">
-                    <h3 className="text-xl font-semibold text-velocity-accent mb-3">
+                  <div className="bg-surface border border-border rounded-lg p-6">
+                    <h3 className="text-xl font-semibold text-accent mb-3">
                       Culture First
                     </h3>
                     <p className="text-base leading-relaxed">
@@ -117,8 +117,8 @@ const About = () => {
               </div>
             </div>
 
-            <div className="border-t border-white/10 pt-8">
-              <h2 className="text-3xl font-bold mb-6 heading-gradient">
+            <div className="border-t border-border pt-8">
+              <h2 className="text-3xl font-bold mb-6">
                 Why We Exist
               </h2>
               
@@ -136,7 +136,7 @@ const About = () => {
                 </p>
                 
                 <div className="text-center pt-8">
-                  <p className="text-2xl font-bold heading-gradient">
+                  <p className="text-2xl font-bold">
                     This is the era of augmented genius. We're here to help you embrace it.
                   </p>
                 </div>

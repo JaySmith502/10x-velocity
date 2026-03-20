@@ -33,27 +33,27 @@ const Contact = () => {
       <div className="max-w-5xl mx-auto">
         {/* Header and Contact Cards - Centered */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Get in Touch
           </h1>
-          <p className="text-velocity-muted mb-8 text-lg">
+          <p className="text-muted-foreground mb-8 text-lg">
             Ready to supercharge your team's velocity? Let's talk about how we can help you achieve 10x results.
           </p>
           
           <div className="flex flex-col md:flex-row gap-6 justify-center max-w-3xl mx-auto mb-12">
-            <div className="glass-card p-6 md:p-8 flex-1">
+            <div className="bg-surface border border-border rounded-lg p-6 md:p-8 flex-1">
               <h3 className="font-semibold text-lg mb-2">Contact Information</h3>
-              <p className="text-velocity-muted mb-4">
-                Email: <a href="mailto:info@10xvelocity.ai" className="text-velocity-accent hover:underline">info@10xvelocity.ai</a>
+              <p className="text-muted-foreground mb-4">
+                Email: <a href="mailto:info@10xvelocity.ai" className="text-accent hover:underline">info@10xvelocity.ai</a>
               </p>
-              <p className="text-velocity-muted">
+              <p className="text-muted-foreground">
                 Hours: Monday-Friday, 9am-5pm EST
               </p>
             </div>
             
-            <div className="glass-card p-6 md:p-8 flex-1">
+            <div className="bg-surface border border-border rounded-lg p-6 md:p-8 flex-1">
               <h3 className="font-semibold text-lg mb-2">Office Location</h3>
-              <p className="text-velocity-muted">
+              <p className="text-muted-foreground">
                 10x Velocity<br />
                 10440 Bluegrass Pkwy<br />
                 Louisville, KY 40299
@@ -63,7 +63,7 @@ const Contact = () => {
         </div>
         
         {/* Contact Form - Full Width */}
-        <div className="glass-card p-6 md:p-8">
+        <div className="bg-surface border border-border rounded-lg p-6 md:p-8">
           <h2 className="text-2xl font-semibold mb-6 text-center">Send us a message</h2>
           <div className="w-full" style={{ minHeight: '900px' }}>
             <iframe

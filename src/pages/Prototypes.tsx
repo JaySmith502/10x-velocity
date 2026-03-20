@@ -35,17 +35,17 @@ const Prototypes = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Prototypes", path: "/prototypes" }]} />
         {/* Hero Section */}
         <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Rapid Prototype Sprint – From Idea to Interactive Proof in 10 Days
           </h1>
-          <p className="text-2xl md:text-3xl font-semibold mb-4 text-velocity-light">
+          <p className="text-2xl md:text-3xl font-semibold mb-4 text-foreground">
             Validate Before You Build.
           </p>
-          <p className="text-lg md:text-xl text-velocity-muted mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Turn your automation or AI idea into a working prototype in 10 days—fast enough to test, pitch, or secure buy-in.
           </p>
         </div>
@@ -55,22 +55,22 @@ const Prototypes = () => {
       <section className="bg-gradient-to-b from-black/20 to-transparent py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
               A 10-Day Sprint to Clarity and Momentum
             </h2>
-            <div className="glass-card p-8 md:p-12 mb-8">
-              <p className="text-xl text-velocity-light mb-6 font-medium">
+            <div className="bg-surface border border-border rounded-lg p-8 md:p-12 mb-8">
+              <p className="text-xl text-foreground mb-6 font-medium">
                 Ideas die in meetings. We turn them into proof.
               </p>
-              <p className="text-lg text-velocity-muted mb-8">
+              <p className="text-lg text-muted-foreground mb-8">
                 Our Rapid Prototype Sprint combines human creativity and AI-assisted design to build a clickable, functional prototype that reveals what your product could be—and whether it's worth building.
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {deliverableFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-1" />
-                    <span className="text-velocity-muted">{feature}</span>
+                    <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
+                    <span className="text-muted-foreground">{feature}</span>
                   </div>
                 ))}
               </div>
@@ -82,10 +82,10 @@ const Prototypes = () => {
       {/* Who It's For Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Built for Founders, Innovators, and Intrapreneurs
           </h2>
-          <p className="text-lg text-velocity-muted text-center mb-12">
+          <p className="text-lg text-muted-foreground text-center mb-12">
             This sprint isn't just for startups. It's for anyone who needs to make an idea tangible, fast.
           </p>
           
@@ -93,14 +93,14 @@ const Prototypes = () => {
             {targetAudience.map((audience, index) => (
               <div
                 key={audience.title}
-                className="glass-card p-8 animate-fade-up"
+                className="bg-surface border border-border rounded-lg p-8 animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 rounded-full bg-velocity-accent/20 flex items-center justify-center mb-4">
-                  <audience.icon className="w-7 h-7 text-velocity-accent" />
+                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                  <audience.icon className="w-7 h-7 text-accent" />
                 </div>
-                <h3 className="text-xl font-semibold mb-3 text-velocity-light">{audience.title}</h3>
-                <p className="text-velocity-muted">{audience.description}</p>
+                <h3 className="text-xl font-semibold mb-3 text-foreground">{audience.title}</h3>
+                <p className="text-muted-foreground">{audience.description}</p>
               </div>
             ))}
           </div>
@@ -111,26 +111,26 @@ const Prototypes = () => {
       <section className="bg-gradient-to-b from-transparent to-black/20 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
               Our 10-Day Process
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {processSteps.map((step, index) => (
                 <div key={step.title} className="text-center animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="w-16 h-16 rounded-full bg-velocity-accent/20 flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-velocity-accent">{index + 1}</span>
+                  <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
+                    <span className="text-2xl font-bold text-accent">{index + 1}</span>
                   </div>
-                  <h3 className="text-xl font-semibold mb-3 text-velocity-light">{step.title}</h3>
-                  <p className="text-velocity-muted mb-2">{step.description}</p>
-                  <p className="text-sm text-velocity-accent">{step.timeline}</p>
+                  <h3 className="text-xl font-semibold mb-3 text-foreground">{step.title}</h3>
+                  <p className="text-muted-foreground mb-2">{step.description}</p>
+                  <p className="text-sm text-accent">{step.timeline}</p>
                 </div>
               ))}
             </div>
 
-            <div className="glass-card p-6 text-center">
-              <p className="text-lg text-velocity-muted">
-                <span className="font-semibold text-velocity-light">Optional Add-On:</span> Internal pitch deck to help secure stakeholder approval or funding.
+            <div className="bg-surface border border-border rounded-lg p-6 text-center">
+              <p className="text-lg text-muted-foreground">
+                <span className="font-semibold text-foreground">Optional Add-On:</span> Internal pitch deck to help secure stakeholder approval or funding.
               </p>
             </div>
           </div>
@@ -140,20 +140,20 @@ const Prototypes = () => {
       {/* Why It Works Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
             Fast. Focused. Fundable.
           </h2>
           
-          <div className="glass-card p-8 md:p-12 mb-8">
-            <p className="text-xl text-velocity-light mb-6">
+          <div className="bg-surface border border-border rounded-lg p-8 md:p-12 mb-8">
+            <p className="text-xl text-foreground mb-6">
               Speed means nothing without insight.
             </p>
-            <p className="text-lg text-velocity-muted mb-6">
+            <p className="text-lg text-muted-foreground mb-6">
               Each sprint is structured to surface ROI opportunities and operational fit—not just aesthetics. We focus on the why behind the workflow so your prototype becomes a reusable foundation, not a dead-end mockup.
             </p>
             
-            <div className="border-l-4 border-velocity-accent pl-6 py-4 bg-velocity-accent/5 rounded-r-lg">
-              <p className="text-2xl font-medium text-velocity-light italic">
+            <div className="border-l-4 border-accent pl-6 py-4 bg-accent/5 rounded-r-lg">
+              <p className="text-2xl font-medium text-foreground italic">
                 "Prototypes aren't about perfection—they're about momentum."
               </p>
             </div>
@@ -165,7 +165,7 @@ const Prototypes = () => {
       <section className="bg-gradient-to-b from-transparent to-black/20 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold mb-12 heading-gradient text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
               What You Get
             </h2>
             
@@ -173,15 +173,15 @@ const Prototypes = () => {
               {deliverables.map((deliverable, index) => (
                 <div
                   key={deliverable.title}
-                  className="glass-card p-8 animate-fade-up flex items-start gap-4"
+                  className="bg-surface border border-border rounded-lg p-8 animate-fade-up flex items-start gap-4"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-velocity-accent/20 flex items-center justify-center shrink-0">
-                    <deliverable.icon className="w-6 h-6 text-velocity-accent" />
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
+                    <deliverable.icon className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-velocity-light">{deliverable.title}</h3>
-                    <p className="text-velocity-muted">{deliverable.description}</p>
+                    <h3 className="text-xl font-semibold mb-2 text-foreground">{deliverable.title}</h3>
+                    <p className="text-muted-foreground">{deliverable.description}</p>
                   </div>
                 </div>
               ))}
@@ -193,14 +193,14 @@ const Prototypes = () => {
       {/* Investment Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <div className="glass-card p-12 text-center relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+          <div className="bg-surface border border-border rounded-lg p-12 text-center relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
             
-            <h2 className="text-3xl md:text-5xl font-bold mb-6 heading-gradient">
+            <h2 className="text-3xl md:text-5xl font-bold mb-6">
               $10,000 | 10 Days | Zero Waste
             </h2>
-            <p className="text-lg md:text-xl text-velocity-muted mb-8">
+            <p className="text-lg md:text-xl text-muted-foreground mb-8">
               You'll know exactly what's next—build, buy, or integrate—before spending months or six figures on development.
             </p>
             <DiscoveryButton />

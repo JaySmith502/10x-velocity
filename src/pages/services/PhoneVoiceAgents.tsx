@@ -53,18 +53,18 @@ const PhoneVoiceAgents = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Phone Voice Agents", path: "/services/phone-voice-agents" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 heading-gradient">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
           Supercharge Your Customer Calls with AI-Powered Voice Agents
         </h1>
-        <h2 className="text-xl md:text-2xl text-velocity-muted text-center max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl text-muted-foreground text-center max-w-3xl mx-auto">
           Cut costs, boost engagement, and never miss a lead—24/7, in any language.
         </h2>
       </section>
 
       {/* Overview Section */}
       <section className="container mx-auto px-4 py-12">
-        <div className="glass-card p-8 max-w-4xl mx-auto">
-          <p className="text-lg text-velocity-light mb-6">
+        <div className="bg-surface border border-border rounded-lg p-8 max-w-4xl mx-auto">
+          <p className="text-lg text-foreground mb-6">
             Our AI-powered Voice Agents seamlessly handle customer calls, qualify leads, and manage inquiries with human-like conversation abilities. By integrating directly with your existing phone systems and CRM tools, these intelligent agents ensure no opportunity is missed while dramatically reducing operational costs.
           </p>
         </div>
@@ -75,25 +75,25 @@ const PhoneVoiceAgents = () => {
         <h3 className="text-3xl font-bold mb-12 text-center">Key Benefits</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="glass-card p-6 hover:scale-105 transition-transform duration-300">
+            <div key={index} className="bg-surface border border-border rounded-lg p-6 hover:scale-105 transition-transform duration-300">
               <div className="text-3xl mb-4">{benefit.emoji}</div>
-              <h4 className="text-xl font-bold mb-3 text-velocity-light">{benefit.title}</h4>
-              <p className="text-velocity-muted">{benefit.description}</p>
+              <h4 className="text-xl font-bold mb-3 text-foreground">{benefit.title}</h4>
+              <p className="text-muted-foreground">{benefit.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Features Section */}
-      <section className="container mx-auto px-4 py-16 bg-black/20">
+      <section className="container mx-auto px-4 py-16 bg-muted">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center">Features & Capabilities</h3>
-          <div className="glass-card p-8">
+          <div className="bg-surface border border-border rounded-lg p-8">
             <ul className="grid md:grid-cols-2 gap-4">
               {features.map((feature, index) => (
                 <li key={index} className="flex items-start gap-3">
-                  <Sparkle className="text-velocity-accent shrink-0 mt-1" />
-                  <span className="text-velocity-light">{feature}</span>
+                  <Sparkle className="text-accent shrink-0 mt-1" />
+                  <span className="text-foreground">{feature}</span>
                 </li>
               ))}
             </ul>
@@ -105,19 +105,19 @@ const PhoneVoiceAgents = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-3xl font-bold mb-8">Why 10x Velocity?</h3>
-          <div className="glass-card p-8">
+          <div className="bg-surface border border-border rounded-lg p-8">
             <ul className="space-y-4 text-left">
               <li className="flex items-start gap-3">
-                <Sparkle className="text-velocity-accent shrink-0 mt-1" />
-                <span className="text-velocity-light">Proven track record with 95% satisfaction rate in AI & automation implementations</span>
+                <Sparkle className="text-accent shrink-0 mt-1" />
+                <span className="text-foreground">Proven track record with 95% satisfaction rate in AI & automation implementations</span>
               </li>
               <li className="flex items-start gap-3">
-                <Sparkle className="text-velocity-accent shrink-0 mt-1" />
-                <span className="text-velocity-light">Enterprise-grade security with SOC 2 compliance and end-to-end encryption</span>
+                <Sparkle className="text-accent shrink-0 mt-1" />
+                <span className="text-foreground">Enterprise-grade security with SOC 2 compliance and end-to-end encryption</span>
               </li>
               <li className="flex items-start gap-3">
-                <Sparkle className="text-velocity-accent shrink-0 mt-1" />
-                <span className="text-velocity-light">Data-driven optimization with real-time analytics and continuous improvement</span>
+                <Sparkle className="text-accent shrink-0 mt-1" />
+                <span className="text-foreground">Data-driven optimization with real-time analytics and continuous improvement</span>
               </li>
             </ul>
           </div>
@@ -128,7 +128,7 @@ const PhoneVoiceAgents = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
-          <div className="glass-card p-8">
+          <div className="bg-surface border border-border rounded-lg p-8">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
@@ -144,7 +144,7 @@ const PhoneVoiceAgents = () => {
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Customer Communication?</h3>
-        <p className="text-velocity-muted mb-8 max-w-2xl mx-auto">
+        <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
           Book a free demo to see how our AI Voice Agents can revolutionize your customer service while cutting costs by up to 70%.
         </p>
         <DiscoveryButton text="Schedule Free Demo" className="text-lg" />

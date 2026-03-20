@@ -19,20 +19,20 @@ export const ToolModal = ({ tool, isOpen, onClose }: ToolModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-velocity-dark border-white/10">
+      <DialogContent className="bg-background border-border">
         <DialogHeader>
           <div className="flex items-center gap-4 mb-4">
-            <div className="p-4 rounded-lg bg-velocity-accent/20">
-              <Package className="w-8 h-8 text-velocity-accent" />
+            <div className="p-4 rounded-lg bg-accent/20">
+              <Package className="w-8 h-8 text-accent" />
             </div>
             <div>
-              <DialogTitle className="text-2xl text-velocity-light">{tool.name}</DialogTitle>
-              <span className="inline-block px-3 py-1 text-sm rounded-full bg-white/5 text-velocity-accent mt-2">
+              <DialogTitle className="text-2xl text-foreground">{tool.name}</DialogTitle>
+              <span className="inline-block px-3 py-1 text-sm rounded-full bg-surface text-accent mt-2">
                 {tool.category}
               </span>
             </div>
           </div>
-          <DialogDescription className="text-velocity-light/80 text-base leading-relaxed">
+          <DialogDescription className="text-foreground/80 text-base leading-relaxed">
             {tool.blurb}
           </DialogDescription>
         </DialogHeader>
@@ -41,7 +41,7 @@ export const ToolModal = ({ tool, isOpen, onClose }: ToolModalProps) => {
             href={tool.link}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary w-full justify-center"
+            className="w-full justify-center"
           >
             Visit {tool.name}
             <ExternalLink className="w-4 h-4" />

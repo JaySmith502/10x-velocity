@@ -79,7 +79,7 @@ const Index = () => {
       <div className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         
         {/* Mobile Logo */}
@@ -94,17 +94,17 @@ const Index = () => {
         </div>
         
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 heading-gradient">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Accelerate Your Business Growth with AI & Automation
           </h1>
-          <p className="text-lg md:text-xl text-velocity-muted mb-8">
+          <p className="text-lg md:text-xl text-muted-foreground mb-8">
             Transform your business processes with cutting-edge solutions. 
             Based in Louisville, KY, serving ambitious companies worldwide.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               asChild
-              className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all text-lg"
+              className="bg-accent text-background font-medium hover:bg-accent/90 transition-all text-lg"
             >
               <Link to="/savings-calculator">
                 Savings Calculator <Calculator className="w-5 h-5" />
@@ -113,7 +113,7 @@ const Index = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-velocity-accent text-[#151A24] hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
+              className="border-accent text-foreground hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
             >
               <Link to="/case-studies">
                 View Case Studies <ArrowRight className="w-5 h-5" />
@@ -127,35 +127,35 @@ const Index = () => {
       <section className="bg-gradient-to-b from-black/20 to-transparent py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Solving Capacity Challenges
             </h2>
-            <p className="text-lg text-velocity-muted">
+            <p className="text-lg text-muted-foreground">
               Whether you're a growing business or a nonprofit organization, 
               we help you break through capacity barriers with intelligent automation.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="glass-card p-8 animate-fade-up">
-              <h3 className="text-xl font-semibold mb-4 text-velocity-accent">For Businesses</h3>
-              <ul className="space-y-4 text-velocity-muted">
+            <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up">
+              <h3 className="text-xl font-semibold mb-4 text-accent">For Businesses</h3>
+              <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-1" />
+                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
                   <span>Automate repetitive tasks to free up your team for strategic work</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-1" />
+                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
                   <span>Optimize workflows with AI-powered process mining</span>
                 </li>
                 <li className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-velocity-accent shrink-0 mt-1" />
+                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
                   <span>Scale operations without proportionally increasing headcount</span>
                 </li>
               </ul>
             </div>
-            <div className="glass-card p-8 animate-fade-up delay-150">
+            <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up delay-150">
               <h3 className="text-xl font-semibold mb-4 text-purple-400">For Nonprofits</h3>
-              <ul className="space-y-4 text-velocity-muted">
+              <ul className="space-y-4 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <ArrowRight className="w-5 h-5 text-purple-400 shrink-0 mt-1" />
                   <span>Streamline donor management and engagement processes</span>
@@ -177,10 +177,10 @@ const Index = () => {
       {/* Features Grid */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Our Solutions
           </h2>
-          <p className="text-lg text-velocity-muted">
+          <p className="text-lg text-muted-foreground">
             Comprehensive AI-powered tools and services to transform your operations
           </p>
         </div>
@@ -188,12 +188,12 @@ const Index = () => {
           {features.map((feature, index) => (
             <div
               key={feature.title}
-              className="glass-card p-6 animate-fade-up hover:bg-white/10 transition-colors"
+              className="bg-surface border border-border rounded-lg p-6 animate-fade-up hover:bg-muted transition-colors"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <feature.icon className="w-10 h-10 text-velocity-accent mb-4" />
+              <feature.icon className="w-10 h-10 text-accent mb-4" />
               <h3 className="text-xl font-semibold mb-3">{feature.title}</h3>
-              <p className="text-velocity-muted">{feature.description}</p>
+              <p className="text-muted-foreground">{feature.description}</p>
             </div>
           ))}
         </div>
@@ -203,21 +203,21 @@ const Index = () => {
       <section className="bg-gradient-to-b from-transparent to-black/20 py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Our Approach
             </h2>
-            <p className="text-lg text-velocity-muted">
+            <p className="text-lg text-muted-foreground">
               A structured methodology to transform your operations
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {process.map((step, index) => (
               <div key={step.title} className="text-center animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="w-16 h-16 rounded-full bg-velocity-accent/20 flex items-center justify-center mx-auto mb-6">
-                  <span className="text-2xl font-bold text-velocity-accent">{index + 1}</span>
+                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
+                  <span className="text-2xl font-bold text-accent">{index + 1}</span>
                 </div>
                 <h3 className="text-xl font-semibold mb-3">{step.title}</h3>
-                <p className="text-velocity-muted">{step.description}</p>
+                <p className="text-muted-foreground">{step.description}</p>
               </div>
             ))}
           </div>
@@ -226,13 +226,13 @@ const Index = () => {
 
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
-        <div className="max-w-4xl mx-auto text-center glass-card p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+        <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Increase Your Velocity?
           </h2>
-          <p className="text-lg text-velocity-muted mb-8">
+          <p className="text-lg text-muted-foreground mb-8">
             Book a free consultation and discover how we can help you achieve 10x growth.
           </p>
           <DiscoveryButton />

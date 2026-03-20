@@ -52,18 +52,18 @@ export const IndustryCard = ({ name, icon, toolCount, onClick, isSelected }: Ind
     <button
       onClick={onClick}
       className={`
-        glass-card p-8 cursor-pointer transition-all duration-300
+        bg-surface border border-border rounded-lg p-8 cursor-pointer transition-all duration-300
         h-full min-h-[200px] w-full
         hover:-translate-y-2 hover:bg-white/15 hover:shadow-xl
-        ${isSelected ? 'ring-2 ring-velocity-accent' : ''}
+        ${isSelected ? 'ring-2 ring-accent' : ''}
       `}
     >
       <div className="flex flex-col items-center justify-center gap-4 h-full">
         <div className={`p-4 rounded-full ${colors.bg}`}>
           <IconComponent className={`w-10 h-10 ${colors.text}`} />
         </div>
-        <h3 className="text-lg font-semibold text-velocity-light text-center">{name}</h3>
-        <p className="text-sm text-velocity-light/60">{toolCount} tools</p>
+        <h3 className="text-lg font-semibold text-foreground text-center">{name}</h3>
+        <p className="text-sm text-foreground/60">{toolCount} tools</p>
       </div>
     </button>
   );

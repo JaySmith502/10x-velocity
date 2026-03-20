@@ -50,7 +50,7 @@ const BlogPost = () => {
           <Button 
             asChild 
             variant="ghost" 
-            className="text-velocity-accent hover:text-purple-400 justify-start p-0 hover:bg-transparent"
+            className="text-accent hover:text-purple-400 justify-start p-0 hover:bg-transparent"
           >
             <Link to="/blog">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to all posts
@@ -70,26 +70,26 @@ const BlogPost = () => {
         </div>
 
         {/* Post metadata */}
-        <div className="flex items-center gap-4 text-sm text-velocity-muted mb-6">
+        <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
           <span className="flex items-center gap-1">
-            <Calendar className="w-4 h-4 text-velocity-accent" /> {post.date}
+            <Calendar className="w-4 h-4 text-accent" /> {post.date}
           </span>
           <span>•</span>
           <span className="flex items-center gap-1">
-            <User className="w-4 h-4 text-velocity-accent" /> {post.author}
+            <User className="w-4 h-4 text-accent" /> {post.author}
           </span>
         </div>
 
         {/* Post title */}
-        <h1 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+        <h1 className="text-3xl md:text-4xl font-bold mb-6">
           {post.title}
         </h1>
 
         {/* Tags */}
         <div className="flex flex-wrap gap-2 mb-8">
           {post.tags.map((tag) => (
-            <span key={tag} className="inline-flex items-center gap-1 text-xs bg-white/10 px-2 py-1 rounded">
-              <Tag className="w-3 h-3 text-velocity-accent" /> {tag}
+            <span key={tag} className="inline-flex items-center gap-1 text-xs bg-muted px-2 py-1 rounded">
+              <Tag className="w-3 h-3 text-accent" /> {tag}
             </span>
           ))}
         </div>
@@ -154,10 +154,10 @@ const BlogPost = () => {
           )}
 
           {/* Call to action */}
-          <div className="mt-12 p-6 glass-card">
+          <div className="mt-12 p-6 bg-surface border border-border rounded-lg">
             <h3 className="text-xl font-semibold mb-3">Want to learn more?</h3>
             <p className="mb-4">Get in touch with our team to discuss how AI can transform your business operations.</p>
-            <Button asChild className="bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all">
+            <Button asChild className="bg-accent text-background font-medium hover:bg-accent/90 transition-all">
             <a href="/contact" target="_blank" rel="noopener noreferrer">Contact Us</a>
             </Button>
           </div>

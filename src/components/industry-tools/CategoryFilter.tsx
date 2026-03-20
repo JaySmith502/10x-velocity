@@ -23,8 +23,8 @@ export const CategoryFilter = ({ categories, selectedCategory, onSelectCategory 
         className={`
           px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2
           ${!selectedCategory 
-            ? 'bg-velocity-accent text-white' 
-            : 'glass-card text-velocity-light/80 hover:bg-white/10'
+            ? 'bg-accent text-white' 
+            : 'bg-surface border border-border rounded-lg text-foreground/80 hover:bg-muted'
           }
         `}
       >
@@ -39,8 +39,8 @@ export const CategoryFilter = ({ categories, selectedCategory, onSelectCategory 
             className={`
               px-4 py-2 rounded-lg transition-all duration-300 flex items-center gap-2
               ${selectedCategory === category 
-                ? 'bg-velocity-accent text-white' 
-                : 'glass-card text-velocity-light/80 hover:bg-white/10'
+                ? 'bg-accent text-white' 
+                : 'bg-surface border border-border rounded-lg text-foreground/80 hover:bg-muted'
               }
             `}
           >

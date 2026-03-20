@@ -64,20 +64,20 @@ const IndustryTools = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
 
-      <div className="min-h-screen bg-velocity-dark py-20">
+      <div className="min-h-screen bg-background py-20">
         <div className="container mx-auto px-4">
           <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Industry Tools", path: "/industry-tools" }]} />
           {/* Header */}
           <div className="text-center mb-12 animate-fade-in">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4 heading-gradient">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4">
               AI & Automation Tool Explorer
             </h1>
-            <p className="text-velocity-light/80 text-lg max-w-2xl mx-auto mb-8">
+            <p className="text-foreground/80 text-lg max-w-2xl mx-auto mb-8">
               Discover the right AI and automation tools for your industry. Click an industry to explore curated solutions that drive real results.
             </p>
             <button
               onClick={() => setIsLeadCaptureOpen(true)}
-              className="btn-primary"
+              className=""
             >
               <Download className="w-5 h-5" />
               Download Full Guide
@@ -106,14 +106,14 @@ const IndustryTools = () => {
           {/* Tools Section */}
           {selectedIndustry && (
             <div className="animate-fade-in">
-              <div className="glass-card p-8 mb-8">
+              <div className="bg-surface border border-border rounded-lg p-8 mb-8">
                 <div className="flex items-center justify-between mb-6 flex-wrap gap-4">
-                  <h2 className="text-2xl font-bold text-velocity-light">
+                  <h2 className="text-2xl font-bold text-foreground">
                     {selectedIndustry} Tools
                   </h2>
                   <button
                     onClick={() => setIsLeadCaptureOpen(true)}
-                    className="text-velocity-accent hover:text-velocity-accent/80 transition-colors flex items-center gap-2"
+                    className="text-accent hover:text-accent/80 transition-colors flex items-center gap-2"
                   >
                     <Download className="w-4 h-4" />
                     Get {selectedIndustry} Guide
@@ -143,7 +143,7 @@ const IndustryTools = () => {
                 </div>
 
                 {filteredTools.length === 0 && (
-                  <p className="text-center text-velocity-light/60 py-8">
+                  <p className="text-center text-foreground/60 py-8">
                     No tools found for this category.
                   </p>
                 )}

@@ -90,14 +90,14 @@ const GovBrokers = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "GovBrokers", path: "/case-studies/govbrokers" }]} />
         <article className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
               10x Velocity Transforms GovBrokers into a High-Performance Government Contracting Powerhouse
           </h1>
           
           {/* Client Overview */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Client Overview</h2>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               GovBrokers is a specialized firm focusing on government contracts, contract brokerage, and contract acquisition. By leveraging HubSpot, Trello, MyGovWatch, Sam.Gov, and G-Suite tools, GovBrokers connects businesses with lucrative government opportunities while streamlining the contract acquisition process. However, as demand for their services grew, inefficiencies in lead tracking, workflow automation, and market intelligence slowed down operations.
             </p>
           </section>
@@ -105,10 +105,10 @@ const GovBrokers = () => {
           {/* The Challenge */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               Despite a strong pipeline of government contracting opportunities, GovBrokers faced multiple bottlenecks limiting their ability to scale:
             </p>
-            <ul className="list-disc list-inside text-velocity-muted space-y-4 ml-4">
+            <ul className="list-disc list-inside text-muted-foreground space-y-4 ml-4">
               <li>Fragmented Lead & Deal Tracking: Contract opportunities were scattered across Sam.Gov, MyGovWatch, and HubSpot, creating inefficiencies in bid management.</li>
               <li>Manual Proposal & Compliance Workflows: Contract submissions and regulatory compliance checks were time-consuming and prone to delays.</li>
               <li>Lack of AI-Powered Bid Intelligence: Limited AI-driven insights restricted the ability to predict contract award likelihood and optimize bid strategies.</li>
@@ -122,11 +122,11 @@ const GovBrokers = () => {
             <h2 className="text-2xl font-bold mb-6">The 10x Velocity Solution</h2>
             <div className="grid gap-8">
               {solutions.map((solution, index) => (
-                <div key={index} className="glass-card p-8">
-                  <h3 className="text-xl font-semibold mb-3 text-velocity-accent">
+                <div key={index} className="bg-surface border border-border rounded-lg p-8">
+                  <h3 className="text-xl font-semibold mb-3 text-accent">
                     {solution.title}
                   </h3>
-                  <p className="text-velocity-muted">
+                  <p className="text-muted-foreground">
                     {solution.description}
                   </p>
                 </div>
@@ -137,15 +137,15 @@ const GovBrokers = () => {
           {/* Results & Impact */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">Results & Impact</h2>
-            <div className="glass-card p-8">
-              <p className="text-velocity-muted mb-6">
+            <div className="bg-surface border border-border rounded-lg p-8">
+              <p className="text-muted-foreground mb-6">
                 After six months of AI-driven transformation, GovBrokers achieved unprecedented operational efficiency and growth:
               </p>
               <div className="grid gap-4">
                 {results.map((result, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-velocity-accent shrink-0" />
-                    <span className="text-velocity-muted">{result}</span>
+                    <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
+                    <span className="text-muted-foreground">{result}</span>
                   </div>
                 ))}
               </div>
@@ -155,10 +155,10 @@ const GovBrokers = () => {
           {/* Conclusion */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               By integrating 10x Velocity's AI automation and strategic workflow enhancements, GovBrokers evolved into a highly efficient, data-driven government contract acquisition powerhouse. With predictive bid analytics, automated compliance tracking, and AI-driven outreach, GovBrokers now wins more contracts, operates more efficiently, and scales at an unprecedented rate.
             </p>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               10x Velocity's tailored AI strategies have revolutionized the government contracting space, positioning GovBrokers as a leader in contract brokerage and acquisition.
             </p>
           </section>
@@ -166,13 +166,13 @@ const GovBrokers = () => {
           {/* What's Next */}
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               With optimized operations, GovBrokers is now expanding into AI-driven subcontracting matchmaking, automated compliance monitoring, and predictive contract award modeling, ensuring continued 10x scalability.
             </p>
-            <p className="text-velocity-muted mb-6">
-              Learn how our <Link to="/services" className="text-velocity-accent hover:underline">AI process automation services</Link> can accelerate your proposal workflows and deal management.
+            <p className="text-muted-foreground mb-6">
+              Learn how our <Link to="/services" className="text-accent hover:underline">AI process automation services</Link> can accelerate your proposal workflows and deal management.
             </p>
-            <div className="glass-card p-8 text-center">
+            <div className="bg-surface border border-border rounded-lg p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve 10x results in your government contracting business?
               </p>

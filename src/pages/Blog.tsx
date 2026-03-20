@@ -36,10 +36,10 @@ const Blog = () => {
       {/* Header Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 heading-gradient">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             10x Velocity Blog
           </h1>
-          <p className="text-lg text-velocity-muted mb-12">
+          <p className="text-lg text-muted-foreground mb-12">
             Insights, case studies, and expert perspectives on AI, automation, and business growth.
           </p>
         </div>
@@ -51,7 +51,7 @@ const Blog = () => {
           {blogPosts.map((post) => (
             <article 
               key={post.id}
-              className="glass-card overflow-hidden flex flex-col h-full animate-fade-up hover:bg-white/10 transition-colors"
+              className="bg-surface border border-border rounded-lg overflow-hidden flex flex-col h-full animate-fade-up hover:bg-muted transition-colors"
             >
               <div className="h-48 overflow-hidden">
                 <img
@@ -64,25 +64,25 @@ const Blog = () => {
                 />
               </div>
               <div className="p-6 flex-1 flex flex-col">
-                <div className="flex items-center gap-2 text-sm text-velocity-muted mb-3">
+                <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                   <span className="flex items-center gap-1">
-                    <Calendar className="w-4 h-4 text-velocity-accent" /> {post.date}
+                    <Calendar className="w-4 h-4 text-accent" /> {post.date}
                   </span>
                   <span>•</span>
                   <span className="flex items-center gap-1">
-                    <User className="w-4 h-4 text-velocity-accent" /> {post.author}
+                    <User className="w-4 h-4 text-accent" /> {post.author}
                   </span>
                 </div>
                 <h2 className="text-xl font-semibold mb-3">{post.title}</h2>
-                <p className="text-velocity-muted mb-4 flex-1">{post.excerpt}</p>
+                <p className="text-muted-foreground mb-4 flex-1">{post.excerpt}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {post.tags.map((tag) => (
-                    <span key={tag} className="inline-flex items-center gap-1 text-xs bg-white/10 px-2 py-1 rounded">
-                      <Tag className="w-3 h-3 text-velocity-accent" /> {tag}
+                    <span key={tag} className="inline-flex items-center gap-1 text-xs bg-muted px-2 py-1 rounded">
+                      <Tag className="w-3 h-3 text-accent" /> {tag}
                     </span>
                   ))}
                 </div>
-                <Button asChild variant="ghost" className="text-velocity-accent justify-start p-0 hover:bg-transparent hover:text-purple-400">
+                <Button asChild variant="ghost" className="text-accent justify-start p-0 hover:bg-transparent hover:text-purple-400">
                   <Link to={`/blog/${post.id}`}>
                     Read more <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
@@ -98,33 +98,33 @@ const Blog = () => {
             <div className="max-w-5xl mx-auto">
               <div className="flex flex-col md:flex-row gap-12 md:gap-16">
                 <div className="flex-1">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+                  <h2 className="text-3xl md:text-4xl font-bold mb-6">
                     Get in Touch
                   </h2>
-                  <p className="text-velocity-muted mb-8 text-lg">
+                  <p className="text-muted-foreground mb-8 text-lg">
                     Ready to supercharge your team's velocity? Let's talk about how we can help you achieve 10x results.
                   </p>
                   
-                  <div className="glass-card p-6 md:p-8 mb-8">
+                  <div className="bg-surface border border-border rounded-lg p-6 md:p-8 mb-8">
                     <h3 className="font-semibold text-lg mb-2">Contact Information</h3>
-                    <p className="text-velocity-muted mb-4">
-                      Email: <a href="mailto:info@10xvelocity.ai" className="text-velocity-accent hover:underline">info@10xvelocity.ai</a>
+                    <p className="text-muted-foreground mb-4">
+                      Email: <a href="mailto:info@10xvelocity.ai" className="text-accent hover:underline">info@10xvelocity.ai</a>
                     </p>
-                    <p className="text-velocity-muted">
+                    <p className="text-muted-foreground">
                       Hours: Monday-Friday, 9am-5pm PST
                     </p>
                   </div>
                 </div>
                 
                 <div className="flex-1">
-                  <div className="glass-card p-6 md:p-8">
+                  <div className="bg-surface border border-border rounded-lg p-6 md:p-8">
                     <h3 className="text-2xl font-semibold mb-6">Get started today</h3>
-                    <p className="text-velocity-muted mb-6">
+                    <p className="text-muted-foreground mb-6">
                       Schedule a quick discovery call with our team to explore how we can help accelerate your business.
                     </p>
                     <Button 
                       asChild
-                      className="w-full bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all"
+                      className="w-full bg-accent text-background font-medium hover:bg-accent/90 transition-all"
                     >
                       <a href="https://level.10xvelocity.ai/widget/bookings/jay-smith-10xvelocity" target="_blank" rel="noopener noreferrer">
                         Schedule a 15 minute call <ArrowRight className="ml-2 h-4 w-4" />

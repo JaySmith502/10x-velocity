@@ -52,23 +52,23 @@ const SavingsCalculator = () => {
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="min-h-screen py-12 bg-velocity-dark">
+      <div className="min-h-screen py-12 bg-background">
         <div className="container mx-auto px-4">
           <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Savings Calculator", path: "/savings-calculator" }]} />
           {/* Header */}
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold heading-gradient mb-4">
+            <h1 className="text-4xl font-bold mb-4">
               Automation Savings Calculator
             </h1>
-            <p className="text-velocity-muted text-lg max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               See how much time and money your business could save by automating repetitive processes
             </p>
           </div>
 
           {/* Explanatory text - moved from bottom to here */}
           <div className="max-w-4xl mx-auto mb-12 text-center">
-            <h3 className="text-xl font-semibold text-velocity-light mb-4">How We Calculate Your Savings</h3>
-            <p className="text-velocity-muted">
+            <h3 className="text-xl font-semibold text-foreground mb-4">How We Calculate Your Savings</h3>
+            <p className="text-muted-foreground">
               Our calculator estimates potential savings based on industry averages and client outcomes. 
               The actual savings may vary depending on your specific processes and implementation details. 
               Contact us for a detailed analysis tailored to your business needs.
@@ -76,7 +76,7 @@ const SavingsCalculator = () => {
           </div>
 
           {/* Calculator Card */}
-          <div className="glass-card p-8 max-w-4xl mx-auto">
+          <div className="bg-surface border border-border rounded-lg p-8 max-w-4xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Input Controls */}
               <InputControls 
@@ -90,13 +90,13 @@ const SavingsCalculator = () => {
           </div>
 
           {/* CTA Section - replaced explanatory text with this */}
-          <div className="max-w-4xl mx-auto mt-20 text-center glass-card p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-velocity-accent/20 rounded-full blur-3xl -z-10" />
+          <div className="max-w-4xl mx-auto mt-20 text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 heading-gradient">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Increase Your Velocity?
             </h2>
-            <p className="text-lg text-velocity-muted mb-8">
+            <p className="text-lg text-muted-foreground mb-8">
               Book a free consultation and discover how we can help you achieve 10x growth.
             </p>
             <DiscoveryButton />

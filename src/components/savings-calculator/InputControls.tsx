@@ -20,8 +20,8 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
 
   return (
     <div className="space-y-8">
-      <h2 className="text-2xl font-semibold text-velocity-light mb-6 flex items-center">
-        <Calculator className="mr-2 text-velocity-accent" />
+      <h2 className="text-2xl font-semibold text-foreground mb-6 flex items-center">
+        <Calculator className="mr-2 text-accent" />
         Configure Your Process
       </h2>
 
@@ -30,17 +30,17 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
         <div className="flex justify-between">
           <Tooltip>
             <TooltipTrigger asChild>
-              <label className="text-velocity-light font-medium flex items-center cursor-help">
-                <Users className="mr-2 text-velocity-accent h-5 w-5" />
+              <label className="text-foreground font-medium flex items-center cursor-help">
+                <Users className="mr-2 text-accent h-5 w-5" />
                 Number of Employees
-                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
+                <Info className="ml-1.5 h-4 w-4 text-accent/70" />
               </label>
             </TooltipTrigger>
-            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+            <TooltipContent className="bg-background border-accent text-foreground">
               <p>The total number of staff who perform this task regularly</p>
             </TooltipContent>
           </Tooltip>
-          <span className="text-velocity-accent font-semibold">{employeeCount}</span>
+          <span className="text-accent font-semibold">{employeeCount}</span>
         </div>
         <Slider 
           value={[employeeCount]} 
@@ -50,7 +50,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
           onValueChange={(value) => onInputChange('employeeCount', value[0])}
           className="py-4"
         />
-        <div className="flex justify-between text-xs text-velocity-muted">
+        <div className="flex justify-between text-xs text-muted-foreground">
           <span>1</span>
           <span>20</span>
         </div>
@@ -61,17 +61,17 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
         <div className="flex justify-between">
           <Tooltip>
             <TooltipTrigger asChild>
-              <label className="text-velocity-light font-medium flex items-center cursor-help">
-                <Clock className="mr-2 text-velocity-accent h-5 w-5" />
+              <label className="text-foreground font-medium flex items-center cursor-help">
+                <Clock className="mr-2 text-accent h-5 w-5" />
                 Hours Per Week (per employee)
-                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
+                <Info className="ml-1.5 h-4 w-4 text-accent/70" />
               </label>
             </TooltipTrigger>
-            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+            <TooltipContent className="bg-background border-accent text-foreground">
               <p>Average time each employee spends on this task weekly</p>
             </TooltipContent>
           </Tooltip>
-          <span className="text-velocity-accent font-semibold">{hoursPerWeek}</span>
+          <span className="text-accent font-semibold">{hoursPerWeek}</span>
         </div>
         <Slider 
           value={[hoursPerWeek]} 
@@ -81,7 +81,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
           onValueChange={(value) => onInputChange('hoursPerWeek', value[0])}
           className="py-4"
         />
-        <div className="flex justify-between text-xs text-velocity-muted">
+        <div className="flex justify-between text-xs text-muted-foreground">
           <span>1</span>
           <span>40</span>
         </div>
@@ -92,17 +92,17 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
         <div className="flex justify-between">
           <Tooltip>
             <TooltipTrigger asChild>
-              <label className="text-velocity-light font-medium flex items-center cursor-help">
-                <Bot className="mr-2 text-velocity-accent h-5 w-5" />
+              <label className="text-foreground font-medium flex items-center cursor-help">
+                <Bot className="mr-2 text-accent h-5 w-5" />
                 Automation Potential
-                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
+                <Info className="ml-1.5 h-4 w-4 text-accent/70" />
               </label>
             </TooltipTrigger>
-            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+            <TooltipContent className="bg-background border-accent text-foreground">
               <p>Percentage of the task that can be automated with our solutions</p>
             </TooltipContent>
           </Tooltip>
-          <span className="text-velocity-accent font-semibold">{automationPotential}%</span>
+          <span className="text-accent font-semibold">{automationPotential}%</span>
         </div>
         <Slider 
           value={[automationPotential]} 
@@ -112,7 +112,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
           onValueChange={(value) => onInputChange('automationPotential', value[0])}
           className="py-4"
         />
-        <div className="flex justify-between text-xs text-velocity-muted">
+        <div className="flex justify-between text-xs text-muted-foreground">
           <span>10%</span>
           <span>90%</span>
         </div>
@@ -123,17 +123,17 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
         <div className="flex justify-between">
           <Tooltip>
             <TooltipTrigger asChild>
-              <label className="text-velocity-light font-medium flex items-center cursor-help">
-                <DollarSign className="mr-2 text-velocity-accent h-5 w-5" />
+              <label className="text-foreground font-medium flex items-center cursor-help">
+                <DollarSign className="mr-2 text-accent h-5 w-5" />
                 Hourly Rate
-                <Info className="ml-1.5 h-4 w-4 text-velocity-accent/70" />
+                <Info className="ml-1.5 h-4 w-4 text-accent/70" />
               </label>
             </TooltipTrigger>
-            <TooltipContent className="bg-velocity-dark border-velocity-accent text-velocity-light">
+            <TooltipContent className="bg-background border-accent text-foreground">
               <p>Average hourly cost of employees performing this task</p>
             </TooltipContent>
           </Tooltip>
-          <span className="text-velocity-accent font-semibold">${hourlyRate}</span>
+          <span className="text-accent font-semibold">${hourlyRate}</span>
         </div>
         <Slider 
           value={[hourlyRate]} 
@@ -143,7 +143,7 @@ const InputControls: React.FC<InputControlsProps> = ({ inputs, onInputChange }) 
           onValueChange={(value) => onInputChange('hourlyRate', value[0])}
           className="py-4"
         />
-        <div className="flex justify-between text-xs text-velocity-muted">
+        <div className="flex justify-between text-xs text-muted-foreground">
           <span>$15</span>
           <span>$100</span>
         </div>

@@ -101,23 +101,23 @@ const InnesYoung = () => {
             />
           </div>
           
-          <h1 className="text-4xl md:text-5xl font-bold mb-12 heading-gradient">
+          <h1 className="text-4xl md:text-5xl font-bold mb-12">
             Innes & Young: AI-Powered PR Evolution
           </h1>
           
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Client Overview</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               Innes & Young (IY) is a leading public relations and reputation management firm that focuses on crisis communication, brand positioning, and strategic media outreach. Renowned for its personalised approach and extensive industry knowledge, IY sought to enhance operations, boost efficiency, and improve digital outreach while maintaining the quality of service that established its reputation.
             </p>
           </section>
 
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">The Challenge</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               Despite its achievements, Innes & Young encountered several operational challenges:
             </p>
-            <ul className="list-disc list-inside text-velocity-muted space-y-4 ml-4">
+            <ul className="list-disc list-inside text-muted-foreground space-y-4 ml-4">
               <li>Limited Scalability: A heavy dependence on manual processes hindered the firm's ability to onboard new clients efficiently.</li>
               <li>Inefficient Workflows: Managing PR campaigns across various platforms involved considerable administrative effort.</li>
               <li>Data Fragmentation: Client interactions, media contacts, and campaign performance data were scattered across different systems, leading to reduced operational visibility.</li>
@@ -129,11 +129,11 @@ const InnesYoung = () => {
             <h2 className="text-2xl font-bold mb-6">The 10x Velocity Solution</h2>
             <div className="grid gap-8">
               {solutions.map((solution, index) => (
-                <div key={index} className="glass-card p-8">
-                  <h3 className="text-xl font-semibold mb-3 text-velocity-accent">
+                <div key={index} className="bg-surface border border-border rounded-lg p-8">
+                  <h3 className="text-xl font-semibold mb-3 text-accent">
                     {solution.title}
                   </h3>
-                  <p className="text-velocity-muted">
+                  <p className="text-muted-foreground">
                     {solution.description}
                   </p>
                 </div>
@@ -143,15 +143,15 @@ const InnesYoung = () => {
 
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-6">Results & Impact</h2>
-            <div className="glass-card p-8">
-              <p className="text-velocity-muted mb-6">
+            <div className="bg-surface border border-border rounded-lg p-8">
+              <p className="text-muted-foreground mb-6">
                 After six months, Innes & Young experienced a tenfold transformation in operations:
               </p>
               <div className="grid gap-4">
                 {results.map((result, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-6 h-6 text-velocity-accent shrink-0" />
-                    <span className="text-velocity-muted">{result}</span>
+                    <CheckCircle2 className="w-6 h-6 text-accent shrink-0" />
+                    <span className="text-muted-foreground">{result}</span>
                   </div>
                 ))}
               </div>
@@ -160,23 +160,23 @@ const InnesYoung = () => {
 
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">Conclusion</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               By utilising 10x Velocity's AI-driven automation, Innes & Young evolved from a manual PR firm into a high-efficiency, data-driven entity. With improved scalability and predictive insights, Innes & Young is now positioned for sustained growth while maintaining premium client service.
             </p>
-            <p className="text-velocity-muted">
+            <p className="text-muted-foreground">
               10x Velocity's intervention has set a new standard in PR operations, redefining AI-powered reputation management.
             </p>
           </section>
 
           <section className="mb-16">
             <h2 className="text-2xl font-bold mb-4">What's Next?</h2>
-            <p className="text-velocity-muted mb-6">
+            <p className="text-muted-foreground mb-6">
               With enhanced efficiency, Innes & Young is considering global expansion and AI-powered content generation, further solidifying its industry leadership.
             </p>
-            <p className="text-velocity-muted mb-6">
-              Discover how our <Link to="/services" className="text-velocity-accent hover:underline">AI process automation services</Link> can transform your operations the way they did for Innes & Young.
+            <p className="text-muted-foreground mb-6">
+              Discover how our <Link to="/services" className="text-accent hover:underline">AI process automation services</Link> can transform your operations the way they did for Innes & Young.
             </p>
-            <div className="glass-card p-8 text-center">
+            <div className="bg-surface border border-border rounded-lg p-8 text-center">
               <p className="text-lg mb-6">
                 Want to achieve significant results in your business?
               </p>

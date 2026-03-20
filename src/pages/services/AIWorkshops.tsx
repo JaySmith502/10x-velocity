@@ -53,18 +53,18 @@ const AIWorkshops = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "AI Workshops", path: "/services/ai-workshops" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 pt-24 pb-16">
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6 heading-gradient">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-6">
           Empower Your Team with Hands-On AI Workshops
         </h1>
-        <h2 className="text-xl md:text-2xl text-velocity-muted text-center max-w-3xl mx-auto">
+        <h2 className="text-xl md:text-2xl text-muted-foreground text-center max-w-3xl mx-auto">
           Practical, role-based training to unlock AI's potential—tailored for your industry.
         </h2>
       </section>
 
       {/* Overview Section */}
       <section className="container mx-auto px-4 py-12">
-        <div className="glass-card p-8 max-w-4xl mx-auto">
-          <p className="text-lg text-velocity-light mb-6">
+        <div className="bg-surface border border-border rounded-lg p-8 max-w-4xl mx-auto">
+          <p className="text-lg text-foreground mb-6">
             Our customized AI workshops deliver hands-on training that transforms how your team works. Through practical exercises and real-world scenarios, we build the skills your staff needs to leverage AI effectively in their daily tasks. Each workshop is tailored to your industry and specific use cases, ensuring immediate value and application.
           </p>
         </div>
@@ -75,30 +75,30 @@ const AIWorkshops = () => {
         <h3 className="text-3xl font-bold mb-12 text-center">Key Benefits</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="glass-card p-6 hover:scale-105 transition-transform duration-300">
+            <div key={index} className="bg-surface border border-border rounded-lg p-6 hover:scale-105 transition-transform duration-300">
               <div className="text-3xl mb-4">{benefit.emoji}</div>
-              <h4 className="text-xl font-bold mb-3 text-velocity-light">{benefit.title}</h4>
-              <p className="text-velocity-muted">{benefit.description}</p>
+              <h4 className="text-xl font-bold mb-3 text-foreground">{benefit.title}</h4>
+              <p className="text-muted-foreground">{benefit.description}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* Popular Workshops */}
-      <section className="container mx-auto px-4 py-16 bg-black/20">
+      <section className="container mx-auto px-4 py-16 bg-muted">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center">Popular Workshops</h3>
           <div className="space-y-6">
             {workshops.map((workshop, index) => (
-              <div key={index} className="glass-card p-6">
-                <h4 className="text-xl font-bold mb-4 text-velocity-light">{workshop.title}</h4>
+              <div key={index} className="bg-surface border border-border rounded-lg p-6">
+                <h4 className="text-xl font-bold mb-4 text-foreground">{workshop.title}</h4>
                 <div className="flex flex-wrap gap-3">
                   {workshop.topics.map((topic, topicIndex) => (
                     <span 
                       key={topicIndex}
-                      className="inline-flex items-center gap-2 bg-white/10 px-3 py-1.5 rounded-full text-sm"
+                      className="inline-flex items-center gap-2 bg-muted px-3 py-1.5 rounded-full text-sm"
                     >
-                      <Sparkle className="w-4 h-4 text-velocity-accent" />
+                      <Sparkle className="w-4 h-4 text-accent" />
                       {topic}
                     </span>
                   ))}
@@ -114,12 +114,12 @@ const AIWorkshops = () => {
         <h3 className="text-3xl font-bold mb-12 text-center">How It Works</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {steps.map((step, index) => (
-            <div key={index} className="glass-card p-6 relative">
-              <div className="text-velocity-accent font-bold text-xl mb-4">
+            <div key={index} className="bg-surface border border-border rounded-lg p-6 relative">
+              <div className="text-accent font-bold text-xl mb-4">
                 {step.number}
               </div>
-              <h4 className="text-xl font-bold mb-3 text-velocity-light">{step.title}</h4>
-              <p className="text-velocity-muted">{step.description}</p>
+              <h4 className="text-xl font-bold mb-3 text-foreground">{step.title}</h4>
+              <p className="text-muted-foreground">{step.description}</p>
             </div>
           ))}
         </div>
@@ -129,7 +129,7 @@ const AIWorkshops = () => {
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
-          <div className="glass-card p-8">
+          <div className="bg-surface border border-border rounded-lg p-8">
             <Accordion type="single" collapsible className="w-full">
               {faqs.map((faq, index) => (
                 <AccordionItem key={index} value={`item-${index}`}>
@@ -149,7 +149,7 @@ const AIWorkshops = () => {
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-16 text-center">
         <h3 className="text-3xl font-bold mb-6">Ready to Transform Your Team's AI Skills?</h3>
-        <p className="text-velocity-muted mb-8 max-w-2xl mx-auto">
+        <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
           Book a free discovery session to discuss your team's needs and design a custom workshop program.
         </p>
         <DiscoveryButton text="Schedule Free Consultation" className="text-lg" />

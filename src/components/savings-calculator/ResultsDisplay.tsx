@@ -14,29 +14,29 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
 
   return (
     <div className="flex flex-col justify-center space-y-8">
-      <h2 className="text-2xl font-semibold text-velocity-light mb-2 flex items-center">
-        <DollarSign className="mr-2 text-velocity-accent" />
+      <h2 className="text-2xl font-semibold text-foreground mb-2 flex items-center">
+        <DollarSign className="mr-2 text-accent" />
         Your Automation Savings
       </h2>
 
       {/* Results Cards */}
       <div className="space-y-6">
-        <div className="bg-black/30 border border-white/10 rounded-lg p-6">
-          <p className="text-velocity-muted">Estimated Weekly Savings</p>
-          <p className="text-3xl font-bold text-velocity-accent">${weeklySavings.toFixed(2)}</p>
+        <div className="bg-black/30 border border-border rounded-lg p-6">
+          <p className="text-muted-foreground">Estimated Weekly Savings</p>
+          <p className="text-3xl font-bold text-accent">${weeklySavings.toFixed(2)}</p>
         </div>
         
-        <div className="bg-black/30 border border-white/10 rounded-lg p-6">
-          <p className="text-velocity-muted">Estimated Annual Savings</p>
-          <p className="text-3xl font-bold text-velocity-accent">${annualSavings.toLocaleString('en-US', {
+        <div className="bg-black/30 border border-border rounded-lg p-6">
+          <p className="text-muted-foreground">Estimated Annual Savings</p>
+          <p className="text-3xl font-bold text-accent">${annualSavings.toLocaleString('en-US', {
             minimumFractionDigits: 2,
             maximumFractionDigits: 2
           })}</p>
         </div>
         
-        <div className="bg-black/30 border border-white/10 rounded-lg p-6">
-          <p className="text-velocity-muted">Hours Reclaimed Weekly</p>
-          <p className="text-3xl font-bold text-velocity-accent">{timeReclaimed.toFixed(1)} hours</p>
+        <div className="bg-black/30 border border-border rounded-lg p-6">
+          <p className="text-muted-foreground">Hours Reclaimed Weekly</p>
+          <p className="text-3xl font-bold text-accent">{timeReclaimed.toFixed(1)} hours</p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@ const ResultsDisplay: React.FC<ResultsDisplayProps> = ({ results }) => {
         <Button 
           asChild
           variant="outline" 
-          className="w-full border-velocity-accent text-[#151A24] hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
+          className="w-full border-accent text-foreground hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
         >
           <Link to="/case-studies" className="flex items-center justify-center w-full">
             See some Case Studies

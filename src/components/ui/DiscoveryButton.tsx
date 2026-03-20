@@ -17,7 +17,7 @@ const DiscoveryButton: React.FC<DiscoveryButtonProps> = ({
   return (
     <Button 
       asChild
-      className={`bg-gradient-to-r from-velocity-accent to-velocity-light text-[#151A24] font-medium hover:bg-gradient-to-r hover:from-purple-400 hover:to-white transition-all text-lg ${className}`}
+      className={`bg-accent text-background font-medium hover:bg-accent/90 transition-all text-lg ${className}`}
     >
       <a href={url} target="_blank" rel="noopener noreferrer">
         {text} <ArrowRight className="w-5 h-5" />
