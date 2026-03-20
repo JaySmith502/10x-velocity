@@ -228,7 +228,7 @@ const Index = () => {
                   Book a Discovery Call <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>
               </Button>
-              <Button asChild variant="outline" className="border-background/30 text-background hover:bg-background/10 font-medium">
+              <Button asChild className="bg-transparent border border-background/30 text-background hover:bg-background/10 font-medium">
                 <Link to="/savings-calculator">
                   Calculate Savings
                 </Link>
