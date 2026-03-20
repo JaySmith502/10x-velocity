@@ -1,5 +1,5 @@
-
 import { useEffect } from "react";
+import { ThemeProvider } from "next-themes";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Outlet } from "react-router-dom";
@@ -20,10 +20,8 @@ const useChatWidgetH1Fix = () => {
       return false;
     };
 
-    // Try immediately in case widget already loaded
     if (fixChatH1()) return;
 
-    // Watch for the widget to be added to the DOM
     const observer = new MutationObserver(() => {
       if (fixChatH1()) {
         observer.disconnect();
@@ -31,7 +29,6 @@ const useChatWidgetH1Fix = () => {
     });
 
     observer.observe(document.body, { childList: true, subtree: true });
-
     return () => observer.disconnect();
   }, []);
 };
@@ -40,11 +37,15 @@ const RootLayout = () => {
   useChatWidgetH1Fix();
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-1">
+          <Outlet />
+        </main>
+        <Footer />
+      </div>
+    </ThemeProvider>
   );
 };
 
