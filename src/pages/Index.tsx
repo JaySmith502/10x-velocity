@@ -1,9 +1,12 @@
+import { lazy, Suspense } from "react";
 import { ArrowRight, Calculator } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { BUSINESS_DATA } from "@/schemas/organization";
+
+const GradientMesh = lazy(() => import("@/components/ui/GradientMesh"));
 
 const Index = () => {
   return (
@@ -71,7 +74,17 @@ const Index = () => {
       </Helmet>
 
       {/* Hero */}
-      <section className="container mx-auto px-4 pt-16 md:pt-24 pb-0">
+      <section className="relative overflow-hidden">
+        {/* WebGL gradient mesh — lazy loaded, CSS fallback for no-JS/no-WebGL/reduced-motion */}
+        <div
+          className="absolute inset-0 -z-10"
+          style={{ background: "radial-gradient(ellipse at 70% 30%, hsl(195 40% 95%) 0%, hsl(40 20% 98%) 50%, hsl(30 14% 94%) 100%)" }}
+        >
+          <Suspense fallback={null}>
+            <GradientMesh className="absolute inset-0 w-full h-full [&:not([data-active=true])]:hidden" />
+          </Suspense>
+        </div>
+      <div className="container mx-auto px-4 pt-16 md:pt-24 pb-0">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 max-w-6xl mx-auto">
           <div className="md:max-w-xl animate-fade-up">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
@@ -111,6 +124,7 @@ const Index = () => {
             ))}
           </div>
         </div>
+      </div>
       </section>
 
       {/* Logo bar */}
