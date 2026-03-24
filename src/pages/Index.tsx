@@ -5,6 +5,7 @@ import { helmetJsonLdProp } from "react-schemaorg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { BUSINESS_DATA } from "@/schemas/organization";
+import ThinkingAnimation from "@/components/landing/ThinkingAnimation";
 
 const GradientMesh = lazy(() => import("@/components/ui/GradientMesh"));
 
@@ -84,8 +85,8 @@ const Index = () => {
           </Suspense>
         </div>
       <div className="container mx-auto px-4 pt-16 md:pt-24 pb-16 md:pb-20">
-        <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 max-w-6xl mx-auto">
-          <div className="md:max-w-xl animate-fade-up">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12 max-w-6xl mx-auto">
+          <div className="md:flex-1 md:max-w-xl animate-fade-up">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
               AI & Automation Consulting
             </p>
@@ -107,20 +108,18 @@ const Index = () => {
                 </Link>
               </Button>
             </div>
+            <ThinkingAnimation />
           </div>
 
-          {/* Stats strip */}
-          <div className="bg-foreground text-background rounded-xl p-6 md:p-8 flex md:flex-col gap-6 md:gap-8 md:min-w-[200px] animate-fade-up" style={{ animationDelay: "0.1s" }}>
-            {[
-              { value: "85%", label: "Time Saved" },
-              { value: "$2.4M", label: "Client Savings" },
-              { value: "40+", label: "Projects" },
-            ].map((stat, i) => (
-              <div key={stat.label} className={`text-center md:text-left ${i > 0 ? "md:pt-6 md:border-t md:border-background/15" : ""}`}>
-                <div className="font-display text-3xl md:text-4xl font-extrabold">{stat.value}</div>
-                <div className="text-xs text-background/50 mt-1">{stat.label}</div>
-              </div>
-            ))}
+          {/* Hero illustration */}
+          <div className="hidden md:flex items-center justify-center md:flex-1 animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            <img
+              src="/src/components/layout/Hero_graphic.png"
+              alt="AI automation network diagram showing interconnected nodes and data flows"
+              className="w-full max-w-md lg:max-w-lg mix-blend-screen"
+              width={1800}
+              height={1200}
+            />
           </div>
         </div>
       </div>

@@ -1,0 +1,35 @@
+<!-- Claude-style thinking animation -->
+<style>
+.t-dot{width:7px;height:7px;background:#d85a30;border-radius:50%;
+  flex-shrink:0;animation:tp 1.4s ease-in-out infinite}
+@keyframes tp{0%,100%{opacity:1}50%{opacity:.45}}
+.t-slot{position:relative;height:1.25em;min-width:200px;overflow:hidden}
+.t-word{position:absolute;top:0;left:0;font-family:monospace;font-size:15px;
+  color:#d85a30;white-space:nowrap;opacity:0;transform:translateY(7px);
+  transition:opacity .28s ease,transform .28s ease}
+.t-word.in{opacity:1;transform:translateY(0)}
+.t-word.out{opacity:0;transform:translateY(-7px);
+  transition:opacity .22s ease,transform .22s ease}
+</style>
+<div style="display:flex;align-items:center;gap:10px">
+  <div class="t-dot"></div>
+  <div class="t-slot" id="tslot"><span class="t-word in">Thinking...</span></div>
+</div>
+<script>
+const VERBS=['Thinking','Pondering','Scheming','Plotting','Considering',
+'Analyzing','Computing','Deliberating','Cogitating','Ruminating',
+'Musing','Contemplating','Reasoning','Calculating','Evaluating',
+'Synthesizing','Brainstorming','Ideating','Envisioning','Deciphering',
+'Unraveling','Hypothesizing','Theorizing','Architecting','Engineering',
+'Orchestrating','Philosophizing','Extrapolating','Concocting','Devising',
+'Strategizing','Formulating','Imagining','Simulating','Optimizing',
+'Refining','Distilling','Connecting','Weaving','Crafting',
+'Assembling','Constructing','Mapping','Navigating','Exploring',
+'Investigating','Decoding','Untangling','Bootstrapping','Hallucinating'];
+let i=0;const s=document.getElementById('tslot');
+setInterval(()=>{const o=s.querySelector('.in');if(o){o.classList.remove('in');
+o.classList.add('out');setTimeout(()=>o.remove(),250)}i=(i+1)%VERBS.length;
+const e=document.createElement('span');e.className='t-word';
+e.textContent=VERBS[i]+'...';s.appendChild(e);
+requestAnimationFrame(()=>requestAnimationFrame(()=>e.classList.add('in')))},1800);
+</script>

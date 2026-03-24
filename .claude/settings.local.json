@@ -17,7 +17,8 @@
       "Skill(gsd:progress:*)",
       "Bash(test:*)",
       "Bash(powershell -Command:*)",
-      "Bash(npm uninstall:*)"
+      "Bash(npm uninstall:*)",
+      "Bash(python:*)"
     ]
   }
 }

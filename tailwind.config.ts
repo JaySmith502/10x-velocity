@@ -69,6 +69,10 @@ export default {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "thinking-pulse": {
+          "0%, 100%": { opacity: "1" },
+          "50%": { opacity: "0.45" },
+        },
       },
       animation: {
         "fade-up": "fade-up 0.5s ease-out forwards",
