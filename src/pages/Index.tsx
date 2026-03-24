@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { BUSINESS_DATA } from "@/schemas/organization";
 import ThinkingAnimation from "@/components/landing/ThinkingAnimation";
+import heroGraphic from "@/components/layout/Hero_graphic.png";
 
 const GradientMesh = lazy(() => import("@/components/ui/GradientMesh"));
 
@@ -114,7 +115,7 @@ const Index = () => {
           {/* Hero illustration */}
           <div className="hidden md:flex items-center justify-center md:flex-1 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <img
-              src="/src/components/layout/Hero_graphic.png"
+              src={heroGraphic}
               alt="AI automation network diagram showing interconnected nodes and data flows"
               className="w-full max-w-md lg:max-w-lg mix-blend-screen"
               width={1800}
