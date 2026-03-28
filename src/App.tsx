@@ -42,6 +42,7 @@ const Prototypes = lazy(() => import("./pages/Prototypes"));
 const IndustryTools = lazy(() => import("./pages/IndustryTools"));
 const AIGuideCertification = lazy(() => import("./pages/AIGuideCertification"));
 const AIGuideThankYou = lazy(() => import("./pages/AIGuideThankYou"));
+const ClaudePowerWorkshop = lazy(() => import("./pages/ClaudePowerWorkshop"));
 
 const queryClient = new QueryClient();
 
@@ -83,6 +84,7 @@ const AppContent = () => {
           <Route path="/case-studies/transportation-director" element={<TransportationDirector />} />
           <Route path="/savings-calculator" element={<SavingsCalculator />} />
           <Route path="/events/lunch-and-learn" element={<LunchAndLearn />} />
+          <Route path="/claude-power-workshop" element={<ClaudePowerWorkshop />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/demo" element={<OnboardingForm />} />
           <Route path="/confirmation" element={<OnboardingConfirmation />} />

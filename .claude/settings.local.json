@@ -18,7 +18,14 @@
       "Bash(test:*)",
       "Bash(powershell -Command:*)",
       "Bash(npm uninstall:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(echo \"$PATH\")",
+      "Bash(tr ';' '\\\\n')",
+      "Bash(echo \"$CLAUDE_CODE_GIT_BASH_PATH\")",
+      "Read(//c/Program Files/Git/bin/**)",
+      "Read(//c/Program Files/Git/usr/bin/**)",
+      "Bash(echo $SHELL)",
+      "Bash(bash --version)"
     ]
   }
 }
