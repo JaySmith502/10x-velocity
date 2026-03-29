@@ -2,7 +2,6 @@ import { Helmet } from "react-helmet";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
-import WorkshopInterestForm from "@/components/workshop/WorkshopInterestForm";
 import {
   Accordion,
   AccordionContent,
@@ -253,17 +252,23 @@ const ClaudePowerWorkshop = () => {
           </div>
         </section>
 
-        {/* ─── 8. INTEREST FORM ─── */}
+        {/* ─── 8. RESERVE CTA ─── */}
         <section id="interest-form" className="container mx-auto px-4 py-20 scroll-mt-24">
-          <div className="max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-3">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3">
               Reserve Your Seat
             </h2>
-            <p className="text-muted-foreground text-center mb-10 max-w-lg mx-auto">
-              Workshops are limited to 20 participants. Drop your info below and we'll reach out
-              with upcoming dates and details.
+            <p className="text-muted-foreground mb-10 max-w-lg mx-auto">
+              Workshops are limited to 20 participants. Reach out and we'll send you upcoming
+              dates and details.
             </p>
-            <WorkshopInterestForm />
+            <Button
+              size="lg"
+              onClick={scrollToForm}
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8 py-6"
+            >
+              Reserve Your Seat <ArrowRight className="ml-2 w-5 h-5" />
+            </Button>
           </div>
         </section>
 
