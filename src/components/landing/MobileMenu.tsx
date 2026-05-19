@@ -46,7 +46,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             </Link>
             <button
               onClick={onClose}
-              className="text-muted-foreground hover:text-foreground p-2"
+              className="inline-flex items-center justify-center h-11 w-11 -mr-3 text-muted-foreground hover:text-foreground"
               aria-label="Close menu"
             >
               <X className="w-5 h-5" />

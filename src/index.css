@@ -6,17 +6,19 @@
   :root {
     /* Light mode (default) — warm tinted neutrals */
     --background: 40 20% 98%;
-    --surface: 0 0% 100%;
+    --surface: 40 40% 99%;
     --foreground: 20 14% 10%;
+    /* De-emphasized text on a foreground-colored panel — AA-safe per theme (not opacity) */
+    --background-muted: 40 15% 72%;
     --muted: 30 14% 94%;
     --muted-foreground: 25 8% 32%;
     --border: 30 10% 89%;
     --input: 30 10% 89%;
     --ring: 195 86% 57%;
 
-    --card: 0 0% 100%;
+    --card: 40 40% 99%;
     --card-foreground: 20 14% 10%;
-    --popover: 0 0% 100%;
+    --popover: 40 40% 99%;
     --popover-foreground: 20 14% 10%;
 
     --primary: 20 14% 10%;
@@ -27,6 +29,11 @@
     --accent: 195 86% 57%;
     --accent-foreground: 0 0% 100%;
     --accent-secondary: 290 75% 55%;
+    /* Text-safe accent variants — darkened to meet WCAG AA (>=4.5:1) on the light foundation */
+    --accent-strong: 195 80% 30%;
+    --accent-secondary-strong: 290 70% 42%;
+    /* Dark ink for text that sits ON an accent fill (theme-independent) */
+    --accent-ink: 20 14% 10%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -39,6 +46,8 @@
     --background: 20 8% 7%;
     --surface: 20 8% 10%;
     --foreground: 30 14% 95%;
+    /* Dark muted text for the inverted (light) foreground panel in dark mode */
+    --background-muted: 20 8% 32%;
     --muted: 20 8% 9%;
     --muted-foreground: 25 5% 64%;
     --border: 20 8% 16%;
@@ -58,6 +67,11 @@
     --accent: 195 86% 57%;
     --accent-foreground: 0 0% 100%;
     --accent-secondary: 290 75% 55%;
+    /* Bright on near-black — high contrast for text on dark surfaces */
+    --accent-strong: 195 86% 62%;
+    --accent-secondary-strong: 290 75% 70%;
+    /* Dark ink stays constant: it always sits on a bright accent fill */
+    --accent-ink: 20 14% 10%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;

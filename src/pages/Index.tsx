@@ -1,12 +1,9 @@
-import { lazy, Suspense } from "react";
 import { ArrowRight, Calculator } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { BUSINESS_DATA } from "@/schemas/organization";
-
-const GradientMesh = lazy(() => import("@/components/ui/GradientMesh"));
 
 const Index = () => {
   return (
@@ -75,18 +72,15 @@ const Index = () => {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        {/* WebGL gradient mesh — lazy loaded, CSS fallback for no-JS/no-WebGL/reduced-motion */}
+        {/* Static warm-neutral wash with a subtle brand-accent tint, no animation */}
         <div
-          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]"
-        >
-          <Suspense fallback={null}>
-            <GradientMesh className="absolute inset-0 w-full h-full [&:not([data-active=true])]:hidden" />
-          </Suspense>
-        </div>
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(var(--accent)/0.10)_0%,hsl(var(--background))_55%,hsl(var(--muted))_100%)]"
+        />
       <div className="container mx-auto px-4 pt-16 md:pt-24 pb-16 md:pb-20">
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-12 max-w-6xl mx-auto">
           <div className="md:max-w-xl animate-fade-up">
-            <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+            <p className="text-xs font-semibold tracking-widest uppercase text-accent-strong mb-4">
               AI & Automation Consulting
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 text-foreground">
@@ -118,7 +112,7 @@ const Index = () => {
             ].map((stat, i) => (
               <div key={stat.label} className={`text-center md:text-left ${i > 0 ? "md:pt-6 md:border-t md:border-background/15" : ""}`}>
                 <div className="font-display text-3xl md:text-4xl font-extrabold">{stat.value}</div>
-                <div className="text-xs text-background/50 mt-1">{stat.label}</div>
+                <div className="text-xs text-background-muted mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -132,7 +126,7 @@ const Index = () => {
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
             <span className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Trusted by</span>
             {["GovBrokers", "Innes & Young", "eCatalyst", "Hillcrest Partners", "Catalyst Group"].map((name) => (
-              <span key={name} className="text-sm font-semibold text-muted-foreground/60">{name}</span>
+              <span key={name} className="text-sm font-semibold text-muted-foreground">{name}</span>
             ))}
           </div>
         </div>
@@ -148,21 +142,21 @@ const Index = () => {
                 GovBrokers cut processing time by 85% and saved $240K/year
               </h2>
               <p className="font-body text-base text-muted-foreground leading-relaxed mb-5">
-                A government services firm drowning in manual document processing. We automated their core workflow in 6 weeks — now their team focuses on clients, not paperwork.
+                A government services firm drowning in manual document processing. We automated their core workflow in 6 weeks. Now their team focuses on clients, not paperwork.
               </p>
-              <Link to="/case-studies/govbrokers" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1">
+              <Link to="/case-studies/govbrokers" className="text-sm font-semibold text-accent-strong hover:underline inline-flex items-center gap-1">
                 Read the full story <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
-            <div className="grid grid-cols-2 gap-3 md:gap-4 md:flex-1 w-full md:w-auto">
+            <div className="grid grid-cols-2 gap-x-8 gap-y-7 md:flex-1 w-full md:w-auto">
               {[
                 { value: "85%", label: "Faster processing" },
                 { value: "$240K", label: "Annual savings" },
                 { value: "6 wk", label: "Implementation" },
                 { value: "3 FTE", label: "Hours reclaimed" },
               ].map((metric) => (
-                <div key={metric.label} className="bg-surface border border-border rounded-lg p-5">
-                  <div className="font-display text-2xl md:text-3xl font-extrabold text-foreground">{metric.value}</div>
+                <div key={metric.label} className="border-t border-border pt-4">
+                  <div className="font-display text-3xl md:text-4xl font-extrabold text-foreground">{metric.value}</div>
                   <div className="text-xs text-muted-foreground mt-1">{metric.label}</div>
                 </div>
               ))}
@@ -184,7 +178,7 @@ const Index = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
               {[
                 { num: "01", title: "Assess", body: "We map your current processes and identify where automation creates the most leverage." },
-                { num: "02", title: "Build", body: "We implement targeted solutions — typically live within 4–8 weeks, not months." },
+                { num: "02", title: "Build", body: "We implement targeted solutions, typically live within 4–8 weeks, not months." },
                 { num: "03", title: "Scale", body: "We measure results and expand what works. Your team learns the systems alongside us." },
               ].map((step, i) => (
                 <div
@@ -194,7 +188,7 @@ const Index = () => {
                   } ${i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"}`}
                 >
                   <div className="font-display text-5xl font-extrabold text-border mb-3">{step.num}</div>
-                  <div className="font-display text-lg font-bold text-foreground mb-2">{step.title}</div>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-2">{step.title}</h3>
                   <p className="font-body text-sm text-muted-foreground leading-relaxed">{step.body}</p>
                 </div>
               ))}
@@ -208,17 +202,17 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
             <div className="pb-10 md:pb-0 md:pr-12 border-b md:border-b-0 md:border-r border-border">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-3">For Businesses</p>
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent-strong mb-3">For Businesses</p>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Scale operations without scaling headcount</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
                 Automate repetitive tasks. Optimize workflows with AI. Free your team for strategic work that grows revenue.
               </p>
             </div>
             <div className="pt-10 md:pt-0 md:pl-12">
-              <p className="text-xs font-semibold tracking-widest uppercase text-accent-secondary mb-3">For Nonprofits</p>
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent-secondary-strong mb-3">For Nonprofits</p>
               <h3 className="font-display text-xl font-bold text-foreground mb-3">Maximize impact with limited resources</h3>
               <p className="font-body text-sm text-muted-foreground leading-relaxed">
-                Streamline donor management, volunteer coordination, and program delivery — so you can focus on your mission.
+                Streamline donor management, volunteer coordination, and program delivery, so you can focus on your mission.
               </p>
             </div>
           </div>
@@ -231,12 +225,12 @@ const Index = () => {
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center md:justify-between gap-8">
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-extrabold mb-2">Ready to move faster?</h2>
-              <p className="font-body text-sm text-background/60">
+              <p className="font-body text-sm text-background-muted">
                 15-minute call. No pitch deck. Just an honest look at what automation could do for you.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-              <Button asChild className="bg-accent text-white hover:bg-accent/90 font-semibold">
+              <Button asChild className="bg-accent text-accent-ink hover:bg-accent/90 font-semibold">
                 <Link to="/contact">
                   Book a Discovery Call <ArrowRight className="w-4 h-4 ml-1" />
                 </Link>

@@ -42,7 +42,7 @@ const Header = () => {
             </Link>
 
             <button
-              className="md:hidden text-muted-foreground hover:text-foreground p-2 -ml-2"
+              className="md:hidden inline-flex items-center justify-center h-11 w-11 -ml-3 text-muted-foreground hover:text-foreground"
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Open menu"
             >
@@ -53,7 +53,7 @@ const Header = () => {
           <div className="flex items-center gap-4">
             <nav className="hidden md:flex items-center gap-6">
               <DropdownMenu>
-                <DropdownMenuTrigger className="text-muted-foreground hover:text-foreground transition-colors font-semibold text-sm flex items-center gap-1 focus:outline-none">
+                <DropdownMenuTrigger className="text-muted-foreground hover:text-foreground transition-colors font-semibold text-sm flex items-center gap-1 rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
                   Services <ChevronDown className="w-3.5 h-3.5" />
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="bg-surface border-border text-foreground min-w-[200px]">
@@ -80,7 +80,7 @@ const Header = () => {
 
             <button
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="p-2 text-muted-foreground hover:text-foreground transition-colors"
+              className="inline-flex items-center justify-center h-11 w-11 text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Toggle theme"
             >
               <Sun className="w-4 h-4 hidden dark:block" />

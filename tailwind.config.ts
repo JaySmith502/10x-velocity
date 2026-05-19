@@ -19,15 +19,16 @@ export default {
     },
     extend: {
       fontFamily: {
-        display: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        display: ['"Schibsted Grotesk"', "system-ui", "sans-serif"],
         body: ['"Source Serif 4"', "Georgia", "serif"],
-        sans: ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+        sans: ['"Schibsted Grotesk"', "system-ui", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        "background-muted": "hsl(var(--background-muted))",
         foreground: "hsl(var(--foreground))",
         surface: "hsl(var(--surface))",
         primary: {
@@ -50,6 +51,9 @@ export default {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
           secondary: "hsl(var(--accent-secondary))",
+          strong: "hsl(var(--accent-strong))",
+          "secondary-strong": "hsl(var(--accent-secondary-strong))",
+          ink: "hsl(var(--accent-ink))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
