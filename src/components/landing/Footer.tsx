@@ -45,6 +45,7 @@ const Footer = () => {
             <h3 className="text-sm font-semibold mb-4 text-background/80">Solutions</h3>
             <ul className="space-y-2 text-sm">
               <li><Link to="/services" className="text-background/50 hover:text-background transition-colors">All Services</Link></li>
+              <li><Link to="/packages" className="text-background/50 hover:text-background transition-colors">Packages &amp; Pricing</Link></li>
               <li><Link to="/services/data-cleaning" className="text-background/50 hover:text-background transition-colors">Data Cleaning</Link></li>
               <li><Link to="/services/phone-voice-agents" className="text-background/50 hover:text-background transition-colors">Voice Agents</Link></li>
               <li><Link to="/services/smart-bots" className="text-background/50 hover:text-background transition-colors">Smart Bots</Link></li>

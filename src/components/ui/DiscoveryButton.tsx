@@ -19,7 +19,7 @@ const DiscoveryButton: React.FC<DiscoveryButtonProps> = ({
   return (
     <Button
       asChild
-      className={`bg-foreground text-background font-semibold hover:bg-foreground/90 transition-colors ${className ?? ""}`}
+      className={`bg-accent text-white font-semibold hover:bg-accent/90 transition-colors ${className ?? ""}`}
     >
       {isExternal ? (
         <a href={url} target="_blank" rel="noopener noreferrer">

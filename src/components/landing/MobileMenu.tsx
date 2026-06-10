@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { X, ChevronDown, ChevronUp } from "lucide-react";
+import DiscoveryButton from "@/components/ui/DiscoveryButton";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -82,7 +83,6 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               { to: "/about", label: "About" },
               { to: "/case-studies", label: "Case Studies" },
               { to: "/savings-calculator", label: "Savings Calculator" },
-              { to: "/demo", label: "Get Demo" },
             ].map((link) => (
               <Link
                 key={link.to}
@@ -95,13 +95,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             ))}
 
             <div className="pt-4">
-              <Link
-                to="/contact"
-                className="block bg-foreground text-background font-semibold px-6 py-3 rounded-lg w-full text-center text-sm"
-                onClick={onClose}
-              >
-                Contact Us
-              </Link>
+              <DiscoveryButton className="w-full text-sm" />
             </div>
           </nav>
         </div>
