@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI & Automation Consulting | 10x Velocity</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Design tokens ─────────────────────────────────────── */
+    :root {
+      --background:       hsl(40, 20%, 98%);
+      --surface:          hsl(40, 15%, 99%);
+      --foreground:       hsl(20, 14%, 10%);
+      --muted:            hsl(30, 14%, 94%);
+      --muted-fg:         hsl(25, 8%, 38%);
+      --border:           hsl(35, 12%, 87%);
+
+      --accent:           #33C3F0;   /* cyan — sharp accent only */
+      --accent-secondary: #D043E6;   /* purple/magenta — second accent */
+      --accent-hover:     #1fb3e0;
+
+      --radius:           0.625rem;
+      --font-display:     'Plus Jakarta Sans', sans-serif;
+      --font-body:        'Source Serif 4', Georgia, serif;
+    }
+
+    /* ─── Reset / base ──────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-display);
+      background: var(--background);
+      color: var(--foreground);
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ─── Layout helpers ────────────────────────────────────── */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ─── HEADER ────────────────────────────────────────────── */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: hsla(40, 20%, 98%, 0.88);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.125rem;
+      letter-spacing: -0.01em;
+      color: var(--foreground);
+    }
+
+    /* Inline SVG wordmark stand-in */
+    .logo-mark {
+      width: 32px;
+      height: 32px;
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .header-nav a {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--muted-fg);
+      transition: color 0.15s;
+    }
+    .header-nav a:hover { color: var(--foreground); }
+
+    .nav-dropdown {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--muted-fg);
+      cursor: pointer;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    /* ─── Buttons ───────────────────────────────────────────── */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: var(--font-display);
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: var(--radius);
+      padding: 9px 18px;
+      cursor: pointer;
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+      border: 1px solid transparent;
+      white-space: nowrap;
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+    .btn-primary:hover { background: var(--accent-hover); }
+
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--foreground);
+    }
+    .btn-outline:hover {
+      background: var(--muted);
+    }
+
+    .btn-dark {
+      background: var(--foreground);
+      color: var(--background);
+    }
+    .btn-dark:hover { background: hsl(20, 14%, 18%); }
+
+    .btn-ghost-light {
+      background: transparent;
+      border-color: rgba(255,255,255,0.25);
+      color: #fff;
+    }
+    .btn-ghost-light:hover { background: rgba(255,255,255,0.1); }
+
+    .btn-lg {
+      font-size: 1rem;
+      padding: 12px 24px;
+    }
+
+    /* Arrow icon inline */
+    .arrow-right {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      flex-shrink: 0;
+    }
+
+    /* ─── HERO ──────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      background: radial-gradient(ellipse at 68% 28%,
+        hsl(195, 50%, 93%) 0%,
+        hsl(40, 20%, 98%) 48%,
+        hsl(30, 14%, 95%) 100%);
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      padding-top: 80px;
+      padding-bottom: 112px;
+    }
+
+    @media (min-width: 768px) {
+      .hero-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 64px;
+        padding-top: 96px;
+        padding-bottom: 144px;
+      }
+    }
+
+    .hero-copy {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .eyebrow-secondary {
+      color: var(--accent-secondary);
+    }
+
+    h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      color: var(--foreground);
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      color: var(--muted-fg);
+      line-height: 1.7;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+
+    /* Thinking animation */
+    .thinking {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .thinking-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent-secondary);
+      animation: pulse 1.4s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    .thinking-text {
+      font-family: monospace;
+      font-size: 0.875rem;
+      color: var(--accent-secondary);
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(0.8); }
+    }
+
+    /* Hero right — metric proof tiles */
+    .hero-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      flex-shrink: 0;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .hero-metrics {
+        width: 340px;
+        min-width: 300px;
+      }
+    }
+
+    .metric-tile {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+    }
+
+    .metric-value {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--foreground);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .metric-label {
+      font-size: 0.75rem;
+      color: var(--muted-fg);
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    /* ─── LOGO / TRUST BAR ──────────────────────────────────── */
+    .trust-bar {
+      background: var(--muted);
+      padding: 14px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trust-bar-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 8px 32px;
+    }
+
+    .trust-label {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted-fg);
+      align-self: center;
+    }
+
+    .trust-client {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .trust-client-name {
+      font-size: 0.8125rem;
+      font-weight: 700;
+      color: var(--muted-fg);
+    }
+
+    .trust-client-industry {
+      font-size: 0.6875rem;
+      color: var(--muted-fg);
+      opacity: 0.65;
+    }
+
+    /* ─── SECTION COMMON ────────────────────────────────────── */
+    section { position: relative; }
+
+    .section-eyebrow {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted-fg);
+      margin-bottom: 24px;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+      color: var(--foreground);
+    }
+
+    h3 {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 10px;
+    }
+
+    .body-copy {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--muted-fg);
+    }
+
+    .body-copy-lg {
+      font-family: var(--font-body);
+      font-size: 1.125rem;
+      line-height: 1.7;
+      color: var(--muted-fg);
+    }
+
+    /* ─── FEATURED CASE STUDY ───────────────────────────────── */
+    .case-study {
+      padding: 80px 0;
+    }
+
+    @media (min-width: 768px) {
+      .case-study { padding: 80px 0; }
+    }
+
+    .case-study-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .case-study-inner {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 64px;
+      }
+    }
+
+    .case-study-copy { flex: 1; }
+
+    .case-study-copy h2 {
+      font-size: clamp(1.375rem, 2.5vw, 1.875rem);
+      margin-bottom: 16px;
+      margin-top: 8px;
+    }
+
+    .case-study-metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      flex: 1;
+    }
+
+    @media (min-width: 768px) {
+      .case-study-metrics {
+        min-width: 300px;
+        max-width: 340px;
+      }
+    }
+
+    .cs-metric {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+    }
+
+    .cs-metric-value {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      font-weight: 800;
+      color: var(--foreground);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .cs-metric-label {
+      font-size: 0.75rem;
+      color: var(--muted-fg);
+      margin-top: 6px;
+      font-weight: 500;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 0.875rem;
+      font-weight: 700;
+      color: var(--accent);
+      transition: opacity 0.15s;
+    }
+    .text-link:hover { opacity: 0.75; }
+
+    /* ─── HOW WE WORK ───────────────────────────────────────── */
+    .how-we-work {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 0;
+    }
+
+    .hww-header {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .hww-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+    }
+
+    .hww-subtitle {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--muted-fg);
+      max-width: 280px;
+    }
+
+    @media (min-width: 768px) {
+      .hww-subtitle { text-align: right; }
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    @media (min-width: 768px) {
+      .steps-grid { grid-template-columns: 1fr 1fr 1fr; }
+    }
+
+    .step {
+      padding: 32px 0;
+    }
+
+    @media (min-width: 768px) {
+      .step { padding: 0; }
+      .step:not(:last-child) {
+        padding-right: 40px;
+        border-right: 1px solid var(--border);
+      }
+      .step:not(:first-child) {
+        padding-left: 40px;
+      }
+    }
+
+    .step:not(:last-child) {
+      border-bottom: 1px solid var(--border);
+    }
+
+    @media (min-width: 768px) {
+      .step:not(:last-child) { border-bottom: none; }
+    }
+
+    .step-number {
+      font-family: var(--font-display);
+      font-size: 3.25rem;
+      font-weight: 800;
+      color: hsl(35, 12%, 80%);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: var(--foreground);
+      margin-bottom: 8px;
+    }
+
+    .step-body {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--muted-fg);
+      line-height: 1.65;
+    }
+
+    /* ─── DUAL AUDIENCE ─────────────────────────────────────── */
+    .dual-audience {
+      padding: 80px 0;
+    }
+
+    .audience-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    @media (min-width: 768px) {
+      .audience-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .audience-col {
+      padding: 40px 0;
+    }
+
+    @media (min-width: 768px) {
+      .audience-col:first-child {
+        padding: 0 48px 0 0;
+        border-right: 1px solid var(--border);
+      }
+      .audience-col:last-child {
+        padding: 0 0 0 48px;
+      }
+    }
+
+    .audience-col:first-child {
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 40px;
+      padding-top: 0;
+    }
+
+    @media (min-width: 768px) {
+      .audience-col:first-child { border-bottom: none; }
+    }
+
+    .audience-eyebrow-biz {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .audience-eyebrow-nonprofit {
+      font-size: 0.6875rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-secondary);
+      margin-bottom: 12px;
+    }
+
+    .audience-body {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: var(--muted-fg);
+      line-height: 1.65;
+      margin-top: 10px;
+    }
+
+    /* ─── BOTTOM CTA ────────────────────────────────────────── */
+    .cta-section {
+      background: var(--foreground);
+      color: var(--background);
+      padding: 64px 0;
+    }
+
+    .cta-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    @media (min-width: 768px) {
+      .cta-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+
+    .cta-heading {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .cta-sub {
+      font-family: var(--font-body);
+      font-size: 0.9375rem;
+      color: rgba(255,255,255,0.6);
+      line-height: 1.6;
+      max-width: 460px;
+    }
+
+    .cta-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    @media (min-width: 480px) {
+      .cta-buttons { flex-direction: row; }
+    }
+
+    /* ─── FOOTER ────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--foreground);
+      color: var(--background);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .footer-inner {
+      padding: 64px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      margin-bottom: 48px;
+    }
+
+    @media (min-width: 768px) {
+      .footer-grid { grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 32px; }
+    }
+
+    .footer-brand p {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.6;
+      margin: 12px 0;
+    }
+
+    .footer-brand a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.5);
+      transition: color 0.15s;
+    }
+    .footer-brand a:hover { color: #fff; }
+
+    .footer-col h3 {
+      font-family: var(--font-display);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 16px;
+      letter-spacing: 0.02em;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .footer-col ul li a {
+      font-size: 0.875rem;
+      color: rgba(255,255,255,0.45);
+      transition: color 0.15s;
+    }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.9); }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    @media (min-width: 640px) {
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .footer-copyright {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.3);
+    }
+
+    .footer-badges {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .badge-placeholder {
+      height: 32px;
+      width: 56px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .badge-placeholder span {
+      font-size: 0.55rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+    }
+
+    /* ─── LinkedIn icon ─────────────────────────────────────── */
+    .linkedin-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    /* ─── Divider utility ───────────────────────────────────── */
+    .divider {
+      height: 1px;
+      background: var(--border);
+      border: none;
+    }
+
+    /* ─── Accent bar on metric tiles ────────────────────────── */
+    .cs-metric:nth-child(1) .cs-metric-value { color: var(--foreground); }
+
+    /* On desktop hero illustration fallback — subtle geometric */
+    .hero-visual {
+      display: none;
+    }
+    @media (min-width: 768px) {
+      .hero-metrics {
+        /* On desktop keep as the right-column proof tiles */
+        display: grid;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════════════════ -->
+<header class="site-header">
+  <div class="container">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="/" class="logo">
+        <svg class="logo-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="32" height="32" rx="7" fill="#33C3F0"/>
+          <path d="M7 22L13 10L19 18L22 14L25 22" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        10x Velocity
+      </a>
+
+      <!-- Desktop nav -->
+      <nav class="header-nav">
+        <span class="nav-dropdown">
+          Services
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" aria-hidden="true">
+            <path d="M3 5L6.5 8.5L10 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <a href="/about">About</a>
+        <a href="/case-studies">Case Studies</a>
+        <a href="/savings-calculator">Calculator</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <a href="/contact" class="btn btn-primary" style="font-size:0.8125rem; padding:8px 16px;">
+          Contact Us
+          <svg class="arrow-right" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Copy column -->
+      <div class="hero-copy">
+        <span class="eyebrow">AI &amp; Automation Consulting</span>
+        <h1>We cut GovBrokers' processing time 85% in 6&nbsp;weeks. We can do the same for&nbsp;you.</h1>
+        <p class="hero-sub">AI &amp; automation consulting for companies ready to move faster. Based in Louisville, serving ambitious teams everywhere.</p>
+        <div class="hero-ctas">
+          <a href="/contact" class="btn btn-primary btn-lg">
+            Book a Discovery Call
+            <svg class="arrow-right" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="/savings-calculator" class="btn btn-outline btn-lg">
+            Calculate Savings
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <rect x="2" y="2" width="11" height="11" rx="1.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M5 5h1M9 5h1M5 7.5h1M9 7.5h1M5 10h1M9 10h1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </a>
+        </div>
+        <!-- Thinking animation (static in mockup) -->
+        <div class="thinking">
+          <span class="thinking-dot"></span>
+          <span class="thinking-text">Analyzing...</span>
+        </div>
+      </div>
+
+      <!-- Right column — metric proof tiles (visible both mobile + desktop) -->
+      <div class="hero-metrics">
+        <div class="metric-tile">
+          <div class="metric-value">85%</div>
+          <div class="metric-label">Faster processing</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-value">$240K</div>
+          <div class="metric-label">Annual savings</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-value">6 wk</div>
+          <div class="metric-label">Implementation</div>
+        </div>
+        <div class="metric-tile">
+          <div class="metric-value">3 FTE</div>
+          <div class="metric-label">Hours reclaimed</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     TRUST BAR
+════════════════════════════════════════════════════════ -->
+<section class="trust-bar">
+  <div class="container">
+    <div class="trust-bar-inner">
+      <span class="trust-label">Trusted by</span>
+
+      <div class="trust-client">
+        <span class="trust-client-name">GovBrokers</span>
+        <span class="trust-client-industry">Government Contracting</span>
+      </div>
+      <div class="trust-client">
+        <span class="trust-client-name">Innes &amp; Young</span>
+        <span class="trust-client-industry">Professional Services</span>
+      </div>
+      <div class="trust-client">
+        <span class="trust-client-name">eCatalyst</span>
+        <span class="trust-client-industry">Nonprofit</span>
+      </div>
+      <div class="trust-client">
+        <span class="trust-client-name">Hillcrest Partners</span>
+        <span class="trust-client-industry">Consulting</span>
+      </div>
+      <div class="trust-client">
+        <span class="trust-client-name">Catalyst Group</span>
+        <span class="trust-client-industry">Advisory</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FEATURED CASE STUDY
+════════════════════════════════════════════════════════ -->
+<section class="case-study">
+  <div class="container">
+    <div style="max-width:1152px; margin:0 auto;">
+      <p class="section-eyebrow">Featured Result</p>
+      <div style="width:40px; height:3px; background:var(--accent); border-radius:2px; margin-bottom:32px;"></div>
+      <div class="case-study-inner">
+
+        <div class="case-study-copy">
+          <h2>GovBrokers cut processing time by 85% and saved $240K/year</h2>
+          <p class="body-copy-lg" style="margin-bottom:20px;">
+            A government services firm drowning in manual document processing. We automated their core workflow in 6 weeks — now their team focuses on clients, not paperwork.
+          </p>
+          <a href="/case-studies/govbrokers" class="text-link">
+            Read the full story
+            <svg class="arrow-right" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+
+        <div class="case-study-metrics">
+          <div class="cs-metric">
+            <div class="cs-metric-value">85%</div>
+            <div class="cs-metric-label">Faster processing</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-value">$240K</div>
+            <div class="cs-metric-label">Annual savings</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-value">6 wk</div>
+            <div class="cs-metric-label">Implementation</div>
+          </div>
+          <div class="cs-metric">
+            <div class="cs-metric-value">3 FTE</div>
+            <div class="cs-metric-label">Hours reclaimed</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     HOW WE WORK
+════════════════════════════════════════════════════════ -->
+<section class="how-we-work">
+  <div class="container">
+    <div style="max-width:1152px; margin:0 auto;">
+
+      <div class="hww-header">
+        <h2>How we work</h2>
+        <p class="hww-subtitle">A structured approach that moves fast without cutting corners.</p>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-title">Assess</div>
+          <p class="step-body">We map your current processes and identify where automation creates the most leverage.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-title">Build</div>
+          <p class="step-body">We implement targeted solutions — typically live within 4–8 weeks, not months.</p>
+        </div>
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-title">Scale</div>
+          <p class="step-body">We measure results and expand what works. Your team learns the systems alongside us.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     DUAL AUDIENCE
+════════════════════════════════════════════════════════ -->
+<section class="dual-audience">
+  <div class="container">
+    <div style="max-width:1152px; margin:0 auto;">
+      <div class="audience-grid">
+
+        <!-- For Businesses -->
+        <div class="audience-col">
+          <p class="audience-eyebrow-biz">For Businesses</p>
+          <h3>Scale operations without scaling headcount</h3>
+          <p class="audience-body">Automate repetitive tasks. Optimize workflows with AI. Free your team for strategic work that grows revenue.</p>
+        </div>
+
+        <!-- For Nonprofits -->
+        <div class="audience-col">
+          <p class="audience-eyebrow-nonprofit">For Nonprofits</p>
+          <h3>Maximize impact with limited resources</h3>
+          <p class="audience-body">Streamline donor management, volunteer coordination, and program delivery — so you can focus on your mission.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     BOTTOM CTA
+════════════════════════════════════════════════════════ -->
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-inner">
+      <div>
+        <p class="cta-heading">Ready to move faster?</p>
+        <p class="cta-sub">15 minutes. You'll leave with 2–3 specific automation opportunities and a rough ROI estimate — no commitment required.</p>
+      </div>
+      <div class="cta-buttons">
+        <a href="/contact" class="btn btn-primary btn-lg">
+          Book a Discovery Call
+          <svg class="arrow-right" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M7 2l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+        <a href="/savings-calculator" class="btn btn-ghost-light btn-lg">
+          Calculate Savings
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════════════ -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="32" height="32" rx="7" fill="#33C3F0"/>
+              <path d="M7 22L13 10L19 18L22 14L25 22" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span style="font-weight:800; font-size:1rem; color:#fff;">10x Velocity</span>
+          </div>
+          <p>AI &amp; Automation Consulting<br>Louisville, KY</p>
+          <a href="mailto:info@10xvelocity.ai">info@10xvelocity.ai</a>
+          <div class="linkedin-link">
+            <a href="https://www.linkedin.com/company/10x-velocity" target="_blank" rel="noopener noreferrer" style="display:inline-flex; align-items:center; gap:6px; font-size:0.875rem; color:rgba(255,255,255,0.5);">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <rect width="16" height="16" rx="3" fill="currentColor" fill-opacity="0.3"/>
+                <path d="M4 6.5V12M4 4.5V4.5M7 12V8.5C7 7.67 7.67 7 8.5 7C9.33 7 10 7.67 10 8.5V12M7 9V12" stroke="white" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="4" cy="4.5" r="0.75" fill="white"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+        </div>
+
+        <!-- Solutions -->
+        <div class="footer-col">
+          <h3>Solutions</h3>
+          <ul>
+            <li><a href="/packages">Packages &amp; Pricing</a></li>
+            <li><a href="/services">All Services</a></li>
+            <li><a href="/services/data-cleaning">Data Cleaning</a></li>
+            <li><a href="/services/phone-voice-agents">Voice Agents</a></li>
+            <li><a href="/services/smart-bots">Smart Bots</a></li>
+            <li><a href="/prototypes">Rapid Prototypes</a></li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul>
+            <li><a href="/about">About</a></li>
+            <li><a href="/case-studies">Case Studies</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div class="footer-col">
+          <h3>Resources</h3>
+          <ul>
+            <li><a href="/savings-calculator">Savings Calculator</a></li>
+            <li><a href="/industry-tools">Industry Tools</a></li>
+            <li><a href="/programs/ai-guide-certification">AI Guide Cert</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copyright">© 2025 10x Velocity. All rights reserved.</p>
+        <div class="footer-badges">
+          <div class="badge-placeholder"><span>VOSB</span></div>
+          <div class="badge-placeholder"><span>ESGR</span></div>
+          <div class="badge-placeholder"><span>Canopy</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

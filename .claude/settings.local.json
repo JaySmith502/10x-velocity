@@ -25,7 +25,16 @@
       "Read(//c/Program Files/Git/bin/**)",
       "Read(//c/Program Files/Git/usr/bin/**)",
       "Bash(echo $SHELL)",
-      "Bash(bash --version)"
+      "Bash(bash --version)",
+      "mcp__plugin_woz_code__Search",
+      "PowerShell(Test-Path *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(npm run *)",
+      "PowerShell(New-Item *)",
+      "PowerShell(Out-Null *)",
+      "PowerShell(Get-ChildItem design-audit\\\\after -ErrorAction SilentlyContinue | Select-Object Name, @{n='KB';e={[math]::Round\\($_.Length/1KB\\)}}, LastWriteTime)",
+      "Bash(npx playwright *)",
+      "PowerShell(Get-ChildItem design-audit\\\\after -ErrorAction SilentlyContinue | Select-Object Name, @{n='KB';e={[math]::Round\\($_.Length/1KB\\)}}, LastWriteTime; \"---\"; Get-ChildItem \"C:\\\\Users\\\\smith\\\\.claude\\\\projects\\\\C--Users-smith-Documents-1-Projects-10x-velocity\\\\dc5dd860-ae49-4234-b6d5-bab3194b4069\\\\subagents\\\\workflows\\\\wf_c1589f45-6fa\" -ErrorAction SilentlyContinue | Select-Object Name, LastWriteTime)"
     ]
   }
 }
