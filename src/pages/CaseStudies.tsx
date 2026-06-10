@@ -35,17 +35,20 @@ const CaseStudies = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }]} />
 
         {/* Page Hero */}
-        <section className="container mx-auto px-4 py-20 bg-hero-gradient dark:bg-hero-gradient-dark">
-          <div className="max-w-7xl mx-auto">
-            <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-              Client Results
-            </p>
-            <h1 className="text-4xl font-extrabold mb-4 text-left">
-              Real outcomes from real implementations — with numbers.
-            </h1>
-            <p className="font-body text-lg text-muted-foreground max-w-2xl">
-              We've helped manufacturers, agencies, real estate firms, nonprofits, and government contractors measure what matters. Every engagement below is an implementation we shipped — tracked, verified, and still running.
-            </p>
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
+          <div className="container mx-auto px-4 py-20">
+            <div className="max-w-7xl mx-auto">
+              <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
+                Client Results
+              </p>
+              <h1 className="text-4xl font-extrabold mb-4 text-left">
+                Real outcomes from real implementations — with numbers.
+              </h1>
+              <p className="font-body text-lg text-muted-foreground max-w-2xl">
+                We've helped manufacturers, agencies, real estate firms, nonprofits, and government contractors measure what matters. Every engagement below is an implementation we shipped — tracked, verified, and still running.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -377,21 +380,23 @@ const CaseStudies = () => {
               </div>
             </div>
 
-            {/* CTA Section */}
-            <div className="mt-16 bg-muted border border-border rounded-lg p-12 relative overflow-hidden">
-              {/* Pull-quote */}
-              <blockquote className="font-body text-base italic text-muted-foreground mb-6 pl-5 border-l-4 border-accent bg-accent/5 rounded-r py-3 max-w-2xl">
-                "The pipeline that used to stall on manual entry now runs overnight — with higher accuracy than our previous team."
-              </blockquote>
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Ready to Increase Your Velocity?
-              </h2>
-              <p className="font-body text-lg text-muted-foreground mb-8 max-w-xl">
-                Book a free consultation and discover how we can help you achieve 10x growth.
-              </p>
-              <DiscoveryButton />
-            </div>
+          </div>
+        </section>
 
+        {/* CTA Section — full-bleed bg-muted band */}
+        <section className="bg-muted border-t border-border mt-16">
+          <div className="container mx-auto px-4 py-16">
+            {/* Pull-quote */}
+            <blockquote className="font-body text-base italic text-muted-foreground mb-6 pl-5 border-l-4 border-accent bg-accent/5 rounded-r py-3 max-w-2xl">
+              "The pipeline that used to stall on manual entry now runs overnight — with higher accuracy than our previous team."
+            </blockquote>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Ready to Increase Your Velocity?
+            </h2>
+            <p className="font-body text-lg text-muted-foreground mb-8 max-w-xl">
+              Book a free consultation and discover how we can help you achieve 10x growth.
+            </p>
+            <DiscoveryButton />
           </div>
         </section>
       </main>
