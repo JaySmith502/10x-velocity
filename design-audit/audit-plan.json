@@ -1,0 +1,128 @@
+{
+  "summary": "Design audit of the 10x Velocity site with before/after redesign mockups",
+  "agentCount": 9,
+  "logs": [
+    "Audit complete: 35 findings across 5/5 dimensions",
+    "Plan ready: 8 global changes, 3 page plans",
+    "Mockups complete: 3/3"
+  ],
+  "result": {
+    "executive_summary": "The site has strong structural bones — a working design system, good homepage data, and a clear brand voice — but fails the 3-second authority test on three compounding fronts. First, the brand brief's two most explicit anti-references (blur orbs and identical card grids) are both present and pervasive. Second, the dual accent palette (cyan + purple/magenta) is functionally a single color; cyan does all the work and reads as a generic AI template default. Third, the serif typeface (Source Serif 4) is declared but rarely applied to body copy on interior pages, stripping warmth from the pages where it matters most (Services, Case Studies, About). The highest-leverage fixes are: remove all blur orbs site-wide, break the identical card grids on Case Studies and Services with a featured-first hierarchy, surface outcome numbers at scan speed on Case Studies, correct color overuse by reserving cyan for 2-3 moments per page and introducing purple/magenta as a second rhythm, and apply Source Serif 4 consistently to body prose across interior pages.",
+    "findings_count": 35,
+    "global_changes": [
+      "Remove all blur-orb decorative divs (absolute rounded-full blur-3xl elements) from every page hero and CTA section site-wide — Services, Packages, Case Studies, individual service pages (DataCleaning, PowerAutomate, Prototypes, LexiFile, TransportationDirector). Replace with either no decoration or a CSS-only radial-gradient matching the home hero pattern. This is the single highest-priority change: it directly violates the brand brief's explicit anti-reference list.",
+      "Reserve cyan (bg-accent / text-accent) for exactly 2-3 moments per page: the primary CTA button, one eyebrow label per section group, and the active/selected state. Demote all bg-accent/20 icon wrapper circles on service cards and checklist rows to bg-muted with text-muted-foreground icons. This prevents cyan from reading as a neutral utility color and restores its role as a sharp accent.",
+      "Introduce purple/magenta (text-accent-secondary / bg-accent-secondary) as a visible second accent on at least 3 surfaces: the About page four-value headings (alternating with cyan), the nonprofit audience label on the homepage dual-audience section, and the process step numbers or badges on the Packages page. This makes the two-color rhythm perceptible and removes the all-cyan-everything template read.",
+      "Apply font-body (Source Serif 4) to all paragraph and prose body-copy elements (p, li, dd) using text-lg, text-base, or text-xl across About, Services, CaseStudies, and Packages pages. Size body copy at text-lg (18px) on interior pages. Do not apply to headlines, labels, stats, or nav. This activates the configured font pairing and delivers the brand brief's 'Notion's warmth' signal.",
+      "Shift --card and --surface in index.css from '0 0% 100%' (pure white) to '40 15% 99%' to make the warm-neutral foundation perceptible on card surfaces, which is where most content lives. Also shift --border from '30 10% 89%' to '35 12% 87%'. This is a one-line change that differentiates the site from any generic shadcn/ui template.",
+      "Change DiscoveryButton.tsx from bg-foreground text-background to bg-accent text-white hover:bg-accent/90. The persistent nav CTA is the most-seen interactive element on the site; making it carry the brand color on every page view establishes cyan as the action color from first glance. Remove the /demo entry from MobileMenu.tsx and replace the mobile menu CTA with the shared DiscoveryButton component to align both viewports.",
+      "Standardize card border-radius to rounded-lg site-wide. Remove redundant rounded-xl overrides in PowerAutomate.tsx, change ClaudePowerWorkshop.tsx and SmartBots.tsx cards from rounded-xl / rounded-2xl to rounded-lg. Set --radius in index.css to 0.625rem as the single token.",
+      "Add a 'Packages & Pricing' link to the Footer Solutions column (after 'All Services') and to the Header Services dropdown as the first item. The transactional page has no persistent navigation entry — a VP buyer who scrolls to footer has no passive path to pricing."
+    ],
+    "page_plans": [
+      {
+        "page": "home",
+        "changes": [
+          "Hero headline (Index.tsx ~line 94): replace 'Accelerate Your Business Growth with AI & Automation' with a proof-led headline that opens with a real outcome, e.g. 'We cut GovBrokers' processing time 85% in 6 weeks. We can do the same for you.' Move the abstract growth framing to supporting body copy. This directly addresses the 3-second authority test — the current headline is indistinguishable from every AI vendor on the market.",
+          "Hero container width (Index.tsx ~line 90): change md:max-w-xl to md:max-w-2xl so the headline reads in 2-3 lines instead of 4 at mid-size viewports. Four-line breaks at display scale read as cramped, not premium.",
+          "Logo/trust bar (Index.tsx ~lines 130-139): raise text-muted-foreground/60 opacity to full muted-foreground. Add a small industry label in text-xs below each client name (e.g. 'GovBrokers — Government Contracting'). The current 60%-opacity text reads as decorative filler, not social proof — a VP sees a footnote, not a credibility signal.",
+          "Vertical rhythm (Index.tsx sections): increase hero bottom padding to pb-28 md:pb-36 for a proper breathing open; compress the logo bar to py-4 (it is a transitional element, not a content section); keep Featured Case Study and How We Work at py-16 md:py-20. This creates a perceptible open-breathe-compress cadence instead of uniform py-16/py-20 stacking.",
+          "Mobile hero (Index.tsx ~line 116): the hidden md:flex illustration leaves mobile above-the-fold as pure text. Add a 2x2 grid of metric stat tiles (85% faster, $240K saved, 6 wks, 3 FTE freed) in the hidden md:flex container's place on mobile, using the existing bg-surface border border-border rounded-lg card pattern at ~72px height each. These render instantly, require no images, and deliver proof above the fold for mobile VPs.",
+          "Bottom CTA subtext (Index.tsx ~lines 229-252): rewrite to name the deliverable: '15 minutes. You'll leave with 2-3 specific automation opportunities and a rough ROI estimate — no commitment required.' Remove the word 'honest' (implies other vendors are not). This shifts from 'give us time' to 'here is what you get for 15 minutes', a concrete value exchange for an ROI-focused VP audience.",
+          "Dual-audience section eyebrow labels: ensure the 'For Nonprofits' label uses text-accent-secondary (purple/magenta) as it is partially done, and keep 'For Businesses' in text-accent (cyan). This is the clearest opportunity on the homepage to establish the two-color rhythm at a glance."
+        ]
+      },
+      {
+        "page": "case-studies",
+        "changes": [
+          "Break the 9-card identical grid (CaseStudies.tsx ~line 44): promote the top 2 strongest-result case studies (GovBrokers and Innes & Young) to a hero row above the grid. Each hero card is full-width with a horizontal layout — client name and badge left, a 2-3 metric stat block ('85% faster processing · $240K saved · 6 weeks') in a visually distinct inline row center, CTA link right. Remaining 7 cards stay in the 3-col grid at reduced padding (p-5) and h3 font-semibold instead of h2 font-bold. This directly addresses the identical-card-grid anti-reference and surfaces proof at scan speed.",
+          "Add a metric stat row to each card (all 9): surface 2-3 key outcome numbers before the description text, styled as font-display text-sm font-bold text-accent. Numbers like '400% lead growth' and '85% error reduction' are buried in sentence-form prose — a scanning VP cannot perceive them. The proof is present but not perceivable.",
+          "Replace all off-brand badge colors (orange-300, blue-300, purple-300, green-300, amber-300, rose-300, teal-300, indigo-300) with a two-token system: bg-accent/15 text-accent border-accent/30 for technology/service tags and bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30 for industry/sector tags. This collapses 8 unrelated hues to 2 brand-consistent ones.",
+          "Remove both blur-orb divs (bg-accent/20 rounded-full blur-3xl and bg-purple-500/10 rounded-full blur-3xl) from the bottom CTA section (CaseStudies.tsx ~lines 215-216). Replace the CTA background with a full-bleed bg-muted warm neutral. Place a short pull-quote or client outcome stat above the CTA headline to maintain 'results over promises' at the page's conversion point.",
+          "Page hero: replace the centered text-5xl font-bold 'Case Studies' title pattern with a left-aligned layout at text-4xl font-extrabold, paired with an eyebrow label ('Client Results' in text-xs font-semibold tracking-widest uppercase text-muted-foreground) and a one-sentence subhead that leads with a proof claim (e.g., 'Real outcomes from real implementations — with numbers.').",
+          "Apply font-body (Source Serif 4) to all card description paragraphs and page hero body copy. Currently all prose renders in Plus Jakarta Sans with no warm serif signal on the highest-credibility page of the site."
+        ]
+      },
+      {
+        "page": "services",
+        "changes": [
+          "Break the 8-card identical grid (Services.tsx ~lines 73-109): give the top 3 highest-revenue services (Process Automation, Rapid Prototype Sprint, Opportunity Discovery) a 2-column wide card with horizontal layout (icon left, content right, larger type). Remaining 5 services render in a 3-col grid below at reduced visual weight (p-5, no icon circle background, smaller heading). Add a conditional className based on index or a featured flag on the service data object. This is the most critical structural fix on this page — the 8-identical-cards read is the brand brief's anti-reference made literal.",
+          "Add section eyebrow labels (text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3) before the services grid ('What We Do'), before the FAQ section ('Common Questions'), and before the CTA section ('Get Started'). Services.tsx goes directly from hero title to 8-card grid with zero section labels, making the page feel like an undifferentiated list. These are one-line additions that bring homepage scannability to the site's highest-intent page.",
+          "Remove blur-orb divs (Services.tsx ~lines 58-59) from the page hero section. Replace the hero background with the CSS-only radial-gradient already used on the home hero, or no decoration. This removes the explicit anti-reference violation from the first visible section of the page.",
+          "Replace the centered text-6xl 'Our Services' hero title with a left-aligned layout at text-4xl font-extrabold, with an eyebrow label and a one-sentence positioning subhead (max-w-2xl). The current centered 60px title with a two-line subtitle reads as a layout placeholder — the same pattern flagged on About and Case Studies.",
+          "Bottom CTA section (Services.tsx ~lines 130-142): remove blur orbs and the card/border container entirely. Replace with a full-bleed bg-muted section using a left-aligned headline and CTA button at right (horizontal split), matching the home page bottom CTA pattern. Differentiate this CTA from the identical clone pattern appearing on 3+ pages.",
+          "Apply font-body (Source Serif 4) to all card description paragraphs and bullet list items. Currently the page renders entirely in Plus Jakarta Sans — the configured serif pairing delivers no warmth signal on a page where executives evaluate whether this firm understands their industry.",
+          "Add font-display to all h2 and h3 section headings that currently use only font-bold or font-semibold (Services.tsx ~line 114 h2, ~line 65 h3). The type system is internally inconsistent with the homepage — this makes the rendering system coherent for future font changes even if visually subtle today.",
+          "Reduce all cyan icon-wrapper circles on service cards from bg-accent/20 with text-accent icons to bg-muted with text-muted-foreground icons. Reserve cyan for the primary CTA button and the section eyebrow labels only. On a page where every card has a cyan circle, cyan reads as a neutral structural color rather than a brand accent."
+        ]
+      }
+    ],
+    "mockups": [
+      {
+        "screenshot_path": "C:/Users/smith/Documents/1 Projects/10x-velocity/design-audit/after/home.png",
+        "html_path": "C:/Users/smith/Documents/1 Projects/10x-velocity/design-audit/after/home.html",
+        "changes_applied": [
+          "Hero headline replaced with proof-led outcome: 'We cut GovBrokers' processing time 85% in 6 weeks. We can do the same for you.' Abstract growth framing moved to body copy beneath.",
+          "Hero container max-width widened (hero-copy flex:1 with proper desktop two-column layout) so headline reads in 2-3 lines at 1440px, not 4.",
+          "Hero right column: 2x2 metric tile grid (85% / $240K / 6 wk / 3 FTE) visible on both mobile and desktop — delivers proof above the fold with no image dependency.",
+          "Trust bar: opacity raised to full muted-foreground for client names; small industry sub-labels added below each name (Government Contracting, Professional Services, Nonprofit, Consulting, Advisory).",
+          "Trust bar padding compressed to py-14px (transitional element, not a content section).",
+          "Dual-audience eyebrow labels: 'For Businesses' in cyan (#33C3F0), 'For Nonprofits' in purple/magenta (#D043E6) — two-color rhythm visible at a glance.",
+          "Bottom CTA subtext rewritten to name the deliverable: '15 minutes. You'll leave with 2-3 specific automation opportunities and a rough ROI estimate — no commitment required.' Word 'honest' removed.",
+          "Cyan reserved as a sharp accent only: primary CTA button (Book a Discovery Call), eyebrow labels, text links. No cyan icon wrappers or decorative fills.",
+          "Purple/magenta (#D043E6) introduced as visible second accent on 'For Nonprofits' eyebrow label and thinking animation dot/text.",
+          "All blur-orb decorative divs eliminated. Hero background is pure CSS radial-gradient (no absolute rounded-full blur-3xl elements).",
+          "Source Serif 4 applied to all body/prose copy (hero-sub, case study description, step bodies, audience copy, CTA subtext, footer brand paragraph).",
+          "Card and surface backgrounds shifted from pure white to hsl(40,15%,99%) warm tinted neutral; border shifted to hsl(35,12%,87%) — differentiates from generic shadcn template.",
+          "DiscoveryButton in header uses bg-accent (cyan) text-white — brand color on every page view.",
+          "Footer Solutions column: 'Packages & Pricing' added as first item for VP buyer pricing path.",
+          "Vertical rhythm: hero pb-112px/144px (open breathing), trust bar py-14px (compressed transition), sections py-80px.",
+          "Cyan accent bar (40px x 3px) added above Featured Case Study metrics to anchor the section visually.",
+          "Card border-radius standardized to 0.625rem (--radius token) site-wide.",
+          "Step numbers in 'How we work' use hsl(35,12%,80%) — visible but clearly decorative, not competing with content."
+        ]
+      },
+      {
+        "screenshot_path": "C:/Users/smith/Documents/1 Projects/10x-velocity/design-audit/after/case-studies.png",
+        "html_path": "C:/Users/smith/Documents/1 Projects/10x-velocity/design-audit/after/case-studies.html",
+        "changes_applied": [
+          "Hero section: replaced centered text-5xl bold 'Case Studies' title with left-aligned layout at ~2.75rem font-extrabold, eyebrow label 'Client Results' in uppercase tracking-widest text-muted-foreground, and proof-first subhead using Source Serif 4 body font",
+          "Promoted GovBrokers and Innes & Young to featured hero cards above the grid — full-width horizontal layout with client name/badge left, 3-stat metric block (35%/250%/AI-driven and 400%/75%/AI-first) center, CTA link right, with featured ribbon tag",
+          "Broke identical 9-card grid: top 2 become full-width hero cards, remaining 7 in 3-col grid at reduced padding (p-5 equivalent) with h3 font-semibold instead of h2 font-bold; last lone card spans 2 columns to avoid orphan row",
+          "Added metric stat row to all 9 cards: 2-3 outcome numbers displayed in font-display font-bold text-accent before description text — numbers like 400% lead growth and 85% error reduction now scannable at a glance",
+          "Replaced all off-brand badge colors (orange-300, blue-300, purple-300, green-300, amber-300, rose-300, teal-300, indigo-300) with two-token system: bg-accent/10 text-accent border-accent/30 for technology/service tags and bg-accent-secondary/10 text-accent-secondary border-accent-secondary/30 for industry/sector tags",
+          "Removed both blur-orb divs from CTA section; replaced with bg-muted warm neutral background, no decorative elements",
+          "Added pull-quote above CTA headline with left cyan border-bar accent and subtle tinted background; secondary CTA stat block shows purple/magenta 400% figure to introduce two-color rhythm",
+          "Applied Source Serif 4 (font-body) to all card description paragraphs, page hero body copy, and CTA section prose — activates configured font pairing across the page's highest-credibility content",
+          "CSS-only radial-gradient in page hero background (no blur orbs) providing subtle right-side cyan atmospheric hint",
+          "Shifted --card/--surface to hsl(40,15%,99%) warm-tinted neutral and --border to hsl(35,12%,87%) to differentiate from generic pure-white template",
+          "Changed DiscoveryButton/nav CTA to bg-accent (cyan #33C3F0) text-white — Contact Us button now carries brand color on every page view",
+          "Added Packages & Pricing as first item in header Services dropdown and as first item in footer Solutions column",
+          "Badge border-radius set to 999px (pill shape) site-wide for consistent rounded-lg card and pill badge system",
+          "Purple/magenta (#D043E6) introduced as visible second accent on CTA stat block and Nonprofit badge, establishing two-color rhythm distinct from all-cyan template"
+        ]
+      },
+      {
+        "screenshot_path": "C:/Users/smith/Documents/1 Projects/10x-velocity/design-audit/after/services.png",
+        "html_path": "C:/Users/smith/Documents/1 Projects/10x-velocity/design-audit/after/services.html",
+        "changes_applied": [
+          "Removed all blur-orb decorative divs from hero and CTA sections; replaced with CSS-only radial-gradient (cyan 7% at top-right, purple 4% at bottom-left) on the hero section only",
+          "Replaced centered 60px 'Our Services' title with left-aligned text-4xl font-extrabold hero at max-w-680px with eyebrow label 'What We Do' and a one-sentence positioning subhead in Source Serif 4",
+          "Broke the 8-identical-card grid: top 3 services (AI Process Automation, Rapid Prototype Sprint, Opportunity Discovery) rendered as 2-column featured cards with horizontal icon-left / content-right layout; remaining 5 services in a 3-col grid at reduced visual weight (p-5, smaller heading, no icon circle backgrounds)",
+          "Reserved cyan for exactly 3 moments: primary CTA button in header, 'Services Overview' eyebrow label (cyan text), and card-link 'Learn more' text on data-cleaning and prototypes cards",
+          "Added purple/magenta as visible second accent on the Rapid Prototype Sprint featured card via a 3px top border in #D043E6",
+          "Demoted all icon-wrapper circles on service cards from bg-accent/20 with text-accent icons to plain muted-foreground icons with no circle backgrounds",
+          "Added section eyebrow labels before services grid ('Services Overview'), before FAQ section ('Common Questions'), and before CTA section ('Get Started')",
+          "Applied Source Serif 4 (font-body) to all card description paragraphs and benefit list items at 1rem/1.65 line-height on featured cards and 0.9rem on standard cards",
+          "Applied Plus Jakarta Sans (font-display) consistently to all h2, h3 section headings with font-weight 700-800 and negative letter-spacing",
+          "Changed header CTA (DiscoveryButton) from dark bg-foreground to bg-accent (#33C3F0) with white text and hover:bg-accent/90 shadow",
+          "Replaced centered card/border CTA container with full-bleed bg-muted section using left-aligned headline and CTA button at right in a horizontal split",
+          "Shifted card and surface backgrounds from pure white to hsl(40 15% 99%) for warm-tinted neutral foundation visible on card surfaces",
+          "Set --radius to 0.625rem as single token; standardized all cards to rounded-lg (border-radius: 0.625rem)",
+          "Added 'Packages & Pricing' link to Footer Solutions column after 'All Services'",
+          "Featured card for AI Process Automation has a 3px left border in cyan (#33C3F0) to denote top-revenue flagship service"
+        ]
+      }
+    ]
+  }
+}
