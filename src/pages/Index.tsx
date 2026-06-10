@@ -169,21 +169,21 @@ const Index = () => {
           <div className="flex flex-col md:flex-row gap-12 md:gap-16 items-start">
             <div className="md:flex-1">
               <h2 className="font-display text-2xl md:text-3xl font-extrabold leading-tight mb-4 text-foreground">
-                GovBrokers cut processing time by 85% and saved $240K/year
+                Innes & Young grew inbound leads 400% with AI-powered PR
               </h2>
               <p className="font-body text-base text-muted-foreground leading-relaxed mb-5">
-                A government services firm drowning in manual document processing. We automated their core workflow in 6 weeks — now their team focuses on clients, not paperwork.
+                A leading PR firm buried in manual media monitoring and reporting. We automated their outreach and monitoring workflows — now they close more clients with no additional headcount.
               </p>
-              <Link to="/case-studies/govbrokers" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1">
+              <Link to="/case-studies/innes-young" className="text-sm font-semibold text-accent hover:underline inline-flex items-center gap-1">
                 Read the full story <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </div>
             <div className="grid grid-cols-2 gap-3 md:gap-4 md:flex-1 w-full md:w-auto">
               {[
-                { value: "85%", label: "Faster processing" },
-                { value: "$240K", label: "Annual savings" },
-                { value: "6 wk", label: "Implementation" },
-                { value: "3 FTE", label: "Hours reclaimed" },
+                { value: "400%", label: "Inbound lead growth" },
+                { value: "75%", label: "Less reporting time" },
+                { value: "3×", label: "Faster media monitoring" },
+                { value: "0", label: "Added headcount" },
               ].map((metric) => (
                 <div key={metric.label} className="bg-surface border border-border rounded-lg p-5">
                   <div className="font-display text-2xl md:text-3xl font-extrabold text-foreground">{metric.value}</div>
