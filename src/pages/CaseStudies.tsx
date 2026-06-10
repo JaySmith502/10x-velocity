@@ -64,7 +64,7 @@ const CaseStudies = () => {
               {/* Hero Card 1: GovBrokers */}
               <Link
                 to="/case-studies/govbrokers"
-                className="block bg-surface border border-border rounded-lg p-8 mb-5 hover:border-accent hover:shadow-[0_4px_20px_rgba(51,195,240,0.1)] transition-all relative"
+                className="block bg-surface border border-border rounded-lg p-8 mb-5 hover:border-accent hover:shadow-[0_4px_20px_rgba(51,195,240,0.1)] transition-all"
               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1">
@@ -82,30 +82,32 @@ const CaseStudies = () => {
                 </div>
 
                 {/* Stat row */}
-                <div className="flex flex-wrap gap-0 my-5 border-t border-b border-border py-4">
-                  <div className="flex-1 min-w-[120px] pr-6">
+                <div className="flex flex-wrap gap-3 my-5 border-t border-b border-border py-4">
+                  <div className="flex-1 min-w-[120px]">
                     <span className="font-display text-2xl font-extrabold text-accent block leading-tight">35%</span>
                     <span className="text-xs text-muted-foreground mt-0.5 block">Higher contract win rate</span>
                   </div>
-                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                  <div className="w-px bg-border self-stretch" />
+                  <div className="flex-1 min-w-[120px]">
                     <span className="font-display text-2xl font-extrabold text-accent block leading-tight">250%</span>
                     <span className="text-xs text-muted-foreground mt-0.5 block">Growth in inbound leads</span>
                   </div>
-                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                  <div className="w-px bg-border self-stretch" />
+                  <div className="flex-1 min-w-[120px]">
                     <span className="font-display text-2xl font-extrabold text-accent block leading-tight">50%</span>
                     <span className="text-xs text-muted-foreground mt-0.5 block">Faster proposal processing</span>
                   </div>
                 </div>
 
                 <p className="font-body text-muted-foreground leading-relaxed max-w-2xl">
-                  We transformed a government contracting firm — 35% increase in contract win rates, 250% boost in inbound leads, and 50% faster proposal processing, powered entirely by AI-driven automation. The pipeline that used to stall on manual data entry now runs overnight.
+                  GovBrokers needed faster bid intelligence and a tighter pipeline across Sam.Gov, HubSpot, and Trello. AI-driven workflow automation cut proposal processing by 50%, boosted contract win rates by 35%, and drove 250% more inbound leads through targeted digital outreach.
                 </p>
               </Link>
 
               {/* Hero Card 2: Innes & Young */}
               <Link
                 to="/case-studies/innes-young"
-                className="block bg-surface border border-border rounded-lg p-8 mb-5 hover:border-accent hover:shadow-[0_4px_20px_rgba(51,195,240,0.1)] transition-all relative"
+                className="block bg-surface border border-border rounded-lg p-8 mb-5 hover:border-accent hover:shadow-[0_4px_20px_rgba(51,195,240,0.1)] transition-all"
               >
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
                   <div className="flex-1">
@@ -123,16 +125,18 @@ const CaseStudies = () => {
                 </div>
 
                 {/* Stat row */}
-                <div className="flex flex-wrap gap-0 my-5 border-t border-b border-border py-4">
-                  <div className="flex-1 min-w-[120px] pr-6">
+                <div className="flex flex-wrap gap-3 my-5 border-t border-b border-border py-4">
+                  <div className="flex-1 min-w-[120px]">
                     <span className="font-display text-2xl font-extrabold text-accent block leading-tight">400%</span>
                     <span className="text-xs text-muted-foreground mt-0.5 block">Growth in inbound leads</span>
                   </div>
-                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                  <div className="w-px bg-border self-stretch" />
+                  <div className="flex-1 min-w-[120px]">
                     <span className="font-display text-2xl font-extrabold text-accent block leading-tight">75%</span>
                     <span className="text-xs text-muted-foreground mt-0.5 block">Reduction in reporting time</span>
                   </div>
-                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                  <div className="w-px bg-border self-stretch" />
+                  <div className="flex-1 min-w-[120px]">
                     <span className="font-display text-2xl font-extrabold text-accent block leading-tight">5×</span>
                     <span className="text-xs text-muted-foreground mt-0.5 block">Increase in media placements</span>
                   </div>
@@ -386,10 +390,11 @@ const CaseStudies = () => {
         {/* CTA Section — full-bleed bg-muted band */}
         <section className="bg-muted border-t border-border mt-16">
           <div className="container mx-auto px-4 py-16">
-            {/* Pull-quote */}
-            <blockquote className="font-body text-base italic text-muted-foreground mb-6 pl-5 border-l-4 border-accent bg-accent/5 rounded-r py-3 max-w-2xl">
-              "The pipeline that used to stall on manual entry now runs overnight — with higher accuracy than our previous team."
-            </blockquote>
+            {/* Verified stat callout */}
+            <div className="font-body text-base text-muted-foreground mb-6 pl-5 border-l-4 border-accent bg-accent/5 rounded-r py-3 max-w-2xl">
+              <span className="font-display font-extrabold text-accent not-italic">250% more inbound leads. 50% faster proposals. Six months.</span>
+              <span className="block text-sm mt-1 text-muted-foreground">— GovBrokers engagement</span>
+            </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Increase Your Velocity?
             </h2>
