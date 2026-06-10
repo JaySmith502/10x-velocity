@@ -2,6 +2,9 @@
 // Blog post data model
 export interface BlogPost {
   id: number;
+  /** Descriptive URL slug. Posts with a slug are served at /blog/<slug>;
+   *  numeric /blog/<id> still resolves for backward compatibility. */
+  slug?: string;
   title: string;
   excerpt: string;
   author: string;
@@ -9,6 +12,11 @@ export interface BlogPost {
   category: string;
   tags: string[];
   image: string;
+  /** Set when a post is substantively updated; feeds dateModified in schema. */
+  dateModified?: string;
+  /** Draft posts are hidden from the blog index and noindexed.
+   *  Flip to false (or remove) on the scheduled publish date — see seo/CONTENT-BACKLOG.md. */
+  draft?: boolean;
 }
 
 // Mock blog data - in a real application, this would come from an API
@@ -62,5 +70,65 @@ export const blogPosts: BlogPost[] = [
     category: "Business",
     tags: ["ROI", "Business Intelligence", "AI Strategy"],
     image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+  },
+  // ——— AEO pillar pages and answer posts (bodies in src/data/articleContent.ts) ———
+  {
+    id: 6,
+    slug: "what-ai-consulting-costs-mid-market",
+    title: "What AI Consulting Costs for a Mid-Market Company",
+    excerpt: "AI consulting pricing is opaque almost everywhere. Here's what 10x Velocity publishes, what determines the price, and how to budget a first engagement at a 50-500 employee company.",
+    author: "Jay Smith",
+    date: "June 10, 2026",
+    category: "Pricing",
+    tags: ["AI Consulting", "Pricing", "Mid-Market"],
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f"
+  },
+  {
+    id: 7,
+    slug: "ai-consulting-louisville",
+    title: "AI Consulting in Louisville: Who Does It, What It Costs, and How to Choose",
+    excerpt: "A complete guide to AI consulting options in Louisville, Kentucky — every provider type, what they publish about pricing, and how to pick based on what you're actually buying.",
+    author: "Jay Smith",
+    date: "June 24, 2026",
+    category: "Local",
+    tags: ["Louisville", "Kentucky", "AI Consulting"],
+    image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e",
+    draft: true
+  },
+  {
+    id: 8,
+    slug: "ai-readiness-without-data-team",
+    title: "Is Your Company Ready for AI? A Readiness Check for Teams Without a Data Team",
+    excerpt: "Most AI readiness frameworks assume you have data engineers. This one doesn't. Score your company on five dimensions and know whether to start, wait, or fix something first.",
+    author: "Jay Smith",
+    date: "July 8, 2026",
+    category: "AI Strategy",
+    tags: ["AI Readiness", "Mid-Market", "Assessment"],
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
+    draft: true
+  },
+  {
+    id: 9,
+    slug: "ai-consultant-vs-msp",
+    title: "AI Consultant vs. MSP: Which Do You Actually Need?",
+    excerpt: "MSPs roll out tools. AI consultants redesign processes. Confusing the two is the most common way mid-sized companies waste their first AI budget.",
+    author: "Jay Smith",
+    date: "July 22, 2026",
+    category: "Buying Guide",
+    tags: ["AI Consulting", "MSP", "Buying Guide"],
+    image: "https://images.unsplash.com/photo-1552664730-d307ca884978",
+    draft: true
+  },
+  {
+    id: 10,
+    slug: "change-management-ai-adoption",
+    title: "Change Management for AI Adoption: Why Pilots Fail and What Fixes Them",
+    excerpt: "Most corporate AI pilots fail to reach production. The failures are organizational, not technical. Here's the adoption playbook for mid-sized companies.",
+    author: "Jay Smith",
+    date: "August 5, 2026",
+    category: "AI Strategy",
+    tags: ["Change Management", "AI Adoption", "Mid-Market"],
+    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
+    draft: true
   }
 ];

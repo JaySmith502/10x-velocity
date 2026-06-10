@@ -21,11 +21,11 @@ const Blog = () => {
         <title>AI & Automation Insights Blog | 10x Velocity</title>
         <meta
           name="description"
-          content="Expert insights on AI implementation, business automation, and digital transformation strategies. Practical advice and tips from 10x Velocity consultants."
+          content="Direct answers on AI consulting costs, readiness, and adoption for mid-market companies and nonprofits — from 10x Velocity consultants in Louisville, KY."
         />
         <link rel="canonical" href="https://10xvelocity.ai/blog" />
         <meta property="og:title" content="AI & Automation Insights Blog | 10x Velocity" />
-        <meta property="og:description" content="Expert insights on AI implementation, business automation, and digital transformation strategies. Practical advice and tips from 10x Velocity consultants." />
+        <meta property="og:description" content="Direct answers on AI consulting costs, readiness, and adoption for mid-market companies and nonprofits — from 10x Velocity consultants in Louisville, KY." />
         <meta property="og:url" content="https://10xvelocity.ai/blog" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
@@ -48,7 +48,7 @@ const Blog = () => {
       {/* Blog Posts Grid */}
       <section className="container mx-auto px-4 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.map((post) => (
+          {blogPosts.filter((post) => !post.draft).map((post) => (
             <article 
               key={post.id}
               className="bg-surface border border-border rounded-lg overflow-hidden flex flex-col h-full animate-fade-up hover:bg-muted transition-colors"
@@ -83,7 +83,7 @@ const Blog = () => {
                   ))}
                 </div>
                 <Button asChild variant="ghost" className="text-accent justify-start p-0 hover:bg-transparent hover:text-purple-400">
-                  <Link to={`/blog/${post.id}`}>
+                  <Link to={`/blog/${post.slug ?? post.id}`}>
                     Read more <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>

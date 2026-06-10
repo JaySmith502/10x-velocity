@@ -2,18 +2,22 @@
 import { ArrowLeft, Calendar, Tag, User } from "lucide-react";
 import { Helmet } from "react-helmet";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
+import { blogPostingJsonLd, postPath, toIsoDate } from "@/schemas/article";
 import { Link, useParams } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { NotFound } from "@/pages/NotFound";
 import { blogPosts } from "@/data/blogPosts";
+import { articleContent } from "@/data/articleContent";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const BlogPost = () => {
   const { id } = useParams();
-  const postId = parseInt(id || "0");
-  
-  const post = blogPosts.find(post => post.id === postId);
-  
+
+  // Slug lookup first; numeric id retained for backward compatibility.
+  const post =
+    blogPosts.find((p) => p.slug === id) ??
+    blogPosts.find((p) => p.id === parseInt(id || "0"));
+
   if (!post) {
     return <NotFound />;
   }
@@ -22,25 +26,32 @@ const BlogPost = () => {
     ? post.title.substring(0, 41) + '...'
     : post.title;
 
+  const canonicalUrl = `https://10xvelocity.ai${postPath(post)}`;
+  const body = post.slug ? articleContent[post.slug] : undefined;
+
   return (
     <main className="flex-1">
-      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: `/blog/${post.id}` }]} />
+      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Blog", path: "/blog" }, { name: post.title, path: postPath(post) }]} />
       <Helmet
         script={[
+          blogPostingJsonLd(post),
           breadcrumbJsonLd([
             { name: "Home", path: "/" },
             { name: "Blog", path: "/blog" },
-            { name: post.title, path: `/blog/${id}` },
+            { name: post.title, path: postPath(post) },
           ]),
         ]}
       >
         <title>{`${blogTitle} | 10x Velocity`}</title>
         <meta name="description" content={post.excerpt} />
-        <link rel="canonical" href={`https://10xvelocity.ai/blog/${post.id}`} />
+        {post.draft && <meta name="robots" content="noindex" />}
+        <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content={`${blogTitle} | 10x Velocity`} />
         <meta property="og:description" content={post.excerpt} />
-        <meta property="og:url" content={`https://10xvelocity.ai/blog/${post.id}`} />
+        <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="article" />
+        <meta property="article:published_time" content={toIsoDate(post.date)} />
+        {post.dateModified && <meta property="article:modified_time" content={toIsoDate(post.dateModified)} />}
         <meta property="og:image" content={post.image} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
@@ -69,11 +80,17 @@ const BlogPost = () => {
           />
         </div>
 
-        {/* Post metadata */}
+        {/* Post metadata — visible dates mirror the BlogPosting schema */}
         <div className="flex items-center gap-4 text-sm text-muted-foreground mb-6">
           <span className="flex items-center gap-1">
             <Calendar className="w-4 h-4 text-accent" /> {post.date}
           </span>
+          {post.dateModified && (
+            <>
+              <span>•</span>
+              <span>Updated {post.dateModified}</span>
+            </>
+          )}
           <span>•</span>
           <span className="flex items-center gap-1">
             <User className="w-4 h-4 text-accent" /> {post.author}
@@ -96,9 +113,13 @@ const BlogPost = () => {
 
         {/* Post content */}
         <div className="prose prose-invert prose-violet max-w-none">
-          <p className="text-lg leading-relaxed mb-6">
-            {post.excerpt}
-          </p>
+          {body ? (
+            <div dangerouslySetInnerHTML={{ __html: body }} />
+          ) : (
+            <p className="text-lg leading-relaxed mb-6">
+              {post.excerpt}
+            </p>
+          )}
 
           {/* Sample content for first post */}
           {post.id === 1 && (

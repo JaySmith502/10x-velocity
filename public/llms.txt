@@ -1,212 +1,77 @@
-# https://10xvelocity.ai llms-full.txt
-
-## AI Business Solutions
-![10x Velocity Logo](https://10xvelocity.ai/lovable-uploads/3a6e6f00-b9ba-4507-a097-f7bef657f6ce.webp)
-
-# Accelerate Your Business Growth with AI & Automation
-
-Transform your business processes with cutting-edge solutions. Based in Louisville, KY, serving ambitious companies worldwide.
-
-[Savings Calculator](https://10xvelocity.ai/savings-calculator) [View Case Studies](https://10xvelocity.ai/case-studies)
-
-## Solving Capacity Challenges
-
-Whether you're a growing business or a nonprofit organization, we help you break through capacity barriers with intelligent automation.
-
-### For Businesses
-
-- Automate repetitive tasks to free up your team for strategic work
-- Optimize workflows with AI-powered process mining
-- Scale operations without proportionally increasing headcount
-
-### For Nonprofits
-
-- Streamline donor management and engagement processes
-- Maximize impact with limited resources through automation
-- Improve volunteer coordination and program management
-
-## Our Solutions
-
-Comprehensive AI-powered tools and services to transform your operations
-
-### AI Process Automation
-
-Streamline your operations with intelligent automation solutions that learn and adapt.
-
-### Data Analytics
-
-Transform your data into actionable insights with advanced analytics.
-
-### Team Augmentation
-
-Enhance your team's capabilities with AI-powered tools and training.
-
-### Process Mining
-
-Discover optimization opportunities in your business processes automatically.
-
-## Our Approach
-
-A structured methodology to transform your operations
-
-1
-
-### Assessment
-
-We analyze your current processes and identify optimization opportunities.
-
-2
-
-### Strategy
-
-Develop a tailored implementation plan aligned with your goals.
-
-3
-
-### Implementation
-
-Execute the solution with continuous monitoring and refinement.
-
-## Ready to Increase Your Velocity?
-
-Book a free consultation and discover how we can help you achieve 10x growth.
-
-[15 minute discovery](https://10xvelocity.ai/contact)
-
-# Hi there! 👋
-
-Start a chat. We're here to help you 24/7.
-
-Hi, my name is Alyssa👋. How can I assist you today?
-
-## Voice Lead Capture Demo
-# Get A Demo For Your Business Now
-
-Experience our Voice Lead Capture Technology that works 24/7 for your business. Here's how it works:
-
-- 1Enter your information in the form
-- 2Our system will collect your business information and call your phone
-- 3Experience how customers can get custom information or leave their needs with your business 24/7
-
-[Free Strategy Call](https://10xvelocity.ai/contact)
-
-Speak with AI Now
-
-# Speak with AI Now
-
-Try out an AI Assistant who knows your business and see how your callers can get instant contact when you're not available!
-
-First Name
-
-This field is required
-
-
-Last Name
-
-This field is required
-
-
-Phone
-
-This field is required
-
-
-Email
-
-This field is required
-
-
-Your Business Name
-
-This field is required
-
-
-Your Business Website
-
-This field is required
-
-
-By submitting this form, I Consent to Receive SMS Notifications, Alerts & Occasional Marketing Communication from **10x Velocity**. Message frequency varies. Message & data rates may apply. Text HELP to (502) 804-2559 for assistance. You can reply STOP to unsubscribe at any time.
-
-
-Submit
-
-
-# Form Submitted
-
-Your information has been received, you should receive a call from your custom voice agent in a few minutes!
-
-
-# Hi there! 👋
-
-Start a chat. We're here to help you 24/7.
-
-Hi, my name is Alyssa👋. How can I assist you today?
-
-## AI-Powered Voice Agents
-# Supercharge Your Customer Calls with AI-Powered Voice Agents
-
-## Cut costs, boost engagement, and never miss a lead—24/7, in any language.
-
-Our AI-powered Voice Agents seamlessly handle customer calls, qualify leads, and manage inquiries with human-like conversation abilities. By integrating directly with your existing phone systems and CRM tools, these intelligent agents ensure no opportunity is missed while dramatically reducing operational costs.
-
-### Key Benefits
-
-💸
-
-#### Cost-Savings vs. Call Centers
-
-Reduce headcount and overhead by up to 70% while maintaining 24/7 service coverage
-
-🤝
-
-#### Customer Engagement
-
-Drive higher satisfaction scores with consistent, human-like conversations
-
-🚫
-
-#### Never Lose Leads
-
-Ensure every inquiry is captured and routed with 24/7 call handling
-
-🚀
-
-#### Lead Generation
-
-Convert more callers into qualified prospects with smart qualification
-
-🌐
-
-#### Multi-Language Support
-
-Serve global audiences with seamless language switching capabilities
-
-### Features & Capabilities
-
-- Seamless CRM Integration (Salesforce, HubSpot, etc.)
-- Dynamic Conversation Scripts
-- Real-time Analytics Dashboard
-- Sentiment Analysis & Detection
-- Compliance Recording & Monitoring
-- Custom Voice & Personality Design
-- Automated Follow-up Scheduling
-- Call Transfer & Escalation Logic
-
-### Why 10x Velocity?
-
-- Proven track record with 95% satisfaction rate in AI & automation implementations
-- Enterprise-grade security with SOC 2 compliance and end-to-end encryption
-- Data-driven optimization with real-time analytics and continuous improvement
-
-### Ready to Transform Your Customer Communication?
-
-Book a free demo to see how our AI Voice Agents can revolutionize your customer service while cutting costs by up to 70%.
-
-[Schedule Free Demo](https://10xvelocity.ai/contact)
-
-# Hi there! 👋
-
-Start a chat. We're here to help you 24/7.
-
-Hi, my name is Alyssa👋. How can I assist you today?
+# 10x Velocity — https://10xvelocity.ai
+# AI & Automation Consulting | Louisville, Kentucky | Serving clients nationally
+# Last updated: 2026-06-10
+
+## Who we are
+
+10x Velocity is a veteran-owned (VOSB Verified) AI & automation consulting firm
+based in Louisville, Kentucky, serving mid-market companies (50-500 employees)
+and nonprofits nationally. We map business processes, build targeted AI and
+automation solutions, and train teams to run them independently. Implementations
+are typically live within 4-8 weeks.
+
+Contact: info@10xvelocity.ai | +1 (502) 804-2559
+Address: 10440 Bluegrass Pkwy, Louisville, KY 40299
+LinkedIn: https://www.linkedin.com/company/10x-velocity
+
+## Pricing (published)
+
+- AI Diagnostic Review — $129 one-time. Expert review of workflows and
+  technology posture; priority impact areas; next-step recommendation.
+- Essential AI Stack — $499 one-time. Remote needs audit; tailored AI Stack
+  Plan; recommended tools and use cases; implementation guidance for internal
+  deployment.
+- Advanced AI Stack — starting at $999. Hands-on implementation, guided
+  rollout, and an upgrade roadmap.
+- AI Advantage Plan — $49/month. Ongoing AI stack oversight and periodic
+  recommendations as tools change.
+- Larger custom automation projects (multi-system workflows, voice agents,
+  document processing pipelines) are scoped after the diagnostic.
+Details: https://10xvelocity.ai/packages
+
+## Services
+
+- AI Process Automation — workflow automation that reduces manual, repetitive work
+- AI Strategy & Opportunity Discovery — identify the highest-ROI automation targets
+- Data Cleaning — https://10xvelocity.ai/services/data-cleaning
+- Data Analytics — dashboards, reporting, and decision support
+- Process Mining — find bottlenecks in how work actually flows
+- AI Voice Agents — 24/7 call handling and lead capture — https://10xvelocity.ai/services/phone-voice-agents
+- Smart Bots — https://10xvelocity.ai/services/smart-bots
+- Team Training & AI Workshops — https://10xvelocity.ai/services/ai-workshops
+- Rapid Prototype Sprint — working prototype in 10 business days — https://10xvelocity.ai/prototypes
+All services: https://10xvelocity.ai/services
+
+## Results (published case studies)
+
+GovBrokers (government contracting): 50% reduction in proposal processing time,
+35% increase in contract win rates, 60% reduction in missed deadlines, 250%
+increase in inbound leads, 40% faster client follow-ups, 30% reduction in
+administrative workload.
+Full case study: https://10xvelocity.ai/case-studies/govbrokers
+Nine case studies with measured results: https://10xvelocity.ai/case-studies
+
+## Who we serve
+
+- Mid-market businesses (50-500 employees): operations, professional services,
+  government contracting, real estate, manufacturing, PR/marketing
+- Nonprofits: donor management, volunteer coordination, grant-drafting
+  workflows, program reporting
+
+## Free resources
+
+- Savings calculator (labor-cost math for automation): https://10xvelocity.ai/savings-calculator
+- Playbook library (step-by-step guides, incl. nonprofit fundraising, grant
+  writing, communications): https://resources.10xvelocity.ai
+- Industry tools directory: https://10xvelocity.ai/industry-tools
+- Blog (AI consulting costs, readiness, adoption): https://10xvelocity.ai/blog
+
+## Key pages
+
+- Home: https://10xvelocity.ai/
+- Services: https://10xvelocity.ai/services
+- Packages & pricing: https://10xvelocity.ai/packages
+- Case studies: https://10xvelocity.ai/case-studies
+- About: https://10xvelocity.ai/about
+- Contact: https://10xvelocity.ai/contact
+- What AI consulting costs (guide): https://10xvelocity.ai/blog/what-ai-consulting-costs-mid-market

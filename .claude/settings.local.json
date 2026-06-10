@@ -39,7 +39,24 @@
       "Bash(git stash *)",
       "mcp__plugin_woz_code__Edit",
       "Bash(grep -v \"^+$\")",
-      "Bash(git grep *)"
+      "Bash(git grep *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:8080)",
+      "Bash(Start-Process -NoNewWindow -FilePath \"npx\" -ArgumentList \"vite\",\"--port\",\"8080\")",
+      "Bash(Start-Sleep 3)",
+      "Bash(npx vite *)",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/case-studies/GovBrokers.tsx' -Pattern '35%|250%|50%' | Select-Object -First 20\")",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/case-studies/TransportationDirector.tsx' -Pattern '85%|70%|60%' | Select-Object -First 20\")",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/case-studies/InnesYoung.tsx' -Pattern '400|75|media' | Select-Object -First 20\")",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/case-studies/InnesYoung.tsx' -Pattern '5.{0,5}media|placement|5x|five' | Select-Object -First 20\")",
+      "Bash(powershell -command \"Get-Content 'tailwind.config.ts' | Select-String -Pattern 'hero-gradient|accent-secondary|bg-surface|bg-muted' | Select-Object -First 30\")",
+      "Bash(powershell -command \"Get-Content 'src/index.css' | Select-String -Pattern 'hero-gradient|accent-secondary' | Select-Object -First 20\")",
+      "Bash(powershell -command \"Get-Content 'src/index.css' | Select-String -Pattern 'accent-secondary' | Select-Object -First 10\")",
+      "Bash(powershell -command \"Get-Content 'src/index.css' | Select-String -Pattern 'dark|\\\\.dark' | Select-Object -First 10\")",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/CaseStudies.tsx' -Pattern 'aria-label|role=|aria-' | Select-Object -First 20\")",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/CaseStudies.tsx' -Pattern 'key=' | Select-Object -First 10\")",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/Services.tsx' -Pattern 'hero-gradient|absolute inset-0' | Select-Object -First 10\")",
+      "Bash(powershell -command \"Select-String -Path 'src/components/landing/Header.tsx','src/components/landing/MobileMenu.tsx' -Pattern 'case-studies' | Select-Object -First 10\")",
+      "Bash(powershell -command \"Select-String -Path 'src/pages/CaseStudies.tsx' -Pattern 'animate-fade' | Select-Object -First 10\")"
     ]
   }
 }

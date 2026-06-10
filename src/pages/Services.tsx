@@ -61,8 +61,8 @@ const Services = () => {
             Our Services
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8">
-            Comprehensive AI solutions to transform your operations and accelerate growth.
-            We help businesses and nonprofits leverage cutting-edge technology to overcome capacity challenges.
+            AI and automation services that cut manual work and add capacity without adding headcount.
+            We work with mid-market companies and nonprofits, from first assessment through implementation.
           </p>
         </div>
       </section>
@@ -259,6 +259,30 @@ const faqs = [
   {
     question: "What industries does 10x Velocity serve?",
     answer: "We serve businesses and nonprofits across industries including real estate, PR and marketing, government contracting, manufacturing, and professional services. Our solutions adapt to any industry's workflows.",
+  },
+  {
+    question: "How much does it cost to work with 10x Velocity?",
+    answer: "Our published packages run from $129 (AI Diagnostic Review) to $499 (Essential AI Stack) to $999+ (Advanced AI Stack, hands-on implementation), plus a $49/month AI Advantage Plan for ongoing oversight — full details on our packages page. Custom automation and consulting work is scoped after an assessment of your processes, and most implementations are live within 4 to 8 weeks. We publish our starting prices; most consulting firms publish nothing.",
+  },
+  {
+    question: "What's the difference between an AI consultant and an IT provider (MSP) offering AI services?",
+    answer: "An MSP manages your IT infrastructure and typically rolls out packaged tools like Microsoft Copilot. An AI consultant redesigns the business process first, then builds the automation around it. If the goal is licenses installed, an MSP is enough. If the goal is a measured outcome — like the 50% cut in proposal processing time and 250% increase in inbound leads we delivered for GovBrokers — you need process-level consulting.",
+  },
+  {
+    question: "Where is 10x Velocity located, and do you work with companies outside Kentucky?",
+    answer: "We're based in Louisville, Kentucky (10440 Bluegrass Pkwy) and work with clients nationally. Louisville and Kentucky clients get on-site work; everyone else gets the same delivery remotely. 10x Velocity is a verified Veteran-Owned Small Business (VOSB).",
+  },
+  {
+    question: "Do you work with nonprofits?",
+    answer: "Yes — nonprofits are a core client segment, not a side offering. Typical work includes donor management automation, volunteer coordination, grant-drafting workflows, and program reporting. Our free playbook library at resources.10xvelocity.ai includes nonprofit-specific guides for fundraising, grant writing, and communications.",
+  },
+  {
+    question: "What results have 10x Velocity clients actually gotten?",
+    answer: "GovBrokers, a government contracting firm, cut proposal processing time 50%, increased contract win rates 35%, reduced missed deadlines 60%, and grew inbound leads 250% through AI-driven automation. Nine published case studies document results like these — each with measured numbers — on our case studies page.",
+  },
+  {
+    question: "Do we need to clean up our data before starting?",
+    answer: "No — start with the process, not the data. Most mid-market automation wins (document processing, intake, scheduling, reporting) don't require a data warehouse. When data quality is the blocker, our data cleaning service fixes it inside the engagement, not as a prerequisite project.",
   },
 ];
 
