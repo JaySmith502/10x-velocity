@@ -32,197 +32,369 @@ const CaseStudies = () => {
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
       <main className="flex-1">
-      <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }]} />
-      <section className="container mx-auto px-4 py-20">
-        <div className="max-w-7xl mx-auto">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Case Studies
-          </h1>
-          <p className="text-lg text-muted-foreground mb-12">
-            Discover how we've helped businesses achieve transformative results through AI-powered automation.
-          </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link
-              to="/case-studies/transportation-director"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="flex gap-2 mb-3">
-                <Badge variant="outline" className="bg-orange-500/20 text-orange-300 border-orange-500/50">Manufacturing</Badge>
-                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Logistics</Badge>
-                <Badge variant="outline" className="flex items-center gap-1 bg-purple-500/20 text-purple-300 border-purple-500/50">
-                  <Zap className="w-3 h-3" /> Power Automate
-                </Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                Transportation Director: Revolutionizing Logistics Management
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                How a leading appliance manufacturer transformed their inbound logistics with Power Automate OCR solutions, reducing errors by 85%.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
+        <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }]} />
 
-            <Link
-              to="/case-studies/innes-young"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="flex gap-2 mb-3">
-                <Badge variant="outline" className="bg-purple-500/20 text-purple-300 border-purple-500/50">Public Relations</Badge>
-                <Badge variant="outline" className="bg-indigo-500/20 text-indigo-300 border-indigo-500/50">Media</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                Innes & Young: AI-Powered PR Evolution
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Learn how we helped a leading PR firm achieve 400% growth in inbound leads and 75% reduction in reporting time through AI automation.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              to="/case-studies/ecatalyst"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="mb-3">
-                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Business Services</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                eCatalyst: 10x Velocity Boosts Operational Excellence
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Discover how we helped a fractional business support firm achieve 70% reduction in email triage time and 65% increase in task completion rates.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              to="/case-studies/hillcrest-partners"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="mb-3">
-                <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/50">Real Estate</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                Hillcrest Partners: High-Growth Real Estate Powerhouse
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                See how we transformed a real estate investment firm with AI-driven automation, achieving 50% faster property flips and 250% boost in inbound leads.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              to="/case-studies/catalyst-group"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="mb-3">
-                <Badge variant="outline" className="bg-amber-500/20 text-amber-300 border-amber-500/50">Venture Investing</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                The Catalyst Group: Unprecedented Growth in Business Investment & Acquisitions
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Discover how we helped a business portfolio and investment firm achieve 300% increase in LinkedIn conversations and 50% faster deal evaluation through AI-powered automation.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              to="/case-studies/director-of-marketing"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="mb-3">
-                <Badge variant="outline" className="bg-rose-500/20 text-rose-300 border-rose-500/50">Marketing</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                Director of Marketing Inc: High-Performance Social Media Marketing Agency
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Learn how we transformed a digital marketing agency with AI automation, achieving 300% increase in social media engagement and 40% reduction in PPC costs.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              to="/case-studies/birchwood-real-estate"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="mb-3">
-                <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/50">Real Estate</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                Birchwood Real Estate Partners: New Heights in Real Estate Wholesaling
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Explore how we helped a real estate wholesaling firm achieve 400% faster lead processing and 300% growth in inbound leads through AI-powered automation.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              to="/case-studies/govbrokers"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="mb-3">
-                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Business Services</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                GovBrokers: High-Performance Government Contracting Powerhouse
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                Discover how we transformed a government contracting firm, achieving 35% increase in contract win rates and 250% boost in inbound leads through AI-powered automation.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-
-            <Link
-              to="/case-studies/inspyrd"
-              className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
-            >
-              <div className="mb-3">
-                <Badge variant="outline" className="bg-teal-500/20 text-teal-300 border-teal-500/50">Nonprofit</Badge>
-              </div>
-              <h2 className="text-2xl font-bold mb-4">
-                Inspyrd: Transformational Trauma Recovery Program
-              </h2>
-              <p className="text-muted-foreground mb-6">
-                See how we helped a Canadian trauma recovery initiative expand to the U.S., achieving 300% increase in outreach engagement and 250% growth in program enrollments.
-              </p>
-              <div className="flex items-center text-accent">
-                Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
-              </div>
-            </Link>
-          </div>
-
-          {/* CTA Section */}
-          <div className="max-w-4xl mx-auto mt-20 text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Increase Your Velocity?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Book a free consultation and discover how we can help you achieve 10x growth.
+        {/* Page Hero */}
+        <section className="container mx-auto px-4 py-20 bg-hero-gradient dark:bg-hero-gradient-dark">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
+              Client Results
             </p>
-            <DiscoveryButton />
+            <h1 className="text-4xl font-extrabold mb-4 text-left">
+              Real outcomes from real implementations — with numbers.
+            </h1>
+            <p className="font-body text-lg text-muted-foreground max-w-2xl">
+              We've helped manufacturers, agencies, real estate firms, nonprofits, and government contractors measure what matters. Every engagement below is an implementation we shipped — tracked, verified, and still running.
+            </p>
           </div>
-        </div>
-      </section>
-    </main>
+        </section>
+
+        <section className="container mx-auto px-4 py-12">
+          <div className="max-w-7xl mx-auto">
+
+            {/* ── Hero Cards: GovBrokers & Innes & Young ── */}
+            <div className="mb-2">
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+                Featured
+              </p>
+
+              {/* Hero Card 1: GovBrokers */}
+              <Link
+                to="/case-studies/govbrokers"
+                className="block bg-surface border border-border rounded-lg p-8 mb-5 hover:border-accent hover:shadow-[0_4px_20px_rgba(51,195,240,0.1)] transition-all relative"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <Badge variant="outline" className="bg-accent/15 text-accent border-accent/30">Business Services</Badge>
+                      <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Government Contracting</Badge>
+                    </div>
+                    <h2 className="text-2xl font-bold mb-0">
+                      GovBrokers: High-Performance Government Contracting Powerhouse
+                    </h2>
+                  </div>
+                  <div className="flex items-center text-accent font-bold text-sm whitespace-nowrap shrink-0 lg:pt-1">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </div>
+
+                {/* Stat row */}
+                <div className="flex flex-wrap gap-0 my-5 border-t border-b border-border py-4">
+                  <div className="flex-1 min-w-[120px] pr-6">
+                    <span className="font-display text-2xl font-extrabold text-accent block leading-tight">35%</span>
+                    <span className="text-xs text-muted-foreground mt-0.5 block">Higher contract win rate</span>
+                  </div>
+                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                    <span className="font-display text-2xl font-extrabold text-accent block leading-tight">250%</span>
+                    <span className="text-xs text-muted-foreground mt-0.5 block">Growth in inbound leads</span>
+                  </div>
+                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                    <span className="font-display text-2xl font-extrabold text-accent block leading-tight">50%</span>
+                    <span className="text-xs text-muted-foreground mt-0.5 block">Faster proposal processing</span>
+                  </div>
+                </div>
+
+                <p className="font-body text-muted-foreground leading-relaxed max-w-2xl">
+                  We transformed a government contracting firm — 35% increase in contract win rates, 250% boost in inbound leads, and 50% faster proposal processing, powered entirely by AI-driven automation. The pipeline that used to stall on manual data entry now runs overnight.
+                </p>
+              </Link>
+
+              {/* Hero Card 2: Innes & Young */}
+              <Link
+                to="/case-studies/innes-young"
+                className="block bg-surface border border-border rounded-lg p-8 mb-5 hover:border-accent hover:shadow-[0_4px_20px_rgba(51,195,240,0.1)] transition-all relative"
+              >
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Public Relations</Badge>
+                      <Badge variant="outline" className="bg-accent/15 text-accent border-accent/30">Media</Badge>
+                    </div>
+                    <h2 className="text-2xl font-bold mb-0">
+                      Innes &amp; Young: AI-Powered PR Evolution
+                    </h2>
+                  </div>
+                  <div className="flex items-center text-accent font-bold text-sm whitespace-nowrap shrink-0 lg:pt-1">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </div>
+
+                {/* Stat row */}
+                <div className="flex flex-wrap gap-0 my-5 border-t border-b border-border py-4">
+                  <div className="flex-1 min-w-[120px] pr-6">
+                    <span className="font-display text-2xl font-extrabold text-accent block leading-tight">400%</span>
+                    <span className="text-xs text-muted-foreground mt-0.5 block">Growth in inbound leads</span>
+                  </div>
+                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                    <span className="font-display text-2xl font-extrabold text-accent block leading-tight">75%</span>
+                    <span className="text-xs text-muted-foreground mt-0.5 block">Reduction in reporting time</span>
+                  </div>
+                  <div className="flex-1 min-w-[120px] px-6 border-l border-border">
+                    <span className="font-display text-2xl font-extrabold text-accent block leading-tight">5×</span>
+                    <span className="text-xs text-muted-foreground mt-0.5 block">Increase in media placements</span>
+                  </div>
+                </div>
+
+                <p className="font-body text-muted-foreground leading-relaxed max-w-2xl">
+                  A leading PR firm rebuilt around AI — quadrupling qualified inbound leads, cutting reporting overhead by 75%, and placing five times as many stories with the same team. No additional headcount required.
+                </p>
+              </Link>
+            </div>
+
+            {/* ── Remaining 7 Cards ── */}
+            <div className="mb-2">
+              <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
+                More Client Results
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+                {/* Transportation Director */}
+                <Link
+                  to="/case-studies/transportation-director"
+                  className="bg-surface border border-border rounded-lg p-5 hover:border-accent/50 hover:shadow-[0_2px_16px_rgba(51,195,240,0.07)] transition-all flex flex-col"
+                >
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Manufacturing</Badge>
+                    <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Logistics</Badge>
+                    <Badge variant="outline" className="flex items-center gap-1 bg-accent/15 text-accent border-accent/30">
+                      <Zap className="w-3 h-3" /> Power Automate
+                    </Badge>
+                  </div>
+                  {/* Metric row */}
+                  <div className="flex flex-wrap gap-3 mb-3 py-2.5 border-t border-b border-border">
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">85%</span>
+                      <span className="text-[11px] text-muted-foreground">Error reduction</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">70%</span>
+                      <span className="text-[11px] text-muted-foreground">Less wasted labor time</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">60%</span>
+                      <span className="text-[11px] text-muted-foreground">Dock productivity gain</span>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">
+                    Transportation Director: Revolutionizing Logistics Management
+                  </h3>
+                  <p className="font-body text-muted-foreground mb-4 flex-1">
+                    A leading appliance manufacturer transformed their inbound logistics with Power Automate OCR solutions, reducing errors by 85%.
+                  </p>
+                  <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+
+                {/* eCatalyst */}
+                <Link
+                  to="/case-studies/ecatalyst"
+                  className="bg-surface border border-border rounded-lg p-5 hover:border-accent/50 hover:shadow-[0_2px_16px_rgba(51,195,240,0.07)] transition-all flex flex-col"
+                >
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="bg-accent/15 text-accent border-accent/30">Business Services</Badge>
+                  </div>
+                  {/* Metric row */}
+                  <div className="flex flex-wrap gap-3 mb-3 py-2.5 border-t border-b border-border">
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">70%</span>
+                      <span className="text-[11px] text-muted-foreground">Email triage time saved</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">65%</span>
+                      <span className="text-[11px] text-muted-foreground">Task completion increase</span>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">
+                    eCatalyst: 10x Velocity Boosts Operational Excellence
+                  </h3>
+                  <p className="font-body text-muted-foreground mb-4 flex-1">
+                    A fractional business support firm achieved 70% reduction in email triage time and 65% increase in task completion rates through AI automation.
+                  </p>
+                  <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+
+                {/* Hillcrest Partners */}
+                <Link
+                  to="/case-studies/hillcrest-partners"
+                  className="bg-surface border border-border rounded-lg p-5 hover:border-accent/50 hover:shadow-[0_2px_16px_rgba(51,195,240,0.07)] transition-all flex flex-col"
+                >
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Real Estate</Badge>
+                  </div>
+                  {/* Metric row */}
+                  <div className="flex flex-wrap gap-3 mb-3 py-2.5 border-t border-b border-border">
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">50%</span>
+                      <span className="text-[11px] text-muted-foreground">Faster property flips</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">250%</span>
+                      <span className="text-[11px] text-muted-foreground">Inbound seller leads</span>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">
+                    Hillcrest Partners: High-Growth Real Estate Powerhouse
+                  </h3>
+                  <p className="font-body text-muted-foreground mb-4 flex-1">
+                    A real estate investment firm achieved 50% faster property flips and 250% boost in inbound leads with AI-driven automation.
+                  </p>
+                  <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+
+                {/* The Catalyst Group */}
+                <Link
+                  to="/case-studies/catalyst-group"
+                  className="bg-surface border border-border rounded-lg p-5 hover:border-accent/50 hover:shadow-[0_2px_16px_rgba(51,195,240,0.07)] transition-all flex flex-col"
+                >
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Venture Investing</Badge>
+                  </div>
+                  {/* Metric row */}
+                  <div className="flex flex-wrap gap-3 mb-3 py-2.5 border-t border-b border-border">
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">300%</span>
+                      <span className="text-[11px] text-muted-foreground">More LinkedIn conversations</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">50%</span>
+                      <span className="text-[11px] text-muted-foreground">Faster deal evaluation</span>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">
+                    The Catalyst Group: Unprecedented Growth in Business Investment &amp; Acquisitions
+                  </h3>
+                  <p className="font-body text-muted-foreground mb-4 flex-1">
+                    A business portfolio and investment firm achieved 300% more LinkedIn conversations and 50% faster deal evaluation through AI-powered automation.
+                  </p>
+                  <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+
+                {/* Director of Marketing Inc */}
+                <Link
+                  to="/case-studies/director-of-marketing"
+                  className="bg-surface border border-border rounded-lg p-5 hover:border-accent/50 hover:shadow-[0_2px_16px_rgba(51,195,240,0.07)] transition-all flex flex-col"
+                >
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Marketing</Badge>
+                  </div>
+                  {/* Metric row */}
+                  <div className="flex flex-wrap gap-3 mb-3 py-2.5 border-t border-b border-border">
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">300%</span>
+                      <span className="text-[11px] text-muted-foreground">Social media engagement</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">40%</span>
+                      <span className="text-[11px] text-muted-foreground">PPC cost reduction</span>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">
+                    Director of Marketing Inc: High-Performance Social Media Marketing Agency
+                  </h3>
+                  <p className="font-body text-muted-foreground mb-4 flex-1">
+                    A digital marketing agency achieved 300% increase in social media engagement and 40% reduction in PPC costs through AI automation.
+                  </p>
+                  <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+
+                {/* Birchwood Real Estate Partners */}
+                <Link
+                  to="/case-studies/birchwood-real-estate"
+                  className="bg-surface border border-border rounded-lg p-5 hover:border-accent/50 hover:shadow-[0_2px_16px_rgba(51,195,240,0.07)] transition-all flex flex-col"
+                >
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Real Estate</Badge>
+                  </div>
+                  {/* Metric row */}
+                  <div className="flex flex-wrap gap-3 mb-3 py-2.5 border-t border-b border-border">
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">400%</span>
+                      <span className="text-[11px] text-muted-foreground">Faster lead processing</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">300%</span>
+                      <span className="text-[11px] text-muted-foreground">Inbound social leads</span>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">
+                    Birchwood Real Estate Partners: New Heights in Real Estate Wholesaling
+                  </h3>
+                  <p className="font-body text-muted-foreground mb-4 flex-1">
+                    A real estate wholesaling firm achieved 400% faster lead processing and 300% growth in inbound leads through AI-powered automation.
+                  </p>
+                  <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+
+                {/* Inspyrd */}
+                <Link
+                  to="/case-studies/inspyrd"
+                  className="bg-surface border border-border rounded-lg p-5 hover:border-accent/50 hover:shadow-[0_2px_16px_rgba(51,195,240,0.07)] transition-all flex flex-col"
+                >
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    <Badge variant="outline" className="bg-accent-secondary/15 text-accent-secondary border-accent-secondary/30">Nonprofit</Badge>
+                  </div>
+                  {/* Metric row */}
+                  <div className="flex flex-wrap gap-3 mb-3 py-2.5 border-t border-b border-border">
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">300%</span>
+                      <span className="text-[11px] text-muted-foreground">Outreach engagement</span>
+                    </div>
+                    <div className="w-px bg-border self-stretch" />
+                    <div>
+                      <span className="font-display text-sm font-bold text-accent block leading-tight">250%</span>
+                      <span className="text-[11px] text-muted-foreground">Program enrollment growth</span>
+                    </div>
+                  </div>
+                  <h3 className="text-base font-semibold mb-2">
+                    Inspyrd: Transformational Trauma Recovery Program
+                  </h3>
+                  <p className="font-body text-muted-foreground mb-4 flex-1">
+                    A Canadian trauma recovery initiative expanded to the U.S., achieving 300% increase in outreach engagement and 250% growth in program enrollments.
+                  </p>
+                  <div className="flex items-center text-accent font-bold text-sm mt-auto">
+                    Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
+                  </div>
+                </Link>
+
+              </div>
+            </div>
+
+            {/* CTA Section */}
+            <div className="mt-16 bg-muted border border-border rounded-lg p-12 relative overflow-hidden">
+              {/* Pull-quote */}
+              <blockquote className="font-body text-base italic text-muted-foreground mb-6 pl-5 border-l-4 border-accent bg-accent/5 rounded-r py-3 max-w-2xl">
+                "The pipeline that used to stall on manual entry now runs overnight — with higher accuracy than our previous team."
+              </blockquote>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                Ready to Increase Your Velocity?
+              </h2>
+              <p className="font-body text-lg text-muted-foreground mb-8 max-w-xl">
+                Book a free consultation and discover how we can help you achieve 10x growth.
+              </p>
+              <DiscoveryButton />
+            </div>
+
+          </div>
+        </section>
+      </main>
     </>
   );
 };
