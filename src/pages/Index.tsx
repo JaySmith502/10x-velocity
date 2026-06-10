@@ -120,7 +120,7 @@ const Index = () => {
               { value: "6 wk", label: "Implementation" },
               { value: "3 FTE", label: "Hours reclaimed" },
             ].map((metric) => (
-              <div key={metric.label} className="bg-surface border border-border rounded-lg flex flex-col justify-center px-4" style={{ minHeight: "72px" }}>
+              <div key={metric.label} className="bg-surface border border-border rounded-lg flex flex-col justify-center px-4 min-h-[72px]">
                 <div className="font-display text-2xl font-extrabold text-foreground leading-none">{metric.value}</div>
                 <div className="text-xs text-muted-foreground mt-1">{metric.label}</div>
               </div>
