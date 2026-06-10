@@ -92,7 +92,7 @@ const Index = () => {
               AI & Automation Consulting
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 text-foreground">
-              We cut GovBrokers' processing time 85% in 6&nbsp;weeks. We can do the same for&nbsp;you.
+              We grew GovBrokers' inbound leads 250% and cut proposal time in&nbsp;half.
             </h1>
             <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
               AI & automation consulting for companies ready to move faster. Based in Louisville, serving ambitious teams everywhere.
@@ -115,10 +115,10 @@ const Index = () => {
           {/* Mobile: 2x2 metric stat tiles (hidden on md+) */}
           <div className="grid grid-cols-2 gap-3 md:hidden animate-fade-up" style={{ animationDelay: "0.1s" }}>
             {[
-              { value: "85%", label: "Faster processing" },
-              { value: "$240K", label: "Annual savings" },
-              { value: "6 wk", label: "Implementation" },
-              { value: "3 FTE", label: "Hours reclaimed" },
+              { value: "250%", label: "More inbound leads" },
+              { value: "50%", label: "Faster proposals" },
+              { value: "35%", label: "Higher win rate" },
+              { value: "60%", label: "Fewer missed deadlines" },
             ].map((metric) => (
               <div key={metric.label} className="bg-surface border border-border rounded-lg flex flex-col justify-center px-4 min-h-[72px]">
                 <div className="font-display text-2xl font-extrabold text-foreground leading-none">{metric.value}</div>
@@ -182,11 +182,11 @@ const Index = () => {
               {[
                 { value: "400%", label: "Inbound lead growth" },
                 { value: "75%", label: "Less reporting time" },
-                { value: "3×", label: "Faster media monitoring" },
-                { value: "0", label: "Added headcount" },
+                { value: "3×", label: "Faster media monitoring", ariaLabel: "3 times faster media monitoring" },
+                { value: "0", label: "New hires needed" },
               ].map((metric) => (
                 <div key={metric.label} className="bg-surface border border-border rounded-lg p-5">
-                  <div className="font-display text-2xl md:text-3xl font-extrabold text-foreground">{metric.value}</div>
+                  <div className="font-display text-2xl md:text-3xl font-extrabold text-foreground" aria-label={"ariaLabel" in metric ? metric.ariaLabel : undefined}>{metric.value}</div>
                   <div className="text-xs text-muted-foreground mt-1">{metric.label}</div>
                 </div>
               ))}
