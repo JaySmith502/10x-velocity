@@ -89,7 +89,7 @@ const PowerAutomate = () => {
                   <ul className="space-y-4">
                     {services.map((service, index) => (
                       <li key={index} className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                        <Check className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
                         <span className="text-muted-foreground">{service}</span>
                       </li>
                     ))}
@@ -123,13 +123,13 @@ const PowerAutomate = () => {
               <div className="grid md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
                   <div key={index} className="bg-surface border border-border rounded-lg p-8">
-                    <h3 className="text-xl font-semibold mb-4 text-accent">{feature.title}</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-foreground">{feature.title}</h3>
                     <p className="text-muted-foreground mb-6">{feature.description}</p>
                     <h4 className="font-medium mb-3">Common Applications:</h4>
                     <ul className="space-y-2">
                       {feature.applications.map((app, idx) => (
                         <li key={idx} className="flex items-start gap-3">
-                          <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                          <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
                           <span className="text-muted-foreground">{app}</span>
                         </li>
                       ))}

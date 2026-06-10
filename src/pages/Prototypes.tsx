@@ -68,7 +68,7 @@ const Prototypes = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {deliverableFeatures.map((feature, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
+                    <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 mt-1" />
                     <span className="text-muted-foreground">{feature}</span>
                   </div>
                 ))}
@@ -122,7 +122,7 @@ const Prototypes = () => {
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-foreground">{step.title}</h3>
                   <p className="text-muted-foreground mb-2">{step.description}</p>
-                  <p className="text-sm text-accent">{step.timeline}</p>
+                  <p className="text-sm text-muted-foreground">{step.timeline}</p>
                 </div>
               ))}
             </div>
