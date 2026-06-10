@@ -85,14 +85,14 @@ const Index = () => {
             <GradientMesh className="absolute inset-0 w-full h-full [&:not([data-active=true])]:hidden" />
           </Suspense>
         </div>
-      <div className="container mx-auto px-4 pt-16 md:pt-24 pb-16 md:pb-20">
+      <div className="container mx-auto px-4 pt-16 md:pt-24 pb-28 md:pb-36">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-12 max-w-6xl mx-auto">
-          <div className="md:flex-1 md:max-w-xl animate-fade-up">
+          <div className="md:flex-1 md:max-w-2xl animate-fade-up">
             <p className="text-xs font-semibold tracking-widest uppercase text-accent mb-4">
               AI & Automation Consulting
             </p>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-[1.05] mb-6 text-foreground">
-              Accelerate Your Business Growth with AI & Automation
+              We cut GovBrokers' processing time 85% in 6&nbsp;weeks. We can do the same for&nbsp;you.
             </h1>
             <p className="font-body text-lg text-muted-foreground leading-relaxed mb-8">
               AI & automation consulting for companies ready to move faster. Based in Louisville, serving ambitious teams everywhere.
@@ -112,7 +112,22 @@ const Index = () => {
             <ThinkingAnimation />
           </div>
 
-          {/* Hero illustration */}
+          {/* Mobile: 2x2 metric stat tiles (hidden on md+) */}
+          <div className="grid grid-cols-2 gap-3 md:hidden animate-fade-up" style={{ animationDelay: "0.1s" }}>
+            {[
+              { value: "85%", label: "Faster processing" },
+              { value: "$240K", label: "Annual savings" },
+              { value: "6 wk", label: "Implementation" },
+              { value: "3 FTE", label: "Hours reclaimed" },
+            ].map((metric) => (
+              <div key={metric.label} className="bg-surface border border-border rounded-lg flex flex-col justify-center px-4" style={{ minHeight: "72px" }}>
+                <div className="font-display text-2xl font-extrabold text-foreground leading-none">{metric.value}</div>
+                <div className="text-xs text-muted-foreground mt-1">{metric.label}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* Desktop: Hero illustration (hidden on mobile) */}
           <div className="hidden md:flex items-center justify-center md:flex-1 animate-fade-up" style={{ animationDelay: "0.1s" }}>
             <img
               src={heroGraphic}
@@ -127,12 +142,21 @@ const Index = () => {
       </section>
 
       {/* Logo bar */}
-      <section className="bg-muted py-6 mt-16">
+      <section className="bg-muted py-4 border-t border-b border-border">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-2">
             <span className="text-xs font-semibold tracking-widest uppercase text-muted-foreground">Trusted by</span>
-            {["GovBrokers", "Innes & Young", "eCatalyst", "Hillcrest Partners", "Catalyst Group"].map((name) => (
-              <span key={name} className="text-sm font-semibold text-muted-foreground/60">{name}</span>
+            {[
+              { name: "GovBrokers", industry: "Government Contracting" },
+              { name: "Innes & Young", industry: "Professional Services" },
+              { name: "eCatalyst", industry: "Nonprofit" },
+              { name: "Hillcrest Partners", industry: "Consulting" },
+              { name: "Catalyst Group", industry: "Advisory" },
+            ].map(({ name, industry }) => (
+              <div key={name} className="flex flex-col items-center gap-0.5">
+                <span className="text-sm font-semibold text-muted-foreground">{name}</span>
+                <span className="text-xs text-muted-foreground/65">{industry}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -232,7 +256,7 @@ const Index = () => {
             <div>
               <h2 className="font-display text-2xl md:text-3xl font-extrabold mb-2">Ready to move faster?</h2>
               <p className="font-body text-sm text-background/60">
-                15-minute call. No pitch deck. Just an honest look at what automation could do for you.
+                15 minutes. You'll leave with 2–3 specific automation opportunities and a rough ROI estimate — no commitment required.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
