@@ -9,6 +9,7 @@ interface MobileMenuProps {
 }
 
 const serviceLinks = [
+  { to: "/packages", label: "Packages & Pricing" },
   { to: "/services", label: "All Services" },
   { to: "/services/data-cleaning", label: "Data Cleaning" },
   { to: "/services/phone-voice-agents", label: "Phone Voice Agents" },
