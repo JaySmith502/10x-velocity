@@ -60,10 +60,10 @@ const LunchAndLearn = () => {
                 <span>Hybrid (In-Person + Zoom)</span>
               </div>
             </div>
-            <DiscoveryButton 
-              text="Register Now" 
-              url="https://www.eventbrite.com/e/1302953963379?aff=oddtdtcreator" 
-              className="animate-fade-up" 
+            <DiscoveryButton
+              text="Register Now"
+              url="https://www.eventbrite.com/e/1302953963379?aff=oddtdtcreator"
+              className="animate-fade-up"
             />
           </div>
         </div>
@@ -76,7 +76,7 @@ const LunchAndLearn = () => {
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
               Don't let technology slap you in the face!
             </h2>
-            
+
             <Card className="bg-transparent border-accent/20 overflow-hidden max-w-2xl mx-auto">
               <CardContent className="p-0">
                 <div className="w-full">
@@ -105,73 +105,73 @@ const LunchAndLearn = () => {
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Join us for this interactive 60-minute session to discover how AI is reshaping business operations and how to build your own 10x playbook.
             </p>
-            
+
             <div className="bg-surface border border-border rounded-lg p-8 mb-10">
               <div className="space-y-8">
-                <AgendaItem 
-                  number="1" 
-                  title="Welcome & Introductions" 
+                <AgendaItem
+                  number="1"
+                  title="Welcome & Introductions"
                   description="Meet the Co-Founders: Jay Smith & Kirk Hilbrecht - Their backgrounds, vision, and why 10xVelocity exists"
                 />
-                
-                <AgendaItem 
-                  number="2" 
-                  title="What is 10xVelocity?" 
+
+                <AgendaItem
+                  number="2"
+                  title="What is 10xVelocity?"
                   description="What we do / What we don't do - Who we help and how we help them"
                 />
-                
-                <AgendaItem 
-                  number="3" 
-                  title="What is AI in 2025?" 
+
+                <AgendaItem
+                  number="3"
+                  title="What is AI in 2025?"
                   description="Today's AI: Co-pilots, not replacements - What AI will look like in 2026"
                 />
-                
-                <AgendaItem 
-                  number="4" 
-                  title="AI Security: What to Actually Worry About" 
+
+                <AgendaItem
+                  number="4"
+                  title="AI Security: What to Actually Worry About"
                   description="The online banking comparison - Responsible use and best practices"
                 />
-                
-                <AgendaItem 
-                  number="5" 
-                  title="The Cost of NOT Using AI" 
+
+                <AgendaItem
+                  number="5"
+                  title="The Cost of NOT Using AI"
                   description="Competitor advantage - Lost time, missed opportunities"
                 />
-                
-                <AgendaItem 
-                  number="6" 
-                  title="Where AI Can Transform Your Business" 
+
+                <AgendaItem
+                  number="6"
+                  title="Where AI Can Transform Your Business"
                   description="15 Business Functions AI Can 10x - Tools you can use today"
                 />
-                
-                <AgendaItem 
-                  number="7" 
-                  title="Building Your AI Workflow" 
+
+                <AgendaItem
+                  number="7"
+                  title="Building Your AI Workflow"
                   description="Where to start - Mapping out your AI playbook - 10xVelocity's free online workflow tool"
                 />
-                
-                <AgendaItem 
-                  number="8" 
-                  title="Open Q&A" 
+
+                <AgendaItem
+                  number="8"
+                  title="Open Q&A"
                   description="Real-time examples, burning questions, personalized use cases"
                 />
               </div>
             </div>
-            
+
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4">Limited In-Person Seating Available</h3>
               <p className="text-muted-foreground mb-8">
                 Join us in-person for a complimentary lunch or online via Zoom
               </p>
-              <DiscoveryButton 
-                text="Register Now" 
-                url="https://www.eventbrite.com/e/1302953963379?aff=oddtdtcreator" 
+              <DiscoveryButton
+                text="Register Now"
+                url="https://www.eventbrite.com/e/1302953963379?aff=oddtdtcreator"
               />
             </div>
           </div>
         </div>
       </section>
-      
+
       {/* Benefits Section */}
       <section className="py-16 bg-background/80">
         <div className="container mx-auto px-4">
@@ -182,12 +182,12 @@ const LunchAndLearn = () => {
             <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
               Supercharge your business with AI — here's what you'll gain from our free Lunch & Learn:
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-muted p-2 rounded-full">
+                    <div className="bg-muted p-2 rounded-full">
                       <Check className="w-5 h-5 text-muted-foreground" />
                     </div>
                     <h3 className="text-xl font-semibold">AI Multiplier Effect</h3>
@@ -197,7 +197,7 @@ const LunchAndLearn = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
@@ -211,7 +211,7 @@ const LunchAndLearn = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
@@ -225,7 +225,7 @@ const LunchAndLearn = () => {
                   </p>
                 </div>
               </div>
-              
+
               <div className="bg-surface border border-border rounded-lg p-6">
                 <div className="flex flex-col h-full">
                   <div className="flex items-center gap-3 mb-4">
@@ -240,11 +240,11 @@ const LunchAndLearn = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="text-center">
-              <a 
-                href="https://level.10xvelocity.ai/widget/bookings/jay-smith-10xvelocity" 
-                target="_blank" 
+              <a
+                href="https://level.10xvelocity.ai/widget/bookings/jay-smith-10xvelocity"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-accent hover:text-foreground transition-colors"
               >
@@ -259,11 +259,11 @@ const LunchAndLearn = () => {
   );
 };
 
-const AgendaItem = ({ 
-  number, 
-  title, 
-  description 
-}: { 
+const AgendaItem = ({
+  number,
+  title,
+  description
+}: {
   number: string;
   title: string;
   description: string;
