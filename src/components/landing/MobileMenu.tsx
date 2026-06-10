@@ -95,7 +95,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
             ))}
 
             <div className="pt-4">
-              <DiscoveryButton className="w-full text-sm" />
+              <DiscoveryButton className="w-full text-sm" onClick={onClose} />
             </div>
           </nav>
         </div>

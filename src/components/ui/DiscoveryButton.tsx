@@ -7,12 +7,14 @@ interface DiscoveryButtonProps {
   className?: string;
   text?: string;
   url?: string;
+  onClick?: () => void;
 }
 
 const DiscoveryButton: React.FC<DiscoveryButtonProps> = ({
   className,
   text = "Contact Us",
   url = "/contact",
+  onClick,
 }) => {
   const isExternal = url.startsWith("http");
 
@@ -22,11 +24,11 @@ const DiscoveryButton: React.FC<DiscoveryButtonProps> = ({
       className={`bg-accent text-white font-semibold hover:bg-accent/90 transition-colors ${className ?? ""}`}
     >
       {isExternal ? (
-        <a href={url} target="_blank" rel="noopener noreferrer">
+        <a href={url} target="_blank" rel="noopener noreferrer" onClick={onClick}>
           {text} <ArrowRight className="w-4 h-4" />
         </a>
       ) : (
-        <Link to={url}>
+        <Link to={url} onClick={onClick}>
           {text} <ArrowRight className="w-4 h-4" />
         </Link>
       )}
