@@ -42,7 +42,7 @@ const CaseStudies = () => {
             Discover how we've helped businesses achieve transformative results through AI-powered automation.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link 
+            <Link
               to="/case-studies/transportation-director"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -64,7 +64,7 @@ const CaseStudies = () => {
               </div>
             </Link>
 
-            <Link 
+            <Link
               to="/case-studies/innes-young"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -83,7 +83,7 @@ const CaseStudies = () => {
               </div>
             </Link>
 
-            <Link 
+            <Link
               to="/case-studies/ecatalyst"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -100,8 +100,8 @@ const CaseStudies = () => {
                 Read Case Study <ArrowRight className="ml-2 w-4 h-4" />
               </div>
             </Link>
-            
-            <Link 
+
+            <Link
               to="/case-studies/hillcrest-partners"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -119,7 +119,7 @@ const CaseStudies = () => {
               </div>
             </Link>
 
-            <Link 
+            <Link
               to="/case-studies/catalyst-group"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -137,7 +137,7 @@ const CaseStudies = () => {
               </div>
             </Link>
 
-            <Link 
+            <Link
               to="/case-studies/director-of-marketing"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -155,7 +155,7 @@ const CaseStudies = () => {
               </div>
             </Link>
 
-            <Link 
+            <Link
               to="/case-studies/birchwood-real-estate"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -173,7 +173,7 @@ const CaseStudies = () => {
               </div>
             </Link>
 
-            <Link 
+            <Link
               to="/case-studies/govbrokers"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -191,7 +191,7 @@ const CaseStudies = () => {
               </div>
             </Link>
 
-            <Link 
+            <Link
               to="/case-studies/inspyrd"
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
@@ -209,11 +209,9 @@ const CaseStudies = () => {
               </div>
             </Link>
           </div>
-          
+
           {/* CTA Section */}
           <div className="max-w-4xl mx-auto mt-20 text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Increase Your Velocity?
             </h2>

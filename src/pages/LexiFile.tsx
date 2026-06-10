@@ -91,9 +91,8 @@ const LexiFile = () => {
       <div className="min-h-screen flex flex-col">
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lexi-File", path: "/lexi-file" }]} />
         {/* Hero Section */}
-      <section className="container mx-auto px-4 py-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
+      <section className="container mx-auto px-4 py-20 relative overflow-hidden">
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Lexi-File<sup className="text-2xl md:text-3xl">™</sup>
@@ -105,12 +104,12 @@ const LexiFile = () => {
             Cut Research Time in Half-Without Sacrificing Accuracy
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-            For law firms, accounting practices, nonprofits, and other document-heavy organizations, 
-            digging through shared drives, PDFs, emails, or intranets wastes time, introduces errors, 
+            For law firms, accounting practices, nonprofits, and other document-heavy organizations,
+            digging through shared drives, PDFs, emails, or intranets wastes time, introduces errors,
             and frustrates your team. Our Smart Knowledge Assistant changes that.
           </p>
           <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-            We deploy a private, secure AI system that lets your team ask plain-language questions 
+            We deploy a private, secure AI system that lets your team ask plain-language questions
             and get immediate, accurate answers-grounded only in your data.
           </p>
         </div>
@@ -150,7 +149,7 @@ const LexiFile = () => {
               <div className="absolute inset-0 w-24 h-0.5 bg-gradient-to-r from-emerald-400 to-green-300 mx-auto blur-sm opacity-75"></div>
             </div>
             <p className="text-lg text-muted-foreground mb-6">
-              We're confident this solution will transform how your team works. After onboarding (usually completed in one week), 
+              We're confident this solution will transform how your team works. After onboarding (usually completed in one week),
               you'll get 30 days to evaluate the system inside your real environment.
             </p>
             <p className="text-lg text-muted-foreground mb-6">
@@ -159,7 +158,7 @@ const LexiFile = () => {
             <p className="text-lg font-medium text-emerald-300 mb-8">
               Most of our clients see value within days. But we'll let the results speak for themselves.
             </p>
-            <Button 
+            <Button
               asChild
               className="bg-gradient-to-r from-emerald-400 to-green-300 text-black font-semibold hover:from-emerald-300 hover:to-green-200 shadow-[0_0_20px_rgba(52,211,153,0.6)] hover:shadow-[0_0_30px_rgba(52,211,153,0.8)] transition-all duration-300"
             >
@@ -247,7 +246,7 @@ const LexiFile = () => {
           </h2>
           <div className="bg-surface border border-border rounded-lg p-8 animate-fade-up">
             <p className="text-lg text-muted-foreground mb-6">
-              We combine deep expertise in automation, secure system integration, and industry-specific AI implementation. 
+              We combine deep expertise in automation, secure system integration, and industry-specific AI implementation.
               Our team has helped law firms, nonprofits, and regulated businesses adopt AI responsibly and at speed-without the tech overhead.
             </p>
             <p className="text-xl font-semibold text-foreground">
@@ -268,9 +267,9 @@ const LexiFile = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <DiscoveryButton />
-            <Button 
+            <Button
               asChild
-              variant="outline" 
+              variant="outline"
               className="border-accent text-foreground hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
             >
               <Link to="/contact">

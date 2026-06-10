@@ -34,8 +34,7 @@ const PowerAutomate = () => {
       <div className="min-h-screen flex flex-col">
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Power Automate", path: "/power-automate" }]} />
         <section className="container mx-auto px-4 py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
+        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -222,8 +221,6 @@ const PowerAutomate = () => {
 
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Automate Your Enterprise?
           </h2>
