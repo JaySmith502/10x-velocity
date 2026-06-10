@@ -74,7 +74,7 @@ const SmartBots = () => {
 
             {/* Chatbot Widget Section */}
             <div className="mb-16">
-              <div className="bg-surface backdrop-blur-sm rounded-2xl p-8 border border-border">
+              <div className="bg-surface backdrop-blur-sm rounded-lg p-8 border border-border">
                 <h2 className="text-2xl font-bold text-white mb-6 text-center">
                   Chat with Our AI Assistant
                 </h2>

@@ -128,7 +128,7 @@ const ClaudePowerWorkshop = () => {
             {problems.map((problem, i) => (
               <div
                 key={i}
-                className="bg-surface border border-border rounded-xl p-8 relative overflow-hidden group hover:border-accent/40 transition-colors duration-300"
+                className="bg-surface border border-border rounded-lg p-8 relative overflow-hidden group hover:border-accent/40 transition-colors duration-300"
               >
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-accent-secondary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <h3 className="text-lg font-bold mb-3 text-foreground">{problem.title}</h3>
@@ -146,7 +146,7 @@ const ClaudePowerWorkshop = () => {
             </h2>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14 max-w-6xl mx-auto">
               {buildItems.map((item, i) => (
-                <div key={i} className="bg-surface border border-border rounded-xl p-7 text-center">
+                <div key={i} className="bg-surface border border-border rounded-lg p-7 text-center">
                   <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent/10 text-accent mb-5">
                     {item.icon}
                   </div>
@@ -196,7 +196,7 @@ const ClaudePowerWorkshop = () => {
               leads who are technically curious but don't write code. You don't need programming
               experience. You need a laptop and a willingness to build.
             </p>
-            <div className="bg-surface border border-border rounded-xl p-8 md:p-10">
+            <div className="bg-surface border border-border rounded-lg p-8 md:p-10">
               <p className="font-semibold text-foreground mb-5">This is for you if…</p>
               <ul className="space-y-4">
                 {audience.map((item, i) => (
@@ -215,7 +215,7 @@ const ClaudePowerWorkshop = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">What to Bring</h2>
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {prereqs.map((item, i) => (
-              <div key={i} className="flex items-start gap-4 bg-surface border border-border rounded-xl p-6">
+              <div key={i} className="flex items-start gap-4 bg-surface border border-border rounded-lg p-6">
                 <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent shrink-0">
                   {item.icon}
                 </div>
@@ -236,7 +236,7 @@ const ClaudePowerWorkshop = () => {
         <section className="bg-muted/50 py-20">
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">Your Instructor</h2>
-            <div className="bg-surface border border-border rounded-xl p-8 md:p-10">
+            <div className="bg-surface border border-border rounded-lg p-8 md:p-10">
               <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6 text-accent font-bold text-2xl">
                 JS
               </div>

@@ -36,7 +36,7 @@ const PowerAutomate = () => {
         <section className="container mx-auto px-4 py-20 relative overflow-hidden">
         <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
-        
+
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Microsoft Power Automate Expertise
@@ -85,7 +85,7 @@ const PowerAutomate = () => {
                     automation solutions tailored to your enterprise's unique challenges and objectives.
                   </p>
                 </div>
-                <div className="bg-surface border border-border rounded-lg p-8 rounded-xl">
+                <div className="bg-surface border border-border rounded-lg p-8">
                   <h3 className="text-xl font-semibold mb-6 text-center">Our Power Automate Services</h3>
                   <ul className="space-y-4">
                     {services.map((service, index) => (
@@ -98,7 +98,7 @@ const PowerAutomate = () => {
                 </div>
               </div>
 
-              <div className="bg-surface border border-border rounded-lg p-8 rounded-xl">
+              <div className="bg-surface border border-border rounded-lg p-8">
                 <h2 className="text-2xl font-bold mb-6 text-center">Why Choose 10x Velocity for Power Automate?</h2>
                 <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
                   {reasons.map((reason, index) => (
@@ -120,10 +120,10 @@ const PowerAutomate = () => {
               <h2 className="text-3xl font-bold text-center mb-12">
                 Power Automate Features We Leverage
               </h2>
-              
+
               <div className="grid md:grid-cols-2 gap-8">
                 {features.map((feature, index) => (
-                  <div key={index} className="bg-surface border border-border rounded-lg p-8 rounded-xl">
+                  <div key={index} className="bg-surface border border-border rounded-lg p-8">
                     <h3 className="text-xl font-semibold mb-4 text-accent">{feature.title}</h3>
                     <p className="text-muted-foreground mb-6">{feature.description}</p>
                     <h4 className="font-medium mb-3">Common Applications:</h4>
@@ -146,8 +146,8 @@ const PowerAutomate = () => {
               <h2 className="text-3xl font-bold text-center mb-12">
                 Business Benefits of Power Automate
               </h2>
-              
-              <div className="bg-surface border border-border rounded-lg p-8 rounded-xl">
+
+              <div className="bg-surface border border-border rounded-lg p-8">
                 <div className="grid md:grid-cols-2 gap-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start gap-4">
@@ -162,7 +162,7 @@ const PowerAutomate = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="text-center">
                 <p className="text-lg mb-6">
                   Ready to transform your operations with Microsoft Power Automate?
@@ -177,10 +177,10 @@ const PowerAutomate = () => {
               <h2 className="text-3xl font-bold text-center mb-12">
                 Success Stories
               </h2>
-              
+
               <div className="grid gap-8">
                 {caseStudies.map((study, index) => (
-                  <div key={index} className="bg-surface border border-border rounded-lg p-8 rounded-xl">
+                  <div key={index} className="bg-surface border border-border rounded-lg p-8">
                     <div className="grid md:grid-cols-2 gap-8">
                       <div>
                         <h3 className="text-xl font-semibold mb-3">{study.title}</h3>
@@ -195,7 +195,7 @@ const PowerAutomate = () => {
                           ))}
                         </ul>
                       </div>
-                      
+
                       <div className="flex flex-col justify-between">
                         <div className="bg-surface border border-border rounded-lg p-4 mb-4 bg-black/40">
                           <h4 className="font-medium mb-2">Industry</h4>
