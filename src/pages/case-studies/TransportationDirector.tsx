@@ -58,7 +58,7 @@ const TransportationDirector = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Transportation Director", path: "/case-studies/transportation-director" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
         
         <Link to="/case-studies" className="inline-flex items-center text-muted-foreground hover:text-accent mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />

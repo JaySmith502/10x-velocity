@@ -78,6 +78,10 @@ export default {
         "fade-up": "fade-up 0.5s ease-out forwards",
         "fade-in": "fade-in 0.5s ease-out forwards",
       },
+      backgroundImage: {
+        "hero-gradient": "radial-gradient(ellipse at 70% 30%, hsl(195 40% 95%) 0%, hsl(40 20% 98%) 50%, hsl(30 14% 94%) 100%)",
+        "hero-gradient-dark": "radial-gradient(ellipse at 70% 30%, hsl(20 8% 9%) 0%, hsl(20 8% 7%) 50%, hsl(20 8% 5%) 100%)",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -45,19 +45,19 @@ const OnboardingForm = () => {
             
             <ul className="space-y-4">
               <li className="flex items-start">
-                <span className="bg-accent/20 p-1 rounded-full mr-3 mt-1">
+                <span className="bg-muted p-1 rounded-full mr-3 mt-1">
                   <span className="flex items-center justify-center w-5 h-5 bg-accent rounded-full text-black font-bold">1</span>
                 </span>
                 <span className="text-foreground">Enter your information in the form</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-accent/20 p-1 rounded-full mr-3 mt-1">
+                <span className="bg-muted p-1 rounded-full mr-3 mt-1">
                   <span className="flex items-center justify-center w-5 h-5 bg-accent rounded-full text-black font-bold">2</span>
                 </span>
                 <span className="text-foreground">Our system will collect your business information and call your phone</span>
               </li>
               <li className="flex items-start">
-                <span className="bg-accent/20 p-1 rounded-full mr-3 mt-1">
+                <span className="bg-muted p-1 rounded-full mr-3 mt-1">
                   <span className="flex items-center justify-center w-5 h-5 bg-accent rounded-full text-black font-bold">3</span>
                 </span>
                 <span className="text-foreground">Experience how customers can get custom information or leave their needs with your business 24/7</span>

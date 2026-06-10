@@ -42,7 +42,7 @@ const DataCleaning = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Data Cleaning", path: "/services/data-cleaning" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Data Cleaning Services
@@ -66,8 +66,8 @@ const DataCleaning = () => {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                  <Check className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                  <Check className="w-5 h-5 text-muted-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">More Accurate Results</h3>
@@ -75,8 +75,8 @@ const DataCleaning = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                  <Check className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                  <Check className="w-5 h-5 text-muted-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Reduced Processing Time</h3>
@@ -84,8 +84,8 @@ const DataCleaning = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                  <Check className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                  <Check className="w-5 h-5 text-muted-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Cost Efficiency</h3>
@@ -93,8 +93,8 @@ const DataCleaning = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                  <Check className="w-5 h-5 text-accent" />
+                <div className="w-10 h-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+                  <Check className="w-5 h-5 text-muted-foreground" />
                 </div>
                 <div>
                   <h3 className="font-semibold mb-2">Better Decision Making</h3>
@@ -118,8 +118,8 @@ const DataCleaning = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="mb-4">
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                    <type.icon className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center mb-4">
+                    <type.icon className="w-6 h-6 text-muted-foreground" />
                   </div>
                   <h3 className="text-xl font-semibold mb-2">{type.name}</h3>
                 </div>
@@ -127,7 +127,7 @@ const DataCleaning = () => {
                 <ul className="space-y-2 mt-auto">
                   {type.formats.map((format, idx) => (
                     <li key={idx} className="flex items-center gap-2 text-sm">
-                      <ArrowRight className="w-4 h-4 text-accent shrink-0" />
+                      <ArrowRight className="w-4 h-4 text-muted-foreground shrink-0" />
                       <span className="text-muted-foreground">{format}</span>
                     </li>
                   ))}

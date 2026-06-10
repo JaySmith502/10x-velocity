@@ -147,11 +147,11 @@ const Packages = () => {
 
         {/* Hero */}
         <section className="container mx-auto px-4 py-20 relative overflow-hidden">
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
+          <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">AI & Automation Packages</h1>
-            <p className="text-xl md:text-2xl text-foreground mb-4 text-balance">Choose the 10xV Core OS package that fits where your business is today.</p>
-            <p className="text-lg md:text-xl text-muted-foreground mb-4 text-pretty">Whether you need a clear expert recommendation, a tailored AI software plan, or hands-on implementation support, 10xVelocity helps you adopt artificial intelligence with clarity, control, and momentum.</p>
+            <p className="font-body text-xl md:text-2xl text-foreground mb-4 text-balance">Choose the 10xV Core OS package that fits where your business is today.</p>
+            <p className="font-body text-lg md:text-xl text-muted-foreground mb-4 text-pretty">Whether you need a clear expert recommendation, a tailored AI software plan, or hands-on implementation support, 10xVelocity helps you adopt artificial intelligence with clarity, control, and momentum.</p>
           </div>
         </section>
 
@@ -181,17 +181,17 @@ const Packages = () => {
                   {pkg.priceNote && <span className="text-muted-foreground text-lg"> {pkg.priceNote}</span>}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">{pkg.priceDetail}</p>
-                <p className="text-muted-foreground mb-6">{pkg.description}</p>
+                <p className="font-body text-muted-foreground mb-6">{pkg.description}</p>
                 <p className="text-sm font-medium text-foreground mb-3">{pkg.itemsLabel}</p>
                 <ul className="space-y-2 mb-6 flex-grow">
                   {pkg.items.map((item) => (
                     <li key={item} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
                       <span className="text-muted-foreground text-sm">{item}</span>
                     </li>
                   ))}
                 </ul>
-                <p className="text-sm text-muted-foreground mb-6 italic">
+                <p className="font-body text-sm text-muted-foreground mb-6 italic">
                   <span className="font-medium text-foreground not-italic">Best for: </span>
                   {pkg.bestFor}
                 </p>
@@ -210,7 +210,7 @@ const Packages = () => {
 
           <div className="mt-16 text-center max-w-2xl mx-auto bg-surface border border-border rounded-lg p-10 relative overflow-hidden">
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Not sure where to start?</h3>
-            <p className="text-lg text-muted-foreground">
+            <p className="font-body text-lg text-muted-foreground">
               Begin with the <a href="https://level.10xvelocity.ai/widget/form/q29C5iSULP1AO63r4Vjl" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors border-b border-foreground hover:border-accent">AI Diagnostic Review</a> and get a clear expert recommendation before selecting the right implementation path.
             </p>
           </div>
@@ -222,12 +222,12 @@ const Packages = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {timeline.map((step) => (
               <div key={step.days} className="bg-surface border border-border rounded-lg p-6 text-center">
-                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-6 h-6 text-muted-foreground" />
                 </div>
-                <p className="text-accent font-semibold text-sm mb-2">{step.days}</p>
+                <p className="text-accent-secondary font-semibold text-sm mb-2">{step.days}</p>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                <p className="text-muted-foreground text-sm">{step.description}</p>
+                <p className="font-body text-muted-foreground text-sm">{step.description}</p>
               </div>
             ))}
           </div>
@@ -241,8 +241,8 @@ const Packages = () => {
               <ul className="space-y-4">
                 {audienceBullets.map((text) => (
                   <li key={text} className="flex items-start gap-3">
-                    <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
-                    <span className="text-lg text-muted-foreground">{text}</span>
+                    <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 mt-1" />
+                    <span className="font-body text-lg text-muted-foreground">{text}</span>
                   </li>
                 ))}
               </ul>
@@ -254,10 +254,10 @@ const Packages = () => {
         <section className="container mx-auto px-4 py-16">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">The 10xVelocity Advantage</h2>
-            <p className="text-lg text-foreground mb-8">10xVelocity is pragmatic, human-centered, and contrarian to AI hype.</p>
-            <p className="text-muted-foreground text-lg mb-3">We do not sell complexity.</p>
-            <p className="text-muted-foreground text-lg mb-3">We do not chase shiny tools.</p>
-            <p className="text-muted-foreground text-lg mb-3">We do not automate broken processes.</p>
+            <p className="font-body text-lg text-foreground mb-8">10xVelocity is pragmatic, human-centered, and contrarian to AI hype.</p>
+            <p className="font-body text-muted-foreground text-lg mb-3">We do not sell complexity.</p>
+            <p className="font-body text-muted-foreground text-lg mb-3">We do not chase shiny tools.</p>
+            <p className="font-body text-muted-foreground text-lg mb-3">We do not automate broken processes.</p>
             <p className="text-xl font-semibold text-foreground mt-6">We simplify first — then scale what matters.</p>
           </div>
         </section>
@@ -268,7 +268,7 @@ const Packages = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Move?
             </h2>
-            <p className="text-lg text-muted-foreground mb-8">
+            <p className="font-body text-lg text-muted-foreground mb-8">
               Book a free discovery call to lock in your spot.
             </p>
             <DiscoveryButton />

@@ -79,7 +79,7 @@ const Index = () => {
       <section className="relative overflow-hidden">
         {/* WebGL gradient mesh — lazy loaded, CSS fallback for no-JS/no-WebGL/reduced-motion */}
         <div
-          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]"
+          className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark"
         >
           <Suspense fallback={null}>
             <GradientMesh className="absolute inset-0 w-full h-full [&:not([data-active=true])]:hidden" />

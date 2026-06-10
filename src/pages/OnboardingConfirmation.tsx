@@ -24,8 +24,8 @@ const OnboardingConfirmation = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-8">
-                <div className="bg-accent/20 p-4 rounded-full">
-                  <CheckCircle className="w-12 h-12 text-accent" />
+                <div className="bg-muted p-4 rounded-full">
+                  <CheckCircle className="w-12 h-12 text-muted-foreground" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">

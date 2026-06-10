@@ -147,7 +147,7 @@ const ClaudePowerWorkshop = () => {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mt-14 max-w-6xl mx-auto">
               {buildItems.map((item, i) => (
                 <div key={i} className="bg-surface border border-border rounded-lg p-7 text-center">
-                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-accent/10 text-accent mb-5">
+                  <div className="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-muted text-muted-foreground mb-5">
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3">{item.title}</h3>
@@ -201,7 +201,7 @@ const ClaudePowerWorkshop = () => {
               <ul className="space-y-4">
                 {audience.map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
-                    <Check className="w-5 h-5 text-accent mt-0.5 shrink-0" />
+                    <Check className="w-5 h-5 text-muted-foreground mt-0.5 shrink-0" />
                     <span className="text-muted-foreground">{item}</span>
                   </li>
                 ))}
@@ -216,7 +216,7 @@ const ClaudePowerWorkshop = () => {
           <div className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
             {prereqs.map((item, i) => (
               <div key={i} className="flex items-start gap-4 bg-surface border border-border rounded-lg p-6">
-                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-accent/10 text-accent shrink-0">
+                <div className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-muted text-muted-foreground shrink-0">
                   {item.icon}
                 </div>
                 <div>
@@ -237,7 +237,7 @@ const ClaudePowerWorkshop = () => {
           <div className="container mx-auto px-4 max-w-3xl text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-8">Your Instructor</h2>
             <div className="bg-surface border border-border rounded-lg p-8 md:p-10">
-              <div className="w-20 h-20 rounded-full bg-accent/10 flex items-center justify-center mx-auto mb-6 text-accent font-bold text-2xl">
+              <div className="w-20 h-20 rounded-full bg-muted flex items-center justify-center mx-auto mb-6 text-muted-foreground font-bold text-2xl">
                 JS
               </div>
               <h3 className="text-2xl font-bold mb-4">Jay Smith</h3>

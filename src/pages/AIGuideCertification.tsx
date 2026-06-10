@@ -76,8 +76,8 @@ const AIGuideCertification = () => {
               {audience.map((item, index) => (
                 <div key={index} className="bg-surface border border-border rounded-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent/20 p-2 rounded-full flex-shrink-0 mt-1">
-                      <Check className="w-5 h-5 text-accent" />
+                    <div className="bg-muted p-2 rounded-full flex-shrink-0 mt-1">
+                      <Check className="w-5 h-5 text-muted-foreground" />
                     </div>
                     <p className="text-foreground">{item}</p>
                   </div>
@@ -105,8 +105,8 @@ const AIGuideCertification = () => {
               {learningAreas.map((area, index) => (
                 <div key={index} className="bg-surface border border-border rounded-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent/20 p-3 rounded-full flex-shrink-0">
-                      <area.icon className="w-6 h-6 text-accent" />
+                    <div className="bg-muted p-3 rounded-full flex-shrink-0">
+                      <area.icon className="w-6 h-6 text-muted-foreground" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground mb-2">{area.title}</h3>
@@ -131,8 +131,8 @@ const AIGuideCertification = () => {
               {outcomes.map((outcome, index) => (
                 <div key={index} className="bg-surface border border-border rounded-lg p-6 hover:scale-105 transition-transform duration-300">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="bg-accent/20 p-2 rounded-full">
-                      <outcome.icon className="w-5 h-5 text-accent" />
+                    <div className="bg-muted p-2 rounded-full">
+                      <outcome.icon className="w-5 h-5 text-muted-foreground" />
                     </div>
                     <h3 className="text-xl font-semibold text-foreground">{outcome.title}</h3>
                   </div>
@@ -155,7 +155,7 @@ const AIGuideCertification = () => {
               <div className="space-y-8">
                 {steps.map((step, index) => (
                   <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-accent/20 rounded-full flex items-center justify-center text-accent font-bold">
+                    <div className="flex-shrink-0 w-10 h-10 bg-muted rounded-full flex items-center justify-center text-muted-foreground font-bold">
                       {step.number}
                     </div>
                     <div>

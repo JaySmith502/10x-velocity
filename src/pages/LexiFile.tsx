@@ -92,7 +92,7 @@ const LexiFile = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lexi-File", path: "/lexi-file" }]} />
         {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Lexi-File<sup className="text-2xl md:text-3xl">™</sup>
@@ -128,8 +128,8 @@ const LexiFile = () => {
                 className="bg-surface border border-border rounded-lg p-6 flex flex-col h-full animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                  <feature.icon className="w-6 h-6 text-accent" />
+                <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center mb-4">
+                  <feature.icon className="w-6 h-6 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground">{feature.title}</h3>
                 <p className="text-muted-foreground">{feature.description}</p>
@@ -183,8 +183,8 @@ const LexiFile = () => {
                 className="bg-surface border border-border rounded-lg p-6 text-center animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-6 mx-auto">
-                  <useCase.icon className="w-8 h-8 text-accent" />
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mb-6 mx-auto">
+                  <useCase.icon className="w-8 h-8 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-foreground">{useCase.title}</h3>
                 <p className="text-muted-foreground">{useCase.description}</p>
@@ -204,7 +204,7 @@ const LexiFile = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {whatYouGet.map((item, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
+                  <ArrowRight className="w-5 h-5 text-muted-foreground shrink-0 mt-1" />
                   <span className="text-muted-foreground">{item}</span>
                 </div>
               ))}

@@ -35,7 +35,7 @@ const Prototypes = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Prototypes", path: "/prototypes" }]} />
         {/* Hero Section */}
         <section className="container mx-auto px-4 pt-20 pb-32 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
         
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -95,8 +95,8 @@ const Prototypes = () => {
                 className="bg-surface border border-border rounded-lg p-8 animate-fade-up"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                  <audience.icon className="w-7 h-7 text-accent" />
+                <div className="w-14 h-14 rounded-full bg-muted flex items-center justify-center mb-4">
+                  <audience.icon className="w-7 h-7 text-muted-foreground" />
                 </div>
                 <h3 className="text-xl font-semibold mb-3 text-foreground">{audience.title}</h3>
                 <p className="text-muted-foreground">{audience.description}</p>
@@ -117,8 +117,8 @@ const Prototypes = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {processSteps.map((step, index) => (
                 <div key={step.title} className="text-center animate-fade-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-6">
-                    <span className="text-2xl font-bold text-accent">{index + 1}</span>
+                  <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-6">
+                    <span className="text-2xl font-bold text-muted-foreground">{index + 1}</span>
                   </div>
                   <h3 className="text-xl font-semibold mb-3 text-foreground">{step.title}</h3>
                   <p className="text-muted-foreground mb-2">{step.description}</p>
@@ -175,8 +175,8 @@ const Prototypes = () => {
                   className="bg-surface border border-border rounded-lg p-8 animate-fade-up flex items-start gap-4"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                    <deliverable.icon className="w-6 h-6 text-accent" />
+                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
+                    <deliverable.icon className="w-6 h-6 text-muted-foreground" />
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-foreground">{deliverable.title}</h3>

@@ -34,7 +34,7 @@ const PowerAutomate = () => {
       <div className="min-h-screen flex flex-col">
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Power Automate", path: "/power-automate" }]} />
         <section className="container mx-auto px-4 py-20 relative overflow-hidden">
-        <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(195_40%_95%)_0%,hsl(40_20%_98%)_50%,hsl(30_14%_94%)_100%)] dark:bg-[radial-gradient(ellipse_at_70%_30%,hsl(20_8%_9%)_0%,hsl(20_8%_7%)_50%,hsl(20_8%_5%)_100%)]" />
+        <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
 
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
@@ -102,8 +102,8 @@ const PowerAutomate = () => {
                 <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
                   {reasons.map((reason, index) => (
                     <div key={index} className="text-center">
-                      <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
-                        <reason.icon className="w-8 h-8 text-accent" />
+                      <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                        <reason.icon className="w-8 h-8 text-muted-foreground" />
                       </div>
                       <h3 className="font-semibold mb-2">{reason.title}</h3>
                       <p className="text-sm text-muted-foreground">{reason.description}</p>
@@ -150,8 +150,8 @@ const PowerAutomate = () => {
                 <div className="grid md:grid-cols-2 gap-8">
                   {benefits.map((benefit, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center shrink-0">
-                        <CheckCircle2 className="w-6 h-6 text-accent" />
+                      <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center shrink-0">
+                        <CheckCircle2 className="w-6 h-6 text-muted-foreground" />
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold mb-2">{benefit.title}</h3>
@@ -188,7 +188,7 @@ const PowerAutomate = () => {
                         <ul className="space-y-2">
                           {study.results.map((result, idx) => (
                             <li key={idx} className="flex items-start gap-3">
-                              <CheckCircle2 className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+                              <CheckCircle2 className="w-5 h-5 text-muted-foreground shrink-0 mt-0.5" />
                               <span className="text-muted-foreground">{result}</span>
                             </li>
                           ))}

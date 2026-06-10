@@ -24,8 +24,8 @@ const AIGuideThankYou = () => {
           <div className="container mx-auto px-4 relative z-10">
             <div className="max-w-3xl mx-auto text-center">
               <div className="flex justify-center mb-8">
-                <div className="bg-accent/20 p-4 rounded-full">
-                  <CheckCircle className="w-12 h-12 text-accent" />
+                <div className="bg-muted p-4 rounded-full">
+                  <CheckCircle className="w-12 h-12 text-muted-foreground" />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -47,8 +47,8 @@ const AIGuideThankYou = () => {
               <div className="space-y-6">
                 <div className="bg-surface border border-border rounded-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent/20 p-3 rounded-full flex-shrink-0">
-                      <Mail className="w-6 h-6 text-accent" />
+                    <div className="bg-muted p-3 rounded-full flex-shrink-0">
+                      <Mail className="w-6 h-6 text-muted-foreground" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground mb-2">Check Your Inbox</h3>
@@ -61,8 +61,8 @@ const AIGuideThankYou = () => {
 
                 <div className="bg-surface border border-border rounded-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent/20 p-3 rounded-full flex-shrink-0">
-                      <BookOpen className="w-6 h-6 text-accent" />
+                    <div className="bg-muted p-3 rounded-full flex-shrink-0">
+                      <BookOpen className="w-6 h-6 text-muted-foreground" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground mb-2">Get Ready to Learn</h3>
@@ -75,8 +75,8 @@ const AIGuideThankYou = () => {
 
                 <div className="bg-surface border border-border rounded-lg p-6">
                   <div className="flex items-start gap-4">
-                    <div className="bg-accent/20 p-3 rounded-full flex-shrink-0">
-                      <ArrowRight className="w-6 h-6 text-accent" />
+                    <div className="bg-muted p-3 rounded-full flex-shrink-0">
+                      <ArrowRight className="w-6 h-6 text-muted-foreground" />
                     </div>
                     <div>
                       <h3 className="text-xl font-semibold text-foreground mb-2">Questions?</h3>
