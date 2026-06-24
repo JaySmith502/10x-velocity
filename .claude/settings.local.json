@@ -56,7 +56,11 @@
       "Bash(powershell -command \"Select-String -Path 'src/pages/CaseStudies.tsx' -Pattern 'key=' | Select-Object -First 10\")",
       "Bash(powershell -command \"Select-String -Path 'src/pages/Services.tsx' -Pattern 'hero-gradient|absolute inset-0' | Select-Object -First 10\")",
       "Bash(powershell -command \"Select-String -Path 'src/components/landing/Header.tsx','src/components/landing/MobileMenu.tsx' -Pattern 'case-studies' | Select-Object -First 10\")",
-      "Bash(powershell -command \"Select-String -Path 'src/pages/CaseStudies.tsx' -Pattern 'animate-fade' | Select-Object -First 10\")"
+      "Bash(powershell -command \"Select-String -Path 'src/pages/CaseStudies.tsx' -Pattern 'animate-fade' | Select-Object -First 10\")",
+      "Bash(npx tsc *)",
+      "Bash(npm install *)",
+      "Bash(npx --yes bun install)",
+      "Bash(git rm *)"
     ]
   }
 }

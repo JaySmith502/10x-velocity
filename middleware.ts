@@ -1,8 +1,9 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { next, ipAddress } from '@vercel/functions';
+import type { RequestContext } from '@vercel/functions';
 
 // CONFIGURATION
 const SUPABASE_URL = 'https://ctprmlcpoeilicowddvo.supabase.co';
+// Supabase anon key: public by design, protected by RLS. Move to an env var if you prefer.
 const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN0cHJtbGNwb2VpbGljb3dkZHZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk0NDc2MTYsImV4cCI6MjA4NTAyMzYxNn0.KUAuml_FOwvi5NYqfRByXWYhJekD-qFx38k85WMmNnA';
 const PROJECT_ID = '705a113a-4dd3-4252-a2f5-39b216451158';
 
@@ -22,14 +23,15 @@ const KNOWN_BOTS: Record<string, string> = {
     'amazonbot': 'Amazon Q',
 };
 
-// Paths that indicate security scanner/vulnerability探测
+// Paths that indicate security scanner/vulnerability probing
 const SUSPICIOUS_PATHS = [
     'wp-admin', 'wp-login', '.env', '.git', '.aws', 'phpinfo',
     'id_rsa', 'backup', '.sql', 'admin.php', 'xmlrpc.php',
     '.htaccess', 'config.php', 'db.php', 'wp-config'
 ];
 
-// Rate limiting: Simple in-memory Map
+// ponytail: in-memory rate limit is per-edge-isolate, so it's a soft guard, not a global limit.
+// Fine for throttling log writes; swap to Upstash/KV if you ever need a true distributed limit.
 const requestCounts = new Map<string, { count: number; windowStart: number }>();
 const RATE_LIMIT = 100; // Max requests per minute
 const RATE_WINDOW = 60000; // 1 minute
@@ -57,20 +59,19 @@ function detectBot(ua: string): string | null {
     return null;
 }
 
-export function middleware(request: NextRequest) {
-    // Rate limiting check
-    const clientIP = request.ip ?? 'unknown';
-    if (isRateLimited(clientIP)) {
-        return NextResponse.next();
+export default function middleware(request: Request, context: RequestContext) {
+    const clientIP = ipAddress(request) ?? 'unknown';
+    // waitUntil keeps the logging fetch alive after the response is returned
+    if (!isRateLimited(clientIP)) {
+        context.waitUntil(logTraffic(request));
     }
-
-    logTraffic(request);
-    return NextResponse.next();
+    return next();
 }
 
-async function logTraffic(req: NextRequest) {
+async function logTraffic(req: Request) {
     const ua = req.headers.get('user-agent') || '';
-    const path = req.nextUrl.pathname;
+    const path = new URL(req.url).pathname;
+    const host = req.headers.get('host');
 
     // Check if this is a security scan (suspicious path)
     const isSecurityScan = SUSPICIOUS_PATHS.some(badPath =>
@@ -78,9 +79,7 @@ async function logTraffic(req: NextRequest) {
     );
 
     if (isSecurityScan) {
-        // Log security scan to separate table
-        const endpoint = `${SUPABASE_URL}/rest/v1/security_scans`;
-        fetch(endpoint, {
+        await fetch(`${SUPABASE_URL}/rest/v1/security_scans`, {
             method: 'POST',
             headers: {
                 'apikey': SUPABASE_KEY,
@@ -90,35 +89,34 @@ async function logTraffic(req: NextRequest) {
             },
             body: JSON.stringify({
                 project_id: PROJECT_ID,
-                host: req.headers.get('host'),
-                path: path,
-                ua: ua,
+                host,
+                path,
+                ua,
                 threat_type: 'vulnerability_scan'
             }),
         }).catch(() => { });
-    } else {
-        // Check if this is a Gen AI bot
-        const botLabel = detectBot(ua);
-        if (botLabel) {
-            // Log AI bot to ai_bot_hits table
-            const endpoint = `${SUPABASE_URL}/rest/v1/ai_bot_hits`;
-            fetch(endpoint, {
-                method: 'POST',
-                headers: {
-                    'apikey': SUPABASE_KEY,
-                    'Authorization': `Bearer ${SUPABASE_KEY}`,
-                    'Content-Type': 'application/json',
-                    'Prefer': 'return=minimal'
-                },
-                body: JSON.stringify({
-                    project_id: PROJECT_ID,
-                    host: req.headers.get('host'),
-                    path: path,
-                    ua: ua,
-                    bot_label: botLabel
-                }),
-            }).catch(() => { });
-        }
+        return;
+    }
+
+    // Check if this is a Gen AI bot
+    const botLabel = detectBot(ua);
+    if (botLabel) {
+        await fetch(`${SUPABASE_URL}/rest/v1/ai_bot_hits`, {
+            method: 'POST',
+            headers: {
+                'apikey': SUPABASE_KEY,
+                'Authorization': `Bearer ${SUPABASE_KEY}`,
+                'Content-Type': 'application/json',
+                'Prefer': 'return=minimal'
+            },
+            body: JSON.stringify({
+                project_id: PROJECT_ID,
+                host,
+                path,
+                ua,
+                bot_label: botLabel
+            }),
+        }).catch(() => { });
     }
 }
 
