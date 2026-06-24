@@ -93,7 +93,6 @@ export const blogPosts: BlogPost[] = [
     category: "Local",
     tags: ["Louisville", "Kentucky", "AI Consulting"],
     image: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e",
-    draft: true
   },
   {
     id: 8,
