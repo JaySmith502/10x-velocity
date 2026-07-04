@@ -59,7 +59,7 @@ const SmartBots = () => {
       </Helmet>
       <main className="flex-1">
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Services", path: "/services" }, { name: "Smart Bots", path: "/services/smart-bots" }]} />
-      <div className="min-h-screen bg-gradient-to-br from-background to-black py-16">
+      <div className="min-h-screen bg-background py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             {/* Header Section */}
@@ -75,7 +75,7 @@ const SmartBots = () => {
             {/* Chatbot Widget Section */}
             <div className="mb-16">
               <div className="bg-surface backdrop-blur-sm rounded-2xl p-8 border border-border">
-                <h2 className="text-2xl font-bold text-white mb-6 text-center">
+                <h2 className="text-2xl font-bold text-foreground mb-6 text-center">
                   Chat with Our AI Assistant
                 </h2>
                 <div className="flex justify-center">
@@ -83,23 +83,23 @@ const SmartBots = () => {
                   {clientKey && collectionId ? (
                     isDevelopment ? (
                       // Mock widget for development (CORS workaround)
-                      <div className="bg-gray-800 rounded-lg p-6 border border-gray-600">
+                      <div className="bg-muted rounded-lg p-6 border border-border">
                         <div className="text-center mb-4">
-                          <p className="text-yellow-400 mb-2">🚧 Development Mode</p>
+                          <p className="text-accent-strong mb-2">Development Mode</p>
                           <p className="text-foreground text-sm mb-4">
                             Needle AI widget will work on live site. CORS blocks localhost.
                           </p>
                         </div>
-                        <div className="bg-gray-900 rounded p-4 min-h-[300px] flex items-center justify-center">
+                        <div className="bg-surface rounded p-4 min-h-[300px] flex items-center justify-center">
                           <div className="text-center">
                             <div className="animate-pulse mb-4">
-                              <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2"></div>
+                              <div className="w-8 h-8 bg-accent rounded-full mx-auto mb-2"></div>
                             </div>
-                            <p className="text-gray-400">Needle AI Chat Widget</p>
-                            <p className="text-gray-500 text-sm mt-2">
+                            <p className="text-muted-foreground">Needle AI Chat Widget</p>
+                            <p className="text-muted-foreground text-sm mt-2">
                               Client Key: {clientKey.substring(0, 8)}...
                             </p>
-                            <p className="text-gray-500 text-sm">
+                            <p className="text-muted-foreground text-sm">
                               Collection: {collectionId.substring(0, 8)}...
                             </p>
                           </div>
@@ -113,7 +113,7 @@ const SmartBots = () => {
                     )
                   ) : (
                     <div className="text-center py-8">
-                      <p className="text-red-400 mb-2">⚠️ Widget Configuration Missing</p>
+                      <p className="text-destructive mb-2">Widget Configuration Missing</p>
                       <p className="text-foreground text-sm">
                         Please configure your environment variables in .env.local
                       </p>

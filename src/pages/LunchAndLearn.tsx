@@ -37,7 +37,10 @@ const LunchAndLearn = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lunch & Learn", path: "/events/lunch-and-learn" }]} />
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-background/90 z-0"></div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(var(--accent)/0.10)_0%,hsl(var(--background))_55%,hsl(var(--muted))_100%)]"
+        ></div>
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center mb-12">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up">
@@ -47,15 +50,15 @@ const LunchAndLearn = () => {
               How to Run a 10x Company Playbook
             </p>
             <div className="flex flex-wrap justify-center gap-6 mb-10 animate-fade-up">
-              <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-background/80 border border-border text-foreground px-4 py-2 rounded-full">
                 <Calendar className="w-5 h-5 text-accent" />
                 <span>April 22, 2025</span>
               </div>
-              <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-background/80 border border-border text-foreground px-4 py-2 rounded-full">
                 <Clock className="w-5 h-5 text-accent" />
                 <span>12:00-1:00pm ET</span>
               </div>
-              <div className="flex items-center gap-2 bg-black/30 px-4 py-2 rounded-full">
+              <div className="flex items-center gap-2 bg-background/80 border border-border text-foreground px-4 py-2 rounded-full">
                 <MapPin className="w-5 h-5 text-accent" />
                 <span>Hybrid (In-Person + Zoom)</span>
               </div>
@@ -96,7 +99,7 @@ const LunchAndLearn = () => {
       </section>
 
       {/* Agenda Section */}
-      <section className="py-16 bg-foreground">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">

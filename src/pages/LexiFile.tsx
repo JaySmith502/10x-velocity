@@ -143,11 +143,10 @@ const LexiFile = () => {
       {/* Satisfaction Guarantee */}
       <section className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="bg-gradient-to-r from-emerald-500/10 to-green-400/10 border border-emerald-500/20 rounded-xl p-8 animate-fade-up">
-            <h3 className="text-2xl font-bold mb-4 text-emerald-400">Our Satisfaction Guarantee</h3>
+          <div className="bg-accent/10 border border-accent/20 rounded-xl p-8 animate-fade-up">
+            <h3 className="text-2xl font-bold mb-4 text-accent-strong">Our Satisfaction Guarantee</h3>
             <div className="relative mb-8">
-              <div className="w-24 h-0.5 bg-gradient-to-r from-emerald-400 to-green-300 mx-auto shadow-[0_0_20px_rgba(52,211,153,0.8)]"></div>
-              <div className="absolute inset-0 w-24 h-0.5 bg-gradient-to-r from-emerald-400 to-green-300 mx-auto blur-sm opacity-75"></div>
+              <div className="w-24 h-0.5 bg-accent mx-auto"></div>
             </div>
             <p className="text-lg text-muted-foreground mb-6">
               We're confident this solution will transform how your team works. After onboarding (usually completed in one week), 
@@ -156,12 +155,12 @@ const LexiFile = () => {
             <p className="text-lg text-muted-foreground mb-6">
               If you decide not to continue, we'll refund 50% of your onboarding fee-because we believe in shared commitment, not just easy exits.
             </p>
-            <p className="text-lg font-medium text-emerald-300 mb-8">
+            <p className="text-lg font-medium text-accent-strong mb-8">
               Most of our clients see value within days. But we'll let the results speak for themselves.
             </p>
-            <Button 
+            <Button
               asChild
-              className="bg-gradient-to-r from-emerald-400 to-green-300 text-black font-semibold hover:from-emerald-300 hover:to-green-200 shadow-[0_0_20px_rgba(52,211,153,0.6)] hover:shadow-[0_0_30px_rgba(52,211,153,0.8)] transition-all duration-300"
+              className="bg-accent text-accent-ink font-semibold hover:bg-accent/90 transition-all duration-300"
             >
               <Link to="/contact">
                 Start Your Risk-Free Trial <ArrowRight className="w-5 h-5 ml-2" />
@@ -271,7 +270,7 @@ const LexiFile = () => {
             <Button 
               asChild
               variant="outline" 
-              className="border-accent text-foreground hover:bg-gradient-to-r hover:from-purple-400 hover:to-white hover:border-transparent text-lg"
+              className="border-accent text-foreground hover:bg-muted text-lg"
             >
               <Link to="/contact">
                 Contact Us <ArrowRight className="w-5 h-5" />

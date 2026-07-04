@@ -52,7 +52,7 @@ const Prototypes = () => {
       </section>
 
       {/* What It Is Section */}
-      <section className="bg-gradient-to-b from-black/20 to-transparent py-20">
+      <section className="bg-muted py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-center">
@@ -108,7 +108,7 @@ const Prototypes = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="bg-gradient-to-b from-transparent to-black/20 py-20">
+      <section className="bg-muted py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
@@ -162,7 +162,7 @@ const Prototypes = () => {
       </section>
 
       {/* Deliverables Section */}
-      <section className="bg-gradient-to-b from-transparent to-black/20 py-20">
+      <section className="bg-muted py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">

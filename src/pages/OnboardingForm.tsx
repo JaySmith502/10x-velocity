@@ -29,7 +29,7 @@ const OnboardingForm = () => {
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
-      <div className="min-h-screen bg-gradient-to-br from-background to-black py-16">
+      <div className="min-h-screen bg-background py-16">
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Demo", path: "/demo" }]} />
       <div className="container mx-auto px-4">
         <div className="bg-surface border border-border rounded-lg p-8 md:p-12 grid md:grid-cols-2 gap-8 md:gap-12">

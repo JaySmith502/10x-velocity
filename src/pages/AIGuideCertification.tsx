@@ -40,7 +40,10 @@ const AIGuideCertification = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "AI Guide Certification", path: "/programs/ai-guide-certification" }]} />
         {/* Hero Section */}
       <section id="ai-guide-certification" className="relative overflow-hidden py-20 md:py-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-background/90 z-0" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_70%_30%,hsl(var(--accent)/0.10)_0%,hsl(var(--background))_55%,hsl(var(--muted))_100%)]"
+        />
         <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 animate-fade-up">
@@ -54,7 +57,7 @@ const AIGuideCertification = () => {
             </p>
             <Button
               onClick={() => document.getElementById("register-form")?.scrollIntoView({ behavior: "smooth" })}
-              className="bg-accent text-background font-medium hover:bg-accent/90 transition-all text-lg animate-fade-up"
+              className="bg-accent text-accent-ink font-medium hover:bg-accent/90 transition-all text-lg animate-fade-up"
             >
               Register Now <ArrowRight className="w-5 h-5" />
             </Button>
@@ -63,7 +66,7 @@ const AIGuideCertification = () => {
       </section>
 
       {/* Who This Is For */}
-      <section className="py-16 bg-foreground">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
@@ -121,7 +124,7 @@ const AIGuideCertification = () => {
       </section>
 
       {/* What You'll Get */}
-      <section className="py-16 bg-foreground">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -171,7 +174,7 @@ const AIGuideCertification = () => {
       </section>
 
       {/* Program Details */}
-      <section className="py-16 bg-foreground">
+      <section className="py-16 bg-muted">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
