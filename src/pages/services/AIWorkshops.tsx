@@ -4,7 +4,6 @@ import { helmetJsonLdProp } from "react-schemaorg";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Sparkle, TrendingUp, Users, Target, Wrench, BookOpen } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const AIWorkshops = () => {
@@ -128,22 +127,16 @@ const AIWorkshops = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
-          <div className="bg-surface border border-border rounded-lg p-8">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">
-                    {faq.question}
-                  </AccordionTrigger>
-                  <AccordionContent>
-                    {faq.answer}
-                  </AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+      <section className="container mx-auto px-4 py-16 border-t border-border">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extrabold mb-10">Frequently asked questions</h2>
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+            {faqs.map((faq, index) => (
+              <div key={index}>
+                <h3 className="font-semibold text-foreground mb-2">{faq.question}</h3>
+                <p className="font-body text-muted-foreground leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
