@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
@@ -28,12 +29,13 @@ export const LeadCaptureModal = ({ isOpen, onClose, selectedIndustry }: LeadCapt
     e.preventDefault();
     setLoading(true);
 
-    // Simulate form submission
+    // ponytail: no backend wired yet — collects the lead client-side only.
+    // Wire to the GHL/n8n endpoint used elsewhere when the destination is confirmed.
     await new Promise(resolve => setTimeout(resolve, 1000));
 
     toast({
-      title: "Success!",
-      description: "Your tool guide will be sent to your email shortly.",
+      title: "Thanks for your interest",
+      description: "We've noted your request and will follow up shortly.",
     });
 
     setLoading(false);
@@ -95,14 +97,14 @@ export const LeadCaptureModal = ({ isOpen, onClose, selectedIndustry }: LeadCapt
               placeholder="Your company"
             />
           </div>
-          <button
+          <Button
             type="submit"
             disabled={loading}
-            className="w-full justify-center"
+            className="w-full bg-foreground text-background hover:bg-foreground/90 font-semibold"
           >
             {loading ? "Sending..." : "Send Me the Guide"}
             <Download className="w-4 h-4" />
-          </button>
+          </Button>
         </form>
       </DialogContent>
     </Dialog>

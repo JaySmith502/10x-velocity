@@ -7,6 +7,7 @@ import { CategoryFilter } from "@/components/industry-tools/CategoryFilter";
 import { ToolCard } from "@/components/industry-tools/ToolCard";
 import { ToolModal } from "@/components/industry-tools/ToolModal";
 import { LeadCaptureModal } from "@/components/industry-tools/LeadCaptureModal";
+import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
@@ -75,13 +76,14 @@ const IndustryTools = () => {
             <p className="text-foreground/80 text-lg max-w-2xl mx-auto mb-8">
               Discover the right AI and automation tools for your industry. Click an industry to explore curated solutions that drive real results.
             </p>
-            <button
+            <Button
               onClick={() => setIsLeadCaptureOpen(true)}
-              className=""
+              size="lg"
+              className="bg-foreground text-background hover:bg-foreground/90 font-semibold"
             >
               <Download className="w-5 h-5" />
               Download Full Guide
-            </button>
+            </Button>
           </div>
 
           {/* Industry Grid */}

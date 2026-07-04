@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { Menu, ChevronDown, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
@@ -67,15 +67,25 @@ const Header = () => {
                 </DropdownMenuContent>
               </DropdownMenu>
 
-              <Link to="/about" className="text-muted-foreground hover:text-foreground transition-colors font-semibold text-sm">
-                About
-              </Link>
-              <Link to="/case-studies" className="text-muted-foreground hover:text-foreground transition-colors font-semibold text-sm">
-                Case Studies
-              </Link>
-              <Link to="/savings-calculator" className="text-muted-foreground hover:text-foreground transition-colors font-semibold text-sm">
-                Calculator
-              </Link>
+              {[
+                { to: "/about", label: "About" },
+                { to: "/case-studies", label: "Case Studies" },
+                { to: "/savings-calculator", label: "Calculator" },
+              ].map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  className={({ isActive }) =>
+                    `transition-colors font-semibold text-sm rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background ${
+                      isActive
+                        ? "text-foreground border-b-2 border-accent pb-0.5"
+                        : "text-muted-foreground hover:text-foreground"
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
             </nav>
 
             <button
