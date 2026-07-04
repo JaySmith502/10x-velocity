@@ -136,7 +136,7 @@ const TermsOfService = () => {
         </div>
         
         <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-muted-foreground">Last updated: June 1, 2024</p>
+          <p className="text-muted-foreground">Last updated: July 4, 2026</p>
         </div>
       </div>
     </main>

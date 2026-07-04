@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef } from "react";
 import {
   Dialog,
   DialogContent,
@@ -6,11 +6,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 interface LeadCaptureModalProps {
   isOpen: boolean;
@@ -18,32 +14,20 @@ interface LeadCaptureModalProps {
   selectedIndustry?: string;
 }
 
+// ponytail: embeds the shared GHL intake form (same one ContactPopup uses)
+// so leads route to GoHighLevel like the rest of the site — no custom backend.
 export const LeadCaptureModal = ({ isOpen, onClose, selectedIndustry }: LeadCaptureModalProps) => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [company, setCompany] = useState("");
-  const [loading, setLoading] = useState(false);
-  const { toast } = useToast();
+  const scriptLoadedRef = useRef(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-
-    // ponytail: no backend wired yet — collects the lead client-side only.
-    // Wire to the GHL/n8n endpoint used elsewhere when the destination is confirmed.
-    await new Promise(resolve => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Thanks for your interest",
-      description: "We've noted your request and will follow up shortly.",
-    });
-
-    setLoading(false);
-    onClose();
-    setName("");
-    setEmail("");
-    setCompany("");
-  };
+  useEffect(() => {
+    if (isOpen && !scriptLoadedRef.current) {
+      const script = document.createElement("script");
+      script.src = "https://link.msgsndr.com/js/form_embed.js";
+      script.async = true;
+      document.body.appendChild(script);
+      scriptLoadedRef.current = true;
+    }
+  }, [isOpen]);
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -61,51 +45,19 @@ export const LeadCaptureModal = ({ isOpen, onClose, selectedIndustry }: LeadCapt
             Get a comprehensive PDF guide of {selectedIndustry ? `${selectedIndustry} ` : ''}AI and automation tools delivered to your inbox.
           </DialogDescription>
         </DialogHeader>
-        <form onSubmit={handleSubmit} className="space-y-4 mt-4">
-          <div className="space-y-2">
-            <Label htmlFor="name" className="text-foreground">Name</Label>
-            <Input
-              id="name"
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              className="bg-surface border-border text-foreground"
-              placeholder="Your name"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email" className="text-foreground">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="bg-surface border-border text-foreground"
-              placeholder="your@email.com"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="company" className="text-foreground">Company (Optional)</Label>
-            <Input
-              id="company"
-              type="text"
-              value={company}
-              onChange={(e) => setCompany(e.target.value)}
-              className="bg-surface border-border text-foreground"
-              placeholder="Your company"
-            />
-          </div>
-          <Button
-            type="submit"
-            disabled={loading}
-            className="w-full bg-foreground text-background hover:bg-foreground/90 font-semibold"
-          >
-            {loading ? "Sending..." : "Send Me the Guide"}
-            <Download className="w-4 h-4" />
-          </Button>
-        </form>
+        <div className="mt-4 rounded-lg overflow-hidden bg-white">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/mYtM8nnkSBtAzcDroeEO"
+            className="w-full h-[439px] border-none"
+            id="inline-mYtM8nnkSBtAzcDroeEO-lead-capture"
+            data-layout="{'id':'INLINE'}"
+            data-form-name="10XVelocity Contact Intake Form - Tool Guide"
+            data-height="439"
+            data-form-id="mYtM8nnkSBtAzcDroeEO"
+            title="Download Tool Guide"
+            loading="lazy"
+          />
+        </div>
       </DialogContent>
     </Dialog>
   );
