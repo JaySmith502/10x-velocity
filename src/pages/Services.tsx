@@ -6,7 +6,6 @@ import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
 import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText, Rocket } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
 
 const Services = () => {
@@ -66,60 +65,64 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {/* Services — editorial index */}
+      <section className="container mx-auto px-4 py-8">
+        <div className="max-w-6xl mx-auto divide-y divide-border">
           {services.map((service, index) => (
             <div
               key={service.title}
               id={service.id}
-              className="bg-surface border border-border rounded-lg p-8 flex flex-col h-full animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="grid md:grid-cols-12 gap-6 md:gap-10 py-12 animate-fade-up scroll-mt-24"
             >
-              <div className="mb-6">
-                <div className="w-14 h-14 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-                  <service.icon className="w-7 h-7 text-accent" />
+              <div className="md:col-span-5">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="font-display text-4xl font-extrabold text-border tabular-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                  <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center">
+                    <service.icon className="w-6 h-6 text-accent" />
+                  </div>
                 </div>
                 <h3 className="text-2xl font-semibold mb-3">{service.title}</h3>
-                <p className="text-muted-foreground mb-4">{service.description}</p>
-              </div>
-              <div className="mt-auto">
-                <h4 className="font-medium mb-2 text-foreground">Key Benefits:</h4>
-                <ul className="space-y-2 mb-6">
-                  {service.benefits.map((benefit, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <ArrowRight className="w-5 h-5 text-accent shrink-0 mt-1" />
-                      <span className="text-muted-foreground">{benefit}</span>
-                    </li>
-                  ))}
-                </ul>
+                <p className="font-body text-muted-foreground mb-4">{service.description}</p>
                 {service.link && (
-                  <Link 
-                    to={service.link} 
-                    className="text-accent hover:text-foreground font-medium flex items-center gap-2 mt-4"
+                  <Link
+                    to={service.link}
+                    className="text-accent-strong hover:text-foreground font-semibold text-sm inline-flex items-center gap-1"
                   >
                     Learn more <ArrowRight className="w-4 h-4" />
                   </Link>
                 )}
+              </div>
+              <div className="md:col-span-7 md:pl-10 md:border-l border-border">
+                <h4 className="text-xs font-semibold tracking-widest uppercase text-accent-strong mb-4">
+                  Key Benefits
+                </h4>
+                <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
+                  {service.benefits.map((benefit, idx) => (
+                    <li key={idx} className="flex items-start gap-2.5">
+                      <ArrowRight className="w-4 h-4 text-accent shrink-0 mt-1" />
+                      <span className="text-sm text-muted-foreground">{benefit}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="container mx-auto px-4 py-16">
-        <div className="max-w-4xl mx-auto">
-          <h3 className="text-3xl font-bold mb-8 text-center">Frequently Asked Questions</h3>
-          <div className="bg-surface border border-border rounded-lg p-8">
-            <Accordion type="single" collapsible className="w-full">
-              {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`}>
-                  <AccordionTrigger className="text-left">{faq.question}</AccordionTrigger>
-                  <AccordionContent>{faq.answer}</AccordionContent>
-                </AccordionItem>
-              ))}
-            </Accordion>
+      {/* FAQ — two-column list */}
+      <section className="container mx-auto px-4 py-16 border-t border-border">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-extrabold mb-10">Frequently asked questions</h2>
+          <div className="grid md:grid-cols-2 gap-x-12 gap-y-10">
+            {faqs.map((faq, index) => (
+              <div key={index}>
+                <h3 className="font-semibold text-foreground mb-2">{faq.question}</h3>
+                <p className="font-body text-muted-foreground leading-relaxed">{faq.answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
