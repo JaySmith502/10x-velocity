@@ -68,10 +68,10 @@ const TransportationDirector = () => {
         
         <div className="max-w-4xl">
           <div className="mb-8">
-            <span className="inline-block bg-orange-500/20 text-orange-300 border border-orange-500/50 px-3 py-1 rounded-full text-sm font-medium">
+            <span className="inline-block bg-accent/10 text-accent-strong border border-accent/30 px-3 py-1 rounded-full text-sm font-medium">
               Manufacturing & Logistics
             </span>
-            <span className="inline-block bg-blue-500/20 text-blue-300 border border-blue-500/50 px-3 py-1 rounded-full text-sm font-medium ml-2">
+            <span className="inline-block bg-accent/10 text-accent-strong border border-accent/30 px-3 py-1 rounded-full text-sm font-medium ml-2">
               Power Automate
             </span>
           </div>

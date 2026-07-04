@@ -47,9 +47,9 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="flex gap-2 mb-3">
-                <Badge variant="outline" className="bg-orange-500/20 text-orange-300 border-orange-500/50">Manufacturing</Badge>
-                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Logistics</Badge>
-                <Badge variant="outline" className="flex items-center gap-1 bg-purple-500/20 text-purple-300 border-purple-500/50">
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Manufacturing</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Logistics</Badge>
+                <Badge variant="outline" className="flex items-center gap-1 bg-accent/10 text-accent-strong border-accent/30">
                   <Zap className="w-3 h-3" /> Power Automate
                 </Badge>
               </div>
@@ -69,8 +69,8 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="flex gap-2 mb-3">
-                <Badge variant="outline" className="bg-purple-500/20 text-purple-300 border-purple-500/50">Public Relations</Badge>
-                <Badge variant="outline" className="bg-indigo-500/20 text-indigo-300 border-indigo-500/50">Media</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Public Relations</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Media</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 Innes & Young: AI-Powered PR Evolution
@@ -88,7 +88,7 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="mb-3">
-                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Business Services</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Business Services</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 eCatalyst: 10x Velocity Boosts Operational Excellence
@@ -106,7 +106,7 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="mb-3">
-                <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/50">Real Estate</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Real Estate</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 Hillcrest Partners: High-Growth Real Estate Powerhouse
@@ -124,7 +124,7 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="mb-3">
-                <Badge variant="outline" className="bg-amber-500/20 text-amber-300 border-amber-500/50">Venture Investing</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Venture Investing</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 The Catalyst Group: Unprecedented Growth in Business Investment & Acquisitions
@@ -142,7 +142,7 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="mb-3">
-                <Badge variant="outline" className="bg-rose-500/20 text-rose-300 border-rose-500/50">Marketing</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Marketing</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 Director of Marketing Inc: High-Performance Social Media Marketing Agency
@@ -160,7 +160,7 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="mb-3">
-                <Badge variant="outline" className="bg-green-500/20 text-green-300 border-green-500/50">Real Estate</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Real Estate</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 Birchwood Real Estate Partners: New Heights in Real Estate Wholesaling
@@ -178,7 +178,7 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="mb-3">
-                <Badge variant="outline" className="bg-blue-500/20 text-blue-300 border-blue-500/50">Business Services</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Business Services</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 GovBrokers: High-Performance Government Contracting Powerhouse
@@ -196,7 +196,7 @@ const CaseStudies = () => {
               className="bg-surface border border-border rounded-lg p-8 hover:bg-muted transition-all cursor-pointer animate-fade-up"
             >
               <div className="mb-3">
-                <Badge variant="outline" className="bg-teal-500/20 text-teal-300 border-teal-500/50">Nonprofit</Badge>
+                <Badge variant="outline" className="bg-accent/10 text-accent-strong border-accent/30">Nonprofit</Badge>
               </div>
               <h2 className="text-2xl font-bold mb-4">
                 Inspyrd: Transformational Trauma Recovery Program

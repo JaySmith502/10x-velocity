@@ -50,7 +50,7 @@ const BlogPost = () => {
           <Button 
             asChild 
             variant="ghost" 
-            className="text-accent hover:text-purple-400 justify-start p-0 hover:bg-transparent"
+            className="text-accent hover:text-foreground justify-start p-0 hover:bg-transparent"
           >
             <Link to="/blog">
               <ArrowLeft className="w-4 h-4 mr-2" /> Back to all posts
@@ -95,7 +95,7 @@ const BlogPost = () => {
         </div>
 
         {/* Post content */}
-        <div className="prose prose-invert prose-violet max-w-none">
+        <div className="prose prose-neutral dark:prose-invert max-w-none font-body">
           <p className="text-lg leading-relaxed mb-6">
             {post.excerpt}
           </p>
@@ -157,8 +157,8 @@ const BlogPost = () => {
           <div className="mt-12 p-6 bg-surface border border-border rounded-lg">
             <h3 className="text-xl font-semibold mb-3">Want to learn more?</h3>
             <p className="mb-4">Get in touch with our team to discuss how AI can transform your business operations.</p>
-            <Button asChild className="bg-accent text-background font-medium hover:bg-accent/90 transition-all">
-            <a href="/contact" target="_blank" rel="noopener noreferrer">Contact Us</a>
+            <Button asChild className="bg-accent text-accent-ink font-medium hover:bg-accent/90 transition-all">
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
         </div>

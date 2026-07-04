@@ -82,7 +82,7 @@ const Blog = () => {
                     </span>
                   ))}
                 </div>
-                <Button asChild variant="ghost" className="text-accent justify-start p-0 hover:bg-transparent hover:text-purple-400">
+                <Button asChild variant="ghost" className="text-accent justify-start p-0 hover:bg-transparent hover:text-foreground">
                   <Link to={`/blog/${post.id}`}>
                     Read more <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
@@ -124,7 +124,7 @@ const Blog = () => {
                     </p>
                     <Button 
                       asChild
-                      className="w-full bg-accent text-background font-medium hover:bg-accent/90 transition-all"
+                      className="w-full bg-accent text-accent-ink font-medium hover:bg-accent/90 transition-all"
                     >
                       <a href="https://level.10xvelocity.ai/widget/bookings/jay-smith-10xvelocity" target="_blank" rel="noopener noreferrer">
                         Schedule a 15 minute call <ArrowRight className="ml-2 h-4 w-4" />

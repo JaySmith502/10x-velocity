@@ -67,7 +67,7 @@ const OnboardingForm = () => {
             <div className="mt-4 flex justify-center">
               <Link 
                 to="/contact" 
-                className="inline-flex items-center px-8 py-4 bg-accent text-background font-bold rounded text-xl hover:bg-accent/80 transition-colors"
+                className="inline-flex items-center px-8 py-4 bg-accent text-accent-ink font-bold rounded text-xl hover:bg-accent/90 transition-colors"
               >
                 Free Strategy Call
               </Link>

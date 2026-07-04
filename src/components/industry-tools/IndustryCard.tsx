@@ -54,7 +54,7 @@ export const IndustryCard = ({ name, icon, toolCount, onClick, isSelected }: Ind
       className={`
         bg-surface border border-border rounded-lg p-8 cursor-pointer transition-all duration-300
         h-full min-h-[200px] w-full
-        hover:-translate-y-2 hover:bg-white/15 hover:shadow-xl
+        hover:-translate-y-2 hover:bg-muted hover:shadow-xl
         ${isSelected ? 'ring-2 ring-accent' : ''}
       `}
     >
