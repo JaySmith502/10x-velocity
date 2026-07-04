@@ -28,7 +28,7 @@ const PrivacyPolicy = () => {
       </Helmet>
       <main className="container mx-auto px-4 py-16">
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Privacy Policy", path: "/privacy-policy" }]} />
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto font-body">
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-muted-foreground hover:text-accent transition-colors">
             <ArrowLeft className="mr-2 h-4 w-4" />

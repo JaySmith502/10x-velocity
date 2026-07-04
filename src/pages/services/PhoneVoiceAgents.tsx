@@ -2,7 +2,7 @@
 import { Helmet } from "react-helmet";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
-import { Sparkle } from "lucide-react";
+import { Sparkle, Wallet, Users, PhoneIncoming, TrendingUp, Globe } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { VisualBreadcrumb } from "@/components/VisualBreadcrumb";
@@ -76,7 +76,9 @@ const PhoneVoiceAgents = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
             <div key={index} className="bg-surface border border-border rounded-lg p-6 hover:scale-105 transition-transform duration-300">
-              <div className="text-3xl mb-4">{benefit.emoji}</div>
+              <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mb-4">
+                <benefit.icon className="w-6 h-6 text-accent" />
+              </div>
               <h4 className="text-xl font-bold mb-3 text-foreground">{benefit.title}</h4>
               <p className="text-muted-foreground">{benefit.description}</p>
             </div>
@@ -156,27 +158,27 @@ const PhoneVoiceAgents = () => {
 
 const benefits = [
   {
-    emoji: "💸",
+    icon: Wallet,
     title: "Cost-Savings vs. Call Centers",
     description: "Reduce headcount and overhead by up to 70% while maintaining 24/7 service coverage"
   },
   {
-    emoji: "🤝",
+    icon: Users,
     title: "Customer Engagement",
     description: "Drive higher satisfaction scores with consistent, human-like conversations"
   },
   {
-    emoji: "🚫",
+    icon: PhoneIncoming,
     title: "Never Lose Leads",
     description: "Ensure every inquiry is captured and routed with 24/7 call handling"
   },
   {
-    emoji: "🚀",
+    icon: TrendingUp,
     title: "Lead Generation",
     description: "Convert more callers into qualified prospects with smart qualification"
   },
   {
-    emoji: "🌐",
+    icon: Globe,
     title: "Multi-Language Support",
     description: "Serve global audiences with seamless language switching capabilities"
   },

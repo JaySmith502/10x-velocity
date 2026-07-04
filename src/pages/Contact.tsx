@@ -47,7 +47,7 @@ const Contact = () => {
                 Email: <a href="mailto:info@10xvelocity.ai" className="text-accent hover:underline">info@10xvelocity.ai</a>
               </p>
               <p className="text-muted-foreground">
-                Hours: Monday-Friday, 9am-5pm EST
+                Hours: Monday-Friday, 9am-5pm ET
               </p>
             </div>
             
