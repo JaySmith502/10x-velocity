@@ -147,8 +147,6 @@ const Packages = () => {
 
         {/* Hero */}
         <section className="container mx-auto px-4 py-20 overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">AI & Automation Packages</h1>
             <p className="text-xl md:text-2xl text-foreground mb-4 text-balance">Choose the 10xV Core OS package that fits where your business is today.</p>
@@ -210,8 +208,6 @@ const Packages = () => {
           </div>
 
           <div className="mt-16 text-center max-w-2xl mx-auto bg-surface border border-border rounded-lg p-10 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-32 h-32 bg-accent/10 rounded-full blur-2xl -z-10" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl -z-10" />
             <h3 className="text-2xl md:text-3xl font-bold mb-4">Not sure where to start?</h3>
             <p className="text-lg text-muted-foreground">
               Begin with the <a href="https://level.10xvelocity.ai/widget/form/q29C5iSULP1AO63r4Vjl" target="_blank" rel="noopener noreferrer" className="text-foreground font-medium hover:text-accent transition-colors border-b border-foreground hover:border-accent">AI Diagnostic Review</a> and get a clear expert recommendation before selecting the right implementation path.
@@ -268,8 +264,6 @@ const Packages = () => {
         {/* CTA */}
         <section className="container mx-auto px-4 py-20">
           <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Move?
             </h2>

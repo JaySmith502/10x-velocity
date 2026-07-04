@@ -58,8 +58,6 @@ const TransportationDirector = () => {
       <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Case Studies", path: "/case-studies" }, { name: "Transportation Director", path: "/case-studies/transportation-director" }]} />
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-16 md:py-20 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         
         <Link to="/case-studies" className="inline-flex items-center text-muted-foreground hover:text-accent mb-8">
           <ArrowLeft className="mr-2 h-4 w-4" />
@@ -178,8 +176,6 @@ const TransportationDirector = () => {
       {/* CTA Section */}
       <section className="container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center bg-surface border border-border rounded-lg p-12 relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -z-10" />
-          <div className="absolute bottom-0 left-0 w-64 h-64 bg-purple-500/10 rounded-full blur-3xl -z-10" />
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Ready to Transform Your Logistics Operations?
           </h2>

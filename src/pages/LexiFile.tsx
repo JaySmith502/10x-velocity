@@ -92,8 +92,6 @@ const LexiFile = () => {
         <VisualBreadcrumb items={[{ name: "Home", path: "/" }, { name: "Lexi-File", path: "/lexi-file" }]} />
         {/* Hero Section */}
       <section className="container mx-auto px-4 py-20 overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-3xl -z-10" />
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl -z-10" />
         <div className="max-w-4xl mx-auto text-center animate-fade-up">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Lexi-File<sup className="text-2xl md:text-3xl">™</sup>
