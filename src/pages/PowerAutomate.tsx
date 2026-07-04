@@ -195,11 +195,11 @@ const PowerAutomate = () => {
                       </div>
                       
                       <div className="flex flex-col justify-between">
-                        <div className="bg-surface border border-border rounded-lg p-4 mb-4 bg-black/40">
+                        <div className="bg-surface border border-border rounded-lg p-4 mb-4">
                           <h4 className="font-medium mb-2">Industry</h4>
                           <p className="text-muted-foreground">{study.industry}</p>
                         </div>
-                        <div className="bg-surface border border-border rounded-lg p-4 mb-4 bg-black/40">
+                        <div className="bg-surface border border-border rounded-lg p-4 mb-4">
                           <h4 className="font-medium mb-2">Solutions Used</h4>
                           <p className="text-muted-foreground">{study.solutions}</p>
                         </div>

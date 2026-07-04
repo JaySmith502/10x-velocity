@@ -167,7 +167,7 @@ const Packages = () => {
                 }
               >
                 {pkg.featured && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white text-sm font-semibold px-4 py-1 rounded-full">Most Popular</div>
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-accent-ink text-sm font-semibold px-4 py-1 rounded-full">Most Popular</div>
                 )}
                 <h3 className="text-2xl font-semibold mb-1">{pkg.name}</h3>
                 {pkg.subtitle ? (
@@ -195,7 +195,7 @@ const Packages = () => {
                   {pkg.bestFor}
                 </p>
                 {pkg.featured ? (
-                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors">
+                  <a href={pkg.paymentLink} className="block w-full text-center px-6 py-3 bg-accent text-accent-ink font-medium rounded-lg hover:bg-opacity-90 transition-colors">
                     {pkg.ctaText}
                   </a>
                 ) : (

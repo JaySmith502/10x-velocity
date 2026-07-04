@@ -128,17 +128,17 @@ const TransportationDirector = () => {
           <div className="bg-surface border border-border rounded-lg p-8 rounded-xl mb-12">
             <h2 className="text-2xl font-bold mb-6">The Results</h2>
             <div className="grid md:grid-cols-3 gap-6 mb-6">
-              <div className="bg-surface border border-border rounded-lg p-6 bg-black/40 text-center">
+              <div className="bg-surface border border-border rounded-lg p-6 text-center">
                 <h3 className="text-lg font-medium mb-2">Documentation Errors</h3>
                 <p className="text-3xl font-bold text-accent mb-2">-85%</p>
                 <p className="text-sm text-muted-foreground">Reduction in misplaced documentation</p>
               </div>
-              <div className="bg-surface border border-border rounded-lg p-6 bg-black/40 text-center">
+              <div className="bg-surface border border-border rounded-lg p-6 text-center">
                 <h3 className="text-lg font-medium mb-2">Labor Hours</h3>
                 <p className="text-3xl font-bold text-accent mb-2">-70%</p>
                 <p className="text-sm text-muted-foreground">Decrease in wasted search time</p>
               </div>
-              <div className="bg-surface border border-border rounded-lg p-6 bg-black/40 text-center">
+              <div className="bg-surface border border-border rounded-lg p-6 text-center">
                 <h3 className="text-lg font-medium mb-2">Productivity</h3>
                 <p className="text-3xl font-bold text-accent mb-2">+60%</p>
                 <p className="text-sm text-muted-foreground">Increase in dock productivity</p>
