@@ -26,6 +26,27 @@ Cadence: 1–2 substantive pieces/month, staggered — never batch-publish. To p
 | 7 | Louisville AI consultant vs. national firm — honest comparison | 1/3 | UPTech argues it for Central KY only; nobody does it even-handedly. |
 | 8 | AI automation for Kentucky logistics (UPS Worldport metro angle) | 1 | Vertical × local: zero direct competition. First of a local-vertical series (healthcare, manufacturing next). |
 
+## AI Evals cluster (topic-authority lane — write in this order)
+
+Separate lane from the consulting backlog above. Pillar is **live** (`ai-evaluation-for-business`). Publish supporting posts open-lanes-first, one at a time (never batch). Each links **up** to the pillar; add a **down**-link from the pillar to each as it goes live (see Standing rules). Full landscape + lane status in `seo/visibility-log.md` (AI Evals campaign section).
+
+| Order | Piece (working title) | Proposed slug | Target query | Lane |
+|---|---|---|---|---|
+| 1 | What an AI "Trace" Actually Looks Like | `what-an-ai-trace-looks-like` | what does an AI trace look like | OPEN (teased as pillar's next-in-series) |
+| 2 | How Do You Know If Your AI Is Accurate? A Manager's Checklist | `how-to-know-if-your-ai-is-accurate` | how do I know if my AI is accurate | OPEN |
+| 3 | AI Quality Control Without a QA Team | `ai-quality-control-without-qa-team` | AI QA for non-technical leaders | OPEN |
+| 4 | Error Analysis: The Highest-Return Hour in AI | `ai-error-analysis` | how to review AI output quality | Semi-open |
+| 5 | Writing Down What "Good" Means | `define-what-good-ai-looks-like` | how to define AI quality criteria | Semi-open |
+| 6 | Letting One AI Grade Another (and When Not to Trust It) | `llm-as-a-judge-explained` | LLM as a judge | Contested |
+| 7 (opt) | Agents Don't Get the Same Forgiveness | `ai-agent-reliability` | make an AI agent reliable before deploying | Semi-open |
+| 8 (opt) | How to Judge an AI Vendor's Actual Performance (Not the Demo) | `evaluate-ai-vendor-performance` | evaluate an AI vendor before buying | Semi-open (bridges to consulting lane) |
+
+Each piece follows `CONTENT-BRIEF-TEMPLATE.md`; Jay byline; a number in the first 50 words.
+
+## Legacy scaffold posts (hidden 2026-07-07 — rewrite before re-publishing)
+
+Posts id 1-5 in `src/data/blogPosts.ts` are Lovable-scaffold stubs: no real body (1-2 have partial generic-listicle sample JSX in `BlogPost.tsx`; 3-5 are excerpt-only) and fabricated bylines. Set `draft: true` and removed from `public/sitemap.xml` on 2026-07-07 so they stop diluting the AEO authority surface. Do NOT un-draft as-is. To revive any topic: rewrite as a full article per `CONTENT-BRIEF-TEMPLATE.md` with a real (Jay) byline and internal links, then add back to the sitemap. Candidate topics: (1) AI streamlining operations, (2) AI + human collaboration / future of work, (3) healthcare cost-savings case study, (4) nonprofits + AI, (5) ROI of AI implementation.
+
 ## Quarterly cornerstone maintenance
 
 Each quarter (Sep 2026, Dec 2026, …): re-verify facts in the three pillars + Louisville guide against competitors' current pages, update copy, set `dateModified` in `src/data/blogPosts.ts`, and bump `lastmod` in the sitemap. Freshness is a ranked GEO factor — competitor cost pages aging out (RTS Labs: Jan 2025) is how we pass them.
