@@ -29,7 +29,8 @@ export const blogPosts: BlogPost[] = [
     date: "May 15, 2024",
     category: "Business",
     tags: ["AI", "Automation", "Productivity"],
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    draft: true
   },
   {
     id: 2,
@@ -39,7 +40,8 @@ export const blogPosts: BlogPost[] = [
     date: "May 8, 2024",
     category: "Technology",
     tags: ["Future of Work", "AI", "Collaboration"],
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    draft: true
   },
   {
     id: 3,
@@ -49,7 +51,8 @@ export const blogPosts: BlogPost[] = [
     date: "April 30, 2024",
     category: "Case Study",
     tags: ["Healthcare", "Cost Savings", "Process Automation"],
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    draft: true
   },
   {
     id: 4,
@@ -59,7 +62,8 @@ export const blogPosts: BlogPost[] = [
     date: "April 22, 2024",
     category: "Nonprofit",
     tags: ["Nonprofit", "Resource Optimization", "AI for Good"],
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    draft: true
   },
   {
     id: 5,
@@ -69,7 +73,8 @@ export const blogPosts: BlogPost[] = [
     date: "April 15, 2024",
     category: "Business",
     tags: ["ROI", "Business Intelligence", "AI Strategy"],
-    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1",
+    draft: true
   },
   // ——— AEO pillar pages and answer posts (bodies in src/data/articleContent.ts) ———
   {

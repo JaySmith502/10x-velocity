@@ -135,31 +135,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://10xvelocity.ai/blog/1</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://10xvelocity.ai/blog/2</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://10xvelocity.ai/blog/3</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://10xvelocity.ai/blog/4</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://10xvelocity.ai/blog/5</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
     <loc>https://10xvelocity.ai/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
