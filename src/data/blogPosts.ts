@@ -129,5 +129,17 @@ export const blogPosts: BlogPost[] = [
     tags: ["Change Management", "AI Adoption", "Mid-Market"],
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c",
     draft: true
+  },
+  // ——— AI Evals campaign (topic-authority lane) — see seo/visibility-log.md ———
+  {
+    id: 11,
+    slug: "ai-evaluation-for-business",
+    title: "Everyone Got the Chatbot. Nobody Checked Its Work.",
+    excerpt: "We measured AI adoption everywhere and performance almost nowhere. A no-jargon guide to AI evaluation for business: read what your AI actually did, find the failure patterns, define what 'good' means, and check the work - no research team required.",
+    author: "Jay Smith",
+    date: "July 7, 2026",
+    category: "AI Evaluation",
+    tags: ["AI Evaluation", "Evals", "Agentic AI", "AI Adoption"],
+    image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1"
   }
 ];
