@@ -11,6 +11,7 @@ Cadence: 1–2 substantive pieces/month, staggered — never batch-publish. To p
 | Jul 8, 2026 | Is Your Company Ready for AI? A Readiness Check for Teams Without a Data Team | `ai-readiness-without-data-team` | 2 (pillar) | Draft |
 | Jul 22, 2026 | AI Consultant vs. MSP: Which Do You Actually Need? | `ai-consultant-vs-msp` | 3 | Draft |
 | Aug 5, 2026 | Change Management for AI Adoption: Why Pilots Fail and What Fixes Them | `change-management-ai-adoption` | 2 (pillar) | Draft |
+| **Jul 7, 2026** | Everyone Got the Chatbot. Nobody Checked Its Work. (AI evals pillar — new topic-authority lane) | `ai-evaluation-for-business` | Evals | **Live** (in sitemap) |
 
 ## Prioritized backlog (write next, in order)
 
@@ -33,5 +34,5 @@ Each quarter (Sep 2026, Dec 2026, …): re-verify facts in the three pillars + L
 
 - One edge per piece no competitor has (data, framework, pricing, ICP, or depth).
 - A number in the first 50 words of every answer block.
-- Internal links: cluster post ↔ pillar ↔ relevant service page.
+- Internal links (apply automatically to every post, new and existing — never wait to be asked): cluster post ↔ pillar ↔ relevant service/case-study page. Hub-and-spoke: each cluster post links up to its pillar; each pillar gets a down-link added to every cluster post as that post goes live.
 - Voice: declarative; banned phrases per `seo/CONTENT-BRIEF-TEMPLATE.md` §5.

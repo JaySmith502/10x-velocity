@@ -68,7 +68,13 @@
       "Bash(ls -la seo/)",
       "Bash(ls design-audit/)",
       "Bash(ls *.md docs/)",
-      "Bash(grep -nE '^\\\\s*\"[a-z-]+\":\\\\s*`' src/data/articleContent.ts)"
+      "Bash(grep -nE '^\\\\s*\"[a-z-]+\":\\\\s*`' src/data/articleContent.ts)",
+      "Bash(grep -nE '\\\\$[0-9,]+|price|package|retainer|/month|/mo|per month' src/data/articleContent.ts)",
+      "Bash(grep -rnE '\\\\$[0-9,]+|priceRange|price' src/schemas/organization.ts public/llms.txt src/pages/Services.tsx index.html)",
+      "Bash(grep -rnE '\\\\$129|\\\\$499|\\\\$999|\\\\$49\\\\b|\\\\$49/' src public index.html)",
+      "Bash(grep -rlnE 'priceRange|Packages\\\\b' src/pages)",
+      "Bash(memanto remember *)",
+      "mcp__claude_ai_Firecrawl__firecrawl_search"
     ]
   }
 }
