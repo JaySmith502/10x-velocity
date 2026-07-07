@@ -48,7 +48,10 @@ const Blog = () => {
       {/* Blog Posts Grid */}
       <section className="container mx-auto px-4 pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {blogPosts.filter((post) => !post.draft).map((post) => (
+          {blogPosts
+            .filter((post) => !post.draft)
+            .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+            .map((post) => (
             <article 
               key={post.id}
               className="bg-surface border border-border rounded-lg overflow-hidden flex flex-col h-full animate-fade-up hover:bg-muted transition-colors"
