@@ -109,7 +109,6 @@ export const blogPosts: BlogPost[] = [
     category: "AI Strategy",
     tags: ["AI Readiness", "Mid-Market", "Assessment"],
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
-    draft: true
   },
   {
     id: 9,
