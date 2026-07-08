@@ -33,6 +33,7 @@ const DataCleaning = lazy(() => import("./pages/services/DataCleaning"));
 const LunchAndLearn = lazy(() => import("./pages/LunchAndLearn"));
 const PhoneVoiceAgents = lazy(() => import("./pages/services/PhoneVoiceAgents"));
 const AIWorkshops = lazy(() => import("./pages/services/AIWorkshops"));
+const AITestBenchReview = lazy(() => import("./pages/services/AITestBenchReview"));
 const OnboardingForm = lazy(() => import("./pages/OnboardingForm"));
 const OnboardingConfirmation = lazy(() => import("./pages/OnboardingConfirmation"));
 const SmartBots = lazy(() => import("./pages/SmartBots"));
@@ -65,6 +66,7 @@ const AppContent = () => {
           <Route path="/services/data-cleaning" element={<DataCleaning />} />
           <Route path="/services/phone-voice-agents" element={<PhoneVoiceAgents />} />
           <Route path="/services/ai-workshops" element={<AIWorkshops />} />
+          <Route path="/services/ai-test-bench-review" element={<AITestBenchReview />} />
           <Route path="/services/smart-bots" element={<SmartBots />} />
           <Route path="/lexi-file" element={<LexiFile />} />
           <Route path="/industry-tools" element={<IndustryTools />} />

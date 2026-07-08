@@ -3,7 +3,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import { helmetJsonLdProp } from "react-schemaorg";
 import { breadcrumbJsonLd } from "@/schemas/breadcrumbs";
-import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText, Rocket } from "lucide-react";
+import { ArrowRight, Bot, ChartLine, Users, Database, GraduationCap, Search, FileText, Rocket, ClipboardCheck } from "lucide-react";
 import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Link } from "react-router-dom";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -240,6 +240,19 @@ const services = [
       "Know exactly what's next in just 10 days"
     ],
     link: "/prototypes"
+  },
+  {
+    id: "ai-test-bench-review",
+    title: "AI Test Bench Review",
+    description: "Your AI works around the clock, but nobody reviews its work. A two-week, fixed-fee performance review of your AI that leaves you a quality standard your team owns.",
+    icon: ClipboardCheck,
+    benefits: [
+      "We read 50-100 real interactions end to end",
+      "Failure patterns ranked by business risk",
+      "A plain-language quality rubric your team can enforce",
+      "A working automated check you keep when we leave"
+    ],
+    link: "/services/ai-test-bench-review"
   }
 ];
 

@@ -34,6 +34,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://10xvelocity.ai/services/ai-test-bench-review</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://10xvelocity.ai/services/smart-bots</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
