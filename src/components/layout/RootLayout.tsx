@@ -3,6 +3,7 @@ import { ThemeProvider } from "next-themes";
 import Header from "@/components/landing/Header";
 import Footer from "@/components/landing/Footer";
 import { Outlet } from "react-router-dom";
+import CookieConsentBanner from "@/components/CookieConsent";
 
 const useChatWidgetH1Fix = () => {
   useEffect(() => {
@@ -44,6 +45,7 @@ const RootLayout = () => {
           <Outlet />
         </main>
         <Footer />
+        <CookieConsentBanner />
       </div>
     </ThemeProvider>
   );

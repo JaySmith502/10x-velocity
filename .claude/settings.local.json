@@ -74,7 +74,8 @@
       "Bash(grep -rnE '\\\\$129|\\\\$499|\\\\$999|\\\\$49\\\\b|\\\\$49/' src public index.html)",
       "Bash(grep -rlnE 'priceRange|Packages\\\\b' src/pages)",
       "Bash(memanto remember *)",
-      "mcp__claude_ai_Firecrawl__firecrawl_search"
+      "mcp__claude_ai_Firecrawl__firecrawl_search",
+      "PowerShell($conns = Get-NetTCPConnection -LocalPort 8080 -State Listen -ErrorAction SilentlyContinue; if \\($conns\\) { $conns.OwningProcess | Sort-Object -Unique | ForEach-Object { try { Stop-Process -Id $_ -Force -ErrorAction Stop; \"Stopped PID $_\" } catch { \"Could not stop PID $_\" } } } else { \"No listener on :8080\" })"
     ]
   }
 }
