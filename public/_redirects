@@ -21,6 +21,5 @@
 /contact                             /index.html   200
 /privacy-policy                      /index.html   200
 /terms-of-service                    /index.html   200
-/sample-report                       /sample-report.html   200
 # Catch-all: any unmatched route returns 404 status
 /*                                   /index.html   404
