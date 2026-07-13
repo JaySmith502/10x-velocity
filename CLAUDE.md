@@ -64,7 +64,7 @@ import { Button } from "@/components/ui/button";
 
 **Static Data:** Blog posts and industry tools are defined as in-memory arrays in `src/data/`. There is no backend API.
 
-**Global State:** `src/contexts/ContactPopupContext.tsx` manages contact popup visibility across pages, consumed via `src/hooks/useContactPopupContext.ts`.
+**Global State:** None. (A former contact-popup context existed but was never wired into the app and has been removed.)
 
 ## Styling
 
