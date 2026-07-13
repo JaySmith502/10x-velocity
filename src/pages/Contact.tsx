@@ -67,21 +67,10 @@ const Contact = () => {
           <h2 className="text-2xl font-semibold mb-6 text-center">Send us a message</h2>
           <div className="w-full" style={{ minHeight: '900px' }}>
             <iframe
-              src="https://api.leadconnectorhq.com/widget/form/oF3UAG9Kp3vwDm8QCJ1i"
+              src="https://tally.so/r/68yxYk?transparentBackground=1"
               style={{ display: 'block', width: '100%', height: '900px', border: 'none', borderRadius: '0px' }}
-              id="polite-slide-in-right-oF3UAG9Kp3vwDm8QCJ1i"
-              data-layout="{'id':'POLITE_SLIDE_IN','minimizedTitle':'','isLeftAligned':false,'isRightAligned':true,'allowMinimize':false}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="10XVelocity Contact Intake Form"
-              data-height="900"
-              data-layout-iframe-id="polite-slide-in-right-oF3UAG9Kp3vwDm8QCJ1i"
-              data-form-id="oF3UAG9Kp3vwDm8QCJ1i"
-              title="10XVelocity Contact Intake Form"
+              title="Contact Us"
+              loading="lazy"
             />
           </div>
         </div>
