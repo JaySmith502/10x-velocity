@@ -44,6 +44,7 @@ const IndustryTools = lazy(() => import("./pages/IndustryTools"));
 const AIGuideCertification = lazy(() => import("./pages/AIGuideCertification"));
 const AIGuideThankYou = lazy(() => import("./pages/AIGuideThankYou"));
 const ClaudePowerWorkshop = lazy(() => import("./pages/ClaudePowerWorkshop"));
+const Onramp = lazy(() => import("./pages/Onramp"));
 
 const queryClient = new QueryClient();
 
@@ -59,6 +60,7 @@ const AppContent = () => {
       <ScrollToTop />
       <Suspense fallback={<PageLoader />}>
       <Routes>
+        <Route path="/onramp" element={<Onramp />} />
         <Route element={<RootLayout />}>
           <Route path="/" element={<Index />} />
           <Route path="/about" element={<About />} />
