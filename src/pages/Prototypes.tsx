@@ -195,7 +195,7 @@ const Prototypes = () => {
           <div className="bg-surface border border-border rounded-lg p-12 text-center relative overflow-hidden">
             
             <h2 className="text-3xl md:text-5xl font-bold mb-6">
-              $10,000 | 10 Days | Zero Waste
+              $8,000 | 10 Days | Zero Waste
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground mb-8">
               You'll know exactly what's next—build, buy, or integrate—before spending months or six figures on development.

@@ -223,7 +223,7 @@ const LexiFile = () => {
             <div className="space-y-6">
               <div className="border-b border-muted-foreground/20 pb-4">
                 <h3 className="text-xl font-semibold text-foreground mb-2">Setup Fee</h3>
-                <p className="text-muted-foreground">Custom based on size and complexity (starts at $2,500)</p>
+                <p className="text-muted-foreground">Custom based on size and complexity (starts at $2,000)</p>
               </div>
               <div className="border-b border-muted-foreground/20 pb-4">
                 <h3 className="text-xl font-semibold text-foreground mb-2">Monthly Per-User</h3>

@@ -19,7 +19,7 @@ const packages = [
     id: "10xv-core",
     name: "10xV Core",
     subtitle: "Biweekly cadence",
-    price: "$2,500",
+    price: "$2,000",
     priceNote: "/ 4 weeks",
     priceDetail: "One 10xV Core Meeting every two weeks on a standing biweekly cadence.",
     description: "Steady, managed progress toward AI adoption. Your dedicated strategist and architect work a standing biweekly rhythm, building between sessions so every meeting starts with finished work.",
@@ -43,7 +43,7 @@ const packages = [
     id: "10xv-growth",
     name: "10xV Growth",
     subtitle: "Weekly cadence",
-    price: "$5,000",
+    price: "$4,000",
     priceNote: "/ 4 weeks",
     priceDetail: "One 10xV Growth Meeting every week on a standing weekly cadence.",
     description: "Weekly progress for teams actively prioritizing AI and automation. Twice the build time of Core, with a standing weekly session to keep initiatives moving instead of stacking up.",
@@ -67,7 +67,7 @@ const packages = [
     id: "10xv-pro",
     name: "10xV Pro",
     subtitle: "Twice-weekly cadence",
-    price: "$10,000",
+    price: "$8,000",
     priceNote: "/ 4 weeks",
     priceDetail: "Two 10x Core Meetings every week on a standing twice-weekly cadence.",
     description: "Multi-department velocity. Two standing sessions a week and 40 hours of build time per cycle, so several workstreams can run in parallel without waiting on each other.",
@@ -201,10 +201,10 @@ const Packages = () => {
         ]}
       >
         <title>10x Core Meetings | AI & Automation Packages | 10x Velocity</title>
-        <meta name="description" content="10x Core Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,500 per 4 weeks, or a single 2-hour session for $999." />
+        <meta name="description" content="10x Core Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,000 per 4 weeks, or a single 2-hour session for $999." />
         <link rel="canonical" href="https://10xvelocity.ai/packages" />
         <meta property="og:title" content="10x Core Meetings | AI & Automation Packages | 10x Velocity" />
-        <meta property="og:description" content="10x Core Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,500 per 4 weeks, or a single 2-hour session for $999." />
+        <meta property="og:description" content="10x Core Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,000 per 4 weeks, or a single 2-hour session for $999." />
         <meta property="og:url" content="https://10xvelocity.ai/packages" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
