@@ -8,7 +8,7 @@ export const BUSINESS_DATA = {
     "10x Velocity is a veteran-owned AI & automation consulting firm based in Louisville, Kentucky, serving mid-market companies and nonprofits nationally. Services include AI process automation, AI strategy and opportunity discovery, data cleaning, voice agents, smart bots, and team training.",
   linkedIn: "https://www.linkedin.com/company/10x-velocity",
   image: "https://10xvelocity.ai/og-image.png",
-  priceRange: "$129 - $999+",
+  priceRange: "$999 - $10,000+",
   address: {
     streetAddress: "10440 Bluegrass Pkwy",
     addressLocality: "Louisville",

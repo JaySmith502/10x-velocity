@@ -16,17 +16,25 @@ LinkedIn: https://www.linkedin.com/company/10x-velocity
 
 ## Pricing (published)
 
-- AI Diagnostic Review — $129 one-time. Expert review of workflows and
-  technology posture; priority impact areas; next-step recommendation.
-- Essential AI Stack — $499 one-time. Remote needs audit; tailored AI Stack
-  Plan; recommended tools and use cases; implementation guidance for internal
-  deployment.
-- Advanced AI Stack — starting at $999. Hands-on implementation, guided
-  rollout, and an upgrade roadmap.
-- AI Advantage Plan — $49/month. Ongoing AI stack oversight and periodic
-  recommendations as tools change.
+Amplify Meetings pair each client with a dedicated AI Strategist and a
+dedicated Automation Architect. 4-week billing, no long-term contract, no
+onboarding fees, scale up or down at any time.
+
+- 10xV Core — $2,500 per 4 weeks. Biweekly 90-minute Amplify Meeting on a
+  standing cadence; 5 hours of build time between each session (10 hours per
+  cycle); documentation and handoff; client portal and async support.
+- 10xV Growth — $5,000 per 4 weeks. Weekly 90-minute Amplify Meeting; 5 hours
+  of build time between each session (20 hours per cycle); same inclusions as
+  Core.
+- 10xV Pro — $10,000 per 4 weeks. Twice-weekly 90-minute Amplify Meetings;
+  5 hours of build time between each session (40 hours per cycle); for teams
+  moving across multiple departments.
+- Single Session — $999. One 2-hour working session, no ongoing commitment.
+  Opportunity mapping, team training, or a technical deep dive.
+- Build Accelerator add-on doubles build time between sessions: +$1,300 on
+  Core, +$2,600 on Growth, +$5,200 on Pro. Meeting cadence is unchanged.
 - Larger custom automation projects (multi-system workflows, voice agents,
-  document processing pipelines) are scoped after the diagnostic.
+  document processing pipelines) are scoped inside the engagement.
 Details: https://10xvelocity.ai/packages
 
 ## Services
