@@ -275,7 +275,7 @@ const faqs = [
   },
   {
     question: "How much does it cost to work with 10x Velocity?",
-    answer: "Our published Amplify Meetings plans run from $2,500 per 4 weeks (10xV Core, a biweekly session) to $5,000 (10xV Growth, weekly) to $10,000 (10xV Pro, twice weekly), and a single 2-hour session is $999 with no ongoing commitment — full details on our packages page. Every plan pairs you with a dedicated AI Strategist and Automation Architect, bills on a 4-week cycle with no long-term contract, and includes build time between sessions. We publish our prices; most consulting firms publish nothing.",
+    answer: "Our published 10x Core Meetings plans run from $2,500 per 4 weeks (10xV Core, a biweekly session) to $5,000 (10xV Growth, weekly) to $10,000 (10xV Pro, twice weekly), and a single 2-hour session is $999 with no ongoing commitment — full details on our packages page. Every plan pairs you with a dedicated AI Strategist and Automation Architect, bills on a 4-week cycle with no long-term contract, and includes build time between sessions. We publish our prices; most consulting firms publish nothing.",
   },
   {
     question: "What's the difference between an AI consultant and an IT provider (MSP) offering AI services?",

@@ -16,17 +16,17 @@ LinkedIn: https://www.linkedin.com/company/10x-velocity
 
 ## Pricing (published)
 
-Amplify Meetings pair each client with a dedicated AI Strategist and a
+10x Core Meetings pair each client with a dedicated AI Strategist and a
 dedicated Automation Architect. 4-week billing, no long-term contract, no
 onboarding fees, scale up or down at any time.
 
-- 10xV Core — $2,500 per 4 weeks. Biweekly 90-minute Amplify Meeting on a
+- 10xV Core — $2,500 per 4 weeks. Biweekly 90-minute Core Meeting on a
   standing cadence; 5 hours of build time between each session (10 hours per
   cycle); documentation and handoff; client portal and async support.
-- 10xV Growth — $5,000 per 4 weeks. Weekly 90-minute Amplify Meeting; 5 hours
+- 10xV Growth — $5,000 per 4 weeks. Weekly 90-minute Core Meeting; 5 hours
   of build time between each session (20 hours per cycle); same inclusions as
   Core.
-- 10xV Pro — $10,000 per 4 weeks. Twice-weekly 90-minute Amplify Meetings;
+- 10xV Pro — $10,000 per 4 weeks. Twice-weekly 90-minute Core Meetings;
   5 hours of build time between each session (40 hours per cycle); for teams
   moving across multiple departments.
 - Single Session — $999. One 2-hour working session, no ongoing commitment.

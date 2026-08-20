@@ -6,7 +6,7 @@ import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, ArrowRight, Search, Wrench, Users, TrendingUp } from "lucide-react";
 
-// TODO: replace with live GHL payment links once the Amplify Meetings products are created.
+// TODO: replace with live GHL payment links once the 10x Core Meetings products are created.
 const PAYMENT_LINKS = {
   core: "#TODO-payment-link-10xv-core",
   growth: "#TODO-payment-link-10xv-growth",
@@ -21,10 +21,10 @@ const packages = [
     subtitle: "Biweekly cadence",
     price: "$2,500",
     priceNote: "/ 4 weeks",
-    priceDetail: "One Amplify Meeting every two weeks on a standing biweekly cadence.",
+    priceDetail: "One 10xV Core Meeting every two weeks on a standing biweekly cadence.",
     description: "Steady, managed progress toward AI adoption. Your dedicated strategist and architect work a standing biweekly rhythm, building between sessions so every meeting starts with finished work.",
     items: [
-      "Biweekly 90-minute Amplify Meeting on a standing cadence",
+      "Biweekly 90-minute 10xV Core Meeting on a standing cadence",
       "A dedicated AI Strategist",
       "A dedicated Automation Architect",
       "5 hours of 10xV build time between each session",
@@ -45,10 +45,10 @@ const packages = [
     subtitle: "Weekly cadence",
     price: "$5,000",
     priceNote: "/ 4 weeks",
-    priceDetail: "One Amplify Meeting every week on a standing weekly cadence.",
+    priceDetail: "One 10xV Growth Meeting every week on a standing weekly cadence.",
     description: "Weekly progress for teams actively prioritizing AI and automation. Twice the build time of Core, with a standing weekly session to keep initiatives moving instead of stacking up.",
     items: [
-      "Weekly 90-minute Amplify Meeting on a standing cadence",
+      "Weekly 90-minute 10x Core Meeting on a standing cadence",
       "A dedicated AI Strategist",
       "A dedicated Automation Architect",
       "5 hours of 10xV build time between each session",
@@ -69,10 +69,10 @@ const packages = [
     subtitle: "Twice-weekly cadence",
     price: "$10,000",
     priceNote: "/ 4 weeks",
-    priceDetail: "Two Amplify Meetings every week on a standing twice-weekly cadence.",
+    priceDetail: "Two 10x Core Meetings every week on a standing twice-weekly cadence.",
     description: "Multi-department velocity. Two standing sessions a week and 40 hours of build time per cycle, so several workstreams can run in parallel without waiting on each other.",
     items: [
-      "Twice-weekly 90-minute Amplify Meetings on a standing cadence",
+      "Twice-weekly 90-minute 10x Core Meetings on a standing cadence",
       "A dedicated AI Strategist",
       "A dedicated Automation Architect",
       "5 hours of 10xV build time between each session",
@@ -94,9 +94,9 @@ const packages = [
     price: "$999",
     priceNote: "/ session",
     priceDetail: "One 2-hour working session, scheduled when it works for you.",
-    description: "Not ready for an ongoing cadence? Book a single 2-hour Amplify Meeting. Same team, same format, no commitment. Many clients start here to experience the format, then move into a standing cadence.",
+    description: "Not ready for an ongoing cadence? Book a single 2-hour 10x Core Meeting. Same team, same format, no commitment. Many clients start here to experience the format, then move into a standing cadence.",
     items: [
-      "Single 2-hour Amplify Meeting, scheduled when it works for you",
+      "Single 2-hour 10x Core Meeting, scheduled when it works for you",
       "An AI strategist leads and an automation architect builds alongside, live inside your stack",
       "One of three focuses: opportunity mapping, team training, or a technical deep dive",
       "No ongoing commitment",
@@ -173,7 +173,7 @@ const faqs = [
   },
   {
     question: "Can I start with one session before committing to a cadence?",
-    answer: "Absolutely. Many clients book a single 2-hour Amplify Meeting to experience the format, then continue with additional sessions or move into a standing 10xV Core, Growth, or Pro cadence.",
+    answer: "Absolutely. Many clients book a single 2-hour 10x Core Meeting to experience the format, then continue with additional sessions or move into a standing 10xV Core, Growth, or Pro cadence.",
   },
 ];
 
@@ -200,11 +200,11 @@ const Packages = () => {
           ]),
         ]}
       >
-        <title>Amplify Meetings | AI & Automation Packages | 10x Velocity</title>
-        <meta name="description" content="Amplify Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,500 per 4 weeks, or a single 2-hour session for $999." />
+        <title>10x Core Meetings | AI & Automation Packages | 10x Velocity</title>
+        <meta name="description" content="10x Core Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,500 per 4 weeks, or a single 2-hour session for $999." />
         <link rel="canonical" href="https://10xvelocity.ai/packages" />
-        <meta property="og:title" content="Amplify Meetings | AI & Automation Packages | 10x Velocity" />
-        <meta property="og:description" content="Amplify Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,500 per 4 weeks, or a single 2-hour session for $999." />
+        <meta property="og:title" content="10x Core Meetings | AI & Automation Packages | 10x Velocity" />
+        <meta property="og:description" content="10x Core Meetings pair your business with a dedicated AI Strategist and Automation Architect on a standing cadence. Plans from $2,500 per 4 weeks, or a single 2-hour session for $999." />
         <meta property="og:url" content="https://10xvelocity.ai/packages" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="https://10xvelocity.ai/og-image.png" />
@@ -218,7 +218,7 @@ const Packages = () => {
           <div className="absolute inset-0 -z-10 bg-hero-gradient dark:bg-hero-gradient-dark" />
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <p className="text-accent text-sm font-semibold tracking-wide uppercase mb-4">10xV Core OS</p>
-            <h1 className="text-4xl md:text-6xl font-bold mb-6">Amplify Meetings</h1>
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">10x Core Meetings</h1>
             <p className="font-body text-xl md:text-2xl text-foreground mb-4 text-balance">Your fractional AI and automation partner.</p>
             <p className="font-body text-lg md:text-xl text-muted-foreground mb-4 text-pretty">Every engagement pairs your business with a dedicated AI Strategist and a dedicated Automation Architect. We map your opportunities, build real workflows alongside your team, and keep building between sessions.</p>
             <p className="font-body text-base text-muted-foreground">4-week billing. No long-term contract, no onboarding fees, and the ability to scale up or down at any time.</p>
