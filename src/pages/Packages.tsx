@@ -6,12 +6,11 @@ import DiscoveryButton from "@/components/ui/DiscoveryButton";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { CheckCircle2, ArrowRight, Search, Wrench, Users, TrendingUp } from "lucide-react";
 
-// TODO: replace with live GHL payment links once the 10x Core Meetings products are created.
 const PAYMENT_LINKS = {
-  core: "#TODO-payment-link-10xv-core",
-  growth: "#TODO-payment-link-10xv-growth",
-  pro: "#TODO-payment-link-10xv-pro",
-  singleSession: "#TODO-payment-link-single-session",
+  core: "https://level.10xvelocity.ai/payment-link/6a86f21ed6768df054447056",
+  growth: "https://level.10xvelocity.ai/payment-link/6a86f048d6768df054447052",
+  pro: "https://level.10xvelocity.ai/payment-link/6a86f27ed6768df054447058",
+  singleSession: "https://level.10xvelocity.ai/payment-link/6a86f2b6f9c8c807930b921b",
 };
 
 const packages = [
